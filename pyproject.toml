@@ -1,0 +1,65 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "jev-extract"
+version = "0.1.0"
+description = "Paragraph information extraction using TypeSafe AI Jev — convert extractive QA into closed-set Choice over candidate spans."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+  { name = "Quan Dang", email = "dangquan1402@users.noreply.github.com" },
+]
+keywords = ["jev", "typesafe", "extraction", "qa", "nlp", "system-one"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Typing :: Typed",
+]
+dependencies = [
+  "typesafe-sdk",
+  "pydantic>=2",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "ruff",
+]
+
+[project.urls]
+Homepage = "https://github.com/dangquan1402/jev-extract"
+Repository = "https://github.com/dangquan1402/jev-extract"
+Issues = "https://github.com/dangquan1402/jev-extract/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/jev_extract"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/src",
+  "/tests",
+  "/examples",
+  "/README.md",
+  "/LICENSE",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
