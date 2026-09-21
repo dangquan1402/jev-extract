@@ -33,3 +33,6 @@ htmlcov/
 .env.*
 !.env.example
 *.pem
+
+# Benchmark results JSON are tracked (live TypeSafe comparison runs).
+# Keep directory even if empty via .gitkeep

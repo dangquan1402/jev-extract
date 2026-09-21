@@ -10,6 +10,7 @@ from jev_extract.candidates import (
     JEV_CHOICE_MAX_CRITERIA,
     limit_candidates,
     propose_candidates,
+    propose_chunks,
     spans_to_criteria,
     truncate_criteria_text,
 )
@@ -110,3 +111,27 @@ def test_spans_to_criteria_keys():
 def test_limit_max_candidates_invalid():
     with pytest.raises(ValueError):
         limit_candidates([], max_candidates=0)
+
+
+def test_propose_chunks_clause_fallback_long():
+    # Long sentence with commas should yield multiple clauses when fallback on.
+    long = (
+        "The committee reviewed the proposal, considered the budget implications, "
+        "and finally approved the multi-year roadmap for the coastal research program "
+        "after extensive deliberation among stakeholders across twelve member nations."
+    )
+    # Ensure it exceeds default long threshold
+    assert len(long) > 180
+    plain = propose_candidates(long, clause_fallback=False)
+    assert len(plain) == 1
+    chunks = propose_chunks(long)
+    assert len(chunks) > 1
+    for s in chunks:
+        assert long[s.start : s.end] == s.text
+
+
+def test_propose_chunks_short_unchanged():
+    text = "Short one. Another short."
+    a = propose_candidates(text)
+    b = propose_chunks(text)
+    assert [s.text for s in a] == [s.text for s in b]

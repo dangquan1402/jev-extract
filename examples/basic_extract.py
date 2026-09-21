@@ -30,7 +30,8 @@ def main() -> int:
         return 1
 
     print(f"answer:      {result.answer!r}")
-    print(f"offsets:     [{result.start}, {result.end})")
+    print(f"token span:  start={result.start.model_dump()} end={result.end.model_dump()}")
+    print(f"char offsets:[{result.char_start}, {result.char_end})")
     print(f"confidence:  {result.confidence}")
     print(f"model:       {result.model}")
     return 0

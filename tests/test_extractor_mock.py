@@ -12,7 +12,7 @@ from jev_extract import (
     ExtractionError,
     MissingAPIKeyError,
     NoCandidatesError,
-    propose_candidates,
+    tokenize,
 )
 
 
@@ -64,17 +64,32 @@ class FakeResponse:
 
 
 class FakeClient:
-    def __init__(self, response: FakeResponse | None = None, exc: Exception | None = None):
-        self.response = response
+    """Returns scripted responses in call order (start then end for extract)."""
+
+    def __init__(
+        self,
+        responses: list[FakeResponse] | FakeResponse | None = None,
+        exc: Exception | None = None,
+    ):
+        if responses is None:
+            self.responses: list[FakeResponse] = []
+        elif isinstance(responses, list):
+            self.responses = list(responses)
+        else:
+            self.responses = [responses]
         self.exc = exc
         self.calls: list[dict[str, Any]] = []
+        self._i = 0
 
     def system_one(self, state: Any, questions: dict[str, Any], *, model: str | None = None, **kwargs: Any):
         self.calls.append({"state": state, "questions": questions, "model": model, "kwargs": kwargs})
         if self.exc is not None:
             raise self.exc
-        assert self.response is not None
-        return self.response
+        if self._i >= len(self.responses):
+            raise AssertionError(f"Unexpected system_one call #{self._i}; only {len(self.responses)} scripted")
+        resp = self.responses[self._i]
+        self._i += 1
+        return resp
 
 
 PARAGRAPH = (
@@ -84,38 +99,84 @@ PARAGRAPH = (
 )
 
 
-def test_extract_maps_choice_to_span():
-    spans = propose_candidates(PARAGRAPH)
-    assert len(spans) >= 2
-    target = spans[1]  # "She published notes in 1843."
+def _year_pos() -> int:
+    toks = tokenize(PARAGRAPH)
+    return toks.index("1843")
 
+
+def test_extract_sequential_start_end():
+    pos = _year_pos()
     client = FakeClient(
-        FakeResponse({"extract": FakeChoiceAnswer(target.key, confidence=0.95)})
+        [
+            FakeResponse({"start": FakeChoiceAnswer(str(pos), confidence=0.95)}),
+            FakeResponse({"end": FakeChoiceAnswer(str(pos), confidence=0.9)}),
+        ]
     )
     ex = Extractor(client=client)
     result = ex.extract(paragraph=PARAGRAPH, question="When were the notes published?")
 
-    assert result.answer == target.text
-    assert result.start == target.start
-    assert result.end == target.end
-    assert result.confidence == pytest.approx(0.95)
+    assert result.start.pos == pos
+    assert result.start.word == "1843"
+    assert result.end.pos == pos
+    assert result.end.word == "1843"
+    assert result.answer == "1843"
+    assert result.tokens[result.start.pos] == "1843"
+    assert PARAGRAPH[result.char_start : result.char_end] == "1843"
+    assert result.confidence == pytest.approx(0.95 * 0.9)
     assert result.model == "jev-latest"
-    assert len(client.calls) == 1
-    q = client.calls[0]["questions"]["extract"]
-    assert q.type == "choice"
-    assert target.key in q.criteria
-    assert client.calls[0]["state"]["paragraph"] == PARAGRAPH
+    assert len(client.calls) == 2
+    assert "start" in client.calls[0]["questions"]
+    assert "end" in client.calls[1]["questions"]
+    # End criteria only includes pos >= start
+    end_crit = client.calls[1]["questions"]["end"].criteria
+    assert str(pos) in end_crit
+    assert all(int(k) >= pos for k in end_crit)
 
 
-def test_extract_unknown_key_raises():
-    client = FakeClient(FakeResponse({"extract": FakeChoiceAnswer("nope")}))
+def test_extract_multi_token_span():
+    toks = tokenize(PARAGRAPH)
+    # "Analytical Engine" — find Engine and the token before if Analytical
+    start = toks.index("Analytical")
+    end = toks.index("Engine")
+    client = FakeClient(
+        [
+            FakeResponse({"start": FakeChoiceAnswer(str(start))}),
+            FakeResponse({"end": FakeChoiceAnswer(str(end))}),
+        ]
+    )
     ex = Extractor(client=client)
-    with pytest.raises(ExtractionError, match="unknown span key"):
+    result = ex.extract(paragraph=PARAGRAPH, question="What engine?")
+    assert result.start.pos == start
+    assert result.end.pos == end
+    assert "Analytical" in (result.answer or "")
+    assert "Engine" in (result.answer or "")
+
+
+def test_extract_unknown_pos_raises():
+    client = FakeClient(
+        [FakeResponse({"start": FakeChoiceAnswer("999")})]
+    )
+    ex = Extractor(client=client)
+    with pytest.raises(ExtractionError, match="outside allowed range"):
         ex.extract(paragraph=PARAGRAPH, question="What?")
 
 
-def test_extract_no_candidates():
-    client = FakeClient(FakeResponse({"extract": FakeChoiceAnswer("s0")}))
+def test_extract_end_before_window_raises():
+    pos = _year_pos()
+    # Start OK, end returns a pos < start (not in criteria normally, but fake it)
+    client = FakeClient(
+        [
+            FakeResponse({"start": FakeChoiceAnswer(str(pos))}),
+            FakeResponse({"end": FakeChoiceAnswer("0")}),
+        ]
+    )
+    ex = Extractor(client=client)
+    with pytest.raises(ExtractionError, match="outside allowed range"):
+        ex.extract(paragraph=PARAGRAPH, question="When?")
+
+
+def test_extract_no_tokens():
+    client = FakeClient([])
     ex = Extractor(client=client)
     with pytest.raises(NoCandidatesError):
         ex.extract(paragraph="   ", question="Anything?")
@@ -135,24 +196,28 @@ def test_missing_api_key(monkeypatch: pytest.MonkeyPatch):
 
 
 def test_extract_fields_mixed_modes():
-    spans = propose_candidates(PARAGRAPH)
-    target = spans[0]
-
+    pos = _year_pos()
+    # span field needs start+end; then one call for non-span fields
     client = FakeClient(
-        FakeResponse(
-            {
-                "who": FakeChoiceAnswer(target.key),
-                "is_history": FakeNoulAnswer(0.91),
-                "topic": FakeChoiceAnswer("math", confidence=0.8, probabilities={"math": 0.8, "other": 0.2}),
-                "detail": FakeScoreAnswer(1.7, confidence=0.6),
-            }
-        )
+        [
+            FakeResponse({"start": FakeChoiceAnswer(str(pos))}),
+            FakeResponse({"end": FakeChoiceAnswer(str(pos))}),
+            FakeResponse(
+                {
+                    "is_history": FakeNoulAnswer(0.91),
+                    "topic": FakeChoiceAnswer(
+                        "math", confidence=0.8, probabilities={"math": 0.8, "other": 0.2}
+                    ),
+                    "detail": FakeScoreAnswer(1.7, confidence=0.6),
+                }
+            ),
+        ]
     )
     ex = Extractor(client=client)
     results = ex.extract_fields(
         paragraph=PARAGRAPH,
         fields={
-            "who": {"mode": "span", "question": "Who is discussed?"},
+            "when": {"mode": "span", "question": "When published?"},
             "is_history": {"mode": "noul", "question": "Is this historical?"},
             "topic": {
                 "mode": "choice",
@@ -167,9 +232,10 @@ def test_extract_fields_mixed_modes():
         },
     )
 
-    assert results["who"].mode == "span"
-    assert results["who"].value == target.text
-    assert results["who"].start == target.start
+    assert results["when"].mode == "span"
+    assert results["when"].value == "1843"
+    assert results["when"].start is not None
+    assert getattr(results["when"].start, "pos") == pos
     assert results["is_history"].mode == "noul"
     assert results["is_history"].value == pytest.approx(0.91)
     assert results["topic"].value == "math"
@@ -178,7 +244,7 @@ def test_extract_fields_mixed_modes():
 
 
 def test_extract_fields_choice_requires_criteria():
-    client = FakeClient(FakeResponse({}))
+    client = FakeClient([])
     ex = Extractor(client=client)
     with pytest.raises(ExtractionError, match="criteria dict"):
         ex.extract_fields(
@@ -188,19 +254,103 @@ def test_extract_fields_choice_requires_criteria():
 
 
 def test_extract_fields_string_shorthand():
-    spans = propose_candidates(PARAGRAPH)
-    target = spans[0]
-    client = FakeClient(FakeResponse({"q": FakeChoiceAnswer(target.key)}))
+    pos = tokenize(PARAGRAPH).index("Ada")
+    client = FakeClient(
+        [
+            FakeResponse({"start": FakeChoiceAnswer(str(pos))}),
+            FakeResponse({"end": FakeChoiceAnswer(str(pos))}),
+        ]
+    )
     ex = Extractor(client=client)
     results = ex.extract_fields(paragraph=PARAGRAPH, fields={"q": "Who?"})
-    assert results["q"].value == target.text
+    assert results["q"].value == "Ada"
 
 
 def test_include_raw():
-    spans = propose_candidates(PARAGRAPH)
-    target = spans[0]
-    resp = FakeResponse({"extract": FakeChoiceAnswer(target.key)})
-    client = FakeClient(resp)
+    pos = _year_pos()
+    r0 = FakeResponse({"start": FakeChoiceAnswer(str(pos))})
+    r1 = FakeResponse({"end": FakeChoiceAnswer(str(pos))})
+    client = FakeClient([r0, r1])
     ex = Extractor(client=client)
-    result = ex.extract(paragraph=PARAGRAPH, question="Who?", include_raw=True)
-    assert result.raw is resp
+    result = ex.extract(paragraph=PARAGRAPH, question="When?", include_raw=True)
+    assert isinstance(result.raw, dict)
+    assert result.raw["start"] is r0
+    assert result.raw["end"] is r1
+
+
+def test_start_criteria_format():
+    pos = _year_pos()
+    client = FakeClient(
+        [
+            FakeResponse({"start": FakeChoiceAnswer(str(pos))}),
+            FakeResponse({"end": FakeChoiceAnswer(str(pos))}),
+        ]
+    )
+    ex = Extractor(client=client)
+    ex.extract(paragraph=PARAGRAPH, question="When?")
+    criteria = client.calls[0]["questions"]["start"].criteria
+    desc = criteria[str(pos)]
+    assert "«1843»" in desc
+    assert "notes" in desc or "in" in desc
+    # End instructions mention chosen start
+    end_instr = client.calls[1]["questions"]["end"].instructions
+    assert f"start was {pos}:1843" in end_instr
+
+
+def test_extract_chunk_whole_sentence():
+    # Pick s1 ("She published notes in 1843.")
+    spans_text = PARAGRAPH
+    client = FakeClient(
+        [FakeResponse({"chunk": FakeChoiceAnswer("s1", confidence=0.88)})]
+    )
+    ex = Extractor(client=client)
+    result = ex.extract_chunk(paragraph=PARAGRAPH, question="When published?")
+    assert "1843" in (result.answer or "")
+    assert result.start.pos < result.end.pos or result.start.pos == result.end.pos
+    # Whole sentence should include trailing period token
+    assert result.answer.endswith(".") or "1843" in result.tokens[result.start.pos : result.end.pos + 1]
+    assert len(client.calls) == 1
+    assert "chunk" in client.calls[0]["questions"]
+
+
+def test_extract_cascade_refines_inside_chunk():
+    pos = _year_pos()
+    client = FakeClient(
+        [
+            FakeResponse({"chunk": FakeChoiceAnswer("s1", confidence=0.9)}),
+            FakeResponse({"start": FakeChoiceAnswer(str(pos), confidence=0.95)}),
+            FakeResponse({"end": FakeChoiceAnswer(str(pos), confidence=0.9)}),
+        ]
+    )
+    ex = Extractor(client=client)
+    result = ex.extract_cascade(paragraph=PARAGRAPH, question="When were the notes published?")
+    assert result.answer == "1843"
+    assert result.start.pos == pos
+    assert result.end.pos == pos
+    assert len(client.calls) == 3
+    # Start/end criteria restricted to chunk token range
+    start_crit = client.calls[1]["questions"]["start"].criteria
+    assert str(pos) in start_crit
+    # Positions outside the middle sentence should not appear
+    toks = tokenize(PARAGRAPH)
+    # first sentence tokens include Ada — should be absent from start criteria
+    ada = toks.index("Ada")
+    assert str(ada) not in start_crit
+
+
+def test_extract_cascade_single_chunk_skips_choice():
+    # One sentence → no chunk Choice call
+    para = "She published notes in 1843."
+    toks = tokenize(para)
+    pos = toks.index("1843")
+    client = FakeClient(
+        [
+            FakeResponse({"start": FakeChoiceAnswer(str(pos))}),
+            FakeResponse({"end": FakeChoiceAnswer(str(pos))}),
+        ]
+    )
+    ex = Extractor(client=client)
+    result = ex.extract_cascade(paragraph=para, question="When?")
+    assert result.answer == "1843"
+    assert len(client.calls) == 2  # start + end only
+    assert "start" in client.calls[0]["questions"]

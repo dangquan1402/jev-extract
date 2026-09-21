@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "jev-extract"
-version = "0.1.0"
-description = "Paragraph information extraction using TypeSafe AI Jev — convert extractive QA into closed-set Choice over candidate spans."
+version = "0.2.0"
+description = "Paragraph information extraction using TypeSafe AI Jev — convert extractive QA into token-native start/end Choice over tokenizer-v1 tokens."
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.10"
@@ -35,6 +35,10 @@ dev = [
   "pytest",
   "ruff",
 ]
+bench = [
+  "google-genai>=1.0.0",
+  "anthropic>=0.40.0",
+]
 
 [project.urls]
 Homepage = "https://github.com/dangquan1402/jev-extract"
@@ -49,6 +53,7 @@ include = [
   "/src",
   "/tests",
   "/examples",
+  "/benchmarks",
   "/README.md",
   "/LICENSE",
 ]

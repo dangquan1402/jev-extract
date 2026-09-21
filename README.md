@@ -1,19 +1,67 @@
-# jev-extract
+# jev-extract — Jev comparison benchmark + extractive IE library
 
-**Paragraph information extraction** using [TypeSafe AI](https://typesafe.ai) **Jev** (System One).
+**Comparison framework** for [TypeSafe AI](https://typesafe.ai) **Jev** (System One) against future LLM backends (Gemini / Haiku stubs — not required today).
 
-Convert extractive QA into a **closed-set Jev Choice** over candidate sentence spans: the model picks which span answers the question — it does **not** freely generate answer text.
+This repo ships:
 
-> Honest scope: this library is **extractive-only**. Answers are always substrings (or merged chunks) of the input paragraph. It is not a generative IE / OpenIE toolkit, and it is **not** a drop-in replacement for [Instructor](https://python.useinstructor.com/) (which structures LLM JSON outputs). Jev Choice gives you calibrated probabilities over a finite candidate set.
+1. **`jev_extract`** — paragraph **information extraction** library: convert extractive QA into sequential Jev **Choice** over **token** start/end positions.
+2. **`benchmarks/`** — side-by-side **classification** and **extraction** benches measuring **accuracy, latency, tokens, and estimated USD**.
+
+> TypeSafe-only today. Gemini/Haiku backends are registered stubs (`not configured yet`) so the harness is ready without those API keys.
 
 Blog / product context: [Introducing System One models and Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev).
+
+## What we measure
+
+| Metric | Classification | Extraction |
+|--------|----------------|------------|
+| Quality | `accuracy` | `token_em`, `token_f1`, `token_iou` (primary); optional `exact_match`, `contains_gold` |
+| Speed | `latency_ms` (p50 / p95 / mean) | same |
+| Cost | `input_tokens`, `output_tokens`, `estimated_usd` | same |
+
+**TypeSafe Jev public pricing** (documented + used in cost estimates): **$0.042 / million input tokens**, **output free**.
+
+## Protocols
+
+### Classification (50 samples)
+
+Support-ticket / short-paragraph multi-class labeling (`billing`, `technical`, `account`, `shipping`, `other`) via Jev **Choice** with a shared criteria schema.
+
+```bash
+python benchmarks/run_bench.py classification --backend typesafe --limit 50
+```
+
+### Information extraction (50 samples)
+
+Extractive QA → `jev_extract.Extractor` (**token-native** sequential start/end Choice). Gold spans are inclusive token positions `{pos, word}` with derived char offsets.
+
+```bash
+python benchmarks/run_bench.py extraction --backend typesafe --limit 50
+```
+
+### Both
+
+```bash
+python benchmarks/run_bench.py all --backend typesafe
+```
+
+Dry-run (validate data only, no API spend):
+
+```bash
+python benchmarks/run_bench.py all --backend typesafe --dry-run
+```
+
+## Fairness
+
+**Jev extraction is token-native.** The extractor tokenizes the paragraph (whitespace + punctuation split), then runs two Choice calls: **start** token, then **end** token (`pos >= start`). Criteria keys are positions (`"4"`); descriptions are **local context windows** with the candidate marked `«word»` (default radius 4) so duplicate words stay distinguishable. End instructions mention `start was pos:word`. Primary bench metric is token-span exact match.
+
+Sentence-candidate Choice remains available via `Extractor.extract_sentence` for coarse mode. See [benchmarks/README.md](benchmarks/README.md).
 
 ## Install
 
 ```bash
-pip install jev-extract
-# or from source
-pip install -e ".[dev]"
+python -m venv .venv && source .venv/bin/activate
+pip install -e ".[bench]"   # or pip install -e ".[dev]" for pytest/ruff
 ```
 
 Requires Python **≥ 3.10**.
@@ -24,107 +72,66 @@ Requires Python **≥ 3.10**.
 export TYPESAFE_API_KEY=tsk_...
 ```
 
-Optional: `TYPESAFE_DEFAULT_MODEL` (SDK default is `jev-latest`).
+Optional: `TYPESAFE_DEFAULT_MODEL` (bench pins **`jev-latest`**).  
+Optional: `JEV_EXTRACT_SECRETS_JSON` path to a JSON file with `{"card":{"TYPESAFE_API_KEY":"..."}}` when the env var is unset (never prints the value).
 
-## Quickstart
+## Library quickstart
 
 ```python
 from jev_extract import Extractor
 
-ex = Extractor()  # reads TYPESAFE_API_KEY; model="jev-latest" by default
+ex = Extractor()  # reads TYPESAFE_API_KEY; model="jev-latest"
 
 paragraph = (
     "Ada Lovelace worked on Babbage's Analytical Engine. "
     "She published notes in 1843. Those notes include an early algorithm."
 )
-result = ex.extract(
-    paragraph=paragraph,
-    question="When were the notes published?",
-)
-print(result.answer)       # e.g. "She published notes in 1843."
-print(result.start, result.end)
-print(result.confidence)   # float in [0, 1] when returned by the API
+result = ex.extract(paragraph=paragraph, question="When were the notes published?")
+print(result.answer, result.start, result.end, result.char_start, result.char_end, result.confidence)
+# result.start / result.end are TokenRef(pos=..., word=...)
 ```
 
-### Multiple fields
+### Extraction modes
 
-```python
-results = ex.extract_fields(
-    paragraph=paragraph,
-    fields={
-        "when": {"mode": "span", "question": "When were the notes published?"},
-        "about_computing": {
-            "mode": "noul",
-            "question": "Is this paragraph about early computing?",
-        },
-        "topic": {
-            "mode": "choice",
-            "question": "Primary topic?",
-            "criteria": {
-                "math": "Mathematics or algorithms",
-                "biology": "Biology or medicine",
-                "other": "Something else",
-            },
-        },
-        "specificity": {
-            "mode": "score",
-            "question": "How specific are the historical details?",
-            "criteria": ["vague", "moderate", "highly specific"],
-        },
-    },
-)
+`Extractor.extract(..., extract_mode=...)` and dedicated methods:
+
+| Mode | Method | Idea |
+|------|--------|------|
+| `sequential` | `extract` | Start Choice → end Choice (baseline) |
+| `joint` / `auto` | `extract` | Pair Choice / duplicate-aware end |
+| `span_choice` | `extract_span_choice` | One Choice over contiguous windows (len 1..K≤255) |
+| `anchor_expand` | `extract_anchor_expand` | Head token → left/right extent Choices |
+| `shape_gate` | `extract_shape_gate` | Shape Choice → shape-specific end prior |
+| `topk_noul` | `extract_topk_noul` | Top-k ends + batched Noul verify |
+| `ambiguous_joint` | `extract_ambiguous_joint` | Joint when start word duplicated / low margin |
+| `length_rerank` | `extract_length_rerank` | `argmax(prob × length_penalty)`; shape-aware |
+| — | `extract_chunk` / `extract_cascade` | Chunk-only / cascade baselines |
+
+Compare live:
+
+```bash
+python benchmarks/run_mode_compare.py --limit 20 --stratified \
+  --modes token_sequential span_choice length_rerank shape_gate topk_noul ambiguous_joint anchor_expand
 ```
 
-Field modes:
+See the package docstring / [benchmarks/README.md](benchmarks/README.md) for field modes (`span`, `noul`, `choice`, `score`) and harness details.
 
-| Mode | Needs | Value |
-|------|--------|--------|
-| `span` | question | Selected candidate text + `start`/`end` |
-| `noul` | question; optional `criteria` `{true, false}` | Probability of yes ∈ [0, 1] |
-| `choice` | question + `criteria` dict | Winning label |
-| `score` | question + `criteria` list of level strings | Expected score |
+## Results
 
-### Custom / mock client
-
-```python
-ex = Extractor(client=my_fake_client, model="jev-latest")
-```
-
-Useful for unit tests — no live API required.
-
-## How it works
-
-1. **Propose candidates** — split the paragraph into sentence-like spans (`propose_candidates`) with character offsets (`s0`, `s1`, …).
-2. **Respect Choice cardinality** — Jev Choice supports at most **255** criteria. If there are more spans, `limit_candidates` merges adjacent spans into roughly equal chunks until ≤ 255 (and emits a warning).
-3. **Ask System One** — call `TypeSafeClient.system_one` with `Choice(criteria={key: text}, …)` and structured state `{paragraph, question}`.
-4. **Map back** — the winning choice key is looked up to recover `answer`, `start`, and `end`.
-
-## Cardinality (255)
-
-Jev’s Choice primitive caps the number of alternatives. This package:
-
-- Documents the limit as `JEV_CHOICE_MAX_CRITERIA = 255`
-- Merges surplus adjacent sentences rather than silently dropping middle content
-
-Very long individual span texts are truncated when used as criteria descriptions (offsets still refer to the full span in the paragraph).
-
-## vs Instructor
-
-| | **jev-extract** | **Instructor** |
-|--|-----------------|----------------|
-| Backend | TypeSafe System One / Jev | OpenAI-compatible chat models |
-| Task | Closed-set span selection + Noul/Choice/Score | Schema-constrained generation |
-| Answer text | Must appear in the paragraph | Model may paraphrase / invent |
-| Calibration | Choice / score probabilities | Depends on the underlying LLM |
-
-Use **jev-extract** when you want extractive grounding and System One primitives. Use Instructor when you need free-form structured generation.
+Live runs write per-example JSON under `benchmarks/results/` and refresh `benchmarks/results/SUMMARY.md` with markdown tables.
 
 ## Development
 
 ```bash
 pip install -e ".[dev]"
 pytest -q
-ruff check src tests
+ruff check src tests benchmarks
+```
+
+Regenerate synthetic datasets:
+
+```bash
+python benchmarks/generate_datasets.py
 ```
 
 ## License

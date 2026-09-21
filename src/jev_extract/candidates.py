@@ -20,56 +20,131 @@ DEFAULT_CRITERIA_TEXT_MAX = 500
 
 JEV_CHOICE_MAX_CRITERIA = 255
 
+# Soft length (chars) above which a sentence is further split into clauses.
+DEFAULT_LONG_SENTENCE_CHARS = 180
 
-def propose_candidates(paragraph: str) -> list[Span]:
+# Clause separators: comma / semicolon / colon / em-dash / en-dash, with trailing space.
+_CLAUSE_SPLIT = re.compile(r"(?<=[,;:—–])\s+")
+
+
+def _trim_piece(paragraph: str, start: int, end: int) -> tuple[int, int, str] | None:
+    """Return trimmed (abs_start, abs_end, text) or None if empty."""
+    text = paragraph[start:end]
+    if not text.strip():
+        return None
+    stripped = text.strip()
+    lead = len(text) - len(text.lstrip())
+    abs_start = start + lead
+    abs_end = abs_start + len(stripped)
+    return abs_start, abs_end, stripped
+
+
+def _split_interval(paragraph: str, start: int, end: int, pattern: re.Pattern[str]) -> list[tuple[int, int, str]]:
+    """Split ``paragraph[start:end]`` on *pattern*; return trimmed pieces with absolute offsets."""
+    segment = paragraph[start:end]
+    pieces: list[tuple[int, int, str]] = []
+    last = 0
+    for match in pattern.finditer(segment):
+        piece = _trim_piece(paragraph, start + last, start + match.start())
+        if piece is not None:
+            pieces.append(piece)
+        last = match.end()
+    piece = _trim_piece(paragraph, start + last, end)
+    if piece is not None:
+        pieces.append(piece)
+    return pieces
+
+
+def _split_long_into_clauses(
+    paragraph: str,
+    start: int,
+    end: int,
+    text: str,
+    *,
+    long_chars: int,
+) -> list[tuple[int, int, str]]:
+    """If *text* is longer than *long_chars*, split on clause punctuation; else keep as-is."""
+    if len(text) <= long_chars:
+        return [(start, end, text)]
+    clauses = _split_interval(paragraph, start, end, _CLAUSE_SPLIT)
+    # If clause split did nothing useful, keep the sentence.
+    if len(clauses) <= 1:
+        return [(start, end, text)]
+    return clauses
+
+
+def propose_candidates(
+    paragraph: str,
+    *,
+    clause_fallback: bool = False,
+    long_sentence_chars: int = DEFAULT_LONG_SENTENCE_CHARS,
+) -> list[Span]:
     """Split *paragraph* into non-empty sentence-like spans with char offsets.
 
     Splits on ``.!?`` followed by whitespace, and on newlines. Empty / whitespace-only
     pieces are dropped. Keys are ``s0``, ``s1``, …
+
+    When ``clause_fallback`` is True, sentences longer than ``long_sentence_chars``
+    are further split on commas / semicolons / colons / dashes (clause boundaries).
     """
     if not paragraph:
         return []
 
-    spans: list[Span] = []
     # Find split points by iterating matches and carving intervals.
     last = 0
-    pieces: list[tuple[int, int, str]] = []
+    raw_pieces: list[tuple[int, int, str]] = []
 
     for match in _SENTENCE_SPLIT.finditer(paragraph):
         start, end = last, match.start()
-        # Include trailing punctuation already in [last, match.start()); whitespace is the separator.
-        text = paragraph[start:end]
-        if text.strip():
-            # Trim leading/trailing whitespace but keep offsets for the trimmed core.
-            stripped = text.strip()
-            lead = len(text) - len(text.lstrip())
-            abs_start = start + lead
-            abs_end = abs_start + len(stripped)
-            pieces.append((abs_start, abs_end, stripped))
+        piece = _trim_piece(paragraph, start, end)
+        if piece is not None:
+            raw_pieces.append(piece)
         last = match.end()
 
     # Tail after the last split.
     if last < len(paragraph):
-        text = paragraph[last:]
-        if text.strip():
-            stripped = text.strip()
-            lead = len(text) - len(text.lstrip())
-            abs_start = last + lead
-            abs_end = abs_start + len(stripped)
-            pieces.append((abs_start, abs_end, stripped))
+        piece = _trim_piece(paragraph, last, len(paragraph))
+        if piece is not None:
+            raw_pieces.append(piece)
 
     # No split matched — whole paragraph is one span (if non-empty).
-    if not pieces and paragraph.strip():
-        stripped = paragraph.strip()
-        lead = len(paragraph) - len(paragraph.lstrip())
-        abs_start = lead
-        abs_end = abs_start + len(stripped)
-        pieces.append((abs_start, abs_end, stripped))
+    if not raw_pieces and paragraph.strip():
+        piece = _trim_piece(paragraph, 0, len(paragraph))
+        if piece is not None:
+            raw_pieces.append(piece)
 
-    for i, (start, end, text) in enumerate(pieces):
-        spans.append(Span(text=text, start=start, end=end, key=f"s{i}"))
+    pieces: list[tuple[int, int, str]] = []
+    for start, end, txt in raw_pieces:
+        if clause_fallback:
+            pieces.extend(
+                _split_long_into_clauses(
+                    paragraph, start, end, txt, long_chars=long_sentence_chars
+                )
+            )
+        else:
+            pieces.append((start, end, txt))
+
+    spans: list[Span] = []
+    for i, (start, end, txt) in enumerate(pieces):
+        spans.append(Span(text=txt, start=start, end=end, key=f"s{i}"))
 
     return spans
+
+
+def propose_chunks(
+    paragraph: str,
+    *,
+    long_sentence_chars: int = DEFAULT_LONG_SENTENCE_CHARS,
+) -> list[Span]:
+    """Default chunker: sentence split with clause fallback for long sentences.
+
+    Prefer this for cascade / chunk-only extract paths.
+    """
+    return propose_candidates(
+        paragraph,
+        clause_fallback=True,
+        long_sentence_chars=long_sentence_chars,
+    )
 
 
 def limit_candidates(
