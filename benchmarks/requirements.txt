@@ -1,0 +1,5 @@
+# Optional deps for benchmarks/run_bench.py (core jev-extract stays lean).
+google-genai>=1.0.0
+anthropic>=0.40.0
+typesafe-sdk
+pydantic>=2
