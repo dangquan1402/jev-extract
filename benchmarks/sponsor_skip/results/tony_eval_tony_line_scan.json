@@ -1,0 +1,1281 @@
+{
+  "created_at": "20260921T053038Z",
+  "model": "jev-latest",
+  "modes": [
+    "tony_line_scan"
+  ],
+  "refine": false,
+  "videos": [
+    "QoC8R3KHk8E",
+    "O0gbfvJDsv4",
+    "6NxW3xSAqUg",
+    "JXQE_wjCQGE",
+    "8RTmvUZlSSk",
+    "j_OwK2OzO8E",
+    "2ehSCWoaOqQ",
+    "qgK38sg1ws4"
+  ],
+  "aggregates": {
+    "tony_line_scan": {
+      "n_videos": 8,
+      "iou": 0.5955277322710858,
+      "precision": 0.6599135063530145,
+      "recall": 0.6804220323624859,
+      "f1": 0.6576124896589732,
+      "mean_best_iou": 0.6241175492408476,
+      "content_fp_rate": 0.012866665037991118,
+      "video_level_recall": 0.75,
+      "total_input_tokens": 330218,
+      "total_estimated_usd": 0.013869156,
+      "latency_p50_ms_across_videos": 229.96307724679355,
+      "latency_total_p50_ms": 2149.3388045055326,
+      "latency_total_mean_ms": 1988.3660472478368
+    }
+  },
+  "by_mode": {
+    "tony_line_scan": [
+      {
+        "video_id": "QoC8R3KHk8E",
+        "mode": "tony_line_scan",
+        "gold": [
+          {
+            "start": 56.278,
+            "end": 75.716,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 177.588,
+            "end": 196.82,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 404.026,
+            "end": 414.59,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 447.259,
+            "end": 471.67,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 983.31,
+            "end": 1038.544,
+            "category": "sponsor",
+            "uuid": null
+          }
+        ],
+        "pred_segments": [
+          {
+            "start": 54.69,
+            "end": 78.05,
+            "category": "sponsor"
+          },
+          {
+            "start": 983.42,
+            "end": 1038.72,
+            "category": "sponsor"
+          }
+        ],
+        "metrics": {
+          "n_pred": 2,
+          "n_gold": 5,
+          "overlap_sec": 74.56200000000013,
+          "pred_dur_sec": 78.66000000000007,
+          "gold_dur_sec": 128.8790000000001,
+          "iou": 0.5607135068470496,
+          "precision": 0.9479023646071709,
+          "recall": 0.5785426640492249,
+          "f1": 0.7185348295982931,
+          "mean_best_iou": 0.9134723205964013,
+          "video_recall_hit": true,
+          "video_has_gold": true,
+          "video_detected": true,
+          "fp_sec": 4.097999999999942,
+          "content_fp_rate": 0.004393723986645076,
+          "latency_ms_total": 2096.2249120348133,
+          "latency_ms_p50_calls": 211.47733798716217,
+          "n_api_calls": 9,
+          "input_tokens": 48275,
+          "estimated_usd": 0.00202755
+        },
+        "examples": {
+          "hits": [],
+          "misses": []
+        },
+        "raw": {
+          "n_chunks": 66,
+          "n_sentences": 223,
+          "refined": false,
+          "chunk_labels": null,
+          "traces": [
+            {
+              "window": 0,
+              "anchor": {
+                "line_id": "L012",
+                "seconds": 58.86,
+                "text": "Build Redux. Build Redux takes the challenge and hassle out of building",
+                "probability": 0.98
+              },
+              "start": {
+                "line_id": "L011",
+                "seconds": 54.69,
+                "text": "- Thankfully, we have the solution, just like we have this segway to our sponsor.",
+                "probability": 0.98
+              },
+              "end": {
+                "line_id": "L015",
+                "seconds": 78.05,
+                "text": "and start your new build today. (electronic swooshing) (tinker tapping)",
+                "probability": 0.91,
+                "runs_past_excerpt": 0.0,
+                "end_ok": true
+              },
+              "confidence": 0.99
+            },
+            {
+              "window": 2,
+              "anchor": {
+                "line_id": "L202",
+                "seconds": 983.42,
+                "text": "- Oh, all right, cool. Just like I left this segway, to our sponsor. Squarespace.",
+                "probability": 0.92
+              },
+              "start": {
+                "line_id": "L202",
+                "seconds": 983.42,
+                "text": "- Oh, all right, cool. Just like I left this segway, to our sponsor. Squarespace.",
+                "probability": 0.47000000000000003
+              },
+              "end": {
+                "line_id": "L213",
+                "seconds": 1038.72,
+                "text": "So, don't wait. Get started today and head to squarespace.com/LTT to get 10% off your first purchase.",
+                "probability": 0.98,
+                "runs_past_excerpt": 0.0,
+                "end_ok": true
+              },
+              "confidence": 0.99
+            }
+          ],
+          "pattern_counts": null,
+          "cue_hits": null,
+          "proposed_windows": null,
+          "dropped_segments": null,
+          "n_candidate_chunks": null,
+          "tony_status": "found",
+          "tony_traces": [
+            {
+              "window": 0,
+              "anchor": {
+                "line_id": "L012",
+                "seconds": 58.86,
+                "text": "Build Redux. Build Redux takes the challenge and hassle out of building",
+                "probability": 0.98
+              },
+              "start": {
+                "line_id": "L011",
+                "seconds": 54.69,
+                "text": "- Thankfully, we have the solution, just like we have this segway to our sponsor.",
+                "probability": 0.98
+              },
+              "end": {
+                "line_id": "L015",
+                "seconds": 78.05,
+                "text": "and start your new build today. (electronic swooshing) (tinker tapping)",
+                "probability": 0.91,
+                "runs_past_excerpt": 0.0,
+                "end_ok": true
+              },
+              "confidence": 0.99
+            },
+            {
+              "window": 2,
+              "anchor": {
+                "line_id": "L202",
+                "seconds": 983.42,
+                "text": "- Oh, all right, cool. Just like I left this segway, to our sponsor. Squarespace.",
+                "probability": 0.92
+              },
+              "start": {
+                "line_id": "L202",
+                "seconds": 983.42,
+                "text": "- Oh, all right, cool. Just like I left this segway, to our sponsor. Squarespace.",
+                "probability": 0.47000000000000003
+              },
+              "end": {
+                "line_id": "L213",
+                "seconds": 1038.72,
+                "text": "So, don't wait. Get started today and head to squarespace.com/LTT to get 10% off your first purchase.",
+                "probability": 0.98,
+                "runs_past_excerpt": 0.0,
+                "end_ok": true
+              },
+              "confidence": 0.99
+            }
+          ],
+          "n_lines": 219,
+          "windows_scanned": 3
+        }
+      },
+      {
+        "video_id": "O0gbfvJDsv4",
+        "mode": "tony_line_scan",
+        "gold": [
+          {
+            "start": 33.112,
+            "end": 52.981,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 162.367,
+            "end": 164.56,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 529.236,
+            "end": 584.616,
+            "category": "sponsor",
+            "uuid": null
+          }
+        ],
+        "pred_segments": [
+          {
+            "start": 33.91,
+            "end": 52.98,
+            "category": "sponsor"
+          },
+          {
+            "start": 524.88,
+            "end": 584.68,
+            "category": "sponsor"
+          }
+        ],
+        "metrics": {
+          "n_pred": 2,
+          "n_gold": 3,
+          "overlap_sec": 74.44999999999999,
+          "pred_dur_sec": 78.86999999999995,
+          "gold_dur_sec": 77.44200000000001,
+          "iou": 0.9094573794923165,
+          "precision": 0.9439584125776599,
+          "recall": 0.9613646341778361,
+          "f1": 0.9525820154562671,
+          "mean_best_iou": 0.9429367793832213,
+          "video_recall_hit": true,
+          "video_has_gold": true,
+          "video_detected": true,
+          "fp_sec": 4.419999999999959,
+          "content_fp_rate": 0.008466119242033245,
+          "latency_ms_total": 2202.452696976252,
+          "latency_ms_p50_calls": 253.98155802395195,
+          "n_api_calls": 9,
+          "input_tokens": 44980,
+          "estimated_usd": 0.0018891600000000002
+        },
+        "examples": {
+          "hits": [],
+          "misses": []
+        },
+        "raw": {
+          "n_chunks": 37,
+          "n_sentences": 85,
+          "refined": false,
+          "chunk_labels": null,
+          "traces": [
+            {
+              "window": 0,
+              "anchor": {
+                "line_id": "L007",
+                "seconds": 37.47,
+                "text": "- Lambda created with Razer, their new Tensorbook comes with an RTX 3080",
+                "probability": 0.9400000000000001
+              },
+              "start": {
+                "line_id": "L006",
+                "seconds": 33.91,
+                "text": "I'll tell you, but first I'm gonna drop this message from our sponsor.",
+                "probability": 1.0
+              },
+              "end": {
+                "line_id": "L009",
+                "seconds": 52.98,
+                "text": "can develop AI models anytime, anywhere. Learn more at the link down below.",
+                "probability": 0.99,
+                "runs_past_excerpt": 0.0,
+                "end_ok": true
+              },
+              "confidence": 0.98
+            },
+            {
+              "window": 1,
+              "anchor": {
+                "line_id": "L095",
+                "seconds": 531.19,
+                "text": "- Zoho CRM! Zoho CRM is a 360-degree solution for managing your business sales, marketing,",
+                "probability": 0.95
+              },
+              "start": {
+                "line_id": "L094",
+                "seconds": 524.88,
+                "text": "then for you, the 5800X3D has few downsides. And neither does our sponsor.",
+                "probability": 0.9400000000000001
+              },
+              "end": {
+                "line_id": "L104",
+                "seconds": 584.68,
+                "text": "Get 50% off your annual subscription when you use the code: ZCRM50 using the link in the video description.",
+                "probability": 0.99,
+                "runs_past_excerpt": 0.0,
+                "end_ok": true
+              },
+              "confidence": 0.98
+            }
+          ],
+          "pattern_counts": null,
+          "cue_hits": null,
+          "proposed_windows": null,
+          "dropped_segments": null,
+          "n_candidate_chunks": null,
+          "tony_status": "found",
+          "tony_traces": [
+            {
+              "window": 0,
+              "anchor": {
+                "line_id": "L007",
+                "seconds": 37.47,
+                "text": "- Lambda created with Razer, their new Tensorbook comes with an RTX 3080",
+                "probability": 0.9400000000000001
+              },
+              "start": {
+                "line_id": "L006",
+                "seconds": 33.91,
+                "text": "I'll tell you, but first I'm gonna drop this message from our sponsor.",
+                "probability": 1.0
+              },
+              "end": {
+                "line_id": "L009",
+                "seconds": 52.98,
+                "text": "can develop AI models anytime, anywhere. Learn more at the link down below.",
+                "probability": 0.99,
+                "runs_past_excerpt": 0.0,
+                "end_ok": true
+              },
+              "confidence": 0.98
+            },
+            {
+              "window": 1,
+              "anchor": {
+                "line_id": "L095",
+                "seconds": 531.19,
+                "text": "- Zoho CRM! Zoho CRM is a 360-degree solution for managing your business sales, marketing,",
+                "probability": 0.95
+              },
+              "start": {
+                "line_id": "L094",
+                "seconds": 524.88,
+                "text": "then for you, the 5800X3D has few downsides. And neither does our sponsor.",
+                "probability": 0.9400000000000001
+              },
+              "end": {
+                "line_id": "L104",
+                "seconds": 584.68,
+                "text": "Get 50% off your annual subscription when you use the code: ZCRM50 using the link in the video description.",
+                "probability": 0.99,
+                "runs_past_excerpt": 0.0,
+                "end_ok": true
+              },
+              "confidence": 0.98
+            }
+          ],
+          "n_lines": 106,
+          "windows_scanned": 2
+        }
+      },
+      {
+        "video_id": "6NxW3xSAqUg",
+        "mode": "tony_line_scan",
+        "gold": [
+          {
+            "start": 14.287,
+            "end": 18.709,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 126.841,
+            "end": 217.361,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 1310.768,
+            "end": 1317.326,
+            "category": "sponsor",
+            "uuid": null
+          }
+        ],
+        "pred_segments": [
+          {
+            "start": 10.52,
+            "end": 67.88,
+            "category": "sponsor"
+          },
+          {
+            "start": 126.32,
+            "end": 223.52,
+            "category": "sponsor"
+          },
+          {
+            "start": 1308.68,
+            "end": 1321.96,
+            "category": "sponsor"
+          }
+        ],
+        "metrics": {
+          "n_pred": 3,
+          "n_gold": 3,
+          "overlap_sec": 101.49999999999999,
+          "pred_dur_sec": 167.83999999999997,
+          "gold_dur_sec": 101.49999999999999,
+          "iou": 0.6047426120114394,
+          "precision": 0.6047426120114394,
+          "recall": 1.0,
+          "f1": 0.7536942154897156,
+          "mean_best_iou": 0.5007310238595445,
+          "video_recall_hit": true,
+          "video_has_gold": true,
+          "video_detected": true,
+          "fp_sec": 66.33999999999999,
+          "content_fp_rate": 0.05435655408616422,
+          "latency_ms_total": 3045.636155002285,
+          "latency_ms_p50_calls": 217.39428502041847,
+          "n_api_calls": 14,
+          "input_tokens": 58506,
+          "estimated_usd": 0.002457252
+        },
+        "examples": {
+          "hits": [],
+          "misses": []
+        },
+        "raw": {
+          "n_chunks": 95,
+          "n_sentences": 134,
+          "refined": false,
+          "chunk_labels": null,
+          "traces": [
+            {
+              "window": 0,
+              "anchor": {
+                "line_id": "L005",
+                "seconds": 14.96,
+                "text": "this video is sponsored by Watcher of Realms but I'll talk about that in a",
+                "probability": 0.98
+              },
+              "start": {
+                "line_id": "L004",
+                "seconds": 10.52,
+                "text": "have some fun win some tickets get some prizes yeah get in there oh and also",
+                "probability": 0.74
+              },
+              "end": {
+                "line_id": "L017",
+                "seconds": 67.88,
+                "text": "this my room my God this is really nice I mean look at this under the bed",
+                "probability": null,
+                "runs_past_excerpt": 0.95,
+                "end_ok": false
+              },
+              "confidence": 0.97
+            },
+            {
+              "window": 0,
+              "anchor": {
+                "line_id": "L033",
+                "seconds": 130.4,
+                "text": "your watch no it's Watcher of Realms let me ask you something do you like fantasy",
+                "probability": 0.9
+              },
+              "start": {
+                "line_id": "L032",
+                "seconds": 126.32,
+                "text": "promising all right let's follow it and oh what's that is that my watch is that",
+                "probability": 0.64
+              },
+              "end": {
+                "line_id": "L054",
+                "seconds": 223.52,
+                "text": "sponsoring okay let's head on downstairs and get the day started surely nothing's",
+                "probability": 0.68,
+                "runs_past_excerpt": 0.0,
+                "end_ok": true
+              },
+              "confidence": 0.99
+            },
+            {
+              "window": 4,
+              "anchor": {
+                "line_id": "L330",
+                "seconds": 1308.68,
+                "text": "arcade experience with a little bit of cow I want to thank Watcher of Realms",
+                "probability": 0.94
+              },
+              "start": {
+                "line_id": "L330",
+                "seconds": 1308.68,
+                "text": "arcade experience with a little bit of cow I want to thank Watcher of Realms",
+                "probability": 0.61
+              },
+              "end": {
+                "line_id": "L332",
+                "seconds": 1321.96,
+                "text": "for yourself there's a linky down in the description so hope you had fun I know",
+                "probability": 0.88,
+                "runs_past_excerpt": 0.0,
+                "end_ok": true
+              },
+              "confidence": 0.9
+            }
+          ],
+          "pattern_counts": null,
+          "cue_hits": null,
+          "proposed_windows": null,
+          "dropped_segments": null,
+          "n_candidate_chunks": null,
+          "tony_status": "found",
+          "tony_traces": [
+            {
+              "window": 0,
+              "anchor": {
+                "line_id": "L005",
+                "seconds": 14.96,
+                "text": "this video is sponsored by Watcher of Realms but I'll talk about that in a",
+                "probability": 0.98
+              },
+              "start": {
+                "line_id": "L004",
+                "seconds": 10.52,
+                "text": "have some fun win some tickets get some prizes yeah get in there oh and also",
+                "probability": 0.74
+              },
+              "end": {
+                "line_id": "L017",
+                "seconds": 67.88,
+                "text": "this my room my God this is really nice I mean look at this under the bed",
+                "probability": null,
+                "runs_past_excerpt": 0.95,
+                "end_ok": false
+              },
+              "confidence": 0.97
+            },
+            {
+              "window": 0,
+              "anchor": {
+                "line_id": "L033",
+                "seconds": 130.4,
+                "text": "your watch no it's Watcher of Realms let me ask you something do you like fantasy",
+                "probability": 0.9
+              },
+              "start": {
+                "line_id": "L032",
+                "seconds": 126.32,
+                "text": "promising all right let's follow it and oh what's that is that my watch is that",
+                "probability": 0.64
+              },
+              "end": {
+                "line_id": "L054",
+                "seconds": 223.52,
+                "text": "sponsoring okay let's head on downstairs and get the day started surely nothing's",
+                "probability": 0.68,
+                "runs_past_excerpt": 0.0,
+                "end_ok": true
+              },
+              "confidence": 0.99
+            },
+            {
+              "window": 4,
+              "anchor": {
+                "line_id": "L330",
+                "seconds": 1308.68,
+                "text": "arcade experience with a little bit of cow I want to thank Watcher of Realms",
+                "probability": 0.94
+              },
+              "start": {
+                "line_id": "L330",
+                "seconds": 1308.68,
+                "text": "arcade experience with a little bit of cow I want to thank Watcher of Realms",
+                "probability": 0.61
+              },
+              "end": {
+                "line_id": "L332",
+                "seconds": 1321.96,
+                "text": "for yourself there's a linky down in the description so hope you had fun I know",
+                "probability": 0.88,
+                "runs_past_excerpt": 0.0,
+                "end_ok": true
+              },
+              "confidence": 0.9
+            }
+          ],
+          "n_lines": 333,
+          "windows_scanned": 5
+        }
+      },
+      {
+        "video_id": "JXQE_wjCQGE",
+        "mode": "tony_line_scan",
+        "gold": [
+          {
+            "start": 102.379,
+            "end": 123.943,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 206.322,
+            "end": 232.554,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 310.34,
+            "end": 339.648,
+            "category": "sponsor",
+            "uuid": null
+          }
+        ],
+        "pred_segments": [],
+        "metrics": {
+          "n_pred": 0,
+          "n_gold": 3,
+          "overlap_sec": 0,
+          "pred_dur_sec": 0,
+          "gold_dur_sec": 77.10400000000004,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "mean_best_iou": 0.0,
+          "video_recall_hit": false,
+          "video_has_gold": true,
+          "video_detected": false,
+          "fp_sec": 0.0,
+          "content_fp_rate": 0.0,
+          "latency_ms_total": 484.577106020879,
+          "latency_ms_p50_calls": 241.5148224972654,
+          "n_api_calls": 2,
+          "input_tokens": 9811,
+          "estimated_usd": 0.00041206200000000004
+        },
+        "examples": {
+          "hits": [],
+          "misses": []
+        },
+        "raw": {
+          "n_chunks": 22,
+          "n_sentences": 15,
+          "refined": false,
+          "chunk_labels": null,
+          "traces": [],
+          "pattern_counts": null,
+          "cue_hits": null,
+          "proposed_windows": null,
+          "dropped_segments": null,
+          "n_candidate_chunks": null,
+          "tony_status": "not-found",
+          "tony_traces": [],
+          "n_lines": 46,
+          "windows_scanned": 1
+        }
+      },
+      {
+        "video_id": "8RTmvUZlSSk",
+        "mode": "tony_line_scan",
+        "gold": [
+          {
+            "start": 375.511,
+            "end": 456.042,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 700.86,
+            "end": 714.37,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 799.696,
+            "end": 817.117,
+            "category": "sponsor",
+            "uuid": null
+          }
+        ],
+        "pred_segments": [
+          {
+            "start": 541.2,
+            "end": 552.48,
+            "category": "sponsor"
+          }
+        ],
+        "metrics": {
+          "n_pred": 1,
+          "n_gold": 3,
+          "overlap_sec": 0.0,
+          "pred_dur_sec": 11.279999999999973,
+          "gold_dur_sec": 111.46199999999988,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "mean_best_iou": 0.0,
+          "video_recall_hit": false,
+          "video_has_gold": true,
+          "video_detected": true,
+          "fp_sec": 11.279999999999973,
+          "content_fp_rate": 0.01922952345558623,
+          "latency_ms_total": 1409.8048189771362,
+          "latency_ms_p50_calls": 227.4394744890742,
+          "n_api_calls": 6,
+          "input_tokens": 28749,
+          "estimated_usd": 0.001207458
+        },
+        "examples": {
+          "hits": [],
+          "misses": []
+        },
+        "raw": {
+          "n_chunks": 50,
+          "n_sentences": 71,
+          "refined": false,
+          "chunk_labels": null,
+          "traces": [
+            {
+              "window": 1,
+              "anchor": {
+                "line_id": "L137",
+                "seconds": 545.4,
+                "text": "they could learn today which our sponsor coin tracker can help Down Below in the",
+                "probability": 0.98
+              },
+              "start": {
+                "line_id": "L136",
+                "seconds": 541.2,
+                "text": "it came to taxes 34 of them said that it was the most important Financial skill",
+                "probability": 0.51
+              },
+              "end": {
+                "line_id": "L137",
+                "seconds": 552.48,
+                "text": "they could learn today which our sponsor coin tracker can help Down Below in the",
+                "probability": 0.53,
+                "runs_past_excerpt": 0.0,
+                "end_ok": true
+              },
+              "confidence": 0.89
+            }
+          ],
+          "pattern_counts": null,
+          "cue_hits": null,
+          "proposed_windows": null,
+          "dropped_segments": null,
+          "n_candidate_chunks": null,
+          "tony_status": "found",
+          "tony_traces": [
+            {
+              "window": 1,
+              "anchor": {
+                "line_id": "L137",
+                "seconds": 545.4,
+                "text": "they could learn today which our sponsor coin tracker can help Down Below in the",
+                "probability": 0.98
+              },
+              "start": {
+                "line_id": "L136",
+                "seconds": 541.2,
+                "text": "it came to taxes 34 of them said that it was the most important Financial skill",
+                "probability": 0.51
+              },
+              "end": {
+                "line_id": "L137",
+                "seconds": 552.48,
+                "text": "they could learn today which our sponsor coin tracker can help Down Below in the",
+                "probability": 0.53,
+                "runs_past_excerpt": 0.0,
+                "end_ok": true
+              },
+              "confidence": 0.89
+            }
+          ],
+          "n_lines": 175,
+          "windows_scanned": 3
+        }
+      },
+      {
+        "video_id": "j_OwK2OzO8E",
+        "mode": "tony_line_scan",
+        "gold": [
+          {
+            "start": 94.738,
+            "end": 172.533,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 2055.453,
+            "end": 2058.382,
+            "category": "sponsor",
+            "uuid": null
+          }
+        ],
+        "pred_segments": [
+          {
+            "start": 98.68,
+            "end": 172.96,
+            "category": "sponsor"
+          }
+        ],
+        "metrics": {
+          "n_pred": 1,
+          "n_gold": 2,
+          "overlap_sec": 73.85299999999998,
+          "pred_dur_sec": 74.28,
+          "gold_dur_sec": 80.72400000000007,
+          "iou": 0.9100688839324209,
+          "precision": 0.9942514808831445,
+          "recall": 0.9148828105643911,
+          "f1": 0.9529173440685395,
+          "mean_best_iou": 0.944146148142466,
+          "video_recall_hit": true,
+          "video_has_gold": true,
+          "video_detected": true,
+          "fp_sec": 0.4270000000000209,
+          "content_fp_rate": 0.00021430514442762505,
+          "latency_ms_total": 2088.584908982739,
+          "latency_ms_p50_calls": 237.33449802966788,
+          "n_api_calls": 9,
+          "input_tokens": 43359,
+          "estimated_usd": 0.0018210780000000003
+        },
+        "examples": {
+          "hits": [],
+          "misses": []
+        },
+        "raw": {
+          "n_chunks": 149,
+          "n_sentences": 132,
+          "refined": false,
+          "chunk_labels": null,
+          "traces": [
+            {
+              "window": 0,
+              "anchor": {
+                "line_id": "L028",
+                "seconds": 126.12,
+                "text": "just lost sight of him oh God where did he go not again once again makeshift",
+                "probability": 0.49
+              },
+              "start": {
+                "line_id": "L021",
+                "seconds": 98.68,
+                "text": "something oh yes that's right by the new frog gentlemen it's been over a year",
+                "probability": 0.83
+              },
+              "end": {
+                "line_id": "L037",
+                "seconds": 172.96,
+                "text": "in the description hand can come up please",
+                "probability": 0.68,
+                "runs_past_excerpt": 0.0,
+                "end_ok": true
+              },
+              "confidence": 0.62
+            }
+          ],
+          "pattern_counts": null,
+          "cue_hits": null,
+          "proposed_windows": null,
+          "dropped_segments": null,
+          "n_candidate_chunks": null,
+          "tony_status": "uncertain",
+          "tony_traces": [
+            {
+              "window": 0,
+              "anchor": {
+                "line_id": "L028",
+                "seconds": 126.12,
+                "text": "just lost sight of him oh God where did he go not again once again makeshift",
+                "probability": 0.49
+              },
+              "start": {
+                "line_id": "L021",
+                "seconds": 98.68,
+                "text": "something oh yes that's right by the new frog gentlemen it's been over a year",
+                "probability": 0.83
+              },
+              "end": {
+                "line_id": "L037",
+                "seconds": 172.96,
+                "text": "in the description hand can come up please",
+                "probability": 0.68,
+                "runs_past_excerpt": 0.0,
+                "end_ok": true
+              },
+              "confidence": 0.62
+            }
+          ],
+          "n_lines": 363,
+          "windows_scanned": 5
+        }
+      },
+      {
+        "video_id": "2ehSCWoaOqQ",
+        "mode": "tony_line_scan",
+        "gold": [
+          {
+            "start": 26.027,
+            "end": 42.46,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 1260.313,
+            "end": 1305.209,
+            "category": "sponsor",
+            "uuid": null
+          }
+        ],
+        "pred_segments": [
+          {
+            "start": 26.44,
+            "end": 48.01,
+            "category": "sponsor"
+          },
+          {
+            "start": 1260.6,
+            "end": 1306.55,
+            "category": "sponsor"
+          }
+        ],
+        "metrics": {
+          "n_pred": 2,
+          "n_gold": 2,
+          "overlap_sec": 60.62900000000015,
+          "pred_dur_sec": 67.52000000000004,
+          "gold_dur_sec": 61.32899999999996,
+          "iou": 0.8887276458516606,
+          "precision": 0.8979413507109021,
+          "recall": 0.9885861501084346,
+          "f1": 0.9410860775015739,
+          "mean_best_iou": 0.846767521217697,
+          "video_recall_hit": true,
+          "video_has_gold": true,
+          "video_detected": true,
+          "fp_sec": 6.890999999999892,
+          "content_fp_rate": 0.005513135198619989,
+          "latency_ms_total": 2300.558802962769,
+          "latency_ms_p50_calls": 232.4866800045129,
+          "n_api_calls": 10,
+          "input_tokens": 43806,
+          "estimated_usd": 0.0018398520000000001
+        },
+        "examples": {
+          "hits": [],
+          "misses": []
+        },
+        "raw": {
+          "n_chunks": 81,
+          "n_sentences": 181,
+          "refined": false,
+          "chunk_labels": null,
+          "traces": [
+            {
+              "window": 0,
+              "anchor": {
+                "line_id": "L006",
+                "seconds": 26.44,
+                "text": "and I get to tell you about our sponsor. - Zoho CRM, Zoho CRM is a 360 degree solution",
+                "probability": 1.0
+              },
+              "start": {
+                "line_id": "L006",
+                "seconds": 26.44,
+                "text": "and I get to tell you about our sponsor. - Zoho CRM, Zoho CRM is a 360 degree solution",
+                "probability": 0.68
+              },
+              "end": {
+                "line_id": "L008",
+                "seconds": 48.01,
+                "text": "Get 50% off with the code ZCRM50 using the link below. (upbeat music)",
+                "probability": 0.99,
+                "runs_past_excerpt": 0.0,
+                "end_ok": true
+              },
+              "confidence": 0.98
+            },
+            {
+              "window": 3,
+              "anchor": {
+                "line_id": "L232",
+                "seconds": 1264.67,
+                "text": "Ting mobile. Ting mobile has rates that make it easier to see how much you can save by switching.",
+                "probability": 0.87
+              },
+              "start": {
+                "line_id": "L231",
+                "seconds": 1260.6,
+                "text": "to you guys for coming and sharing it with me and of course, to my sponsor.",
+                "probability": 0.6900000000000001
+              },
+              "end": {
+                "line_id": "L240",
+                "seconds": 1306.55,
+                "text": "so check them out atlinus.ting.com and receive a $25 credit. If you guys enjoyed this video,",
+                "probability": 0.9400000000000001,
+                "runs_past_excerpt": 0.0,
+                "end_ok": true
+              },
+              "confidence": 0.98
+            }
+          ],
+          "pattern_counts": null,
+          "cue_hits": null,
+          "proposed_windows": null,
+          "dropped_segments": null,
+          "n_candidate_chunks": null,
+          "tony_status": "found",
+          "tony_traces": [
+            {
+              "window": 0,
+              "anchor": {
+                "line_id": "L006",
+                "seconds": 26.44,
+                "text": "and I get to tell you about our sponsor. - Zoho CRM, Zoho CRM is a 360 degree solution",
+                "probability": 1.0
+              },
+              "start": {
+                "line_id": "L006",
+                "seconds": 26.44,
+                "text": "and I get to tell you about our sponsor. - Zoho CRM, Zoho CRM is a 360 degree solution",
+                "probability": 0.68
+              },
+              "end": {
+                "line_id": "L008",
+                "seconds": 48.01,
+                "text": "Get 50% off with the code ZCRM50 using the link below. (upbeat music)",
+                "probability": 0.99,
+                "runs_past_excerpt": 0.0,
+                "end_ok": true
+              },
+              "confidence": 0.98
+            },
+            {
+              "window": 3,
+              "anchor": {
+                "line_id": "L232",
+                "seconds": 1264.67,
+                "text": "Ting mobile. Ting mobile has rates that make it easier to see how much you can save by switching.",
+                "probability": 0.87
+              },
+              "start": {
+                "line_id": "L231",
+                "seconds": 1260.6,
+                "text": "to you guys for coming and sharing it with me and of course, to my sponsor.",
+                "probability": 0.6900000000000001
+              },
+              "end": {
+                "line_id": "L240",
+                "seconds": 1306.55,
+                "text": "so check them out atlinus.ting.com and receive a $25 credit. If you guys enjoyed this video,",
+                "probability": 0.9400000000000001,
+                "runs_past_excerpt": 0.0,
+                "end_ok": true
+              },
+              "confidence": 0.98
+            }
+          ],
+          "n_lines": 241,
+          "windows_scanned": 4
+        }
+      },
+      {
+        "video_id": "qgK38sg1ws4",
+        "mode": "tony_line_scan",
+        "gold": [
+          {
+            "start": 80.289,
+            "end": 98.332,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 848.791,
+            "end": 904.518,
+            "category": "sponsor",
+            "uuid": null
+          }
+        ],
+        "pred_segments": [
+          {
+            "start": 73.77,
+            "end": 98.41,
+            "category": "sponsor"
+          },
+          {
+            "start": 846.51,
+            "end": 904.71,
+            "category": "sponsor"
+          }
+        ],
+        "metrics": {
+          "n_pred": 2,
+          "n_gold": 2,
+          "overlap_sec": 73.76999999999997,
+          "pred_dur_sec": 82.84000000000005,
+          "gold_dur_sec": 73.76999999999997,
+          "iou": 0.8905118300337992,
+          "precision": 0.8905118300337992,
+          "recall": 1.0,
+          "f1": 0.942085435157397,
+          "mean_best_iou": 0.8448866007274505,
+          "video_recall_hit": true,
+          "video_has_gold": true,
+          "video_detected": true,
+          "fp_sec": 9.070000000000078,
+          "content_fp_rate": 0.010759959190452556,
+          "latency_ms_total": 2279.088977025822,
+          "latency_ms_p50_calls": 215.38711851462722,
+          "n_api_calls": 10,
+          "input_tokens": 52732,
+          "estimated_usd": 0.0022147440000000003
+        },
+        "examples": {
+          "hits": [],
+          "misses": []
+        },
+        "raw": {
+          "n_chunks": 56,
+          "n_sentences": 133,
+          "refined": false,
+          "chunk_labels": null,
+          "traces": [
+            {
+              "window": 0,
+              "anchor": {
+                "line_id": "L015",
+                "seconds": 80.91,
+                "text": "You know what else exists? This message from our sponsor. - Hetzner. Hetzner offers high-performance cloud service",
+                "probability": 1.0
+              },
+              "start": {
+                "line_id": "L014",
+                "seconds": 73.77,
+                "text": "I had no idea that these things even existed, but they do, and we're gonna be taking a close look.",
+                "probability": 0.53
+              },
+              "end": {
+                "line_id": "L017",
+                "seconds": 98.41,
+                "text": "with their latest location in Hillsboro, Oregon. Use the code LTT22 at the link below for $20 off.",
+                "probability": 1.0,
+                "runs_past_excerpt": 0.0,
+                "end_ok": true
+              },
+              "confidence": 0.99
+            },
+            {
+              "window": 1,
+              "anchor": {
+                "line_id": "L150",
+                "seconds": 846.51,
+                "text": "Please and thank you. And thank you for checking out our sponsor, Squarespace.",
+                "probability": 0.95
+              },
+              "start": {
+                "line_id": "L150",
+                "seconds": 846.51,
+                "text": "Please and thank you. And thank you for checking out our sponsor, Squarespace.",
+                "probability": 0.91
+              },
+              "end": {
+                "line_id": "L161",
+                "seconds": 904.71,
+                "text": "So don't wait, get started today and head to squarespace.com/ltt to get 10% off your first purchase.",
+                "probability": 0.99,
+                "runs_past_excerpt": 0.0,
+                "end_ok": true
+              },
+              "confidence": 0.99
+            }
+          ],
+          "pattern_counts": null,
+          "cue_hits": null,
+          "proposed_windows": null,
+          "dropped_segments": null,
+          "n_candidate_chunks": null,
+          "tony_status": "found",
+          "tony_traces": [
+            {
+              "window": 0,
+              "anchor": {
+                "line_id": "L015",
+                "seconds": 80.91,
+                "text": "You know what else exists? This message from our sponsor. - Hetzner. Hetzner offers high-performance cloud service",
+                "probability": 1.0
+              },
+              "start": {
+                "line_id": "L014",
+                "seconds": 73.77,
+                "text": "I had no idea that these things even existed, but they do, and we're gonna be taking a close look.",
+                "probability": 0.53
+              },
+              "end": {
+                "line_id": "L017",
+                "seconds": 98.41,
+                "text": "with their latest location in Hillsboro, Oregon. Use the code LTT22 at the link below for $20 off.",
+                "probability": 1.0,
+                "runs_past_excerpt": 0.0,
+                "end_ok": true
+              },
+              "confidence": 0.99
+            },
+            {
+              "window": 1,
+              "anchor": {
+                "line_id": "L150",
+                "seconds": 846.51,
+                "text": "Please and thank you. And thank you for checking out our sponsor, Squarespace.",
+                "probability": 0.95
+              },
+              "start": {
+                "line_id": "L150",
+                "seconds": 846.51,
+                "text": "Please and thank you. And thank you for checking out our sponsor, Squarespace.",
+                "probability": 0.91
+              },
+              "end": {
+                "line_id": "L161",
+                "seconds": 904.71,
+                "text": "So don't wait, get started today and head to squarespace.com/ltt to get 10% off your first purchase.",
+                "probability": 0.99,
+                "runs_past_excerpt": 0.0,
+                "end_ok": true
+              },
+              "confidence": 0.99
+            }
+          ],
+          "n_lines": 164,
+          "windows_scanned": 3
+        }
+      }
+    ]
+  },
+  "blockers": [],
+  "pricing_usd_per_m_input": 0.042
+}

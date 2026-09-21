@@ -790,6 +790,134 @@ def detect_jev_then_regex_gate(
     }
 
 
+
+def detect_regex_jev_refined(
+    self: SponsorDetector,
+    chunks: Sequence[Mapping[str, Any]],
+    cues: Sequence[Mapping[str, Any]],
+    *,
+    batch_size: int = 8,
+    context_neighbors: int = 1,
+    pad_before: float = 12.0,
+    pad_after: float = 80.0,
+    merge_gap: float = 8.0,
+    video_duration: float | None = None,
+    include_weak: bool = False,
+    confidence_threshold: float = 0.75,
+    offer_pad_sec: float = 8.0,
+    lead_in_lookback: float = 30.0,
+) -> dict[str, Any]:
+    """Regex→Jev confirm + boundary snap + confidence gate (recommended EN default).
+
+    Same proposal/confirm as ``regex_propose_jev_confirm``, then:
+
+    1. **Boundary snap** — start prefers lead-in / first strong CTA; end snaps to
+       return-to-content cues or caps shortly after offer CTA (conservative:
+       never cut the ad short; avoid weak early starts).
+    2. **Confidence gate** — attach Jev Choice confidence per segment; below
+       *confidence_threshold* → ``auto_skip=False`` / ``needs_confirm=True``
+       (still returned for UI ask).
+    """
+    from regex_propose import (
+        attach_confidence_gate,
+        chunks_overlapping_windows,
+        confidence_gate_summary,
+        expand_confirmed_windows,
+        find_cue_hits,
+        pattern_hit_summary,
+        propose_windows_from_hits,
+        refine_boundaries_heuristic,
+        snap_boundaries_refined,
+    )
+
+    hits = find_cue_hits(cues, include_weak=include_weak)
+    windows = propose_windows_from_hits(
+        hits,
+        pad_before=pad_before,
+        pad_after=pad_after,
+        video_duration=video_duration,
+    )
+    cand_chunks = chunks_overlapping_windows(chunks, windows)
+    strong_times = [h.start for h in hits if h.strength == "strong"]
+    labeled = _classify_chunks_batched_strict(
+        self,
+        cand_chunks,
+        chunks,
+        batch_size=batch_size,
+        context_neighbors=context_neighbors,
+        tag_prefix="regex_jev_refined_batch",
+        strong_cue_times=strong_times,
+    )
+    intervals = expand_confirmed_windows(
+        windows, labeled, cues, hits, sponsor_labels=frozenset({"sponsor"})
+    )
+    if not intervals:
+        intervals = _merge_labeled_sponsor_runs(
+            labeled, sponsor_labels=frozenset({"sponsor"}), merge_gap=merge_gap
+        )
+        intervals = refine_boundaries_heuristic(cues, intervals, hits)
+
+    snapped = snap_boundaries_refined(
+        cues,
+        intervals,
+        hits,
+        lead_in_lookback=lead_in_lookback,
+        offer_pad_sec=offer_pad_sec,
+    )
+    segments = attach_confidence_gate(
+        snapped, labeled, confidence_threshold=confidence_threshold
+    )
+    gate = confidence_gate_summary(segments)
+    return {
+        "mode": "regex_jev_refined",
+        "confidence_threshold": confidence_threshold,
+        "cue_hits": [
+            {
+                "start": h.start,
+                "end": h.end,
+                "pattern_name": h.pattern_name,
+                "strength": h.strength,
+                "text": h.text[:160],
+            }
+            for h in hits
+        ],
+        "pattern_counts": pattern_hit_summary(hits),
+        "proposed_windows": windows,
+        "n_candidate_chunks": len(cand_chunks),
+        "chunk_labels": labeled,
+        "intervals_pre_snap": intervals,
+        "segments": segments,
+        "intervals": [(s["start"], s["end"]) for s in segments],
+        "confidence_gate": gate,
+    }
+
+
 # Bind hybrid detectors onto SponsorDetector
 SponsorDetector.detect_regex_propose_jev_confirm = detect_regex_propose_jev_confirm  # type: ignore[method-assign]
+SponsorDetector.detect_regex_jev_refined = detect_regex_jev_refined  # type: ignore[method-assign]
 SponsorDetector.detect_jev_then_regex_gate = detect_jev_then_regex_gate  # type: ignore[method-assign]
+
+
+def detect_tony_line_scan(
+    self: SponsorDetector,
+    cues: Sequence[Mapping[str, Any]],
+    *,
+    title: str = "unknown",
+    max_segments: int = 6,
+    scan_workers: int = 4,
+    trace_lead_in: bool = True,
+) -> dict[str, Any]:
+    """Tony-style labelled-line scan / refine (see tony_line_scan.py)."""
+    from tony_line_scan import detect_tony_line_scan as _tony
+
+    return _tony(
+        self,
+        cues,
+        title=title,
+        max_segments=max_segments,
+        scan_workers=scan_workers,
+        trace_lead_in=trace_lead_in,
+    )
+
+
+SponsorDetector.detect_tony_line_scan = detect_tony_line_scan  # type: ignore[method-assign]

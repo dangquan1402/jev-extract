@@ -1,0 +1,221 @@
+{
+  "default_mode": "regex_propose_jev_confirm",
+  "videos": [
+    {
+      "video_id": "qgLaCZyKv_8",
+      "gold": [
+        {
+          "start": 76.299,
+          "end": 100.557,
+          "category": "sponsor"
+        },
+        {
+          "start": 937.745,
+          "end": 1038.599,
+          "category": "sponsor"
+        }
+      ],
+      "pred": [
+        {
+          "start": 77.76,
+          "end": 102.76,
+          "category": "sponsor"
+        },
+        {
+          "start": 941.2,
+          "end": 1034.71,
+          "category": "sponsor"
+        }
+      ],
+      "metrics": {
+        "iou": 0.9135372894003069,
+        "precision": 0.9814108514049447,
+        "recall": 0.9296230577402652,
+        "f1": 0.9548152465705069,
+        "input_tokens": 11388,
+        "estimated_usd": 0.00047829600000000007
+      },
+      "source": "results_regex_propose_jev_confirm.json"
+    },
+    {
+      "video_id": "zg-rMHEqg-4",
+      "gold": [
+        {
+          "start": 80.815,
+          "end": 103.099,
+          "category": "sponsor"
+        },
+        {
+          "start": 1109.725,
+          "end": 1185.895,
+          "category": "sponsor"
+        }
+      ],
+      "pred": [
+        {
+          "start": 82.32,
+          "end": 107.32,
+          "category": "sponsor"
+        },
+        {
+          "start": 1117.679,
+          "end": 1189.75,
+          "category": "sponsor"
+        }
+      ],
+      "metrics": {
+        "iou": 0.8353984793016037,
+        "precision": 0.9168031646938837,
+        "recall": 0.903924675482965,
+        "f1": 0.9103183736095118,
+        "input_tokens": 8011,
+        "estimated_usd": 0.00033646200000000005
+      },
+      "source": "results_regex_propose_jev_confirm.json"
+    },
+    {
+      "video_id": "3xngArcFpek",
+      "gold": [
+        {
+          "start": 86.191,
+          "end": 101.898,
+          "category": "sponsor"
+        },
+        {
+          "start": 520.574,
+          "end": 573.97,
+          "category": "sponsor"
+        }
+      ],
+      "pred": [
+        {
+          "start": 89.2,
+          "end": 116.87,
+          "category": "sponsor"
+        },
+        {
+          "start": 524.0,
+          "end": 573.2,
+          "category": "sponsor"
+        }
+      ],
+      "metrics": {
+        "iou": 0.7362236098721376,
+        "precision": 0.8052296084298166,
+        "recall": 0.8957353515766316,
+        "f1": 0.8480746439410027,
+        "input_tokens": 6808,
+        "estimated_usd": 0.00028593600000000004
+      },
+      "source": "results_regex_propose_jev_confirm.json"
+    },
+    {
+      "video_id": "3PGKMwgjla0",
+      "gold": [
+        {
+          "start": 99.413,
+          "end": 122.539,
+          "category": "sponsor"
+        },
+        {
+          "start": 1354.825,
+          "end": 1411.907,
+          "category": "sponsor"
+        }
+      ],
+      "pred": [
+        {
+          "start": 102.64,
+          "end": 131.83,
+          "category": "sponsor"
+        },
+        {
+          "start": 1355.36,
+          "end": 1411.84,
+          "category": "sponsor"
+        }
+      ],
+      "metrics": {
+        "iou": 0.8534061833093118,
+        "precision": 0.8915489669662658,
+        "recall": 0.9522616197885514,
+        "f1": 0.9209057258949357,
+        "input_tokens": 7927,
+        "estimated_usd": 0.000332934
+      },
+      "source": "results_regex_propose_jev_confirm.json"
+    },
+    {
+      "video_id": "i_nj_vkD03g",
+      "gold": [
+        {
+          "start": 78.12,
+          "end": 92.441,
+          "category": "sponsor"
+        },
+        {
+          "start": 1438.211,
+          "end": 1512.873,
+          "category": "sponsor"
+        }
+      ],
+      "pred": [
+        {
+          "start": 79.119,
+          "end": 104.119,
+          "category": "sponsor"
+        },
+        {
+          "start": 1439.2,
+          "end": 1502.71,
+          "category": "sponsor"
+        }
+      ],
+      "metrics": {
+        "iou": 0.7632747538768736,
+        "precision": 0.868060106202689,
+        "recall": 0.8634458267309483,
+        "f1": 0.8657468181843789,
+        "input_tokens": 6968,
+        "estimated_usd": 0.000292656
+      },
+      "source": "results_regex_propose_jev_confirm.json"
+    },
+    {
+      "video_id": "pvSdeU13hKc",
+      "gold": [
+        {
+          "start": 99.078,
+          "end": 119.328,
+          "category": "sponsor"
+        },
+        {
+          "start": 1040.454,
+          "end": 1122.878,
+          "category": "sponsor"
+        }
+      ],
+      "pred": [
+        {
+          "start": 99.6,
+          "end": 124.6,
+          "category": "sponsor"
+        },
+        {
+          "start": 1042.24,
+          "end": 1123.039,
+          "category": "sponsor"
+        }
+      ],
+      "metrics": {
+        "iou": 0.9283950160489136,
+        "precision": 0.9486479078252152,
+        "recall": 0.9775210861561832,
+        "f1": 0.962868093230298,
+        "input_tokens": 7649,
+        "estimated_usd": 0.00032125800000000005
+      },
+      "source": "results_regex_propose_jev_confirm.json"
+    }
+  ]
+}

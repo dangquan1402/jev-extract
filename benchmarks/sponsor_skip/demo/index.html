@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sponsor Skip Demo</title>
+  <style>
+    :root {
+      --bg: #0f1115;
+      --panel: #1a1d24;
+      --text: #e8eaed;
+      --muted: #9aa0a6;
+      --gold: #f9ab00;
+      --pred: #8ab4f8;
+      --accent: #34a853;
+      --danger: #ea4335;
+      --border: #2d323c;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.45;
+    }
+    header {
+      padding: 1rem 1.25rem; border-bottom: 1px solid var(--border);
+      display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;
+    }
+    header h1 { font-size: 1.1rem; margin: 0; font-weight: 600; }
+    header .hint { color: var(--muted); font-size: 0.85rem; }
+    main {
+      display: grid; grid-template-columns: minmax(280px, 360px) 1fr;
+      gap: 1rem; padding: 1rem; max-width: 1200px; margin: 0 auto;
+    }
+    @media (max-width: 860px) { main { grid-template-columns: 1fr; } }
+    .panel {
+      background: var(--panel); border: 1px solid var(--border);
+      border-radius: 10px; padding: 1rem;
+    }
+    label { display: block; font-size: 0.8rem; color: var(--muted); margin-bottom: 0.25rem; }
+    input, select, button {
+      font: inherit; border-radius: 8px; border: 1px solid var(--border);
+      background: #0f1115; color: var(--text); padding: 0.5rem 0.65rem;
+    }
+    input, select { width: 100%; }
+    .row { margin-bottom: 0.75rem; }
+    .btn-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
+    button {
+      cursor: pointer; background: #2a3140; border-color: #3a4254;
+    }
+    button.primary { background: var(--accent); color: #041208; border-color: transparent; font-weight: 600; }
+    button.gold { background: #5c4300; border-color: var(--gold); color: var(--gold); }
+    button.pred { background: #1a2a44; border-color: var(--pred); color: var(--pred); }
+    button:disabled { opacity: 0.45; cursor: not-allowed; }
+    #player-wrap {
+      position: relative; width: 100%; aspect-ratio: 16/9;
+      background: #000; border-radius: 10px; overflow: hidden;
+    }
+    #player { width: 100%; height: 100%; }
+    .seg-list { list-style: none; padding: 0; margin: 0.5rem 0 0; }
+    .seg-list li {
+      display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center;
+      padding: 0.45rem 0; border-bottom: 1px solid var(--border); font-size: 0.9rem;
+    }
+    .badge {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.03em;
+      padding: 0.15rem 0.4rem; border-radius: 4px; text-transform: uppercase;
+    }
+    .badge.gold { background: #5c4300; color: var(--gold); }
+    .badge.pred { background: #1a2a44; color: var(--pred); }
+    .metrics { font-size: 0.85rem; color: var(--muted); margin-top: 0.75rem; }
+    .status { font-size: 0.85rem; color: var(--muted); min-height: 1.2em; }
+    a { color: var(--pred); }
+    footer { padding: 0 1.25rem 1.5rem; color: var(--muted); font-size: 0.8rem; max-width: 1200px; margin: 0 auto; }
+    code { background: #0f1115; padding: 0.1rem 0.35rem; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sponsor Skip Demo</h1>
+    <span class="hint">Cached preds from <code>regex_propose_jev_confirm</code> · YouTube IFrame API seek</span>
+  </header>
+  <main>
+    <aside class="panel">
+      <div class="row">
+        <label for="videoSelect">Cached video</label>
+        <select id="videoSelect"></select>
+      </div>
+      <div class="row">
+        <label for="urlInput">Or YouTube URL / video_id</label>
+        <input id="urlInput" placeholder="https://www.youtube.com/watch?v=…" />
+      </div>
+      <div class="btn-row">
+        <button type="button" class="primary" id="loadBtn">Load</button>
+        <button type="button" id="reloadPredsBtn" title="Reload demo/data/preds.json">Reload preds</button>
+      </div>
+      <p class="status" id="status">Loading preds…</p>
+      <div class="metrics" id="metrics"></div>
+      <h3 style="margin:1rem 0 0.25rem;font-size:0.95rem;">Gold segments</h3>
+      <ul class="seg-list" id="goldList"></ul>
+      <h3 style="margin:1rem 0 0.25rem;font-size:0.95rem;">Predicted (skip targets)</h3>
+      <ul class="seg-list" id="predList"></ul>
+      <div class="btn-row" style="margin-top:0.75rem;">
+        <button type="button" class="pred" id="skipNextBtn" disabled>Skip to end of current / next pred</button>
+      </div>
+    </aside>
+    <section class="panel">
+      <div id="player-wrap"><div id="player"></div></div>
+      <p class="status" id="playerStatus" style="margin-top:0.75rem;">Player idle</p>
+      <p class="hint" style="color:var(--muted);font-size:0.85rem;">
+        If the IFrame API is blocked, use the <code>&amp;t=Ns</code> links below each segment.
+        Local mock: buttons still seek when the API is ready.
+      </p>
+    </section>
+  </main>
+  <footer>
+    <p>
+      Open locally: <code>cd benchmarks/sponsor_skip/demo && python -m http.server 8765</code>
+      then visit <code>http://127.0.0.1:8765/</code>.
+      Predictions: <code>demo/data/preds.json</code> (copied from
+      <code>../results/results_regex_propose_jev_confirm.json</code>).
+      Live detect requires TYPESAFE_API_KEY — use the bench runner, then refresh this page after updating preds.json.
+    </p>
+  </footer>
+  <script>
+    const state = {
+      videos: [],
+      current: null,
+      player: null,
+      apiReady: false,
+      pendingVideoId: null,
+    };
+
+    function fmt(t) {
+      t = Math.max(0, Math.floor(Number(t) || 0));
+      const h = Math.floor(t / 3600);
+      const m = Math.floor((t % 3600) / 60);
+      const s = t % 60;
+      const pad = (n) => String(n).padStart(2, "0");
+      return h > 0 ? `${h}:${pad(m)}:${pad(s)}` : `${m}:${pad(s)}`;
+    }
+
+    function parseVideoId(input) {
+      const s = (input || "").trim();
+      if (!s) return null;
+      if (/^[a-zA-Z0-9_-]{11}$/.test(s)) return s;
+      try {
+        const u = new URL(s);
+        if (u.hostname.includes("youtu.be")) return u.pathname.slice(1, 12);
+        const v = u.searchParams.get("v");
+        if (v) return v;
+        const m = u.pathname.match(/\/(?:embed|shorts)\/([a-zA-Z0-9_-]{11})/);
+        if (m) return m[1];
+      } catch (_) {}
+      return null;
+    }
+
+    function ytLink(videoId, seconds) {
+      const t = Math.floor(Number(seconds) || 0);
+      return `https://www.youtube.com/watch?v=${videoId}&t=${t}s`;
+    }
+
+    function setStatus(msg) {
+      document.getElementById("status").textContent = msg;
+    }
+
+    function renderLists(video) {
+      const goldEl = document.getElementById("goldList");
+      const predEl = document.getElementById("predList");
+      goldEl.innerHTML = "";
+      predEl.innerHTML = "";
+      const vid = video.video_id;
+
+      (video.gold || []).forEach((seg, i) => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+          <span class="badge gold">gold</span>
+          <span>${fmt(seg.start)} → ${fmt(seg.end)}</span>
+          <button type="button" class="gold" data-seek="${seg.start}">Seek start</button>
+          <button type="button" class="gold" data-seek="${seg.end}">Seek end / skip</button>
+          <a href="${ytLink(vid, seg.end)}" target="_blank" rel="noopener">open at t=${Math.floor(seg.end)}s</a>
+        `;
+        goldEl.appendChild(li);
+      });
+      if (!(video.gold || []).length) {
+        goldEl.innerHTML = "<li style='color:var(--muted)'>No gold segments</li>";
+      }
+
+      (video.pred || []).forEach((seg, i) => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+          <span class="badge pred">pred</span>
+          <span>${fmt(seg.start)} → ${fmt(seg.end)}</span>
+          <button type="button" class="pred" data-seek="${seg.start}">Seek start</button>
+          <button type="button" class="pred primary" data-seek="${seg.end}">Skip to end</button>
+          <a href="${ytLink(vid, seg.end)}" target="_blank" rel="noopener">open at t=${Math.floor(seg.end)}s</a>
+        `;
+        predEl.appendChild(li);
+      });
+      if (!(video.pred || []).length) {
+        predEl.innerHTML = "<li style='color:var(--muted)'>No predicted segments</li>";
+      }
+
+      const m = video.metrics || {};
+      const parts = [];
+      if (m.iou != null) parts.push(`IoU ${Number(m.iou).toFixed(3)}`);
+      if (m.f1 != null) parts.push(`F1 ${Number(m.f1).toFixed(3)}`);
+      if (m.precision != null) parts.push(`P ${Number(m.precision).toFixed(3)}`);
+      if (m.recall != null) parts.push(`R ${Number(m.recall).toFixed(3)}`);
+      if (m.estimated_usd != null) parts.push(`~$${Number(m.estimated_usd).toFixed(4)}`);
+      document.getElementById("metrics").textContent =
+        parts.length ? `Metrics (${video.source || "preds"}): ${parts.join(" · ")}` : "";
+
+      document.getElementById("skipNextBtn").disabled = !(video.pred || []).length;
+
+      goldEl.querySelectorAll("[data-seek], [data-seek]".replace(/data-seek/g,'x')); // no-op lint
+      [...goldEl.querySelectorAll("button[data-seek]"), ...predEl.querySelectorAll("button[data-seek]")].forEach((btn) => {
+        btn.addEventListener("click", () => seekTo(Number(btn.getAttribute("data-seek"))));
+      });
+    }
+
+    function seekTo(seconds) {
+      const t = Math.max(0, Number(seconds) || 0);
+      document.getElementById("playerStatus").textContent = `Seek → ${fmt(t)} (${t.toFixed(1)}s)`;
+      if (state.player && state.apiReady && typeof state.player.seekTo === "function") {
+        try {
+          state.player.seekTo(t, true);
+          if (typeof state.player.playVideo === "function") state.player.playVideo();
+        } catch (e) {
+          document.getElementById("playerStatus").textContent =
+            `Seek failed (${e}); use open-at link.`;
+        }
+      } else {
+        document.getElementById("playerStatus").textContent =
+          `API not ready — open ${ytLink(state.current?.video_id || "", t)}`;
+      }
+    }
+
+    function skipNextPred() {
+      const video = state.current;
+      if (!video || !(video.pred || []).length) return;
+      let now = 0;
+      try {
+        if (state.player && typeof state.player.getCurrentTime === "function") {
+          now = state.player.getCurrentTime() || 0;
+        }
+      } catch (_) {}
+      const next = video.pred.find((s) => s.end > now + 0.5) || video.pred[video.pred.length - 1];
+      seekTo(next.end);
+    }
+
+    function loadVideo(videoId) {
+      let video = state.videos.find((v) => v.video_id === videoId);
+      if (!video) {
+        video = { video_id: videoId, gold: [], pred: [], metrics: {}, source: "url-only (no cached preds)" };
+        setStatus(`Loaded ${videoId} without cached preds — paste a known id or refresh preds.json`);
+      } else {
+        setStatus(`Loaded ${videoId} (${video.pred.length} pred, ${video.gold.length} gold)`);
+      }
+      state.current = video;
+      renderLists(video);
+      state.pendingVideoId = videoId;
+      if (state.apiReady) createOrCuePlayer(videoId);
+      else {
+        document.getElementById("playerStatus").textContent =
+          "Waiting for YouTube IFrame API…";
+      }
+    }
+
+    function createOrCuePlayer(videoId) {
+      if (!state.apiReady || typeof YT === "undefined") return;
+      if (state.player && typeof state.player.loadVideoById === "function") {
+        state.player.loadVideoById({ videoId, startSeconds: 0 });
+        document.getElementById("playerStatus").textContent = `Playing ${videoId}`;
+        return;
+      }
+      state.player = new YT.Player("player", {
+        videoId,
+        playerVars: { rel: 0, modestbranding: 1, enablejsapi: 1 },
+        events: {
+          onReady: () => {
+            document.getElementById("playerStatus").textContent = `Player ready · ${videoId}`;
+          },
+          onError: (e) => {
+            document.getElementById("playerStatus").textContent =
+              `Player error ${e?.data} — use &t= links`;
+          },
+        },
+      });
+    }
+
+    window.onYouTubeIframeAPIReady = function () {
+      state.apiReady = true;
+      if (state.pendingVideoId) createOrCuePlayer(state.pendingVideoId);
+    };
+
+    async function loadPreds() {
+      const res = await fetch("data/preds.json", { cache: "no-store" });
+      if (!res.ok) throw new Error(`preds.json HTTP ${res.status}`);
+      const data = await res.json();
+      state.videos = data.videos || [];
+      const sel = document.getElementById("videoSelect");
+      sel.innerHTML = "";
+      state.videos.forEach((v) => {
+        const opt = document.createElement("option");
+        opt.value = v.video_id;
+        opt.textContent = `${v.video_id} (${(v.pred||[]).length} pred)`;
+        sel.appendChild(opt);
+      });
+      setStatus(`Loaded ${state.videos.length} videos from preds.json`);
+      if (state.videos.length) loadVideo(state.videos[0].video_id);
+    }
+
+    document.getElementById("loadBtn").addEventListener("click", () => {
+      const fromUrl = parseVideoId(document.getElementById("urlInput").value);
+      const id = fromUrl || document.getElementById("videoSelect").value;
+      if (!id) { setStatus("Enter a URL or pick a cached video"); return; }
+      loadVideo(id);
+    });
+    document.getElementById("videoSelect").addEventListener("change", (e) => {
+      loadVideo(e.target.value);
+    });
+    document.getElementById("reloadPredsBtn").addEventListener("click", () => {
+      loadPreds().catch((e) => setStatus(String(e)));
+    });
+    document.getElementById("skipNextBtn").addEventListener("click", skipNextPred);
+
+    // Load YT API
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.head.appendChild(tag);
+
+    loadPreds().catch((e) => setStatus("Failed to load preds: " + e));
+  </script>
+</body>
+</html>

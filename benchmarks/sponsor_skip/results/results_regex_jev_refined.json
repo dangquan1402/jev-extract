@@ -1,9 +1,9 @@
 {
-  "mode": "regex_propose_jev_confirm",
+  "mode": "regex_jev_refined",
   "rows": [
     {
       "video_id": "qgLaCZyKv_8",
-      "mode": "regex_propose_jev_confirm",
+      "mode": "regex_jev_refined",
       "gold": [
         {
           "start": 76.299,
@@ -22,40 +22,68 @@
         {
           "start": 77.76,
           "end": 102.76,
-          "category": "sponsor"
+          "category": "sponsor",
+          "confidence": 0.61,
+          "auto_skip": false,
+          "needs_confirm": true
         },
         {
           "start": 428.24,
           "end": 456.59,
-          "category": "sponsor"
+          "category": "sponsor",
+          "confidence": 0.41,
+          "auto_skip": false,
+          "needs_confirm": true
         },
         {
           "start": 941.2,
-          "end": 1034.71,
-          "category": "sponsor"
+          "end": 1038.68,
+          "category": "sponsor",
+          "confidence": 1.0,
+          "auto_skip": true,
+          "needs_confirm": false
         }
       ],
       "metrics": {
         "n_pred": 3,
         "n_gold": 2,
-        "overlap_sec": 116.30699999999999,
-        "pred_dur_sec": 146.85999999999996,
+        "overlap_sec": 120.19599999999988,
+        "pred_dur_sec": 150.82999999999998,
         "gold_dur_sec": 125.11199999999992,
-        "iou": 0.7471621751838889,
-        "precision": 0.7919583276589951,
-        "recall": 0.9296230577402652,
-        "f1": 0.8552865736178727,
-        "mean_best_iou": 0.5962379776388417,
+        "iou": 0.7717437365967658,
+        "precision": 0.7968971689982092,
+        "recall": 0.9607072063431162,
+        "f1": 0.871168578904262,
+        "mean_best_iou": 0.6088332064784724,
         "video_recall_hit": true,
         "video_has_gold": true,
         "video_detected": true,
-        "fp_sec": 30.55299999999997,
-        "content_fp_rate": 0.03297864532062239,
-        "latency_ms_total": 1001.1262659681961,
-        "latency_ms_p50_calls": 252.00132903410122,
+        "fp_sec": 30.6340000000001,
+        "content_fp_rate": 0.03306607602369491,
+        "latency_ms_total": 784.2347120167688,
+        "latency_ms_p50_calls": 262.5180430477485,
         "n_api_calls": 3,
         "input_tokens": 11388,
-        "estimated_usd": 0.00047829600000000007
+        "estimated_usd": 0.00047829600000000007,
+        "high_conf": {
+          "iou": 0.7779907822322323,
+          "precision": 0.9991690603200644,
+          "recall": 0.7784944689558152,
+          "f1": 0.8751347757331792,
+          "overlap_sec": 97.39899999999989,
+          "fp_sec": 0.08100000000013097,
+          "content_fp_rate": 8.743070307252104e-05,
+          "n_pred_segments": 1
+        },
+        "confidence_gate": {
+          "n_segments": 3,
+          "n_auto_skip": 1,
+          "n_needs_confirm": 2,
+          "auto_skip_rate": 0.3333333333333333,
+          "mean_confidence": 0.6733333333333333,
+          "min_confidence": 0.41
+        },
+        "confidence_threshold": 0.75
       },
       "examples": {
         "hits": [
@@ -65,7 +93,7 @@
               83.2
             ],
             "label": "sponsor",
-            "conf": 0.45,
+            "conf": 0.48,
             "preview": "with the segue to our sponsor.",
             "in_gold": true
           },
@@ -87,7 +115,7 @@
               456.6
             ],
             "label": "sponsor",
-            "conf": 0.2,
+            "conf": 0.22,
             "preview": "that's priced right in line with Ring, an offering from TP-Link, the Tapo 2K Plus. Like eufy, highlights their internal storage as a key feature, except they dr",
             "in_gold": false
           },
@@ -97,7 +125,7 @@
               981.2
             ],
             "label": "content",
-            "conf": 0.87,
+            "conf": 0.92,
             "preview": "track your progress, and rally the community in challenging BI-MONTHLY [screaming] BOSS FIGHTS. All while learning real skills that could get you a high-paying ",
             "in_gold": true,
             "kind": "false_negative_chunk"
@@ -114,12 +142,12 @@
             "start": 62.72,
             "end": 77.75,
             "label": "content",
-            "confidence": 0.39,
+            "confidence": 0.38,
             "probabilities": {
-              "sponsor": 0.44,
-              "interaction": 0.0,
+              "sponsor": 0.45,
               "selfpromo": 0.01,
-              "content": 0.55
+              "content": 0.54,
+              "interaction": 0.0
             },
             "text_preview": "we're going to rank them according to their features, image quality, and their value over a 5-year ownership span. Spoiler alert, some of the cheapest options e"
           },
@@ -128,12 +156,12 @@
             "start": 77.76,
             "end": 83.175,
             "label": "sponsor",
-            "confidence": 0.45,
+            "confidence": 0.48,
             "probabilities": {
-              "sponsor": 0.6,
-              "interaction": 0.0,
+              "sponsor": 0.61,
               "selfpromo": 0.0,
-              "content": 0.4
+              "content": 0.39,
+              "interaction": 0.0
             },
             "text_preview": "with the segue to our sponsor."
           },
@@ -145,9 +173,9 @@
             "confidence": 0.99,
             "probabilities": {
               "sponsor": 0.0,
-              "interaction": 0.0,
               "selfpromo": 0.0,
-              "content": 1.0
+              "content": 1.0,
+              "interaction": 0.0
             },
             "text_preview": "through. So, let's quickly run through what they have in common. They are mostly all battery operated, aside from the Ubiquiti's offerings. One is wired and the"
           },
@@ -159,9 +187,9 @@
             "confidence": 1.0,
             "probabilities": {
               "sponsor": 0.0,
-              "interaction": 0.0,
               "selfpromo": 0.0,
-              "content": 1.0
+              "content": 1.0,
+              "interaction": 0.0
             },
             "text_preview": "shocking amount of diversity in features, even among our budget options that start at just $10 for the Orbitel M52. That is a very low price, which is why they "
           },
@@ -173,9 +201,9 @@
             "confidence": 1.0,
             "probabilities": {
               "sponsor": 0.0,
-              "interaction": 0.0,
               "selfpromo": 0.0,
-              "content": 1.0
+              "content": 1.0,
+              "interaction": 0.0
             },
             "text_preview": "for well, pushes. If you want live video, though, that's [music] going to cost you. You'll have to buy a cloud storage subscription. The image quality is okay, "
           },
@@ -184,12 +212,12 @@
             "start": 408.069,
             "end": 424.03,
             "label": "content",
-            "confidence": 0.87,
+            "confidence": 0.84,
             "probabilities": {
-              "sponsor": 0.09,
-              "interaction": 0.0,
-              "selfpromo": 0.01,
-              "content": 0.9
+              "sponsor": 0.12,
+              "selfpromo": 0.0,
+              "content": 0.88,
+              "interaction": 0.0
             },
             "text_preview": "However, [clears throat] it's an A plus. No, not a high A. I meant A plus some pretty sketchy baggage. A couple of years back, eufy had a scandal around easy pu"
           },
@@ -201,9 +229,9 @@
             "confidence": 0.89,
             "probabilities": {
               "sponsor": 0.07,
-              "interaction": 0.0,
               "selfpromo": 0.01,
-              "content": 0.92
+              "content": 0.92,
+              "interaction": 0.0
             },
             "text_preview": "faith, they deflected and obfuscated to the point where we actually put them in our sponsor doghouse until at least 2027. With that said, they claim to have cle"
           },
@@ -212,12 +240,12 @@
             "start": 441.52,
             "end": 456.59,
             "label": "sponsor",
-            "confidence": 0.2,
+            "confidence": 0.22,
             "probabilities": {
-              "sponsor": 0.41000000000000003,
-              "interaction": 0.0,
-              "selfpromo": 0.37,
-              "content": 0.22
+              "sponsor": 0.41,
+              "selfpromo": 0.34,
+              "content": 0.25,
+              "interaction": 0.0
             },
             "text_preview": "that's priced right in line with Ring, an offering from TP-Link, the Tapo 2K Plus. Like eufy, highlights their internal storage as a key feature, except they dr"
           },
@@ -226,12 +254,12 @@
             "start": 456.6,
             "end": 473.31,
             "label": "content",
-            "confidence": 0.31,
+            "confidence": 0.24,
             "probabilities": {
-              "selfpromo": 0.16,
-              "sponsor": 0.36,
-              "interaction": 0.0,
-              "content": 0.48
+              "sponsor": 0.33,
+              "selfpromo": 0.24,
+              "content": 0.43,
+              "interaction": 0.0
             },
             "text_preview": "clips of your courier delivering your durable True Spec cables from lttstore.com than a porch pirate, taking your cables from lttstore.com. Then your wonderful "
           },
@@ -242,10 +270,10 @@
             "label": "content",
             "confidence": 1.0,
             "probabilities": {
-              "selfpromo": 0.0,
               "sponsor": 0.0,
-              "interaction": 0.0,
-              "content": 1.0
+              "selfpromo": 0.0,
+              "content": 1.0,
+              "interaction": 0.0
             },
             "text_preview": "low light though. So, for the same price, it's hard to give this quite the same rating. We're going to go with same rating. We're going to go with um um [music]"
           },
@@ -256,10 +284,10 @@
             "label": "content",
             "confidence": 1.0,
             "probabilities": {
-              "selfpromo": 0.0,
               "sponsor": 0.0,
-              "interaction": 0.0,
-              "content": 1.0
+              "selfpromo": 0.0,
+              "content": 1.0,
+              "interaction": 0.0
             },
             "text_preview": "different as it's PoE. So, you actually get much more reliable streaming over a wire. And after the hassle of running said wire once, you never change a battery"
           },
@@ -270,10 +298,10 @@
             "label": "content",
             "confidence": 1.0,
             "probabilities": {
-              "selfpromo": 0.0,
               "sponsor": 0.0,
-              "interaction": 0.0,
-              "content": 1.0
+              "selfpromo": 0.0,
+              "content": 1.0,
+              "interaction": 0.0
             },
             "text_preview": "of products to support it that we're going to talk about a little bit more later once we get to Ubiquiti's flagship offering. For now, I'm going to throw it in "
           },
@@ -282,12 +310,12 @@
             "start": 915.0,
             "end": 931.67,
             "label": "content",
-            "confidence": 0.93,
+            "confidence": 0.94,
             "probabilities": {
-              "selfpromo": 0.0,
               "sponsor": 0.05,
-              "interaction": 0.0,
-              "content": 0.95
+              "selfpromo": 0.0,
+              "content": 0.95,
+              "interaction": 0.0
             },
             "text_preview": "recommend because they don't really do more than the cheaper options we've looked at with the exception of Ubiquiti who has a very fully featured product here w"
           },
@@ -298,10 +326,10 @@
             "label": "sponsor",
             "confidence": 1.0,
             "probabilities": {
-              "selfpromo": 0.0,
               "sponsor": 1.0,
-              "interaction": 0.0,
-              "content": 0.0
+              "selfpromo": 0.0,
+              "content": 0.0,
+              "interaction": 0.0
             },
             "text_preview": "used without my permission by Big Brother or by anyone else. So, Ubiquiti gets my coveted attaboy of product design, meaning that uh all that's left is to say a"
           },
@@ -312,10 +340,10 @@
             "label": "sponsor",
             "confidence": 0.96,
             "probabilities": {
+              "sponsor": 0.97,
               "selfpromo": 0.0,
-              "sponsor": 0.98,
-              "interaction": 0.0,
-              "content": 0.02
+              "content": 0.03,
+              "interaction": 0.0
             },
             "text_preview": "and complete quests in the hot new phenomenon sweeping the nation. It's phenomenon sweeping the nation. It's boot.dev, the best way to learn to code in Python, "
           },
@@ -324,12 +352,12 @@
             "start": 963.64,
             "end": 981.191,
             "label": "content",
-            "confidence": 0.87,
+            "confidence": 0.92,
             "probabilities": {
+              "sponsor": 0.03,
               "selfpromo": 0.0,
-              "sponsor": 0.05,
-              "interaction": 0.04,
-              "content": 0.91
+              "content": 0.94,
+              "interaction": 0.03
             },
             "text_preview": "track your progress, and rally the community in challenging BI-MONTHLY [screaming] BOSS FIGHTS. All while learning real skills that could get you a high-paying "
           },
@@ -338,12 +366,12 @@
             "start": 981.201,
             "end": 998.79,
             "label": "content",
-            "confidence": 0.96,
+            "confidence": 0.92,
             "probabilities": {
-              "sponsor": 0.0,
+              "sponsor": 0.01,
               "interaction": 0.01,
-              "content": 0.97,
-              "selfpromo": 0.02
+              "content": 0.94,
+              "selfpromo": 0.04
             },
             "text_preview": "Look what the dork squad is up to. [laughter] Oh, learning to code, oh, having fun. Oh, learning to code, oh, having fun. Losers. Travis, go away. How's Travis "
           },
@@ -352,11 +380,11 @@
             "start": 998.8,
             "end": 1015.39,
             "label": "content",
-            "confidence": 0.94,
+            "confidence": 0.97,
             "probabilities": {
-              "sponsor": 0.03,
+              "sponsor": 0.01,
               "interaction": 0.01,
-              "content": 0.96,
+              "content": 0.98,
               "selfpromo": 0.0
             },
             "text_preview": "You're not going to do anything with us. Cody. Cody. Hey. Hey, stupid. Yeah. Man, like you, dude. Your mom makes the worst YOUR DAD? HE'S LIKE"
@@ -368,9 +396,9 @@
             "label": "sponsor",
             "confidence": 0.97,
             "probabilities": {
-              "sponsor": 0.97,
+              "sponsor": 0.98,
               "interaction": 0.0,
-              "content": 0.02,
+              "content": 0.01,
               "selfpromo": 0.01
             },
             "text_preview": "DUDE, YOUR DOG? Your dog LOOKS LIKE A HOT DOG. I'd put ketchup on him AND EAT HIM. WHAT ARE YOU EVEN DOING HERE? YOU'LL NEVER KNOW BOOTS LIKE I DO. LTT to get 2"
@@ -380,12 +408,12 @@
             "start": 1034.72,
             "end": 1051.56,
             "label": "selfpromo",
-            "confidence": 0.23,
+            "confidence": 0.29,
             "probabilities": {
-              "sponsor": 0.24,
+              "sponsor": 0.17,
               "interaction": 0.0,
-              "content": 0.33,
-              "selfpromo": 0.43
+              "content": 0.36,
+              "selfpromo": 0.47
             },
             "text_preview": "year with boot.dev. year with boot.dev. [music] If you guys enjoyed this video and you're on the hunt for more video peripherals, why not check out the time tha"
           }
@@ -493,9 +521,29 @@
         ],
         "dropped_segments": null,
         "n_candidate_chunks": 20,
-        "confidence_gate": null,
-        "confidence_threshold": null,
-        "intervals_pre_snap": null,
+        "confidence_gate": {
+          "n_segments": 3,
+          "n_auto_skip": 1,
+          "n_needs_confirm": 2,
+          "auto_skip_rate": 0.3333333333333333,
+          "mean_confidence": 0.6733333333333333,
+          "min_confidence": 0.41
+        },
+        "confidence_threshold": 0.75,
+        "intervals_pre_snap": [
+          [
+            77.76,
+            102.76
+          ],
+          [
+            428.24,
+            456.59
+          ],
+          [
+            941.2,
+            1034.71
+          ]
+        ],
         "tony_status": null,
         "tony_traces": null,
         "n_lines": null,
@@ -504,7 +552,7 @@
     },
     {
       "video_id": "zg-rMHEqg-4",
-      "mode": "regex_propose_jev_confirm",
+      "mode": "regex_jev_refined",
       "gold": [
         {
           "start": 80.815,
@@ -523,35 +571,60 @@
         {
           "start": 82.32,
           "end": 107.32,
-          "category": "sponsor"
+          "category": "sponsor",
+          "confidence": 0.63,
+          "auto_skip": false,
+          "needs_confirm": true
         },
         {
           "start": 1117.679,
-          "end": 1189.75,
-          "category": "sponsor"
+          "end": 1186.08,
+          "category": "sponsor",
+          "confidence": 0.79,
+          "auto_skip": true,
+          "needs_confirm": false
         }
       ],
       "metrics": {
         "n_pred": 2,
         "n_gold": 2,
         "overlap_sec": 88.9949999999999,
-        "pred_dur_sec": 97.07099999999991,
+        "pred_dur_sec": 93.40099999999984,
         "gold_dur_sec": 98.45400000000008,
-        "iou": 0.8353984793016037,
-        "precision": 0.9168031646938837,
+        "iou": 0.8652051331907438,
+        "precision": 0.9528270575261513,
         "recall": 0.903924675482965,
-        "f1": 0.9103183736095118,
-        "mean_best_iou": 0.8181994520317373,
+        "f1": 0.9277318808475146,
+        "mean_best_iou": 0.8386855457073212,
         "video_recall_hit": true,
         "video_has_gold": true,
         "video_detected": true,
-        "fp_sec": 8.076000000000008,
-        "content_fp_rate": 0.00734324677710028,
-        "latency_ms_total": 516.8404200230725,
-        "latency_ms_p50_calls": 255.53217451670207,
+        "fp_sec": 4.405999999999935,
+        "content_fp_rate": 0.004006233940057371,
+        "latency_ms_total": 458.40557100018486,
+        "latency_ms_p50_calls": 219.30764146964066,
         "n_api_calls": 2,
         "input_tokens": 8011,
-        "estimated_usd": 0.00033646200000000005
+        "estimated_usd": 0.00033646200000000005,
+        "high_conf": {
+          "iou": 0.6915722989892424,
+          "precision": 0.9972953611789309,
+          "recall": 0.6928717979970325,
+          "f1": 0.8176680351203132,
+          "overlap_sec": 68.2159999999999,
+          "fp_sec": 0.18499999999994543,
+          "content_fp_rate": 0.00016821454355660597,
+          "n_pred_segments": 1
+        },
+        "confidence_gate": {
+          "n_segments": 2,
+          "n_auto_skip": 1,
+          "n_needs_confirm": 1,
+          "auto_skip_rate": 0.5,
+          "mean_confidence": 0.71,
+          "min_confidence": 0.63
+        },
+        "confidence_threshold": 0.75
       },
       "examples": {
         "hits": [
@@ -561,7 +634,7 @@
               88.9
             ],
             "label": "sponsor",
-            "conf": 0.59,
+            "conf": 0.5,
             "preview": "course, by watching the LTT guide on how to choose a laptop, right? No, I didn't even know that was a thing. Classic. But you know what everyone knows is a thin",
             "in_gold": true
           },
@@ -571,7 +644,7 @@
               102.1
             ],
             "label": "sponsor",
-            "conf": 0.33,
+            "conf": 0.28,
             "preview": "story. Learn the tale of how one simple man with one [music] grand invention helped a homestead get a grip and build a life for themselves. Tune in tonight, 7:0",
             "in_gold": true
           }
@@ -583,7 +656,7 @@
               1141.9
             ],
             "label": "content",
-            "conf": 0.7,
+            "conf": 0.75,
             "preview": "their fields, grew their [music] grain, and yet time and time again faced a troublesome dilemma. While they worked, [music] the folks of this small town were di",
             "in_gold": true,
             "kind": "false_negative_chunk"
@@ -594,7 +667,7 @@
               1157.8
             ],
             "label": "content",
-            "conf": 0.53,
+            "conf": 0.45,
             "preview": "cold of winter crept in, Sheamus O Snapton knew the homes wouldn't finish on time when his friends kept dropping the phones and he thought, \"Damn, their phone a",
             "in_gold": true,
             "kind": "false_negative_chunk"
@@ -613,10 +686,10 @@
             "label": "content",
             "confidence": 0.98,
             "probabilities": {
-              "selfpromo": 0.0,
-              "interaction": 0.0,
+              "interaction": 0.01,
               "sponsor": 0.0,
-              "content": 1.0
+              "content": 0.99,
+              "selfpromo": 0.0
             },
             "text_preview": "all the research. [music] I mean, I just figured out what all the specs mean and like what I want for school. Okay. But are you sure you've actually made a good"
           },
@@ -625,12 +698,12 @@
             "start": 73.439,
             "end": 88.87,
             "label": "sponsor",
-            "confidence": 0.59,
+            "confidence": 0.5,
             "probabilities": {
-              "selfpromo": 0.22,
-              "interaction": 0.0,
-              "sponsor": 0.7,
-              "content": 0.08
+              "selfpromo": 0.29,
+              "sponsor": 0.63,
+              "content": 0.08,
+              "interaction": 0.0
             },
             "text_preview": "course, by watching the LTT guide on how to choose a laptop, right? No, I didn't even know that was a thing. Classic. But you know what everyone knows is a thin"
           },
@@ -639,12 +712,12 @@
             "start": 88.88,
             "end": 102.149,
             "label": "sponsor",
-            "confidence": 0.33,
+            "confidence": 0.28,
             "probabilities": {
-              "selfpromo": 0.38,
-              "interaction": 0.0,
-              "sponsor": 0.5,
-              "content": 0.12
+              "selfpromo": 0.44,
+              "sponsor": 0.47000000000000003,
+              "content": 0.09,
+              "interaction": 0.0
             },
             "text_preview": "story. Learn the tale of how one simple man with one [music] grand invention helped a homestead get a grip and build a life for themselves. Tune in tonight, 7:0"
           },
@@ -653,12 +726,12 @@
             "start": 102.159,
             "end": 118.789,
             "label": "content",
-            "confidence": 0.74,
+            "confidence": 0.75,
             "probabilities": {
-              "selfpromo": 0.11,
               "interaction": 0.01,
-              "sponsor": 0.08,
-              "content": 0.8
+              "sponsor": 0.04,
+              "content": 0.81,
+              "selfpromo": 0.14
             },
             "text_preview": "7:00 p.m. Pacific, 9:00 p.m. Central on LT. why don't you show me the initial research that you've done? [music] Could we look at it on my phone instead?"
           },
@@ -670,9 +743,9 @@
             "confidence": 0.99,
             "probabilities": {
               "selfpromo": 0.0,
-              "interaction": 0.01,
               "sponsor": 0.0,
-              "content": 0.99
+              "content": 1.0,
+              "interaction": 0.0
             },
             "text_preview": "Uh, you know, I'll get my laptop. Let me have a look at what you got here. Sorry, the notes might be a little bit messy. I kind of just put everything in random"
           },
@@ -683,10 +756,10 @@
             "label": "content",
             "confidence": 0.99,
             "probabilities": {
-              "selfpromo": 0.0,
-              "interaction": 0.01,
+              "interaction": 0.0,
               "sponsor": 0.0,
-              "content": 0.99
+              "content": 1.0,
+              "selfpromo": 0.0
             },
             "text_preview": "already? Yeah, I researched about all of these and then Okay, so tell you what, without even looking at the doc then, why don't you try and summarize what exact"
           },
@@ -698,9 +771,9 @@
             "confidence": 0.99,
             "probabilities": {
               "selfpromo": 0.0,
-              "interaction": 0.0,
               "sponsor": 0.0,
-              "content": 1.0
+              "content": 1.0,
+              "interaction": 0.0
             },
             "text_preview": "run like 50 tabs at a time. 50. Well, yeah, if I have five subm's rookie numbers, VRAMm drop. OH, NO. BUT OKAY, go on. Well, my old Chromebook would like crash "
           },
@@ -709,12 +782,12 @@
             "start": 1091.84,
             "end": 1109.11,
             "label": "content",
-            "confidence": 0.48,
+            "confidence": 0.45,
             "probabilities": {
-              "selfpromo": 0.02,
-              "interaction": 0.0,
-              "sponsor": 0.37,
-              "content": 0.61
+              "selfpromo": 0.03,
+              "sponsor": 0.38,
+              "content": 0.59,
+              "interaction": 0.0
             },
             "text_preview": "Do we have a decision then? Yeah, I'm going to take this this Yeah, I'm going to take this this laptop. All right, happy back to school. We settled on Go figure"
           },
@@ -723,11 +796,11 @@
             "start": 1109.12,
             "end": 1125.35,
             "label": "sponsor",
-            "confidence": 0.76,
+            "confidence": 0.67,
             "probabilities": {
-              "sponsor": 0.82,
-              "content": 0.17,
               "selfpromo": 0.01,
+              "sponsor": 0.76,
+              "content": 0.23,
               "interaction": 0.0
             },
             "text_preview": "solid choice. And this is a pretty solid solid choice. And this is a pretty solid segue. Oh, I'm supposed to say it to our Oh, I'm supposed to say it to our spo"
@@ -737,11 +810,11 @@
             "start": 1125.36,
             "end": 1141.909,
             "label": "content",
-            "confidence": 0.7,
+            "confidence": 0.75,
             "probabilities": {
-              "sponsor": 0.2,
-              "content": 0.78,
-              "selfpromo": 0.02,
+              "selfpromo": 0.01,
+              "sponsor": 0.18,
+              "content": 0.81,
               "interaction": 0.0
             },
             "text_preview": "their fields, grew their [music] grain, and yet time and time again faced a troublesome dilemma. While they worked, [music] the folks of this small town were di"
@@ -751,11 +824,11 @@
             "start": 1141.919,
             "end": 1157.75,
             "label": "content",
-            "confidence": 0.53,
+            "confidence": 0.45,
             "probabilities": {
-              "sponsor": 0.25,
-              "content": 0.64,
-              "selfpromo": 0.11,
+              "selfpromo": 0.1,
+              "sponsor": 0.31,
+              "content": 0.59,
               "interaction": 0.0
             },
             "text_preview": "cold of winter crept in, Sheamus O Snapton knew the homes wouldn't finish on time when his friends kept dropping the phones and he thought, \"Damn, their phone a"
@@ -765,11 +838,11 @@
             "start": 1157.76,
             "end": 1172.87,
             "label": "sponsor",
-            "confidence": 0.45,
+            "confidence": 0.53,
             "probabilities": {
-              "sponsor": 0.59,
+              "selfpromo": 0.13,
+              "sponsor": 0.65,
               "content": 0.22,
-              "selfpromo": 0.19,
               "interaction": 0.0
             },
             "text_preview": "ultra thin, offering a handle and a way for them to prop up their devices. The O snap grip stand. Suddenly, the homesteaders were able to work while watching Yo"
@@ -779,12 +852,12 @@
             "start": 1172.88,
             "end": 1189.75,
             "label": "sponsor",
-            "confidence": 0.67,
+            "confidence": 0.72,
             "probabilities": {
               "interaction": 0.01,
-              "content": 0.05,
-              "selfpromo": 0.19,
-              "sponsor": 0.75
+              "sponsor": 0.79,
+              "content": 0.06,
+              "selfpromo": 0.14
             },
             "text_preview": "impressed, free to fidget, and worked with all of their devices. And now you too can have a piece of the O Snap Legacy with you in your pocket. 25% off sitewide"
           },
@@ -792,12 +865,12 @@
             "index": 73,
             "start": 1189.76,
             "end": 1198.24,
-            "label": "selfpromo",
-            "confidence": 0.43,
+            "label": "content",
+            "confidence": 0.36,
             "probabilities": {
+              "selfpromo": 0.47,
               "sponsor": 0.0,
-              "content": 0.42,
-              "selfpromo": 0.57,
+              "content": 0.52,
               "interaction": 0.01
             },
             "text_preview": "maybe check out the time that Elijah and I went shopping for a printer. It's way more exciting than it sounds."
@@ -915,9 +988,25 @@
         ],
         "dropped_segments": null,
         "n_candidate_chunks": 14,
-        "confidence_gate": null,
-        "confidence_threshold": null,
-        "intervals_pre_snap": null,
+        "confidence_gate": {
+          "n_segments": 2,
+          "n_auto_skip": 1,
+          "n_needs_confirm": 1,
+          "auto_skip_rate": 0.5,
+          "mean_confidence": 0.71,
+          "min_confidence": 0.63
+        },
+        "confidence_threshold": 0.75,
+        "intervals_pre_snap": [
+          [
+            82.32,
+            107.32
+          ],
+          [
+            1117.679,
+            1189.75
+          ]
+        ],
         "tony_status": null,
         "tony_traces": null,
         "n_lines": null,
@@ -926,7 +1015,7 @@
     },
     {
       "video_id": "3xngArcFpek",
-      "mode": "regex_propose_jev_confirm",
+      "mode": "regex_jev_refined",
       "gold": [
         {
           "start": 86.191,
@@ -943,37 +1032,62 @@
       ],
       "pred_segments": [
         {
-          "start": 89.2,
-          "end": 116.87,
-          "category": "sponsor"
+          "start": 86.4,
+          "end": 101.04,
+          "category": "sponsor",
+          "confidence": 1.0,
+          "auto_skip": true,
+          "needs_confirm": false
         },
         {
-          "start": 524.0,
+          "start": 520.0,
           "end": 573.2,
-          "category": "sponsor"
+          "category": "sponsor",
+          "confidence": 1.0,
+          "auto_skip": true,
+          "needs_confirm": false
         }
       ],
       "metrics": {
         "n_pred": 2,
         "n_gold": 2,
-        "overlap_sec": 61.89800000000004,
-        "pred_dur_sec": 76.87000000000005,
+        "overlap_sec": 67.26600000000009,
+        "pred_dur_sec": 67.84000000000005,
         "gold_dur_sec": 69.10300000000007,
-        "iou": 0.7362236098721376,
-        "precision": 0.8052296084298166,
-        "recall": 0.8957353515766316,
-        "f1": 0.8480746439410027,
-        "mean_best_iou": 0.6676580463699795,
+        "iou": 0.9653974769292605,
+        "precision": 0.9915389150943403,
+        "recall": 0.9734164942187753,
+        "f1": 0.9823941347860065,
+        "mean_best_iou": 0.9535828903765189,
         "video_recall_hit": true,
         "video_has_gold": true,
         "video_detected": true,
-        "fp_sec": 14.972000000000008,
-        "content_fp_rate": 0.029028048943632638,
-        "latency_ms_total": 478.39090798515826,
-        "latency_ms_p50_calls": 237.7790154714603,
+        "fp_sec": 0.5739999999999554,
+        "content_fp_rate": 0.0011128840564816878,
+        "latency_ms_total": 491.0119090345688,
+        "latency_ms_p50_calls": 240.55654401308857,
         "n_api_calls": 2,
         "input_tokens": 6808,
-        "estimated_usd": 0.00028593600000000004
+        "estimated_usd": 0.00028593600000000004,
+        "high_conf": {
+          "iou": 0.9653974769292605,
+          "precision": 0.9915389150943403,
+          "recall": 0.9734164942187753,
+          "f1": 0.9823941347860065,
+          "overlap_sec": 67.26600000000009,
+          "fp_sec": 0.5739999999999554,
+          "content_fp_rate": 0.0011128840564816878,
+          "n_pred_segments": 2
+        },
+        "confidence_gate": {
+          "n_segments": 2,
+          "n_auto_skip": 2,
+          "n_needs_confirm": 0,
+          "auto_skip_rate": 1.0,
+          "mean_confidence": 1.0,
+          "min_confidence": 1.0
+        },
+        "confidence_threshold": 0.75
       },
       "examples": {
         "hits": [
@@ -1005,7 +1119,7 @@
               84.2
             ],
             "label": "sponsor",
-            "conf": 0.46,
+            "conf": 0.41,
             "preview": "to invest a lot more into that medium before you hit the break even versus Blu-ray. Now, there are some obvious downsides to burnable media, which we will touch",
             "in_gold": false
           },
@@ -1015,7 +1129,7 @@
               116.9
             ],
             "label": "sponsor",
-            "conf": 0.42,
+            "conf": 0.44,
             "preview": "or stay tuned to the end of this video to find out more. Before we go any further, it's important to clarify that not all types of data are appropriate for Blu-",
             "in_gold": false
           }
@@ -1031,12 +1145,12 @@
             "start": 67.76,
             "end": 84.23,
             "label": "sponsor",
-            "confidence": 0.46,
+            "confidence": 0.41,
             "probabilities": {
               "interaction": 0.0,
-              "sponsor": 0.6,
               "selfpromo": 0.0,
-              "content": 0.4
+              "content": 0.44,
+              "sponsor": 0.56
             },
             "text_preview": "to invest a lot more into that medium before you hit the break even versus Blu-ray. Now, there are some obvious downsides to burnable media, which we will touch"
           },
@@ -1047,10 +1161,10 @@
             "label": "sponsor",
             "confidence": 1.0,
             "probabilities": {
-              "interaction": 0.0,
-              "sponsor": 1.0,
               "selfpromo": 0.0,
-              "content": 0.0
+              "interaction": 0.0,
+              "content": 0.0,
+              "sponsor": 1.0
             },
             "text_preview": "big money by going optical. Just like I saved big money on this segue to our sponsor, Meter. They provide enterprise full stack networking infrastructure and th"
           },
@@ -1059,12 +1173,12 @@
             "start": 99.36,
             "end": 116.87,
             "label": "sponsor",
-            "confidence": 0.42,
+            "confidence": 0.44,
             "probabilities": {
-              "interaction": 0.05,
-              "sponsor": 0.57,
-              "selfpromo": 0.01,
-              "content": 0.37
+              "interaction": 0.04,
+              "selfpromo": 0.02,
+              "content": 0.36,
+              "sponsor": 0.58
             },
             "text_preview": "or stay tuned to the end of this video to find out more. Before we go any further, it's important to clarify that not all types of data are appropriate for Blu-"
           },
@@ -1075,10 +1189,10 @@
             "label": "content",
             "confidence": 1.0,
             "probabilities": {
-              "interaction": 0.0,
-              "sponsor": 0.0,
               "selfpromo": 0.0,
-              "content": 1.0
+              "interaction": 0.0,
+              "content": 1.0,
+              "sponsor": 0.0
             },
             "text_preview": "kept on my local system drive or on a NAS where it can be [music] instantly recalled. Cold data, by contrast, is made up of files that aren't regularly being ac"
           },
@@ -1089,10 +1203,10 @@
             "label": "content",
             "confidence": 1.0,
             "probabilities": {
-              "interaction": 0.0,
-              "sponsor": 0.0,
               "selfpromo": 0.0,
-              "content": 1.0
+              "interaction": 0.0,
+              "content": 1.0,
+              "sponsor": 0.0
             },
             "text_preview": "at unless you get audited or large raw versions of family photos if you happen to be a passionate shutterbug. This is the type of thing that is not only a perfe"
           },
@@ -1104,9 +1218,9 @@
             "confidence": 1.0,
             "probabilities": {
               "interaction": 0.0,
-              "sponsor": 0.0,
               "selfpromo": 0.0,
-              "content": 1.0
+              "content": 1.0,
+              "sponsor": 0.0
             },
             "text_preview": "expected [music] lifespan. Just like with humans, taking proper care of those electronics can help to extend that lifespan. But eventually they're all going to "
           },
@@ -1118,8 +1232,8 @@
             "confidence": 1.0,
             "probabilities": {
               "interaction": 0.0,
-              "sponsor": 0.0,
               "selfpromo": 0.0,
+              "sponsor": 0.0,
               "content": 1.0
             },
             "text_preview": "estimating how much life they have left. Okay, well, no problem. Why don't you just leave them powered off then, right? Ah, not so fast. While there are drives "
@@ -1132,8 +1246,8 @@
             "confidence": 0.97,
             "probabilities": {
               "interaction": 0.0,
-              "sponsor": 0.98,
               "selfpromo": 0.0,
+              "sponsor": 0.98,
               "content": 0.02
             },
             "text_preview": "some people, Blu-ray could make a lot of sense and might not have been the sort of thing that they would think about. Sure, it's not great for everyone, but any"
@@ -1145,9 +1259,9 @@
             "label": "sponsor",
             "confidence": 1.0,
             "probabilities": {
-              "selfpromo": 0.0,
-              "sponsor": 1.0,
               "interaction": 0.0,
+              "sponsor": 1.0,
+              "selfpromo": 0.0,
               "content": 0.0
             },
             "text_preview": "educated on. Now, if you'll excuse me, I'm just going to pop in this segue to our sponsor, Meter. Sometimes a networking team just isn't big enough to juggle th"
@@ -1157,12 +1271,12 @@
             "start": 536.48,
             "end": 553.269,
             "label": "sponsor",
-            "confidence": 1.0,
+            "confidence": 0.99,
             "probabilities": {
-              "selfpromo": 0.0,
-              "sponsor": 1.0,
               "interaction": 0.0,
-              "content": 0.0
+              "sponsor": 0.99,
+              "selfpromo": 0.0,
+              "content": 0.01
             },
             "text_preview": "delivering full stack networking infrastructure across internet, wired, wireless, and cellular. Unlike legacy networking, which isn't built to meet modern deman"
           },
@@ -1171,11 +1285,11 @@
             "start": 553.279,
             "end": 568.71,
             "label": "sponsor",
-            "confidence": 0.92,
+            "confidence": 0.94,
             "probabilities": {
-              "selfpromo": 0.03,
-              "sponsor": 0.95,
               "interaction": 0.0,
+              "sponsor": 0.95,
+              "selfpromo": 0.03,
               "content": 0.02
             },
             "text_preview": "headache. You'll get migration credits, 24/7 support, and predictable subscription pricing. Meter also offers constellation of networking components into one ve"
@@ -1185,12 +1299,12 @@
             "start": 568.72,
             "end": 584.88,
             "label": "selfpromo",
-            "confidence": 0.23,
+            "confidence": 0.37,
             "probabilities": {
-              "selfpromo": 0.42,
-              "sponsor": 0.27,
               "interaction": 0.01,
-              "content": 0.3
+              "sponsor": 0.21,
+              "selfpromo": 0.53,
+              "content": 0.25
             },
             "text_preview": "and book that demo now. That's and book that demo now. That's me.com/ltt to book a demo. If you guys enjoyed this video, why not check out the time that we did "
           }
@@ -1273,9 +1387,25 @@
         ],
         "dropped_segments": null,
         "n_candidate_chunks": 12,
-        "confidence_gate": null,
-        "confidence_threshold": null,
-        "intervals_pre_snap": null,
+        "confidence_gate": {
+          "n_segments": 2,
+          "n_auto_skip": 2,
+          "n_needs_confirm": 0,
+          "auto_skip_rate": 1.0,
+          "mean_confidence": 1.0,
+          "min_confidence": 1.0
+        },
+        "confidence_threshold": 0.75,
+        "intervals_pre_snap": [
+          [
+            89.2,
+            116.87
+          ],
+          [
+            524.0,
+            573.2
+          ]
+        ],
         "tony_status": null,
         "tony_traces": null,
         "n_lines": null,
@@ -1284,7 +1414,7 @@
     },
     {
       "video_id": "3PGKMwgjla0",
-      "mode": "regex_propose_jev_confirm",
+      "mode": "regex_jev_refined",
       "gold": [
         {
           "start": 99.413,
@@ -1303,12 +1433,18 @@
         {
           "start": 102.64,
           "end": 131.83,
-          "category": "sponsor"
+          "category": "sponsor",
+          "confidence": 1.0,
+          "auto_skip": true,
+          "needs_confirm": false
         },
         {
           "start": 1355.36,
           "end": 1411.84,
-          "category": "sponsor"
+          "category": "sponsor",
+          "confidence": 1.0,
+          "auto_skip": true,
+          "needs_confirm": false
         }
       ],
       "metrics": {
@@ -1327,11 +1463,30 @@
         "video_detected": true,
         "fp_sec": 9.291000000000011,
         "content_fp_rate": 0.006896771856479455,
-        "latency_ms_total": 513.3165520383045,
-        "latency_ms_p50_calls": 253.261529491283,
+        "latency_ms_total": 507.7625449630432,
+        "latency_ms_p50_calls": 238.99628000799567,
         "n_api_calls": 2,
         "input_tokens": 7927,
-        "estimated_usd": 0.000332934
+        "estimated_usd": 0.000332934,
+        "high_conf": {
+          "iou": 0.8534061833093118,
+          "precision": 0.8915489669662658,
+          "recall": 0.9522616197885514,
+          "f1": 0.9209057258949357,
+          "overlap_sec": 76.37900000000002,
+          "fp_sec": 9.291000000000011,
+          "content_fp_rate": 0.006896771856479455,
+          "n_pred_segments": 2
+        },
+        "confidence_gate": {
+          "n_segments": 2,
+          "n_auto_skip": 2,
+          "n_needs_confirm": 0,
+          "auto_skip_rate": 1.0,
+          "mean_confidence": 1.0,
+          "min_confidence": 1.0
+        },
+        "confidence_threshold": 0.75
       },
       "examples": {
         "hits": [
@@ -1366,6 +1521,17 @@
             "conf": 0.99,
             "preview": "businesses to navigate. And their flagship event, Zero Trust World, is coming up in February. Learn more and secure your tickets today with the link secure your",
             "in_gold": false
+          },
+          {
+            "t": [
+              1400.4,
+              1415.6
+            ],
+            "label": "content",
+            "conf": 0.2,
+            "preview": "firsthand experience deploying and going through the path of an attack, understanding how these exploits work and how to prevent them. Learn more about zero tru",
+            "in_gold": true,
+            "kind": "false_negative_chunk"
           }
         ]
       },
@@ -1379,12 +1545,12 @@
             "start": 81.68,
             "end": 97.99,
             "label": "content",
-            "confidence": 0.65,
+            "confidence": 0.69,
             "probabilities": {
-              "content": 0.74,
               "selfpromo": 0.0,
+              "content": 0.77,
               "interaction": 0.0,
-              "sponsor": 0.26
+              "sponsor": 0.23
             },
             "text_preview": "that's hiding in plain sight. Steam OS. You've seen it before, but now it's got a fresh new party trick that allows games made for Intel and AMD processors to r"
           },
@@ -1395,8 +1561,8 @@
             "label": "sponsor",
             "confidence": 1.0,
             "probabilities": {
-              "content": 0.0,
               "selfpromo": 0.0,
+              "content": 0.0,
               "interaction": 0.0,
               "sponsor": 1.0
             },
@@ -1411,8 +1577,8 @@
             "probabilities": {
               "content": 0.0,
               "selfpromo": 0.0,
-              "interaction": 0.0,
-              "sponsor": 1.0
+              "sponsor": 1.0,
+              "interaction": 0.0
             },
             "text_preview": "businesses to navigate. And their flagship event, Zero Trust World, is coming up in February. Learn more and secure your tickets today with the link secure your"
           },
@@ -1421,12 +1587,12 @@
             "start": 133.36,
             "end": 148.55,
             "label": "content",
-            "confidence": 0.88,
+            "confidence": 0.86,
             "probabilities": {
-              "content": 0.91,
-              "selfpromo": 0.09,
-              "interaction": 0.0,
-              "sponsor": 0.0
+              "selfpromo": 0.11,
+              "content": 0.89,
+              "sponsor": 0.0,
+              "interaction": 0.0
             },
             "text_preview": "excitedly unboxing and setting it up are going to be over on short circuit. So, I'm not going to be getting into that here. Instead, I want to focus on using it"
           },
@@ -1439,8 +1605,8 @@
             "probabilities": {
               "content": 1.0,
               "selfpromo": 0.0,
-              "interaction": 0.0,
-              "sponsor": 0.0
+              "sponsor": 0.0,
+              "interaction": 0.0
             },
             "text_preview": "over previous generation headsets. And Valve's experience shows in the thoughtful design with a dedicated IPD adjustment wheel and lock, quick button access to "
           },
@@ -1451,8 +1617,8 @@
             "label": "content",
             "confidence": 1.0,
             "probabilities": {
-              "content": 1.0,
               "selfpromo": 0.0,
+              "content": 1.0,
               "interaction": 0.0,
               "sponsor": 0.0
             },
@@ -1465,10 +1631,10 @@
             "label": "content",
             "confidence": 1.0,
             "probabilities": {
-              "content": 1.0,
               "selfpromo": 0.0,
-              "interaction": 0.0,
-              "sponsor": 0.0
+              "content": 1.0,
+              "sponsor": 0.0,
+              "interaction": 0.0
             },
             "text_preview": "headsets that I've worn, some of them years older than this one, that surpass it in at least some of those ways. And guys, I was really hoping that when Valve t"
           },
@@ -1479,10 +1645,10 @@
             "label": "content",
             "confidence": 1.0,
             "probabilities": {
-              "content": 1.0,
               "selfpromo": 0.0,
-              "interaction": 0.0,
-              "sponsor": 0.0
+              "content": 1.0,
+              "sponsor": 0.0,
+              "interaction": 0.0
             },
             "text_preview": "fringing on moving objects. I do understand why they went with LCD. Going to a more responsive technology like OLED would have hurt battery life or brightness o"
           },
@@ -1491,12 +1657,12 @@
             "start": 1338.0,
             "end": 1353.83,
             "label": "content",
-            "confidence": 0.51,
+            "confidence": 0.58,
             "probabilities": {
-              "sponsor": 0.37,
-              "content": 0.63,
+              "content": 0.69,
+              "selfpromo": 0.0,
               "interaction": 0.0,
-              "selfpromo": 0.0
+              "sponsor": 0.31
             },
             "text_preview": "kind of meaningful lens blocker. I'm going to have to like 3D print something. And because the lenses, there's no real way to fix them if they get broken. But f"
           },
@@ -1507,8 +1673,8 @@
             "label": "sponsor",
             "confidence": 1.0,
             "probabilities": {
-              "sponsor": 1.0,
               "content": 0.0,
+              "sponsor": 1.0,
               "interaction": 0.0,
               "selfpromo": 0.0
             },
@@ -1519,12 +1685,12 @@
             "start": 1369.12,
             "end": 1385.19,
             "label": "sponsor",
-            "confidence": 0.91,
+            "confidence": 0.93,
             "probabilities": {
-              "sponsor": 0.9400000000000001,
-              "content": 0.06,
+              "content": 0.05,
+              "selfpromo": 0.0,
               "interaction": 0.0,
-              "selfpromo": 0.0
+              "sponsor": 0.95
             },
             "text_preview": "keep your business secure. That's where Threat Locker and their flagship event, Zero Trust World, come in. At Zero Trust World, there will be hands-on labs, dee"
           },
@@ -1533,12 +1699,12 @@
             "start": 1385.2,
             "end": 1400.39,
             "label": "sponsor",
-            "confidence": 0.92,
+            "confidence": 0.9,
             "probabilities": {
-              "sponsor": 0.95,
-              "content": 0.05,
+              "content": 0.07,
+              "selfpromo": 0.0,
               "interaction": 0.0,
-              "selfpromo": 0.0
+              "sponsor": 0.93
             },
             "text_preview": "and speak at zero trust world and the conference continues to grow every year. Also, the sessions are eligible for continuing education credits and attendees wi"
           },
@@ -1546,13 +1712,13 @@
             "index": 87,
             "start": 1400.4,
             "end": 1415.59,
-            "label": "sponsor",
-            "confidence": 0.17,
+            "label": "content",
+            "confidence": 0.2,
             "probabilities": {
-              "sponsor": 0.37,
-              "content": 0.32,
+              "content": 0.4,
+              "selfpromo": 0.32,
               "interaction": 0.01,
-              "selfpromo": 0.3
+              "sponsor": 0.27
             },
             "text_preview": "firsthand experience deploying and going through the path of an attack, understanding how these exploits work and how to prevent them. Learn more about zero tru"
           },
@@ -1561,12 +1727,12 @@
             "start": 1415.6,
             "end": 1427.36,
             "label": "content",
-            "confidence": 0.77,
+            "confidence": 0.69,
             "probabilities": {
+              "content": 0.77,
               "sponsor": 0.0,
-              "content": 0.83,
               "interaction": 0.0,
-              "selfpromo": 0.17
+              "selfpromo": 0.23
             },
             "text_preview": "Beyond 2? It is an equally valid but very different product. Try that. It's great for forever alone. It's perfect."
           }
@@ -1680,9 +1846,25 @@
         ],
         "dropped_segments": null,
         "n_candidate_chunks": 14,
-        "confidence_gate": null,
-        "confidence_threshold": null,
-        "intervals_pre_snap": null,
+        "confidence_gate": {
+          "n_segments": 2,
+          "n_auto_skip": 2,
+          "n_needs_confirm": 0,
+          "auto_skip_rate": 1.0,
+          "mean_confidence": 1.0,
+          "min_confidence": 1.0
+        },
+        "confidence_threshold": 0.75,
+        "intervals_pre_snap": [
+          [
+            102.64,
+            131.83
+          ],
+          [
+            1355.36,
+            1411.84
+          ]
+        ],
         "tony_status": null,
         "tony_traces": null,
         "n_lines": null,
@@ -1691,7 +1873,7 @@
     },
     {
       "video_id": "i_nj_vkD03g",
-      "mode": "regex_propose_jev_confirm",
+      "mode": "regex_jev_refined",
       "gold": [
         {
           "start": 78.12,
@@ -1708,37 +1890,62 @@
       ],
       "pred_segments": [
         {
-          "start": 79.119,
-          "end": 104.119,
-          "category": "sponsor"
+          "start": 76.96,
+          "end": 96.64,
+          "category": "sponsor",
+          "confidence": 0.96,
+          "auto_skip": true,
+          "needs_confirm": false
         },
         {
-          "start": 1439.2,
-          "end": 1502.71,
-          "category": "sponsor"
+          "start": 1435.2,
+          "end": 1510.32,
+          "category": "sponsor",
+          "confidence": 1.0,
+          "auto_skip": true,
+          "needs_confirm": false
         }
       ],
       "metrics": {
         "n_pred": 2,
         "n_gold": 2,
-        "overlap_sec": 76.832,
-        "pred_dur_sec": 88.50999999999999,
+        "overlap_sec": 86.42999999999992,
+        "pred_dur_sec": 94.7999999999999,
         "gold_dur_sec": 88.98300000000003,
-        "iou": 0.7632747538768736,
-        "precision": 0.868060106202689,
-        "recall": 0.8634458267309483,
-        "f1": 0.8657468181843789,
-        "mean_best_iou": 0.6815189224905835,
+        "iou": 0.88780006779452,
+        "precision": 0.9117088607594939,
+        "recall": 0.9713091264623568,
+        "f1": 0.9405657759422793,
+        "mean_best_iou": 0.8280297229112159,
         "video_recall_hit": true,
         "video_has_gold": true,
         "video_detected": true,
-        "fp_sec": 11.677999999999997,
-        "content_fp_rate": 0.00807419017836092,
-        "latency_ms_total": 556.2758339801803,
-        "latency_ms_p50_calls": 274.85080147744156,
+        "fp_sec": 8.369999999999976,
+        "content_fp_rate": 0.005787033035869217,
+        "latency_ms_total": 604.6833290020004,
+        "latency_ms_p50_calls": 288.72144149499945,
         "n_api_calls": 2,
         "input_tokens": 6968,
-        "estimated_usd": 0.000292656
+        "estimated_usd": 0.000292656,
+        "high_conf": {
+          "iou": 0.88780006779452,
+          "precision": 0.9117088607594939,
+          "recall": 0.9713091264623568,
+          "f1": 0.9405657759422793,
+          "overlap_sec": 86.42999999999992,
+          "fp_sec": 8.369999999999976,
+          "content_fp_rate": 0.005787033035869217,
+          "n_pred_segments": 2
+        },
+        "confidence_gate": {
+          "n_segments": 2,
+          "n_auto_skip": 2,
+          "n_needs_confirm": 0,
+          "auto_skip_rate": 1.0,
+          "mean_confidence": 0.98,
+          "min_confidence": 0.96
+        },
+        "confidence_threshold": 0.75
       },
       "examples": {
         "hits": [
@@ -1748,7 +1955,7 @@
               100.7
             ],
             "label": "sponsor",
-            "conf": 0.6,
+            "conf": 0.63,
             "preview": "cooled G2 enabled 25 watt power bank where you can see the liquid cooling in action. Wa. Check it out. The links below. This project was actually inspired by a ",
             "in_gold": true
           },
@@ -1758,7 +1965,7 @@
               1454.5
             ],
             "label": "sponsor",
-            "conf": 1.0,
+            "conf": 0.99,
             "preview": "segue to our sponsor? I'm chiller than you are. And I'm going to prove it. Big test coming up. No sweat off my back. Dinner with the president of puppies. Cool ",
             "in_gold": true
           }
@@ -1770,7 +1977,7 @@
               83.7
             ],
             "label": "sponsor",
-            "conf": 0.94,
+            "conf": 0.95,
             "preview": "some pulleys along with some help from some pulleys along with some help from Valve. This one, not that one. We are going to write this wrong once and for all. ",
             "in_gold": false
           },
@@ -1780,7 +1987,7 @@
               1439.2
             ],
             "label": "sponsor",
-            "conf": 0.67,
+            "conf": 0.68,
             "preview": "Sure, it might not be as quiet. It might not look as sleek. It might cost way more. But did we get slightly lower more. But did we get slightly lower temperatur",
             "in_gold": false
           }
@@ -1796,12 +2003,12 @@
             "start": 66.799,
             "end": 83.749,
             "label": "sponsor",
-            "confidence": 0.94,
+            "confidence": 0.95,
             "probabilities": {
               "interaction": 0.0,
               "sponsor": 0.96,
-              "content": 0.04,
-              "selfpromo": 0.0
+              "selfpromo": 0.0,
+              "content": 0.04
             },
             "text_preview": "some pulleys along with some help from some pulleys along with some help from Valve. This one, not that one. We are going to write this wrong once and for all. "
           },
@@ -1810,12 +2017,12 @@
             "start": 83.759,
             "end": 100.71,
             "label": "sponsor",
-            "confidence": 0.6,
+            "confidence": 0.63,
             "probabilities": {
               "interaction": 0.0,
-              "sponsor": 0.71,
-              "content": 0.28,
-              "selfpromo": 0.01
+              "sponsor": 0.72,
+              "selfpromo": 0.01,
+              "content": 0.27
             },
             "text_preview": "cooled G2 enabled 25 watt power bank where you can see the liquid cooling in action. Wa. Check it out. The links below. This project was actually inspired by a "
           },
@@ -1824,12 +2031,12 @@
             "start": 100.72,
             "end": 117.109,
             "label": "content",
-            "confidence": 0.99,
+            "confidence": 1.0,
             "probabilities": {
               "interaction": 0.0,
               "sponsor": 0.0,
-              "selfpromo": 0.01,
-              "content": 0.99
+              "selfpromo": 0.0,
+              "content": 1.0
             },
             "text_preview": "Samsons did it. And we actually have done. You pretty much name anything and we have water cooled it at some point. I wanted to do something new. The first reac"
           },
@@ -1842,8 +2049,8 @@
             "probabilities": {
               "interaction": 0.0,
               "sponsor": 0.0,
-              "content": 1.0,
-              "selfpromo": 0.0
+              "selfpromo": 0.0,
+              "content": 1.0
             },
             "text_preview": "But but as it so often does, AliExpress saved the day. See, it turns out for about $300, you can get a few hours of wholesome fun for the whole family and end u"
           },
@@ -1856,8 +2063,8 @@
             "probabilities": {
               "interaction": 0.0,
               "sponsor": 0.0,
-              "content": 1.0,
-              "selfpromo": 0.0
+              "selfpromo": 0.0,
+              "content": 1.0
             },
             "text_preview": "at the end of it. This particular one is a single cylinder design from Rocking Whale that is rated for up to 015 horsepower and 600 g per cm of torque. No idea "
           },
@@ -1870,8 +2077,8 @@
             "probabilities": {
               "interaction": 0.0,
               "sponsor": 0.0,
-              "content": 1.0,
-              "selfpromo": 0.0
+              "selfpromo": 0.0,
+              "content": 1.0
             },
             "text_preview": "which happens to be about two and a half times faster than the stock steam machine. So hopefully this thing will be suitable to amp up our cooling. The output t"
           },
@@ -1880,12 +2087,12 @@
             "start": 1423.36,
             "end": 1439.19,
             "label": "sponsor",
-            "confidence": 0.67,
+            "confidence": 0.68,
             "probabilities": {
               "interaction": 0.0,
-              "sponsor": 0.76,
-              "content": 0.24,
-              "selfpromo": 0.0
+              "sponsor": 0.77,
+              "selfpromo": 0.0,
+              "content": 0.23
             },
             "text_preview": "Sure, it might not be as quiet. It might not look as sleek. It might cost way more. But did we get slightly lower more. But did we get slightly lower temperatur"
           },
@@ -1894,12 +2101,12 @@
             "start": 1439.2,
             "end": 1454.47,
             "label": "sponsor",
-            "confidence": 1.0,
+            "confidence": 0.99,
             "probabilities": {
               "interaction": 0.0,
               "sponsor": 1.0,
-              "content": 0.0,
-              "selfpromo": 0.0
+              "selfpromo": 0.0,
+              "content": 0.0
             },
             "text_preview": "segue to our sponsor? I'm chiller than you are. And I'm going to prove it. Big test coming up. No sweat off my back. Dinner with the president of puppies. Cool "
           },
@@ -1908,12 +2115,12 @@
             "start": 1454.48,
             "end": 1470.87,
             "label": "content",
-            "confidence": 0.58,
+            "confidence": 0.57,
             "probabilities": {
-              "sponsor": 0.2,
-              "content": 0.69,
               "interaction": 0.0,
-              "selfpromo": 0.11
+              "selfpromo": 0.09,
+              "sponsor": 0.22,
+              "content": 0.6900000000000001
             },
             "text_preview": "Green's Magflow Pro has me feeling like I'm wearing a leather jacket, hair sllicked back, shades on. It's a liquid cooled G2 25 watt power bank where you can se"
           },
@@ -1922,12 +2129,12 @@
             "start": 1470.88,
             "end": 1486.31,
             "label": "content",
-            "confidence": 0.38,
+            "confidence": 0.32,
             "probabilities": {
-              "sponsor": 0.19,
-              "content": 0.54,
               "interaction": 0.0,
-              "selfpromo": 0.27
+              "selfpromo": 0.23,
+              "sponsor": 0.29,
+              "content": 0.48
             },
             "text_preview": "18° Fahrenheit lower than industry standards when you charge a phone. This compact bad boy has an attached USBC cable and 10,000 milliamp hours of capacity, so "
           },
@@ -1936,12 +2143,12 @@
             "start": 1486.32,
             "end": 1502.71,
             "label": "sponsor",
-            "confidence": 0.42,
+            "confidence": 0.53,
             "probabilities": {
-              "sponsor": 0.57,
               "interaction": 0.0,
-              "content": 0.21,
-              "selfpromo": 0.22
+              "selfpromo": 0.16,
+              "sponsor": 0.66,
+              "content": 0.18
             },
             "text_preview": "completely charge it twice. And I can't think of anything cooler than a friend. So get your charger a buddy with UG Green's Magflow Pro wireless charging stand."
           },
@@ -1950,12 +2157,12 @@
             "start": 1502.72,
             "end": 1519.607,
             "label": "content",
-            "confidence": 0.54,
+            "confidence": 0.58,
             "probabilities": {
-              "sponsor": 0.26,
-              "content": 0.66,
-              "interaction": 0.01,
-              "selfpromo": 0.07
+              "interaction": 0.02,
+              "selfpromo": 0.05,
+              "sponsor": 0.25,
+              "content": 0.68
             },
             "text_preview": "party. charging iPhone, AirPods, and Apple Watch all at once. Grab your UG Green Mag Flow Pro at the link below. That rhymed, so it's cool. If you guys enjoyed "
           }
@@ -2020,9 +2227,25 @@
         ],
         "dropped_segments": null,
         "n_candidate_chunks": 12,
-        "confidence_gate": null,
-        "confidence_threshold": null,
-        "intervals_pre_snap": null,
+        "confidence_gate": {
+          "n_segments": 2,
+          "n_auto_skip": 2,
+          "n_needs_confirm": 0,
+          "auto_skip_rate": 1.0,
+          "mean_confidence": 0.98,
+          "min_confidence": 0.96
+        },
+        "confidence_threshold": 0.75,
+        "intervals_pre_snap": [
+          [
+            79.119,
+            104.119
+          ],
+          [
+            1439.2,
+            1502.71
+          ]
+        ],
         "tony_status": null,
         "tony_traces": null,
         "n_lines": null,
@@ -2031,7 +2254,7 @@
     },
     {
       "video_id": "pvSdeU13hKc",
-      "mode": "regex_propose_jev_confirm",
+      "mode": "regex_jev_refined",
       "gold": [
         {
           "start": 99.078,
@@ -2048,32 +2271,62 @@
       ],
       "pred_segments": [
         {
+          "start": 99.6,
+          "end": 124.6,
+          "category": "sponsor",
+          "confidence": 0.51,
+          "auto_skip": false,
+          "needs_confirm": true
+        },
+        {
           "start": 1042.24,
           "end": 1123.039,
-          "category": "sponsor"
+          "category": "sponsor",
+          "confidence": 0.98,
+          "auto_skip": true,
+          "needs_confirm": false
         }
       ],
       "metrics": {
-        "n_pred": 1,
+        "n_pred": 2,
         "n_gold": 2,
-        "overlap_sec": 80.63799999999992,
-        "pred_dur_sec": 80.79899999999998,
+        "overlap_sec": 100.36599999999993,
+        "pred_dur_sec": 105.79899999999998,
         "gold_dur_sec": 102.67399999999998,
-        "iou": 0.7841493654884027,
-        "precision": 0.9980074010816958,
-        "recall": 0.7853789664374616,
-        "f1": 0.8790176211213633,
-        "mean_best_iou": 0.9764242901253241,
+        "iou": 0.9283950160489136,
+        "precision": 0.9486479078252152,
+        "recall": 0.9775210861561832,
+        "f1": 0.962868093230298,
+        "mean_best_iou": 0.874702232046441,
         "video_recall_hit": true,
         "video_has_gold": true,
         "video_detected": true,
-        "fp_sec": 0.1610000000000582,
-        "content_fp_rate": 0.00015477703454898182,
-        "latency_ms_total": 458.93519005039707,
-        "latency_ms_p50_calls": 227.11529349908233,
+        "fp_sec": 5.43300000000005,
+        "content_fp_rate": 0.005223003904995788,
+        "latency_ms_total": 708.5340589983389,
+        "latency_ms_p50_calls": 345.045340975048,
         "n_api_calls": 2,
         "input_tokens": 7649,
-        "estimated_usd": 0.00032125800000000005
+        "estimated_usd": 0.00032125800000000005,
+        "high_conf": {
+          "iou": 0.7841493654884027,
+          "precision": 0.9980074010816958,
+          "recall": 0.7853789664374616,
+          "f1": 0.8790176211213633,
+          "overlap_sec": 80.63799999999992,
+          "fp_sec": 0.1610000000000582,
+          "content_fp_rate": 0.00015477703454898182,
+          "n_pred_segments": 1
+        },
+        "confidence_gate": {
+          "n_segments": 2,
+          "n_auto_skip": 1,
+          "n_needs_confirm": 1,
+          "auto_skip_rate": 0.5,
+          "mean_confidence": 0.745,
+          "min_confidence": 0.51
+        },
+        "confidence_threshold": 0.75
       },
       "examples": {
         "hits": [
@@ -2083,7 +2336,7 @@
               1048.7
             ],
             "label": "sponsor",
-            "conf": 0.57,
+            "conf": 0.56,
             "preview": "pretty good deal. And there will be more optimizations and people finding workarounds for things, maybe some more unlocks as well. So, pretty interesting. Futur",
             "in_gold": true
           },
@@ -2093,7 +2346,7 @@
               1065.1
             ],
             "label": "sponsor",
-            "conf": 0.57,
+            "conf": 0.59,
             "preview": "water. No water. No water. water. No. No, I haven't seen him. I know it's cats and dogs out there. I hope he's wearing his messy [music] classic Chelseies.",
             "in_gold": true
           }
@@ -2101,23 +2354,22 @@
         "misses": [
           {
             "t": [
+              87.8,
+              104.4
+            ],
+            "label": "sponsor",
+            "conf": 0.35,
+            "preview": "sorry, I stepped on you. you. I can't fit all of you in my field of view, [snorts] but we're gonna show you guys how to do it and talk about whether one of thes",
+            "in_gold": false
+          },
+          {
+            "t": [
               104.4,
               121.3
             ],
             "label": "content",
-            "conf": 0.8,
+            "conf": 0.84,
             "preview": "from the unmoistened one. Step one",
-            "in_gold": true,
-            "kind": "false_negative_chunk"
-          },
-          {
-            "t": [
-              1065.1,
-              1082.5
-            ],
-            "label": "content",
-            "conf": 0.78,
-            "preview": "Dampertton Falls had never been this damp. Like an infection. [music] The rain wormed its way into every crevice. There wasn't a dry sock in the city except the",
             "in_gold": true,
             "kind": "false_negative_chunk"
           }
@@ -2132,13 +2384,13 @@
             "index": 5,
             "start": 87.759,
             "end": 104.39,
-            "label": "content",
-            "confidence": 0.4,
+            "label": "sponsor",
+            "confidence": 0.35,
             "probabilities": {
-              "sponsor": 0.43,
+              "content": 0.47,
+              "sponsor": 0.51,
               "interaction": 0.01,
-              "selfpromo": 0.01,
-              "content": 0.55
+              "selfpromo": 0.01
             },
             "text_preview": "sorry, I stepped on you. you. I can't fit all of you in my field of view, [snorts] but we're gonna show you guys how to do it and talk about whether one of thes"
           },
@@ -2147,12 +2399,12 @@
             "start": 104.4,
             "end": 121.35,
             "label": "content",
-            "confidence": 0.8,
+            "confidence": 0.84,
             "probabilities": {
-              "sponsor": 0.14,
-              "interaction": 0.01,
-              "selfpromo": 0.0,
-              "content": 0.85
+              "content": 0.88,
+              "sponsor": 0.12,
+              "interaction": 0.0,
+              "selfpromo": 0.0
             },
             "text_preview": "from the unmoistened one. Step one"
           },
@@ -2163,10 +2415,10 @@
             "label": "content",
             "confidence": 1.0,
             "probabilities": {
-              "sponsor": 0.0,
-              "interaction": 0.0,
+              "content": 1.0,
               "selfpromo": 0.0,
-              "content": 1.0
+              "interaction": 0.0,
+              "sponsor": 0.0
             },
             "text_preview": "is to stand on this box so that our camera operator can frame for both of us. Step two is to establish a baseline of what kind of models we can actually run on "
           },
@@ -2177,10 +2429,10 @@
             "label": "content",
             "confidence": 1.0,
             "probabilities": {
+              "content": 1.0,
               "sponsor": 0.0,
               "interaction": 0.0,
-              "selfpromo": 0.0,
-              "content": 1.0
+              "selfpromo": 0.0
             },
             "text_preview": "It's not a comprehensive benchmark, but it gives us a number which is all we really need to do a comparison like for like. Literally the exact same card running"
           },
@@ -2191,10 +2443,10 @@
             "label": "content",
             "confidence": 1.0,
             "probabilities": {
+              "content": 1.0,
               "sponsor": 0.0,
               "interaction": 0.0,
-              "selfpromo": 0.0,
-              "content": 1.0
+              "selfpromo": 0.0
             },
             "text_preview": "The 3090 Ti are here for sort of a they're not quite equivalent in price, are they? These are a little more. They were equivalent in price um before and now the"
           },
@@ -2205,10 +2457,10 @@
             "label": "content",
             "confidence": 1.0,
             "probabilities": {
+              "content": 1.0,
               "sponsor": 0.0,
               "interaction": 0.0,
-              "selfpromo": 0.0,
-              "content": 1.0
+              "selfpromo": 0.0
             },
             "text_preview": "11-,300 and now the CMPs are going for like 16-,900. 3090 Ti are here as sort of a faster compute but less RAM point of comparison. We've got a 1650 that's just"
           },
@@ -2219,10 +2471,10 @@
             "label": "content",
             "confidence": 0.92,
             "probabilities": {
+              "content": 0.94,
               "sponsor": 0.06,
               "interaction": 0.0,
-              "selfpromo": 0.0,
-              "content": 0.94
+              "selfpromo": 0.0
             },
             "text_preview": "lot of room for context to make it Yeah. like half a million or quarter a million like half a million or quarter a million context or running additional models."
           },
@@ -2231,12 +2483,12 @@
             "start": 1032.64,
             "end": 1048.657,
             "label": "sponsor",
-            "confidence": 0.57,
+            "confidence": 0.56,
             "probabilities": {
+              "content": 0.32,
               "sponsor": 0.68,
               "interaction": 0.0,
-              "selfpromo": 0.0,
-              "content": 0.32
+              "selfpromo": 0.0
             },
             "text_preview": "pretty good deal. And there will be more optimizations and people finding workarounds for things, maybe some more unlocks as well. So, pretty interesting. Futur"
           },
@@ -2245,12 +2497,12 @@
             "start": 1049.36,
             "end": 1065.11,
             "label": "sponsor",
-            "confidence": 0.57,
+            "confidence": 0.59,
             "probabilities": {
-              "sponsor": 0.6900000000000001,
-              "interaction": 0.0,
-              "content": 0.31,
-              "selfpromo": 0.0
+              "selfpromo": 0.0,
+              "sponsor": 0.7,
+              "content": 0.3,
+              "interaction": 0.0
             },
             "text_preview": "water. No water. No water. water. No. No, I haven't seen him. I know it's cats and dogs out there. I hope he's wearing his messy [music] classic Chelseies."
           },
@@ -2261,10 +2513,10 @@
             "label": "content",
             "confidence": 0.78,
             "probabilities": {
+              "selfpromo": 0.01,
               "sponsor": 0.15,
-              "content": 0.84,
               "interaction": 0.0,
-              "selfpromo": 0.01
+              "content": 0.84
             },
             "text_preview": "Dampertton Falls had never been this damp. Like an infection. [music] The rain wormed its way into every crevice. There wasn't a dry sock in the city except the"
           },
@@ -2275,10 +2527,10 @@
             "label": "sponsor",
             "confidence": 0.96,
             "probabilities": {
-              "sponsor": 0.97,
-              "interaction": 0.0,
-              "content": 0.02,
-              "selfpromo": 0.01
+              "selfpromo": 0.01,
+              "sponsor": 0.96,
+              "content": 0.03,
+              "interaction": 0.0
             },
             "text_preview": "city except the one inside that thing. Expect the unexpected with the Vessie Weekend Chelsea. Lightweight, breathable, comfortable, and waterproof. Bet you didn"
           },
@@ -2287,12 +2539,12 @@
             "start": 1100.16,
             "end": 1118.47,
             "label": "sponsor",
-            "confidence": 0.96,
+            "confidence": 0.97,
             "probabilities": {
-              "sponsor": 0.97,
+              "selfpromo": 0.0,
+              "sponsor": 0.98,
               "interaction": 0.0,
-              "content": 0.02,
-              "selfpromo": 0.01
+              "content": 0.02
             },
             "text_preview": "Does that mean it [music] can't be real? Or that you can't get 15% off your first order [music] with a one-year warranty and free shipping on North American ord"
           },
@@ -2301,12 +2553,12 @@
             "start": 1120.799,
             "end": 1137.19,
             "label": "selfpromo",
-            "confidence": 0.55,
+            "confidence": 0.59,
             "probabilities": {
+              "selfpromo": 0.69,
               "sponsor": 0.0,
-              "interaction": 0.01,
-              "content": 0.33,
-              "selfpromo": 0.66
+              "content": 0.3,
+              "interaction": 0.01
             },
             "text_preview": "Just embrace Vessie. Now, to return most of these to their rightful owner. If you guys enjoyed this video, maybe check out the one where we used a different cut"
           },
@@ -2317,10 +2569,10 @@
             "label": "content",
             "confidence": 0.97,
             "probabilities": {
+              "selfpromo": 0.02,
               "sponsor": 0.0,
               "interaction": 0.0,
-              "content": 0.98,
-              "selfpromo": 0.02
+              "content": 0.98
             },
             "text_preview": "which if that sounds complicated, it's because it was a little bit."
           }
@@ -2418,9 +2670,25 @@
         ],
         "dropped_segments": null,
         "n_candidate_chunks": 14,
-        "confidence_gate": null,
-        "confidence_threshold": null,
-        "intervals_pre_snap": null,
+        "confidence_gate": {
+          "n_segments": 2,
+          "n_auto_skip": 1,
+          "n_needs_confirm": 1,
+          "auto_skip_rate": 0.5,
+          "mean_confidence": 0.745,
+          "min_confidence": 0.51
+        },
+        "confidence_threshold": 0.75,
+        "intervals_pre_snap": [
+          [
+            99.6,
+            124.6
+          ],
+          [
+            1042.24,
+            1123.039
+          ]
+        ],
         "tony_status": null,
         "tony_traces": null,
         "n_lines": null,
@@ -2430,17 +2698,25 @@
   ],
   "aggregate": {
     "n_videos": 6,
-    "iou": 0.786602427838703,
-    "precision": 0.8786012625055576,
-    "recall": 0.8883949162928039,
-    "f1": 0.8798916260615108,
-    "mean_best_iou": 0.7569479777743714,
-    "content_fp_rate": 0.014079280018457443,
+    "iou": 0.8786579356449192,
+    "precision": 0.9155281461949459,
+    "recall": 0.9565233680753247,
+    "f1": 0.9342723649342161,
+    "mean_best_iou": 0.8175804625849552,
+    "content_fp_rate": 0.00934866713626307,
     "video_level_recall": 1.0,
     "total_input_tokens": 48751,
     "total_estimated_usd": 0.0020475420000000003,
-    "latency_p50_ms_across_videos": 252.6314292626921,
-    "latency_total_p50_ms": 515.0784860306885,
-    "latency_total_mean_ms": 587.4808616742181
+    "high_conf_iou": 0.8267193624571617,
+    "high_conf_precision": 0.9648780942334652,
+    "high_conf_recall": 0.8589554123099988,
+    "high_conf_f1": 0.9026143447663463,
+    "high_conf_content_fp_rate": 0.0023678518716680782,
+    "auto_skip_segments": 9,
+    "all_pred_segments": 13,
+    "auto_skip_coverage": 0.6923076923076923,
+    "latency_p50_ms_across_videos": 251.53729353041854,
+    "latency_total_p50_ms": 556.2229369825218,
+    "latency_total_mean_ms": 592.4386875024842
   }
 }

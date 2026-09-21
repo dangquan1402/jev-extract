@@ -374,3 +374,349 @@ def pattern_hit_summary(hits: Sequence[CueHit]) -> dict[str, int]:
     for h in hits:
         counts[h.pattern_name] = counts.get(h.pattern_name, 0) + 1
     return counts
+
+# ---------------------------------------------------------------------------
+# Refined boundary snap + confidence gate (English regex_jev_refined)
+# ---------------------------------------------------------------------------
+
+# Lead-in / paid-read openers (prefer these for segment *start*).
+LEAD_IN_PATTERN_NAMES = frozenset(
+    {
+        "sponsored_by",
+        "thanks_to_sponsor",
+        "video_sponsored",
+        "brought_to_you",
+        "paid_partnership",
+        "segue_sponsor",
+        "segue_to_our",
+        "todays_sponsor",
+        "our_sponsor",
+    }
+)
+
+# Offer / CTA closers — after these, cap length if no explicit end cue.
+OFFER_CTA_PATTERN_NAMES = frozenset(
+    {
+        "use_code",
+        "promo_code",
+        "discount_code",
+        "pct_off",
+        "link_in_desc",
+        "link_down_below",
+        "with_the_link",
+        "check_out_at",
+    }
+)
+
+# Extra end-of-ad cues beyond END_PATTERNS (compiled below with the base set).
+_REFINED_END_EXTRA = [
+    r"\bnow[,.]?\s+(back\s+)?to\b",
+    r"\bbefore we go (any )?(further|on)?\b",
+    r"\b(alright|all right)[,.]?\s+(so|now|back)\b",
+    r"\bthat rhymed\b",
+    r"\bthanks (again )?to .{0,40} for sponsor",
+]
+
+_REFINED_END_PATTERNS: list[re.Pattern[str]] = END_PATTERNS + [
+    re.compile(p, re.I) for p in _REFINED_END_EXTRA
+]
+
+# Soft lead-in language immediately before a strong cue (include if adjacent).
+_SOFT_LEAD_IN = re.compile(
+    r"\b("
+    r"speaking of|which brings me|that brings us|brings me to|"
+    r"before we (continue|move on|get back)|"
+    r"real quick|quick (word|shout|thanks)|"
+    r"just like .{0,40} (on this|with this)|"
+    r"what I do know is|and are we going to|"
+    r"now[,.]?\s+if you('ll| will) excuse|"
+    r"pop in this segue"
+    r")\b",
+    re.I,
+)
+
+
+def _cue_window_text(
+    cues: Sequence[Mapping[str, Any]], index: int, *, neighbors: int = 1
+) -> str:
+    """Join cue text with the next *neighbors* cues (ASR often splits phrases)."""
+    parts: list[str] = []
+    for j in range(index, min(len(cues), index + 1 + neighbors)):
+        parts.append(str(cues[j].get("text") or ""))
+    return " ".join(parts)
+
+
+def _iter_end_cue_times(
+    cues: Sequence[Mapping[str, Any]],
+    *,
+    after: float,
+    until: float,
+) -> list[float]:
+    """Return start times of end-of-ad cues (single or adjacent-cue match).
+
+    If the phrase only completes on the *next* cue (ASR split), use that cue's
+    start so we don't end at an earlier offer/link cue.
+    """
+    times: list[float] = []
+    for i, c in enumerate(cues):
+        cs = float(c["start"])
+        if cs > until:
+            break
+        alone = str(c.get("text") or "")
+        window = _cue_window_text(cues, i, neighbors=1)
+        matched_alone = any(rx.search(alone) for rx in _REFINED_END_PATTERNS)
+        matched_window = any(rx.search(window) for rx in _REFINED_END_PATTERNS)
+        if not matched_window:
+            continue
+        if matched_alone:
+            t = cs
+        elif i + 1 < len(cues):
+            t = float(cues[i + 1]["start"])
+        else:
+            t = cs
+        if after <= t <= until:
+            times.append(t)
+    # de-dupe preserving order
+    out: list[float] = []
+    seen: set[float] = set()
+    for t in times:
+        if t not in seen:
+            seen.add(t)
+            out.append(t)
+    return out
+
+
+def _soft_lead_in_start(
+    cues: Sequence[Mapping[str, Any]],
+    anchor_start: float,
+    *,
+    lookback: float = 25.0,
+) -> float | None:
+    """If a soft lead-in cue sits just before *anchor_start*, return its start."""
+    best: float | None = None
+    for c in cues:
+        cs, ce = float(c["start"]), float(c["end"])
+        if ce < anchor_start - lookback:
+            continue
+        if cs >= anchor_start:
+            break
+        # Must be close to the anchor (same breath / adjacent roll-up)
+        if anchor_start - ce > 8.0 and anchor_start - cs > 15.0:
+            continue
+        text = str(c.get("text") or "")
+        if _SOFT_LEAD_IN.search(text):
+            best = cs if best is None else min(best, cs)
+    return best
+
+
+def snap_boundaries_refined(
+    cues: Sequence[Mapping[str, Any]],
+    intervals: Sequence[tuple[float, float]],
+    hits: Sequence[CueHit] | None = None,
+    *,
+    lead_in_lookback: float = 30.0,
+    offer_pad_sec: float = 8.0,
+    max_span: float = 100.0,
+    min_span: float = 8.0,
+) -> list[tuple[float, float]]:
+    """Conservative start/end snap after a confirmed sponsor window.
+
+    Start: prefer clear lead-in / first strong CTA within lookback; never pull
+    start earlier on weak guesses (Tony KEEP_CONTENT — start slightly late if
+    unsure). End: snap to return-to-content cues, else cap shortly after the
+    last offer CTA (+offer_pad_sec); prefer ending slightly late over cutting
+    the ad short.
+    """
+    if not intervals:
+        return []
+    hit_list = list(hits) if hits is not None else find_cue_hits(cues, include_weak=False)
+    refined: list[tuple[float, float]] = []
+
+    for a, b in intervals:
+        # --- Start ---
+        lead_hits = [
+            h
+            for h in hit_list
+            if h.strength == "strong"
+            and h.pattern_name in LEAD_IN_PATTERN_NAMES
+            and (a - lead_in_lookback) <= h.start <= (b + 2.0)
+        ]
+        cta_hits = [
+            h
+            for h in hit_list
+            if h.strength == "strong"
+            and (a - 5.0) <= h.start <= (b + 2.0)
+        ]
+        if lead_hits:
+            # Earliest lead-in near the window (don't start mid-pitch)
+            na = min(h.start for h in lead_hits)
+            soft = _soft_lead_in_start(cues, na, lookback=lead_in_lookback)
+            if soft is not None and soft >= a - lead_in_lookback:
+                # Only pull earlier when soft lead-in is clear and close
+                na = soft
+        elif cta_hits:
+            # First strong CTA — start slightly late into the read if no lead-in
+            na = min(h.start for h in cta_hits)
+        else:
+            na = a
+
+        # Never start earlier than lookback before original confirmed start
+        na = max(na, a - lead_in_lookback)
+        # Never start later than original confirmed body by > ~20s (keep coverage)
+        if na > a + 20.0:
+            na = a
+
+        # --- End ---
+        search_hi = min(na + max_span, max(b, na) + 45.0)
+        end_times = _iter_end_cue_times(cues, after=na + min_span, until=search_hi)
+
+        # Offer CTA anchors use cue *start* (YouTube roll-up cue ends inflate).
+        _OFFER_RX = re.compile(
+            r"("
+            r"\buse (code|promo)\b|\bpromo code\b|\bdiscount code\b|"
+            r"\b\d+\s*%\s*off\b|"
+            r"\blink (down below|in (the )?description|below)\b|"
+            r"\blinks? below\b|\bwith the link\b|"
+            r"\bbook (a |that )?demo\b|\bgo to \w+\.(com|net|io)\b"
+            r")",
+            re.I,
+        )
+        offer_starts: list[float] = []
+        for h in hit_list:
+            if h.pattern_name not in OFFER_CTA_PATTERN_NAMES:
+                continue
+            if h.start < na + 5.0 or h.start > search_hi:
+                continue
+            offer_starts.append(h.start)
+        for i, c in enumerate(cues):
+            cs = float(c["start"])
+            if cs < na + 5.0 or cs > search_hi:
+                continue
+            window = _cue_window_text(cues, i, neighbors=1)
+            if _OFFER_RX.search(window):
+                offer_starts.append(cs)
+
+        # Core span floor — do not trust an inflated *b* when cues say the ad ended
+        core_lo = na + min_span
+        last_offer = max(offer_starts) if offer_starts else None
+
+        # Prefer return-to-content cue after the offer (or mid-window). Allows
+        # pulling *back* from an overshot confirmed end (common FP).
+        chosen_end: float | None = None
+        end_floor = core_lo
+        if last_offer is not None:
+            end_floor = max(core_lo, last_offer - 2.0)
+        for et in end_times:
+            if et >= end_floor:
+                chosen_end = et
+                break
+
+        if chosen_end is not None:
+            nb = chosen_end
+        elif last_offer is not None:
+            # Cap shortly after offer CTA *start* (not roll-up end)
+            nb = last_offer + offer_pad_sec
+            # Prefer slightly late vs cutting the offer: allow up to +4s past pad
+            # if original confirmed end is nearby; otherwise pull back hard.
+            if b <= nb + 4.0:
+                nb = max(nb, min(b, last_offer + offer_pad_sec + 4.0))
+            # Never keep a huge overshoot past the offer
+            if b > last_offer + offer_pad_sec + 4.0:
+                nb = last_offer + offer_pad_sec
+        else:
+            # No cue: keep confirmed end (slightly late), capped
+            nb = min(max(b, na + 20.0), na + max_span)
+
+        nb = min(max(nb, core_lo), na + max_span)
+        if nb > na + 3.0:
+            refined.append((na, nb))
+        else:
+            refined.append((a, b))
+
+    return merge_intervals(refined, gap=8.0)
+
+
+def segment_confidence_from_labels(
+    labeled: Sequence[Mapping[str, Any]],
+    start: float,
+    end: float,
+    *,
+    sponsor_labels: frozenset[str] = frozenset({"sponsor"}),
+) -> float | None:
+    """Per-segment confidence from overlapping Jev Choice rows.
+
+    Uses max of ``probabilities[label]`` when present, else ``confidence``.
+    """
+    scores: list[float] = []
+    for row in labeled:
+        if row.get("label") not in sponsor_labels:
+            continue
+        rs, re_ = float(row["start"]), float(row["end"])
+        if re_ < start or rs > end:
+            continue
+        probs = row.get("probabilities")
+        label = str(row["label"])
+        score: float | None = None
+        if isinstance(probs, Mapping) and label in probs:
+            try:
+                score = float(probs[label])
+            except (TypeError, ValueError):
+                score = None
+        if score is None and row.get("confidence") is not None:
+            try:
+                score = float(row["confidence"])
+            except (TypeError, ValueError):
+                score = None
+        if score is not None:
+            scores.append(score)
+    if not scores:
+        return None
+    return max(scores)
+
+
+def attach_confidence_gate(
+    intervals: Sequence[tuple[float, float]],
+    labeled: Sequence[Mapping[str, Any]],
+    *,
+    confidence_threshold: float = 0.75,
+    category: str = "sponsor",
+) -> list[dict[str, Any]]:
+    """Build segment dicts with confidence + auto_skip / needs_confirm flags.
+
+    Segments below *confidence_threshold* are still returned but marked
+    ``auto_skip=False`` / ``needs_confirm=True`` (ask the user).
+    """
+    segs: list[dict[str, Any]] = []
+    for a, b in intervals:
+        conf = segment_confidence_from_labels(labeled, a, b)
+        # Missing confidence → treat as needs confirm (conservative)
+        auto = conf is not None and conf >= confidence_threshold
+        segs.append(
+            {
+                "start": a,
+                "end": b,
+                "category": category,
+                "confidence": conf,
+                "auto_skip": auto,
+                "needs_confirm": not auto,
+            }
+        )
+    return segs
+
+
+def confidence_gate_summary(segments: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
+    n = len(segments)
+    n_auto = sum(1 for s in segments if s.get("auto_skip"))
+    confs = [
+        float(s["confidence"])
+        for s in segments
+        if s.get("confidence") is not None
+    ]
+    return {
+        "n_segments": n,
+        "n_auto_skip": n_auto,
+        "n_needs_confirm": n - n_auto,
+        "auto_skip_rate": (n_auto / n) if n else None,
+        "mean_confidence": (sum(confs) / len(confs)) if confs else None,
+        "min_confidence": min(confs) if confs else None,
+    }

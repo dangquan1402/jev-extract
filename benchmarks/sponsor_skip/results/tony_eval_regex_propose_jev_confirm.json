@@ -1,0 +1,5274 @@
+{
+  "created_at": "20260921T053015Z",
+  "model": "jev-latest",
+  "modes": [
+    "regex_propose_jev_confirm"
+  ],
+  "refine": false,
+  "videos": [
+    "QoC8R3KHk8E",
+    "O0gbfvJDsv4",
+    "6NxW3xSAqUg",
+    "JXQE_wjCQGE",
+    "8RTmvUZlSSk",
+    "j_OwK2OzO8E",
+    "2ehSCWoaOqQ",
+    "qgK38sg1ws4",
+    "uO6DMWHK_HA",
+    "QAkXf7O46w0",
+    "DMqL73IGO5U",
+    "le_ORQZzkmE",
+    "SwIPOf2YAgI",
+    "Gav25xB0LtE",
+    "c3CN8elYKrY",
+    "r_e21HhG5Ko",
+    "pmDePx56S6Q",
+    "BUUF84Wfx6U",
+    "51hiAU01A1E"
+  ],
+  "aggregates": {
+    "regex_propose_jev_confirm": {
+      "n_videos": 19,
+      "iou": 0.28183530008582663,
+      "precision": 0.4227448166947781,
+      "recall": 0.33284134485007405,
+      "f1": 0.35007376470021484,
+      "mean_best_iou": 0.374553401167724,
+      "content_fp_rate": 0.02582105402206538,
+      "video_level_recall": 0.8421052631578947,
+      "total_input_tokens": 95113,
+      "total_estimated_usd": 0.003994746,
+      "latency_p50_ms_across_videos": 240.90382852591574,
+      "latency_total_p50_ms": 260.63850603532046,
+      "latency_total_mean_ms": 355.4190894172184
+    }
+  },
+  "by_mode": {
+    "regex_propose_jev_confirm": [
+      {
+        "video_id": "QoC8R3KHk8E",
+        "mode": "regex_propose_jev_confirm",
+        "gold": [
+          {
+            "start": 56.278,
+            "end": 75.716,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 177.588,
+            "end": 196.82,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 404.026,
+            "end": 414.59,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 447.259,
+            "end": 471.67,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 983.31,
+            "end": 1038.544,
+            "category": "sponsor",
+            "uuid": null
+          }
+        ],
+        "pred_segments": [
+          {
+            "start": 56.67,
+            "end": 81.67,
+            "category": "sponsor"
+          },
+          {
+            "start": 984.559,
+            "end": 1038.72,
+            "category": "sponsor"
+          }
+        ],
+        "metrics": {
+          "n_pred": 2,
+          "n_gold": 5,
+          "overlap_sec": 73.03100000000012,
+          "pred_dur_sec": 79.16100000000006,
+          "gold_dur_sec": 128.8790000000001,
+          "iou": 0.5409343080831656,
+          "precision": 0.9225628781849656,
+          "recall": 0.56666330433973,
+          "f1": 0.7020861372812927,
+          "mean_best_iou": 0.8621806927154818,
+          "video_recall_hit": true,
+          "video_has_gold": true,
+          "video_detected": true,
+          "fp_sec": 6.129999999999939,
+          "content_fp_rate": 0.0065723592089151845,
+          "latency_ms_total": 765.570703020785,
+          "latency_ms_p50_calls": 379.1625665035099,
+          "n_api_calls": 2,
+          "input_tokens": 8089,
+          "estimated_usd": 0.0003397380000000001
+        },
+        "examples": {
+          "hits": [
+            {
+              "t": [
+                63.2,
+                79.5
+              ],
+              "label": "sponsor",
+              "conf": 0.93,
+              "preview": "With pre-done configurations, support guides to aid you, and competitive pricing versus building a PC yourself, why not kick your feet up, and let build Redux h",
+              "in_gold": true
+            },
+            {
+              "t": [
+                977.7,
+                993.8
+              ],
+              "label": "sponsor",
+              "conf": 0.95,
+              "preview": "- Oh, that's awesome. Oh, I didn't bring the thermal camera with me, but. - Or my phone. I left my phone over there. - Oh, all right, cool. Just like I left thi",
+              "in_gold": true
+            }
+          ],
+          "misses": [
+            {
+              "t": [
+                48.1,
+                63.2
+              ],
+              "label": "sponsor",
+              "conf": 1.0,
+              "preview": "or even three blankets at night, because the upstairs is much colder than the downstairs. - You just trying to guilt trip me now? - Thankfully, we have the solu",
+              "in_gold": false
+            },
+            {
+              "t": [
+                961.0,
+                977.7
+              ],
+              "label": "sponsor",
+              "conf": 0.63,
+              "preview": "Hey Jake, did it work? - Did he say he turned it on? - [Andy] Yeah. - Hey. Jake! - [Jake] Hey, it worked. - Did it work? - [Jake] It worked. - [Linus] Yes! - Di",
+              "in_gold": false
+            }
+          ]
+        },
+        "raw": {
+          "n_chunks": 66,
+          "n_sentences": 223,
+          "refined": false,
+          "chunk_labels": [
+            {
+              "index": 2,
+              "start": 32.31,
+              "end": 48.12,
+              "label": "content",
+              "confidence": 0.99,
+              "probabilities": {
+                "interaction": 0.0,
+                "sponsor": 0.0,
+                "selfpromo": 0.0,
+                "content": 1.0
+              },
+              "text_preview": "pumping heat outside. It's pumping heat out into the basement. I blame Jake, who assured me the whole thing was perfectly simple, and it would be done well befo"
+            },
+            {
+              "index": 3,
+              "start": 48.12,
+              "end": 63.18,
+              "label": "sponsor",
+              "confidence": 1.0,
+              "probabilities": {
+                "interaction": 0.0,
+                "sponsor": 1.0,
+                "selfpromo": 0.0,
+                "content": 0.0
+              },
+              "text_preview": "or even three blankets at night, because the upstairs is much colder than the downstairs. - You just trying to guilt trip me now? - Thankfully, we have the solu"
+            },
+            {
+              "index": 4,
+              "start": 63.18,
+              "end": 79.531,
+              "label": "sponsor",
+              "confidence": 0.93,
+              "probabilities": {
+                "interaction": 0.0,
+                "sponsor": 0.95,
+                "selfpromo": 0.0,
+                "content": 0.05
+              },
+              "text_preview": "With pre-done configurations, support guides to aid you, and competitive pricing versus building a PC yourself, why not kick your feet up, and let build Redux h"
+            },
+            {
+              "index": 5,
+              "start": 79.531,
+              "end": 96.36,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "interaction": 0.0,
+                "sponsor": 0.0,
+                "selfpromo": 0.0,
+                "content": 1.0
+              },
+              "text_preview": "(electro pop beats) It pains me to say this, but Jake's not actually wrong. The system is pretty simple. The way this used to work, was that each of these zones"
+            },
+            {
+              "index": 6,
+              "start": 96.36,
+              "end": 113.01,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "interaction": 0.0,
+                "sponsor": 0.0,
+                "selfpromo": 0.0,
+                "content": 1.0
+              },
+              "text_preview": "the Mercury tilts and completes the circuit thermostats, which would (snaps fingers) activate it, if it got too cold. It's really not that much more complicated"
+            },
+            {
+              "index": 7,
+              "start": 113.01,
+              "end": 129.72,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "interaction": 0.0,
+                "sponsor": 0.0,
+                "selfpromo": 0.0,
+                "content": 1.0
+              },
+              "text_preview": "so, that reports back the temperature, instead of a little tilting mercury vial. Then, in order to actually activate that zone, we use one of these cool little "
+            },
+            {
+              "index": 8,
+              "start": 129.72,
+              "end": 146.91,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "interaction": 0.0,
+                "sponsor": 0.0,
+                "selfpromo": 0.0,
+                "content": 1.0
+              },
+              "text_preview": "and then eight dry contacts here, each of which can activate one of our heating loops. These are running Tasmota firmware, which is open source and super cool, "
+            },
+            {
+              "index": 59,
+              "start": 961.02,
+              "end": 977.73,
+              "label": "sponsor",
+              "confidence": 0.63,
+              "probabilities": {
+                "interaction": 0.01,
+                "sponsor": 0.73,
+                "selfpromo": 0.0,
+                "content": 0.26
+              },
+              "text_preview": "Hey Jake, did it work? - Did he say he turned it on? - [Andy] Yeah. - Hey. Jake! - [Jake] Hey, it worked. - Did it work? - [Jake] It worked. - [Linus] Yes! - Di"
+            },
+            {
+              "index": 60,
+              "start": 977.73,
+              "end": 993.81,
+              "label": "sponsor",
+              "confidence": 0.95,
+              "probabilities": {
+                "sponsor": 0.97,
+                "interaction": 0.0,
+                "selfpromo": 0.0,
+                "content": 0.03
+              },
+              "text_preview": "- Oh, that's awesome. Oh, I didn't bring the thermal camera with me, but. - Or my phone. I left my phone over there. - Oh, all right, cool. Just like I left thi"
+            },
+            {
+              "index": 61,
+              "start": 993.81,
+              "end": 1011.09,
+              "label": "sponsor",
+              "confidence": 0.96,
+              "probabilities": {
+                "sponsor": 0.97,
+                "interaction": 0.0,
+                "selfpromo": 0.0,
+                "content": 0.03
+              },
+              "text_preview": "How am I gonna build a whole website?\", you ask. With Squarespace. Squarespace is a one stop, no frills, all-in-one platform for expanding your presence on the "
+            },
+            {
+              "index": 62,
+              "start": 1011.09,
+              "end": 1027.23,
+              "label": "sponsor",
+              "confidence": 0.96,
+              "probabilities": {
+                "sponsor": 0.97,
+                "interaction": 0.0,
+                "selfpromo": 0.0,
+                "content": 0.03
+              },
+              "text_preview": "School of Tech Wizardry. We love Squarespace so much, that we use it here at Linus Media Group. It's custom templates make it easy to stand out, with a plethora"
+            },
+            {
+              "index": 63,
+              "start": 1027.23,
+              "end": 1042.29,
+              "label": "sponsor",
+              "confidence": 0.95,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "interaction": 0.01,
+                "sponsor": 0.96,
+                "content": 0.03
+              },
+              "text_preview": "to help you optimize for performance, so you can see what's working well and what needs tweaking. So, don't wait. Get started today and head to squarespace.com/"
+            },
+            {
+              "index": 64,
+              "start": 1042.29,
+              "end": 1058.19,
+              "label": "content",
+              "confidence": 0.73,
+              "probabilities": {
+                "sponsor": 0.0,
+                "interaction": 0.17,
+                "selfpromo": 0.03,
+                "content": 0.8
+              },
+              "text_preview": "but you should definitely go check out the part where we laid out the plan, because it had a fair bit more detail about what exactly is going on here. - Yeah, a"
+            },
+            {
+              "index": 65,
+              "start": 1058.19,
+              "end": 1061.573,
+              "label": "content",
+              "confidence": 0.95,
+              "probabilities": {
+                "sponsor": 0.0,
+                "interaction": 0.03,
+                "selfpromo": 0.0,
+                "content": 0.97
+              },
+              "text_preview": "I know, I know. I know, I know, I know. I know. (Sigh)"
+            }
+          ],
+          "traces": null,
+          "pattern_counts": {
+            "our_sponsor": 2,
+            "pct_off": 1
+          },
+          "cue_hits": [
+            {
+              "start": 56.67,
+              "end": 58.86,
+              "pattern_name": "our_sponsor",
+              "strength": "strong",
+              "text": "just like we have this segway to our sponsor."
+            },
+            {
+              "start": 984.559,
+              "end": 986.19,
+              "pattern_name": "our_sponsor",
+              "strength": "strong",
+              "text": "Just like I left this segway, to our sponsor."
+            },
+            {
+              "start": 1036.38,
+              "end": 1038.72,
+              "pattern_name": "pct_off",
+              "strength": "strong",
+              "text": "to get 10% off your first purchase."
+            }
+          ],
+          "proposed_windows": [
+            {
+              "start": 44.67,
+              "end": 136.67000000000002,
+              "strength": "strong",
+              "pattern_names": [
+                "our_sponsor"
+              ],
+              "hits": [
+                {
+                  "start": 56.67,
+                  "end": 58.86,
+                  "pattern_name": "our_sponsor",
+                  "strength": "strong",
+                  "text": "just like we have this segway to our sponsor.",
+                  "cue_index": 25
+                }
+              ]
+            },
+            {
+              "start": 972.559,
+              "end": 1061.573,
+              "strength": "strong",
+              "pattern_names": [
+                "our_sponsor",
+                "pct_off"
+              ],
+              "hits": [
+                {
+                  "start": 984.559,
+                  "end": 986.19,
+                  "pattern_name": "our_sponsor",
+                  "strength": "strong",
+                  "text": "Just like I left this segway, to our sponsor.",
+                  "cue_index": 499
+                },
+                {
+                  "start": 1036.38,
+                  "end": 1038.72,
+                  "pattern_name": "pct_off",
+                  "strength": "strong",
+                  "text": "to get 10% off your first purchase.",
+                  "cue_index": 525
+                }
+              ]
+            }
+          ],
+          "dropped_segments": null,
+          "n_candidate_chunks": 14,
+          "tony_status": null,
+          "tony_traces": null,
+          "n_lines": null,
+          "windows_scanned": null
+        }
+      },
+      {
+        "video_id": "O0gbfvJDsv4",
+        "mode": "regex_propose_jev_confirm",
+        "gold": [
+          {
+            "start": 33.112,
+            "end": 52.981,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 162.367,
+            "end": 164.56,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 529.236,
+            "end": 584.616,
+            "category": "sponsor",
+            "uuid": null
+          }
+        ],
+        "pred_segments": [
+          {
+            "start": 34.76,
+            "end": 66.73,
+            "category": "sponsor"
+          },
+          {
+            "start": 529.58,
+            "end": 584.68,
+            "category": "sponsor"
+          }
+        ],
+        "metrics": {
+          "n_pred": 2,
+          "n_gold": 3,
+          "overlap_sec": 73.25699999999995,
+          "pred_dur_sec": 87.06999999999991,
+          "gold_dur_sec": 77.44200000000001,
+          "iou": 0.8027724508246121,
+          "precision": 0.8413575284254051,
+          "recall": 0.9459595568296266,
+          "f1": 0.890597646372301,
+          "mean_best_iou": 0.7673212661997983,
+          "video_recall_hit": true,
+          "video_has_gold": true,
+          "video_detected": true,
+          "fp_sec": 13.81299999999996,
+          "content_fp_rate": 0.02645758033715067,
+          "latency_ms_total": 456.84474997688085,
+          "latency_ms_p50_calls": 226.81328700855374,
+          "n_api_calls": 2,
+          "input_tokens": 7835,
+          "estimated_usd": 0.00032907
+        },
+        "examples": {
+          "hits": [
+            {
+              "t": [
+                33.9,
+                51.0
+              ],
+              "label": "sponsor",
+              "conf": 1.0,
+              "preview": "I'll tell you, but first I'm gonna drop this message from our sponsor. - Lambda created with Razer, their new Tensorbook comes with an RTX 3080 Linux and Lambda",
+              "in_gold": true
+            },
+            {
+              "t": [
+                535.0,
+                550.7
+              ],
+              "label": "sponsor",
+              "conf": 0.99,
+              "preview": "for managing your business sales, marketing, and customer service. With their intuitive UI and simple navigation, you can implement their service quickly and ef",
+              "in_gold": true
+            }
+          ],
+          "misses": [
+            {
+              "t": [
+                51.0,
+                66.7
+              ],
+              "label": "sponsor",
+              "conf": 0.6,
+              "preview": "Learn more at the link down below. (electronic music) - AMD's new gaming CPU achieves its fastest ever gaming claims",
+              "in_gold": false
+            },
+            {
+              "t": [
+                519.9,
+                535.0
+              ],
+              "label": "sponsor",
+              "conf": 0.99,
+              "preview": "But if you don't want to deal with that, or if you are a small form factor enthusiast, then for you, the 5800X3D has few downsides. And neither does our sponsor",
+              "in_gold": false
+            }
+          ]
+        },
+        "raw": {
+          "n_chunks": 37,
+          "n_sentences": 85,
+          "refined": false,
+          "chunk_labels": [
+            {
+              "index": 1,
+              "start": 17.56,
+              "end": 33.91,
+              "label": "content",
+              "confidence": 0.41,
+              "probabilities": {
+                "content": 0.56,
+                "sponsor": 0.44,
+                "selfpromo": 0.0,
+                "interaction": 0.0
+              },
+              "text_preview": "we didn't get a chance to review it before they shoved it out door. What is it about this unassuming little square, the Ryzen 7 5800X3D, that's got Intel so sca"
+            },
+            {
+              "index": 2,
+              "start": 33.91,
+              "end": 51.05,
+              "label": "sponsor",
+              "confidence": 1.0,
+              "probabilities": {
+                "content": 0.0,
+                "sponsor": 1.0,
+                "selfpromo": 0.0,
+                "interaction": 0.0
+              },
+              "text_preview": "I'll tell you, but first I'm gonna drop this message from our sponsor. - Lambda created with Razer, their new Tensorbook comes with an RTX 3080 Linux and Lambda"
+            },
+            {
+              "index": 3,
+              "start": 51.05,
+              "end": 66.73,
+              "label": "sponsor",
+              "confidence": 0.6,
+              "probabilities": {
+                "sponsor": 0.7,
+                "content": 0.29,
+                "selfpromo": 0.0,
+                "interaction": 0.01
+              },
+              "text_preview": "Learn more at the link down below. (electronic music) - AMD's new gaming CPU achieves its fastest ever gaming claims"
+            },
+            {
+              "index": 4,
+              "start": 66.73,
+              "end": 81.86,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "content": 1.0,
+                "sponsor": 0.0,
+                "selfpromo": 0.0,
+                "interaction": 0.0
+              },
+              "text_preview": "by using their shiny new 3D V-Cache technology, where ultra-fast cache memory is stacked on top of the CPU die, in addition to the cache that's already inside i"
+            },
+            {
+              "index": 5,
+              "start": 81.86,
+              "end": 98.02,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "content": 1.0,
+                "sponsor": 0.0,
+                "selfpromo": 0.0,
+                "interaction": 0.0
+              },
+              "text_preview": "to literally make a cash sandwich? Because it's so close to the CPU cores, it is fast! You can think of it roughly like the relationship between RAM and storage"
+            },
+            {
+              "index": 6,
+              "start": 98.02,
+              "end": 113.72,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "sponsor": 0.0,
+                "content": 1.0,
+                "selfpromo": 0.0,
+                "interaction": 0.0
+              },
+              "text_preview": "3D V-cache is L3 cache, which for the 5800X3D, is a shared pool of cache memory for all of its eight cores. For games, this cache is used for, well, everything."
+            },
+            {
+              "index": 7,
+              "start": 113.72,
+              "end": 128.72,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "content": 1.0,
+                "sponsor": 0.0,
+                "selfpromo": 0.0,
+                "interaction": 0.0
+              },
+              "text_preview": "and other things that the CPU is constantly doing. If the cache fills up and this stuff has to be evicted back to RAM, the CPU not only has to wait for new data"
+            },
+            {
+              "index": 8,
+              "start": 128.72,
+              "end": 145.13,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "content": 1.0,
+                "sponsor": 0.0,
+                "selfpromo": 0.0,
+                "interaction": 0.0
+              },
+              "text_preview": "This is what you'd call a bottleneck. And this one will lower frame rates of CPU bound games, or cause hitching, even when FPS is high. With three times the cac"
+            },
+            {
+              "index": 31,
+              "start": 504.27,
+              "end": 519.89,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "content": 1.0,
+                "selfpromo": 0.0,
+                "interaction": 0.0,
+                "sponsor": 0.0
+              },
+              "text_preview": "that won't require you to take a second job. It doesn't need fancy cooling, or a big power supply, or even new RAM. Could you get similar performance by overclo"
+            },
+            {
+              "index": 32,
+              "start": 519.89,
+              "end": 534.99,
+              "label": "sponsor",
+              "confidence": 0.99,
+              "probabilities": {
+                "content": 0.0,
+                "selfpromo": 0.0,
+                "interaction": 0.0,
+                "sponsor": 1.0
+              },
+              "text_preview": "But if you don't want to deal with that, or if you are a small form factor enthusiast, then for you, the 5800X3D has few downsides. And neither does our sponsor"
+            },
+            {
+              "index": 33,
+              "start": 534.99,
+              "end": 550.67,
+              "label": "sponsor",
+              "confidence": 0.99,
+              "probabilities": {
+                "content": 0.01,
+                "selfpromo": 0.0,
+                "interaction": 0.0,
+                "sponsor": 0.99
+              },
+              "text_preview": "for managing your business sales, marketing, and customer service. With their intuitive UI and simple navigation, you can implement their service quickly and ef"
+            },
+            {
+              "index": 34,
+              "start": 550.67,
+              "end": 567.58,
+              "label": "sponsor",
+              "confidence": 0.98,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "content": 0.02,
+                "interaction": 0.0,
+                "sponsor": 0.98
+              },
+              "text_preview": "by a variety of indicators. Plus, their inbuilt design studio helps you customize your CRM experience to help you spot critical customer or account information,"
+            },
+            {
+              "index": 35,
+              "start": 567.58,
+              "end": 584.68,
+              "label": "sponsor",
+              "confidence": 1.0,
+              "probabilities": {
+                "content": 0.0,
+                "selfpromo": 0.0,
+                "interaction": 0.0,
+                "sponsor": 1.0
+              },
+              "text_preview": "without snowballing costs. With over 15 years of experience in the industry, and over 250,000 clients, Zoho CRM is a great solution to support you in your custo"
+            },
+            {
+              "index": 36,
+              "start": 584.68,
+              "end": 599.523,
+              "label": "selfpromo",
+              "confidence": 0.73,
+              "probabilities": {
+                "content": 0.2,
+                "selfpromo": 0.8,
+                "interaction": 0.0,
+                "sponsor": 0.0
+              },
+              "text_preview": "- Thanks for watching guys. Go check out our most recent sleeper where we had to (chuckles) go to some extreme lengths to make a Core i9-12900K work. The 5800X3"
+            }
+          ],
+          "traces": null,
+          "pattern_counts": {
+            "our_sponsor": 2,
+            "link_down_below": 1,
+            "pct_off": 1
+          },
+          "cue_hits": [
+            {
+              "start": 34.76,
+              "end": 37.47,
+              "pattern_name": "our_sponsor",
+              "strength": "strong",
+              "text": "but first I'm gonna drop this message from our sponsor."
+            },
+            {
+              "start": 51.05,
+              "end": 52.983,
+              "pattern_name": "link_down_below",
+              "strength": "strong",
+              "text": "Learn more at the link down below."
+            },
+            {
+              "start": 529.58,
+              "end": 531.19,
+              "pattern_name": "our_sponsor",
+              "strength": "strong",
+              "text": "And neither does our sponsor."
+            },
+            {
+              "start": 576.95,
+              "end": 579.36,
+              "pattern_name": "pct_off",
+              "strength": "strong",
+              "text": "Get 50% off your annual subscription"
+            }
+          ],
+          "proposed_windows": [
+            {
+              "start": 22.759999999999998,
+              "end": 131.05,
+              "strength": "strong",
+              "pattern_names": [
+                "link_down_below",
+                "our_sponsor"
+              ],
+              "hits": [
+                {
+                  "start": 34.76,
+                  "end": 37.47,
+                  "pattern_name": "our_sponsor",
+                  "strength": "strong",
+                  "text": "but first I'm gonna drop this message from our sponsor.",
+                  "cue_index": 13
+                },
+                {
+                  "start": 51.05,
+                  "end": 52.983,
+                  "pattern_name": "link_down_below",
+                  "strength": "strong",
+                  "text": "Learn more at the link down below.",
+                  "cue_index": 19
+                }
+              ]
+            },
+            {
+              "start": 517.58,
+              "end": 599.523,
+              "strength": "strong",
+              "pattern_names": [
+                "our_sponsor",
+                "pct_off"
+              ],
+              "hits": [
+                {
+                  "start": 529.58,
+                  "end": 531.19,
+                  "pattern_name": "our_sponsor",
+                  "strength": "strong",
+                  "text": "And neither does our sponsor.",
+                  "cue_index": 211
+                },
+                {
+                  "start": 576.95,
+                  "end": 579.36,
+                  "pattern_name": "pct_off",
+                  "strength": "strong",
+                  "text": "Get 50% off your annual subscription",
+                  "cue_index": 234
+                }
+              ]
+            }
+          ],
+          "dropped_segments": null,
+          "n_candidate_chunks": 14,
+          "tony_status": null,
+          "tony_traces": null,
+          "n_lines": null,
+          "windows_scanned": null
+        }
+      },
+      {
+        "video_id": "6NxW3xSAqUg",
+        "mode": "regex_propose_jev_confirm",
+        "gold": [
+          {
+            "start": 14.287,
+            "end": 18.709,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 126.841,
+            "end": 217.361,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 1310.768,
+            "end": 1317.326,
+            "category": "sponsor",
+            "uuid": null
+          }
+        ],
+        "pred_segments": [
+          {
+            "start": 14.96,
+            "end": 39.96,
+            "category": "sponsor"
+          }
+        ],
+        "metrics": {
+          "n_pred": 1,
+          "n_gold": 3,
+          "overlap_sec": 3.7489999999999988,
+          "pred_dur_sec": 25.0,
+          "gold_dur_sec": 101.49999999999999,
+          "iou": 0.030541502716882135,
+          "precision": 0.14995999999999995,
+          "recall": 0.036935960591133,
+          "f1": 0.05927272727272727,
+          "mean_best_iou": 0.14602890195925677,
+          "video_recall_hit": true,
+          "video_has_gold": true,
+          "video_detected": true,
+          "fp_sec": 21.251,
+          "content_fp_rate": 0.017412287170411156,
+          "latency_ms_total": 213.0145539995283,
+          "latency_ms_p50_calls": 206.47914696019143,
+          "n_api_calls": 1,
+          "input_tokens": 3843,
+          "estimated_usd": 0.000161406
+        },
+        "examples": {
+          "hits": [],
+          "misses": [
+            {
+              "t": [
+                0.0,
+                16.7
+              ],
+              "label": "sponsor",
+              "conf": 0.65,
+              "preview": "hey there it's Josh welcome back to Let's game it out we're checking out the coin game today a game that's all about recreating that nostalgic feel from the ' 8",
+              "in_gold": false
+            },
+            {
+              "t": [
+                15.0,
+                30.7
+              ],
+              "label": "sponsor",
+              "conf": 0.66,
+              "preview": "this video is sponsored by Watcher of Realms but I'll talk about that in a little bit I like by the way that we have three different modes here we've got birthd",
+              "in_gold": false
+            }
+          ]
+        },
+        "raw": {
+          "n_chunks": 95,
+          "n_sentences": 134,
+          "refined": false,
+          "chunk_labels": [
+            {
+              "index": 0,
+              "start": 0.04,
+              "end": 16.68,
+              "label": "sponsor",
+              "confidence": 0.65,
+              "probabilities": {
+                "content": 0.26,
+                "interaction": 0.0,
+                "selfpromo": 0.0,
+                "sponsor": 0.74
+              },
+              "text_preview": "hey there it's Josh welcome back to Let's game it out we're checking out the coin game today a game that's all about recreating that nostalgic feel from the ' 8"
+            },
+            {
+              "index": 1,
+              "start": 14.96,
+              "end": 30.679,
+              "label": "sponsor",
+              "confidence": 0.66,
+              "probabilities": {
+                "sponsor": 0.75,
+                "interaction": 0.0,
+                "selfpromo": 0.0,
+                "content": 0.25
+              },
+              "text_preview": "this video is sponsored by Watcher of Realms but I'll talk about that in a little bit I like by the way that we have three different modes here we've got birthd"
+            },
+            {
+              "index": 2,
+              "start": 29.359,
+              "end": 45.48,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "content": 1.0,
+                "interaction": 0.0,
+                "selfpromo": 0.0,
+                "sponsor": 0.0
+              },
+              "text_preview": "much just gives you access to the individual arcade games if that's all you want to play and then it just drops you in this Hol deck like hellscape where we can"
+            },
+            {
+              "index": 3,
+              "start": 43.8,
+              "end": 59.239,
+              "label": "content",
+              "confidence": 0.97,
+              "probabilities": {
+                "sponsor": 0.0,
+                "interaction": 0.01,
+                "selfpromo": 0.01,
+                "content": 0.98
+              },
+              "text_preview": "our relaxing game about just playing arcades casually it wouldn't be the same if we didn't have to worry about health and energy working odd jobs haunting your "
+            },
+            {
+              "index": 4,
+              "start": 56.52,
+              "end": 72.56,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "content": 1.0,
+                "interaction": 0.0,
+                "selfpromo": 0.0,
+                "sponsor": 0.0
+              },
+              "text_preview": "last sounds relaxing Count Me In oh here we are waking from our drunken stuper is this my room my God this is really nice I mean look at this under the bed stor"
+            },
+            {
+              "index": 5,
+              "start": 70.4,
+              "end": 86.479,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "content": 1.0,
+                "interaction": 0.0,
+                "selfpromo": 0.0,
+                "sponsor": 0.0
+              },
+              "text_preview": "oh I get it we're not just into arcades we're really really into arcades okay well great how do I play this oh looks like that's it the thing that says insert c"
+            },
+            {
+              "index": 6,
+              "start": 83.759,
+              "end": 99.6,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "sponsor": 0.0,
+                "interaction": 0.0,
+                "selfpromo": 0.0,
+                "content": 1.0
+              },
+              "text_preview": "our lives and it's playing arcades okay let's give this thing a shot in you go and here in our bedroom we we have the finest prizes like this empty can ready to"
+            }
+          ],
+          "traces": null,
+          "pattern_counts": {
+            "sponsored_by": 1
+          },
+          "cue_hits": [
+            {
+              "start": 14.96,
+              "end": 18.24,
+              "pattern_name": "sponsored_by",
+              "strength": "strong",
+              "text": "this video is sponsored by Watcher of"
+            }
+          ],
+          "proposed_windows": [
+            {
+              "start": 2.960000000000001,
+              "end": 94.96000000000001,
+              "strength": "strong",
+              "pattern_names": [
+                "sponsored_by"
+              ],
+              "hits": [
+                {
+                  "start": 14.96,
+                  "end": 18.24,
+                  "pattern_name": "sponsored_by",
+                  "strength": "strong",
+                  "text": "this video is sponsored by Watcher of",
+                  "cue_index": 8
+                }
+              ]
+            }
+          ],
+          "dropped_segments": null,
+          "n_candidate_chunks": 7,
+          "tony_status": null,
+          "tony_traces": null,
+          "n_lines": null,
+          "windows_scanned": null
+        }
+      },
+      {
+        "video_id": "JXQE_wjCQGE",
+        "mode": "regex_propose_jev_confirm",
+        "gold": [
+          {
+            "start": 102.379,
+            "end": 123.943,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 206.322,
+            "end": 232.554,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 310.34,
+            "end": 339.648,
+            "category": "sponsor",
+            "uuid": null
+          }
+        ],
+        "pred_segments": [],
+        "metrics": {
+          "n_pred": 0,
+          "n_gold": 3,
+          "overlap_sec": 0,
+          "pred_dur_sec": 0,
+          "gold_dur_sec": 77.10400000000004,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "mean_best_iou": 0.0,
+          "video_recall_hit": false,
+          "video_has_gold": true,
+          "video_detected": false,
+          "fp_sec": 0.0,
+          "content_fp_rate": 0.0,
+          "latency_ms_total": 0.7312899688258767,
+          "latency_ms_p50_calls": null,
+          "n_api_calls": 0,
+          "input_tokens": 0,
+          "estimated_usd": 0.0
+        },
+        "examples": {
+          "hits": [],
+          "misses": []
+        },
+        "raw": {
+          "n_chunks": 22,
+          "n_sentences": 15,
+          "refined": false,
+          "chunk_labels": [],
+          "traces": null,
+          "pattern_counts": {},
+          "cue_hits": [],
+          "proposed_windows": [],
+          "dropped_segments": null,
+          "n_candidate_chunks": 0,
+          "tony_status": null,
+          "tony_traces": null,
+          "n_lines": null,
+          "windows_scanned": null
+        }
+      },
+      {
+        "video_id": "8RTmvUZlSSk",
+        "mode": "regex_propose_jev_confirm",
+        "gold": [
+          {
+            "start": 375.511,
+            "end": 456.042,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 700.86,
+            "end": 714.37,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 799.696,
+            "end": 817.117,
+            "category": "sponsor",
+            "uuid": null
+          }
+        ],
+        "pred_segments": [
+          {
+            "start": 545.399,
+            "end": 570.399,
+            "category": "sponsor"
+          }
+        ],
+        "metrics": {
+          "n_pred": 1,
+          "n_gold": 3,
+          "overlap_sec": 0.0,
+          "pred_dur_sec": 25.0,
+          "gold_dur_sec": 111.46199999999988,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "mean_best_iou": 0.0,
+          "video_recall_hit": false,
+          "video_has_gold": true,
+          "video_detected": true,
+          "fp_sec": 25.0,
+          "content_fp_rate": 0.042618624679934124,
+          "latency_ms_total": 252.21864797640592,
+          "latency_ms_p50_calls": 248.97816200973466,
+          "n_api_calls": 1,
+          "input_tokens": 3840,
+          "estimated_usd": 0.00016128
+        },
+        "examples": {
+          "hits": [],
+          "misses": [
+            {
+              "t": [
+                531.4,
+                547.7
+              ],
+              "label": "sponsor",
+              "conf": 0.45,
+              "preview": "yield the greatest returns over the next decade all three generations said cryptocurrency followed by stocks it's also interesting that gen Z mentioned that the",
+              "in_gold": false
+            },
+            {
+              "t": [
+                545.4,
+                562.0
+              ],
+              "label": "sponsor",
+              "conf": 0.88,
+              "preview": "they could learn today which our sponsor coin tracker can help Down Below in the description anyway when it comes to this the younger gen generation said that t",
+              "in_gold": false
+            }
+          ]
+        },
+        "raw": {
+          "n_chunks": 50,
+          "n_sentences": 71,
+          "refined": false,
+          "chunk_labels": [
+            {
+              "index": 38,
+              "start": 531.36,
+              "end": 547.74,
+              "label": "sponsor",
+              "confidence": 0.45,
+              "probabilities": {
+                "sponsor": 0.6,
+                "content": 0.4,
+                "interaction": 0.0,
+                "selfpromo": 0.0
+              },
+              "text_preview": "yield the greatest returns over the next decade all three generations said cryptocurrency followed by stocks it's also interesting that gen Z mentioned that the"
+            },
+            {
+              "index": 39,
+              "start": 545.399,
+              "end": 561.959,
+              "label": "sponsor",
+              "confidence": 0.88,
+              "probabilities": {
+                "sponsor": 0.91,
+                "content": 0.09,
+                "interaction": 0.0,
+                "selfpromo": 0.0
+              },
+              "text_preview": "they could learn today which our sponsor coin tracker can help Down Below in the description anyway when it comes to this the younger gen generation said that t"
+            },
+            {
+              "index": 40,
+              "start": 559.86,
+              "end": 576.06,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "sponsor": 0.0,
+                "content": 1.0,
+                "interaction": 0.0,
+                "selfpromo": 0.0
+              },
+              "text_preview": "mentioned was concerning given the lack of Education around investing in crypto and the fact it's still not regulated by the industry but in terms of my own tho"
+            },
+            {
+              "index": 41,
+              "start": 574.56,
+              "end": 590.58,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "sponsor": 0.0,
+                "content": 1.0,
+                "interaction": 0.0,
+                "selfpromo": 0.0
+              },
+              "text_preview": "the decade and even though some believe this to be a manic fad as more and more countries corporations and hedge funds begin to use it the price so far just kee"
+            },
+            {
+              "index": 42,
+              "start": 589.14,
+              "end": 606.36,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "sponsor": 0.0,
+                "content": 1.0,
+                "interaction": 0.0,
+                "selfpromo": 0.0
+              },
+              "text_preview": "they believe this to be a good source for retirement plus studies show that you do not need a huge allocation to bitcoin to see a positive impact in your portfo"
+            },
+            {
+              "index": 43,
+              "start": 603.839,
+              "end": 620.82,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "sponsor": 0.0,
+                "content": 1.0,
+                "interaction": 0.0,
+                "selfpromo": 0.0
+              },
+              "text_preview": "since 2014. although in terms of my own thoughts on this relying on cryptocurrency is a source of retirement is incredibly risky as much as I'm a fan of Bitcoin"
+            },
+            {
+              "index": 44,
+              "start": 618.12,
+              "end": 634.68,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "sponsor": 0.0,
+                "content": 1.0,
+                "interaction": 0.0,
+                "selfpromo": 0.0
+              },
+              "text_preview": "increasing at the same capacity would be almost impossible even in the last eight years seeing another twelve thousand to eight hundred percent return would Pla"
+            }
+          ],
+          "traces": null,
+          "pattern_counts": {
+            "our_sponsor": 1
+          },
+          "cue_hits": [
+            {
+              "start": 545.399,
+              "end": 550.44,
+              "pattern_name": "our_sponsor",
+              "strength": "strong",
+              "text": "they could learn today which our sponsor"
+            }
+          ],
+          "proposed_windows": [
+            {
+              "start": 533.399,
+              "end": 625.399,
+              "strength": "strong",
+              "pattern_names": [
+                "our_sponsor"
+              ],
+              "hits": [
+                {
+                  "start": 545.399,
+                  "end": 550.44,
+                  "pattern_name": "our_sponsor",
+                  "strength": "strong",
+                  "text": "they could learn today which our sponsor",
+                  "cue_index": 280
+                }
+              ]
+            }
+          ],
+          "dropped_segments": null,
+          "n_candidate_chunks": 7,
+          "tony_status": null,
+          "tony_traces": null,
+          "n_lines": null,
+          "windows_scanned": null
+        }
+      },
+      {
+        "video_id": "j_OwK2OzO8E",
+        "mode": "regex_propose_jev_confirm",
+        "gold": [
+          {
+            "start": 94.738,
+            "end": 172.533,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 2055.453,
+            "end": 2058.382,
+            "category": "sponsor",
+            "uuid": null
+          }
+        ],
+        "pred_segments": [],
+        "metrics": {
+          "n_pred": 0,
+          "n_gold": 2,
+          "overlap_sec": 0,
+          "pred_dur_sec": 0,
+          "gold_dur_sec": 80.72400000000007,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "mean_best_iou": 0.0,
+          "video_recall_hit": false,
+          "video_has_gold": true,
+          "video_detected": false,
+          "fp_sec": 0.0,
+          "content_fp_rate": 0.0,
+          "latency_ms_total": 5.423676979262382,
+          "latency_ms_p50_calls": null,
+          "n_api_calls": 0,
+          "input_tokens": 0,
+          "estimated_usd": 0.0
+        },
+        "examples": {
+          "hits": [],
+          "misses": []
+        },
+        "raw": {
+          "n_chunks": 149,
+          "n_sentences": 132,
+          "refined": false,
+          "chunk_labels": [],
+          "traces": null,
+          "pattern_counts": {},
+          "cue_hits": [],
+          "proposed_windows": [],
+          "dropped_segments": null,
+          "n_candidate_chunks": 0,
+          "tony_status": null,
+          "tony_traces": null,
+          "n_lines": null,
+          "windows_scanned": null
+        }
+      },
+      {
+        "video_id": "2ehSCWoaOqQ",
+        "mode": "regex_propose_jev_confirm",
+        "gold": [
+          {
+            "start": 26.027,
+            "end": 42.46,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 1260.313,
+            "end": 1305.209,
+            "category": "sponsor",
+            "uuid": null
+          }
+        ],
+        "pred_segments": [
+          {
+            "start": 26.44,
+            "end": 51.44,
+            "category": "sponsor"
+          }
+        ],
+        "metrics": {
+          "n_pred": 1,
+          "n_gold": 2,
+          "overlap_sec": 16.02,
+          "pred_dur_sec": 24.999999999999996,
+          "gold_dur_sec": 61.32899999999996,
+          "iou": 0.22785134193346526,
+          "precision": 0.6408,
+          "recall": 0.26121410751846613,
+          "f1": 0.37113831968399974,
+          "mean_best_iou": 0.6303860229016647,
+          "video_recall_hit": true,
+          "video_has_gold": true,
+          "video_detected": true,
+          "fp_sec": 8.979999999999997,
+          "content_fp_rate": 0.007184436813758274,
+          "latency_ms_total": 170.81812297692522,
+          "latency_ms_p50_calls": 165.52614397369325,
+          "n_api_calls": 1,
+          "input_tokens": 4400,
+          "estimated_usd": 0.00018480000000000002
+        },
+        "examples": {
+          "hits": [
+            {
+              "t": [
+                32.5,
+                48.0
+              ],
+              "label": "sponsor",
+              "conf": 0.99,
+              "preview": "that offers an intuitive UI, AI predictions and a design studio to help you get your sales done faster. Get 50% off with the code ZCRM50 using the link below. (",
+              "in_gold": true
+            }
+          ],
+          "misses": [
+            {
+              "t": [
+                16.3,
+                32.5
+              ],
+              "label": "sponsor",
+              "conf": 1.0,
+              "preview": "because I'm gonna be taking three major items off my bucket list. I'm visiting Israel for the first time, I'm gonna be going deep into the heart of Intel's stat",
+              "in_gold": false
+            }
+          ]
+        },
+        "raw": {
+          "n_chunks": 81,
+          "n_sentences": 181,
+          "refined": false,
+          "chunk_labels": [
+            {
+              "index": 0,
+              "start": 0.12,
+              "end": 16.29,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "content": 1.0,
+                "selfpromo": 0.0,
+                "sponsor": 0.0,
+                "interaction": 0.0
+              },
+              "text_preview": "- I've spent most of my career trying to get into a chip fab. Samsung's a hard no, Global Foundries was open to it in person, then ghosted me when I followed up"
+            },
+            {
+              "index": 1,
+              "start": 16.29,
+              "end": 32.47,
+              "label": "sponsor",
+              "confidence": 1.0,
+              "probabilities": {
+                "content": 0.0,
+                "selfpromo": 0.0,
+                "sponsor": 1.0,
+                "interaction": 0.0
+              },
+              "text_preview": "because I'm gonna be taking three major items off my bucket list. I'm visiting Israel for the first time, I'm gonna be going deep into the heart of Intel's stat"
+            },
+            {
+              "index": 2,
+              "start": 32.47,
+              "end": 48.005,
+              "label": "sponsor",
+              "confidence": 0.99,
+              "probabilities": {
+                "content": 0.01,
+                "selfpromo": 0.0,
+                "sponsor": 0.99,
+                "interaction": 0.0
+              },
+              "text_preview": "that offers an intuitive UI, AI predictions and a design studio to help you get your sales done faster. Get 50% off with the code ZCRM50 using the link below. ("
+            },
+            {
+              "index": 3,
+              "start": 48.005,
+              "end": 63.71,
+              "label": "content",
+              "confidence": 0.99,
+              "probabilities": {
+                "content": 0.99,
+                "selfpromo": 0.0,
+                "sponsor": 0.01,
+                "interaction": 0.0
+              },
+              "text_preview": "(upbeat music) - My tour guide today couldn't be more experienced. Dani is the Co-General Manager of Worldwide Semiconductor Manufacturing and started at Intel "
+            },
+            {
+              "index": 4,
+              "start": 63.71,
+              "end": 81.53,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "content": 1.0,
+                "selfpromo": 0.0,
+                "sponsor": 0.0,
+                "interaction": 0.0
+              },
+              "text_preview": "Microprocessor fabrication experts can safely skip ahead a couple of minutes, but for everyone else, let's run through the basics. Every CPU die, every one of t"
+            },
+            {
+              "index": 5,
+              "start": 81.53,
+              "end": 97.11,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "content": 1.0,
+                "selfpromo": 0.0,
+                "sponsor": 0.0,
+                "interaction": 0.0
+              },
+              "text_preview": "If they went in any smaller, they'd increase waste around the edges. I mean look at this, obviously this is not gonna be a working chip if it's cut off by the e"
+            },
+            {
+              "index": 6,
+              "start": 97.11,
+              "end": 112.55,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "content": 1.0,
+                "selfpromo": 0.0,
+                "sponsor": 0.0,
+                "interaction": 0.0
+              },
+              "text_preview": "is that it actually improves the uniformity of the full chips next to them. Consistency is key in CPU manufacturing, because even though we talk about these chi"
+            },
+            {
+              "index": 7,
+              "start": 112.55,
+              "end": 128.35,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "content": 1.0,
+                "selfpromo": 0.0,
+                "sponsor": 0.0,
+                "interaction": 0.0
+              },
+              "text_preview": "are much smaller, like on the order of less than a nanometer and a tiny error or contaminant in any of the hundreds of manufacturing steps means that that die, "
+            }
+          ],
+          "traces": null,
+          "pattern_counts": {
+            "our_sponsor": 1,
+            "pct_off": 1
+          },
+          "cue_hits": [
+            {
+              "start": 26.44,
+              "end": 29.65,
+              "pattern_name": "our_sponsor",
+              "strength": "strong",
+              "text": "and I get to tell you about our sponsor."
+            },
+            {
+              "start": 38.67,
+              "end": 42.453,
+              "pattern_name": "pct_off",
+              "strength": "strong",
+              "text": "Get 50% off with the code ZCRM50 using the link below."
+            }
+          ],
+          "proposed_windows": [
+            {
+              "start": 14.440000000000001,
+              "end": 118.67,
+              "strength": "strong",
+              "pattern_names": [
+                "our_sponsor",
+                "pct_off"
+              ],
+              "hits": [
+                {
+                  "start": 26.44,
+                  "end": 29.65,
+                  "pattern_name": "our_sponsor",
+                  "strength": "strong",
+                  "text": "and I get to tell you about our sponsor.",
+                  "cue_index": 13
+                },
+                {
+                  "start": 38.67,
+                  "end": 42.453,
+                  "pattern_name": "pct_off",
+                  "strength": "strong",
+                  "text": "Get 50% off with the code ZCRM50 using the link below.",
+                  "cue_index": 19
+                }
+              ]
+            }
+          ],
+          "dropped_segments": null,
+          "n_candidate_chunks": 8,
+          "tony_status": null,
+          "tony_traces": null,
+          "n_lines": null,
+          "windows_scanned": null
+        }
+      },
+      {
+        "video_id": "qgK38sg1ws4",
+        "mode": "regex_propose_jev_confirm",
+        "gold": [
+          {
+            "start": 80.289,
+            "end": 98.332,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 848.791,
+            "end": 904.518,
+            "category": "sponsor",
+            "uuid": null
+          }
+        ],
+        "pred_segments": [
+          {
+            "start": 80.91,
+            "end": 105.91,
+            "category": "sponsor"
+          },
+          {
+            "start": 849.09,
+            "end": 911.703,
+            "category": "sponsor"
+          }
+        ],
+        "metrics": {
+          "n_pred": 2,
+          "n_gold": 2,
+          "overlap_sec": 72.85,
+          "pred_dur_sec": 87.61299999999994,
+          "gold_dur_sec": 73.76999999999997,
+          "iou": 0.8228570137688778,
+          "precision": 0.8314976088023471,
+          "recall": 0.9875288057475943,
+          "f1": 0.9028212389161191,
+          "mean_best_iou": 0.7805146272888673,
+          "video_recall_hit": true,
+          "video_has_gold": true,
+          "video_detected": true,
+          "fp_sec": 14.762999999999948,
+          "content_fp_rate": 0.017513702042849962,
+          "latency_ms_total": 486.93812399869785,
+          "latency_ms_p50_calls": 240.90382852591574,
+          "n_api_calls": 2,
+          "input_tokens": 6752,
+          "estimated_usd": 0.00028358400000000003
+        },
+        "examples": {
+          "hits": [
+            {
+              "t": [
+                80.9,
+                98.4
+              ],
+              "label": "sponsor",
+              "conf": 1.0,
+              "preview": "You know what else exists? This message from our sponsor. - Hetzner. Hetzner offers high-performance cloud service for a great price. They now cover the east an",
+              "in_gold": true
+            },
+            {
+              "t": [
+                846.5,
+                862.6
+              ],
+              "label": "sponsor",
+              "conf": 1.0,
+              "preview": "Please and thank you. And thank you for checking out our sponsor, Squarespace. If you need to build a brand online, you need a website. \"But Linus, I just learn",
+              "in_gold": true
+            }
+          ],
+          "misses": [
+            {
+              "t": [
+                830.2,
+                846.5
+              ],
+              "label": "sponsor",
+              "conf": 0.71,
+              "preview": "I suspect that many gamers in 2022 and beyond are not gonna wanna deal with that and are gonna end up junking them. So Google, I'm asking you, please either pro",
+              "in_gold": false
+            }
+          ]
+        },
+        "raw": {
+          "n_chunks": 56,
+          "n_sentences": 133,
+          "refined": false,
+          "chunk_labels": [
+            {
+              "index": 4,
+              "start": 64.17,
+              "end": 80.91,
+              "label": "content",
+              "confidence": 0.6,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "content": 0.71,
+                "sponsor": 0.29,
+                "interaction": 0.0
+              },
+              "text_preview": "a piece of hardware designed to play Stadia cloud games, but from right in front of you. Time really is a flat circle, isn't it? I had no idea that these things"
+            },
+            {
+              "index": 5,
+              "start": 80.91,
+              "end": 98.413,
+              "label": "sponsor",
+              "confidence": 1.0,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "content": 0.0,
+                "interaction": 0.0,
+                "sponsor": 1.0
+              },
+              "text_preview": "You know what else exists? This message from our sponsor. - Hetzner. Hetzner offers high-performance cloud service for a great price. They now cover the east an"
+            },
+            {
+              "index": 6,
+              "start": 98.413,
+              "end": 114.84,
+              "label": "content",
+              "confidence": 0.99,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "content": 1.0,
+                "sponsor": 0.0,
+                "interaction": 0.0
+              },
+              "text_preview": "(upbeat music) - When you create a game, particularly AAA, assets are often version controlled by Perforce and stored on a local server"
+            },
+            {
+              "index": 7,
+              "start": 114.84,
+              "end": 131.67,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "content": 1.0,
+                "sponsor": 0.0,
+                "interaction": 0.0
+              },
+              "text_preview": "as well as on your own workstation. As you develop, team members submit their changes to the server, and new builds get created for QA to test. These builds are"
+            },
+            {
+              "index": 8,
+              "start": 131.67,
+              "end": 148.5,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "content": 1.0,
+                "sponsor": 0.0,
+                "interaction": 0.0
+              },
+              "text_preview": "and the process with Stadia game development was similar, but with a key difference, and that's that for most developers, there is no local testing hardware at "
+            },
+            {
+              "index": 9,
+              "start": 148.5,
+              "end": 163.86,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "content": 1.0,
+                "sponsor": 0.0,
+                "interaction": 0.0
+              },
+              "text_preview": "a process that could take up to 40 minutes for, wait for it, about two gigabytes of content. For context, a 60-gigabyte game should take just a few minutes to l"
+            },
+            {
+              "index": 50,
+              "start": 830.22,
+              "end": 846.51,
+              "label": "sponsor",
+              "confidence": 0.71,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "content": 0.21,
+                "sponsor": 0.79,
+                "interaction": 0.0
+              },
+              "text_preview": "I suspect that many gamers in 2022 and beyond are not gonna wanna deal with that and are gonna end up junking them. So Google, I'm asking you, please either pro"
+            },
+            {
+              "index": 51,
+              "start": 846.51,
+              "end": 862.624,
+              "label": "sponsor",
+              "confidence": 1.0,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "content": 0.0,
+                "sponsor": 1.0,
+                "interaction": 0.0
+              },
+              "text_preview": "Please and thank you. And thank you for checking out our sponsor, Squarespace. If you need to build a brand online, you need a website. \"But Linus, I just learn"
+            },
+            {
+              "index": 52,
+              "start": 862.624,
+              "end": 878.58,
+              "label": "sponsor",
+              "confidence": 0.95,
+              "probabilities": {
+                "sponsor": 0.96,
+                "content": 0.04,
+                "interaction": 0.0,
+                "selfpromo": 0.0
+              },
+              "text_preview": "Squarespace is a one-stop, no-frills, all-in-one platform for expanding your presence on the internet. Squarespace lets you build beautiful websites, engage wit"
+            },
+            {
+              "index": 53,
+              "start": 878.58,
+              "end": 894.81,
+              "label": "sponsor",
+              "confidence": 0.92,
+              "probabilities": {
+                "sponsor": 0.95,
+                "content": 0.05,
+                "selfpromo": 0.0,
+                "interaction": 0.0
+              },
+              "text_preview": "We love Squarespace so much that we use it here at Linus Media Group. Its custom templates make it easy to stand out with a plethora of themes and customization"
+            },
+            {
+              "index": 54,
+              "start": 894.81,
+              "end": 911.703,
+              "label": "sponsor",
+              "confidence": 0.99,
+              "probabilities": {
+                "sponsor": 0.99,
+                "content": 0.01,
+                "selfpromo": 0.0,
+                "interaction": 0.0
+              },
+              "text_preview": "so you can see what's working well and what needs tweaking. So don't wait, get started today and head to squarespace.com/ltt to get 10% off your first purchase."
+            },
+            {
+              "index": 55,
+              "start": 912.54,
+              "end": 916.71,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "sponsor": 0.0,
+                "content": 1.0,
+                "selfpromo": 0.0,
+                "interaction": 0.0
+              },
+              "text_preview": "Now it's over for Stadia, probably (indistinct) at some point."
+            }
+          ],
+          "traces": null,
+          "pattern_counts": {
+            "our_sponsor": 2,
+            "pct_off": 1
+          },
+          "cue_hits": [
+            {
+              "start": 80.91,
+              "end": 83.966,
+              "pattern_name": "our_sponsor",
+              "strength": "strong",
+              "text": "You know what else exists? This message from our sponsor."
+            },
+            {
+              "start": 849.09,
+              "end": 852.78,
+              "pattern_name": "our_sponsor",
+              "strength": "strong",
+              "text": "And thank you for checking out our sponsor, Squarespace."
+            },
+            {
+              "start": 902.28,
+              "end": 904.71,
+              "pattern_name": "pct_off",
+              "strength": "strong",
+              "text": "to get 10% off your first purchase."
+            }
+          ],
+          "proposed_windows": [
+            {
+              "start": 68.91,
+              "end": 160.91,
+              "strength": "strong",
+              "pattern_names": [
+                "our_sponsor"
+              ],
+              "hits": [
+                {
+                  "start": 80.91,
+                  "end": 83.966,
+                  "pattern_name": "our_sponsor",
+                  "strength": "strong",
+                  "text": "You know what else exists? This message from our sponsor.",
+                  "cue_index": 33
+                }
+              ]
+            },
+            {
+              "start": 837.09,
+              "end": 916.71,
+              "strength": "strong",
+              "pattern_names": [
+                "our_sponsor",
+                "pct_off"
+              ],
+              "hits": [
+                {
+                  "start": 849.09,
+                  "end": 852.78,
+                  "pattern_name": "our_sponsor",
+                  "strength": "strong",
+                  "text": "And thank you for checking out our sponsor, Squarespace.",
+                  "cue_index": 340
+                },
+                {
+                  "start": 902.28,
+                  "end": 904.71,
+                  "pattern_name": "pct_off",
+                  "strength": "strong",
+                  "text": "to get 10% off your first purchase.",
+                  "cue_index": 365
+                }
+              ]
+            }
+          ],
+          "dropped_segments": null,
+          "n_candidate_chunks": 12,
+          "tony_status": null,
+          "tony_traces": null,
+          "n_lines": null,
+          "windows_scanned": null
+        }
+      },
+      {
+        "video_id": "uO6DMWHK_HA",
+        "mode": "regex_propose_jev_confirm",
+        "gold": [
+          {
+            "start": 53.486,
+            "end": 68.779,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 1942.489,
+            "end": 1987.449,
+            "category": "sponsor",
+            "uuid": null
+          }
+        ],
+        "pred_segments": [
+          {
+            "start": 56.756,
+            "end": 81.756,
+            "category": "sponsor"
+          },
+          {
+            "start": 1941.072,
+            "end": 1996.894,
+            "category": "sponsor"
+          }
+        ],
+        "metrics": {
+          "n_pred": 2,
+          "n_gold": 2,
+          "overlap_sec": 56.98300000000003,
+          "pred_dur_sec": 80.82200000000012,
+          "gold_dur_sec": 60.253000000000036,
+          "iou": 0.6776268848404122,
+          "precision": 0.7050431813120184,
+          "recall": 0.9457288433770933,
+          "f1": 0.8078398015240117,
+          "mean_best_iou": 0.6153545239056823,
+          "video_recall_hit": true,
+          "video_has_gold": true,
+          "video_detected": true,
+          "fp_sec": 23.839000000000084,
+          "content_fp_rate": 0.012309457457525728,
+          "latency_ms_total": 440.20097400061786,
+          "latency_ms_p50_calls": 215.21157448296435,
+          "n_api_calls": 2,
+          "input_tokens": 6227,
+          "estimated_usd": 0.000261534
+        },
+        "examples": {
+          "hits": [
+            {
+              "t": [
+                49.7,
+                67.1
+              ],
+              "label": "sponsor",
+              "conf": 1.0,
+              "preview": "and securely sync to each other from miles away. Just like I'm gonna remotely sync this message from today's sponsor. CableMod, worry no more about your graphic",
+              "in_gold": true
+            },
+            {
+              "t": [
+                1945.1,
+                1961.6
+              ],
+              "label": "sponsor",
+              "conf": 0.98,
+              "preview": "Cable mod. You're still using that ugly space consuming 12 volt high power adapter that came with your GPU. Why? Cable mods, basic 12 volt high power replacemen",
+              "in_gold": true
+            }
+          ],
+          "misses": [
+            {
+              "t": [
+                1929.7,
+                1945.1
+              ],
+              "label": "sponsor",
+              "conf": 1.0,
+              "preview": "Enjoy the new NAS-ziz. You guys are legends. Eternally grateful. Thank you so much. You make it so I can sleep at night. Now it's time to rip this whole thing a",
+              "in_gold": false
+            },
+            {
+              "t": [
+                1978.5,
+                1996.9
+              ],
+              "label": "sponsor",
+              "conf": 0.82,
+              "preview": "to fully support 600 Watts of safe aesthetic power delivery. So treat yourself and upgrade your build with Cable Mod today at the link below. You guys enjoyed t",
+              "in_gold": false
+            }
+          ]
+        },
+        "raw": {
+          "n_chunks": 122,
+          "n_sentences": 255,
+          "refined": false,
+          "chunk_labels": [
+            {
+              "index": 2,
+              "start": 33.5,
+              "end": 49.716,
+              "label": "content",
+              "confidence": 0.99,
+              "probabilities": {
+                "selfpromo": 0.01,
+                "interaction": 0.0,
+                "content": 0.99,
+                "sponsor": 0.0
+              },
+              "text_preview": "for the one, the only Mark Rober. And not only that, but we're gonna show you guys how with basically zero networking configuration, no port forwarding, any of "
+            },
+            {
+              "index": 3,
+              "start": 49.716,
+              "end": 67.133,
+              "label": "sponsor",
+              "confidence": 1.0,
+              "probabilities": {
+                "interaction": 0.0,
+                "selfpromo": 0.0,
+                "content": 0.0,
+                "sponsor": 1.0
+              },
+              "text_preview": "and securely sync to each other from miles away. Just like I'm gonna remotely sync this message from today's sponsor. CableMod, worry no more about your graphic"
+            },
+            {
+              "index": 4,
+              "start": 67.133,
+              "end": 82.182,
+              "label": "content",
+              "confidence": 0.93,
+              "probabilities": {
+                "interaction": 0.01,
+                "selfpromo": 0.0,
+                "content": 0.95,
+                "sponsor": 0.04
+              },
+              "text_preview": "Learn more at the end of the video. When Mark first reached out, he had already come up with actually a pretty reasonable plan to solve their issues. To migrate"
+            },
+            {
+              "index": 5,
+              "start": 82.182,
+              "end": 97.864,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "interaction": 0.0,
+                "selfpromo": 0.0,
+                "content": 1.0,
+                "sponsor": 0.0
+              },
+              "text_preview": "which is a DAS, or direct-attached storage chassis, that as the name implies, directly connects to the computer using a 40 gigabit Thunderbolt connection. Then "
+            },
+            {
+              "index": 6,
+              "start": 97.864,
+              "end": 115.115,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "interaction": 0.0,
+                "selfpromo": 0.0,
+                "content": 1.0,
+                "sponsor": 0.0
+              },
+              "text_preview": "These kinds of storage docs are great for the solo photographer or freelance video editor, where only that one person needs to access the data. To their credit,"
+            },
+            {
+              "index": 7,
+              "start": 115.115,
+              "end": 130.697,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "interaction": 0.0,
+                "selfpromo": 0.0,
+                "content": 1.0,
+                "sponsor": 0.0
+              },
+              "text_preview": "in order to generate low-quality proxy footage for their remote editors. Once the project is complete, that computer with the raw footage directly attached to i"
+            },
+            {
+              "index": 8,
+              "start": 130.697,
+              "end": 147.68,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "interaction": 0.0,
+                "selfpromo": 0.0,
+                "content": 1.0,
+                "sponsor": 0.0
+              },
+              "text_preview": "And given the flexibility and the upgradeability that's afforded by a DIY NAS, or a network-attached storage box, like being able to access the footage on any c"
+            },
+            {
+              "index": 118,
+              "start": 1929.694,
+              "end": 1945.076,
+              "label": "sponsor",
+              "confidence": 1.0,
+              "probabilities": {
+                "interaction": 0.0,
+                "selfpromo": 0.0,
+                "content": 0.0,
+                "sponsor": 1.0
+              },
+              "text_preview": "Enjoy the new NAS-ziz. You guys are legends. Eternally grateful. Thank you so much. You make it so I can sleep at night. Now it's time to rip this whole thing a"
+            },
+            {
+              "index": 119,
+              "start": 1945.076,
+              "end": 1961.592,
+              "label": "sponsor",
+              "confidence": 0.98,
+              "probabilities": {
+                "sponsor": 0.98,
+                "selfpromo": 0.0,
+                "interaction": 0.0,
+                "content": 0.02
+              },
+              "text_preview": "Cable mod. You're still using that ugly space consuming 12 volt high power adapter that came with your GPU. Why? Cable mods, basic 12 volt high power replacemen"
+            },
+            {
+              "index": 120,
+              "start": 1961.592,
+              "end": 1978.543,
+              "label": "sponsor",
+              "confidence": 0.62,
+              "probabilities": {
+                "sponsor": 0.72,
+                "selfpromo": 0.0,
+                "interaction": 0.0,
+                "content": 0.28
+              },
+              "text_preview": "These cables enable your ATX 2.0 power supply to power any graphics card with a 12 volt high power port. They're available for a wide variety of power supplies "
+            },
+            {
+              "index": 121,
+              "start": 1978.543,
+              "end": 1996.894,
+              "label": "sponsor",
+              "confidence": 0.82,
+              "probabilities": {
+                "sponsor": 0.86,
+                "selfpromo": 0.05,
+                "interaction": 0.02,
+                "content": 0.07
+              },
+              "text_preview": "to fully support 600 Watts of safe aesthetic power delivery. So treat yourself and upgrade your build with Cable Mod today at the link below. You guys enjoyed t"
+            }
+          ],
+          "traces": null,
+          "pattern_counts": {
+            "todays_sponsor": 1,
+            "our_sponsor": 1
+          },
+          "cue_hits": [
+            {
+              "start": 56.756,
+              "end": 57.924,
+              "pattern_name": "todays_sponsor",
+              "strength": "strong",
+              "text": "from today's sponsor."
+            },
+            {
+              "start": 1941.072,
+              "end": 1945.076,
+              "pattern_name": "our_sponsor",
+              "strength": "strong",
+              "text": "Pack it up, ship it and tell you about our sponsor."
+            }
+          ],
+          "proposed_windows": [
+            {
+              "start": 44.756,
+              "end": 136.756,
+              "strength": "strong",
+              "pattern_names": [
+                "todays_sponsor"
+              ],
+              "hits": [
+                {
+                  "start": 56.756,
+                  "end": 57.924,
+                  "pattern_name": "todays_sponsor",
+                  "strength": "strong",
+                  "text": "from today's sponsor.",
+                  "cue_index": 20
+                }
+              ]
+            },
+            {
+              "start": 1929.072,
+              "end": 1996.894,
+              "strength": "strong",
+              "pattern_names": [
+                "our_sponsor"
+              ],
+              "hits": [
+                {
+                  "start": 1941.072,
+                  "end": 1945.076,
+                  "pattern_name": "our_sponsor",
+                  "strength": "strong",
+                  "text": "Pack it up, ship it and tell you about our sponsor.",
+                  "cue_index": 854
+                }
+              ]
+            }
+          ],
+          "dropped_segments": null,
+          "n_candidate_chunks": 11,
+          "tony_status": null,
+          "tony_traces": null,
+          "n_lines": null,
+          "windows_scanned": null
+        }
+      },
+      {
+        "video_id": "QAkXf7O46w0",
+        "mode": "regex_propose_jev_confirm",
+        "gold": [
+          {
+            "start": 99.687,
+            "end": 180.422,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 1362.19,
+            "end": 1388.98,
+            "category": "sponsor",
+            "uuid": null
+          }
+        ],
+        "pred_segments": [
+          {
+            "start": 1372.679,
+            "end": 1397.679,
+            "category": "sponsor"
+          }
+        ],
+        "metrics": {
+          "n_pred": 1,
+          "n_gold": 2,
+          "overlap_sec": 16.30099999999993,
+          "pred_dur_sec": 25.0,
+          "gold_dur_sec": 107.52499999999996,
+          "iou": 0.14025502477973503,
+          "precision": 0.6520399999999973,
+          "recall": 0.1516019530341775,
+          "f1": 0.24600641388417185,
+          "mean_best_iou": 0.4593254247795068,
+          "video_recall_hit": true,
+          "video_has_gold": true,
+          "video_detected": true,
+          "fp_sec": 8.69900000000007,
+          "content_fp_rate": 0.006357644740746421,
+          "latency_ms_total": 458.72733398573473,
+          "latency_ms_p50_calls": 225.4854159837123,
+          "n_api_calls": 2,
+          "input_tokens": 8072,
+          "estimated_usd": 0.000339024
+        },
+        "examples": {
+          "hits": [
+            {
+              "t": [
+                146.6,
+                163.3
+              ],
+              "label": "selfpromo",
+              "conf": 0.45,
+              "preview": "and bang more like bang kupy gamer part is superior with no spike in your blood sugar no crash a light 100 migr boost of caffeine and is cheap as third world co",
+              "in_gold": true
+            },
+            {
+              "t": [
+                161.2,
+                177.9
+              ],
+              "label": "selfpromo",
+              "conf": 0.47,
+              "preview": "scoop like me it's 72 cents you can't spare 72 cents a day [ __ ] you SE drink in the future of energy drinks at Gamers subs. g/ Badger and use code Badger for ",
+              "in_gold": true
+            }
+          ],
+          "misses": [
+            {
+              "t": [
+                1353.5,
+                1369.4
+              ],
+              "label": "sponsor",
+              "conf": 0.38,
+              "preview": "an ambassador of the furry commu as an ambassad as an ambassador of the furry community you're on a white list don't worry a quick reminder to buy guacamole gam",
+              "in_gold": false
+            }
+          ]
+        },
+        "raw": {
+          "n_chunks": 106,
+          "n_sentences": 107,
+          "refined": false,
+          "chunk_labels": [
+            {
+              "index": 10,
+              "start": 146.64,
+              "end": 163.28,
+              "label": "selfpromo",
+              "confidence": 0.45,
+              "probabilities": {
+                "selfpromo": 0.59,
+                "sponsor": 0.21,
+                "content": 0.2,
+                "interaction": 0.0
+              },
+              "text_preview": "and bang more like bang kupy gamer part is superior with no spike in your blood sugar no crash a light 100 migr boost of caffeine and is cheap as third world co"
+            },
+            {
+              "index": 11,
+              "start": 161.239,
+              "end": 177.879,
+              "label": "selfpromo",
+              "confidence": 0.47,
+              "probabilities": {
+                "selfpromo": 0.6,
+                "sponsor": 0.39,
+                "content": 0.01,
+                "interaction": 0.0
+              },
+              "text_preview": "scoop like me it's 72 cents you can't spare 72 cents a day [ __ ] you SE drink in the future of energy drinks at Gamers subs. g/ Badger and use code Badger for "
+            },
+            {
+              "index": 12,
+              "start": 175.92,
+              "end": 195.519,
+              "label": "content",
+              "confidence": 0.99,
+              "probabilities": {
+                "selfpromo": 0.01,
+                "sponsor": 0.0,
+                "content": 0.99,
+                "interaction": 0.0
+              },
+              "text_preview": "and once it's gone it's gone so you better be quick just like this transition to iny Sandstorm makes me angry because the ratio of how incredible it is to how o"
+            },
+            {
+              "index": 13,
+              "start": 193.08,
+              "end": 210.48,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "sponsor": 0.0,
+                "content": 1.0,
+                "interaction": 0.0
+              },
+              "text_preview": "lizard brain arcade [ __ ] obser this station here's a picture of my nuts transmitting now and hardcore Airsoft simulator [ __ ] enemy man 300 M North fast fast"
+            },
+            {
+              "index": 14,
+              "start": 207.08,
+              "end": 223.519,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "sponsor": 0.0,
+                "content": 1.0,
+                "interaction": 0.0
+              },
+              "text_preview": "got a [ __ ] he's got a bipod on his 44 man with a red dot and a suppressor and I'm want to"
+            },
+            {
+              "index": 15,
+              "start": 221.84,
+              "end": 236.84,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "sponsor": 0.0,
+                "content": 1.0,
+                "interaction": 0.0
+              },
+              "text_preview": "tell you why I love it with this awful tutorial that is awful I don't even know why I'm calling it turn around dumb ass you're going the wrong [ __ ] way boot u"
+            },
+            {
+              "index": 16,
+              "start": 235.36,
+              "end": 256.479,
+              "label": "content",
+              "confidence": 0.98,
+              "probabilities": {
+                "selfpromo": 0.01,
+                "sponsor": 0.0,
+                "content": 0.99,
+                "interaction": 0.0
+              },
+              "text_preview": "Bots is how quickly you want to meet Jesus why did you pick PVE instead of PVP main goal is to blow up and then what and then act like I don't know nobody is th"
+            },
+            {
+              "index": 97,
+              "start": 1353.48,
+              "end": 1369.36,
+              "label": "sponsor",
+              "confidence": 0.38,
+              "probabilities": {
+                "selfpromo": 0.37,
+                "sponsor": 0.54,
+                "content": 0.09,
+                "interaction": 0.0
+              },
+              "text_preview": "an ambassador of the furry commu as an ambassad as an ambassador of the furry community you're on a white list don't worry a quick reminder to buy guacamole gam"
+            },
+            {
+              "index": 98,
+              "start": 1367.36,
+              "end": 1382.96,
+              "label": "sponsor",
+              "confidence": 0.69,
+              "probabilities": {
+                "interaction": 0.0,
+                "sponsor": 0.77,
+                "selfpromo": 0.18,
+                "content": 0.05
+              },
+              "text_preview": "drink in the universe I see gamer Subs in your pack give me some of that no no no stay away from me it's mine I use code Badger for for 10% off I will [ __ ] ki"
+            },
+            {
+              "index": 99,
+              "start": 1380.96,
+              "end": 1394.799,
+              "label": "selfpromo",
+              "confidence": 0.19,
+              "probabilities": {
+                "interaction": 0.01,
+                "sponsor": 0.37,
+                "selfpromo": 0.38,
+                "content": 0.24
+              },
+              "text_preview": "epic games store please use my Creator code the Russian Badger because I get a kickback and I always need more money money moneyone you should not be legally al"
+            },
+            {
+              "index": 100,
+              "start": 1395.279,
+              "end": 1413.039,
+              "label": "content",
+              "confidence": 0.96,
+              "probabilities": {
+                "interaction": 0.03,
+                "sponsor": 0.0,
+                "selfpromo": 0.0,
+                "content": 0.97
+              },
+              "text_preview": "Skinner I feel really stupid was ler skyer yo are you [ __ ] Sky my Lobby oh [ __ ] this B guys the fu playing"
+            },
+            {
+              "index": 101,
+              "start": 1409.48,
+              "end": 1425.6,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "interaction": 0.0,
+                "sponsor": 0.0,
+                "selfpromo": 0.0,
+                "content": 1.0
+              },
+              "text_preview": "like three fifths of a meme like halfway through don't say three fifths I mean and that's about it dog that is all that I have to say about Insurgency Sandstorm"
+            },
+            {
+              "index": 102,
+              "start": 1423.679,
+              "end": 1439.36,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "interaction": 0.0,
+                "sponsor": 0.0,
+                "selfpromo": 0.0,
+                "content": 1.0
+              },
+              "text_preview": "had spaghetti sauce on my lips when I started making this video it's not mom's spaghetti it's my spaghetti and it's the only thing that I can taste after having"
+            },
+            {
+              "index": 103,
+              "start": 1437.48,
+              "end": 1453.039,
+              "label": "content",
+              "confidence": 0.99,
+              "probabilities": {
+                "interaction": 0.01,
+                "sponsor": 0.0,
+                "selfpromo": 0.0,
+                "content": 0.99
+              },
+              "text_preview": "thing that I can taste is like chunks of beef and it's really [ __ ] weird once again thank you so much for watching my video and be sure to tune in next time w"
+            },
+            {
+              "index": 104,
+              "start": 1450.84,
+              "end": 1459.88,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "interaction": 0.0,
+                "sponsor": 0.0,
+                "selfpromo": 0.0,
+                "content": 1.0
+              },
+              "text_preview": "played like Devil May Cry 5 or something you would never think I'd ever play in a million years I'm not going to do that [ __ ] but I could"
+            }
+          ],
+          "traces": null,
+          "pattern_counts": {
+            "use_code": 1,
+            "pct_off": 2
+          },
+          "cue_hits": [
+            {
+              "start": 167.44,
+              "end": 172.2,
+              "pattern_name": "use_code",
+              "strength": "strong",
+              "text": "subs. g/ Badger and use code Badger for"
+            },
+            {
+              "start": 170.159,
+              "end": 173.599,
+              "pattern_name": "pct_off",
+              "strength": "strong",
+              "text": "10% off we've even got caffeine free"
+            },
+            {
+              "start": 1372.679,
+              "end": 1379.2,
+              "pattern_name": "pct_off",
+              "strength": "strong",
+              "text": "code Badger for for 10% off I will"
+            }
+          ],
+          "proposed_windows": [
+            {
+              "start": 155.44,
+              "end": 250.159,
+              "strength": "strong",
+              "pattern_names": [
+                "pct_off",
+                "use_code"
+              ],
+              "hits": [
+                {
+                  "start": 167.44,
+                  "end": 172.2,
+                  "pattern_name": "use_code",
+                  "strength": "strong",
+                  "text": "subs. g/ Badger and use code Badger for",
+                  "cue_index": 73
+                },
+                {
+                  "start": 170.159,
+                  "end": 173.599,
+                  "pattern_name": "pct_off",
+                  "strength": "strong",
+                  "text": "10% off we've even got caffeine free",
+                  "cue_index": 74
+                }
+              ]
+            },
+            {
+              "start": 1360.679,
+              "end": 1452.679,
+              "strength": "strong",
+              "pattern_names": [
+                "pct_off"
+              ],
+              "hits": [
+                {
+                  "start": 1372.679,
+                  "end": 1379.2,
+                  "pattern_name": "pct_off",
+                  "strength": "strong",
+                  "text": "code Badger for for 10% off I will",
+                  "cue_index": 552
+                }
+              ]
+            }
+          ],
+          "dropped_segments": null,
+          "n_candidate_chunks": 15,
+          "tony_status": null,
+          "tony_traces": null,
+          "n_lines": null,
+          "windows_scanned": null
+        }
+      },
+      {
+        "video_id": "DMqL73IGO5U",
+        "mode": "regex_propose_jev_confirm",
+        "gold": [
+          {
+            "start": 0.0,
+            "end": 3.68,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 172.484,
+            "end": 256.583,
+            "category": "sponsor",
+            "uuid": null
+          }
+        ],
+        "pred_segments": [
+          {
+            "start": 0.0,
+            "end": 27.48,
+            "category": "sponsor"
+          }
+        ],
+        "metrics": {
+          "n_pred": 1,
+          "n_gold": 2,
+          "overlap_sec": 3.68,
+          "pred_dur_sec": 27.48,
+          "gold_dur_sec": 87.77900000000002,
+          "iou": 0.03298111651834126,
+          "precision": 0.1339155749636099,
+          "recall": 0.04192346688843572,
+          "f1": 0.06385618476648243,
+          "mean_best_iou": 0.1339155749636099,
+          "video_recall_hit": true,
+          "video_has_gold": true,
+          "video_detected": true,
+          "fp_sec": 23.8,
+          "content_fp_rate": 0.1340308946843798,
+          "latency_ms_total": 259.31976502761245,
+          "latency_ms_p50_calls": 257.92341894702986,
+          "n_api_calls": 1,
+          "input_tokens": 3303,
+          "estimated_usd": 0.000138726
+        },
+        "examples": {
+          "hits": [],
+          "misses": [
+            {
+              "t": [
+                0.0,
+                16.5
+              ],
+              "label": "sponsor",
+              "conf": 0.96,
+              "preview": "this video is sponsored by scentbird more about them at the end of the sketch hi there hello thanks for joining us yeah well I mean you said I had to Mr Boss wh",
+              "in_gold": false
+            }
+          ]
+        },
+        "raw": {
+          "n_chunks": 19,
+          "n_sentences": 26,
+          "refined": false,
+          "chunk_labels": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 16.5,
+              "label": "sponsor",
+              "confidence": 0.96,
+              "probabilities": {
+                "interaction": 0.0,
+                "sponsor": 0.97,
+                "selfpromo": 0.0,
+                "content": 0.03
+              },
+              "text_preview": "this video is sponsored by scentbird more about them at the end of the sketch hi there hello thanks for joining us yeah well I mean you said I had to Mr Boss wh"
+            },
+            {
+              "index": 1,
+              "start": 14.759,
+              "end": 31.019,
+              "label": "content",
+              "confidence": 0.98,
+              "probabilities": {
+                "interaction": 0.0,
+                "content": 0.98,
+                "selfpromo": 0.0,
+                "sponsor": 0.02
+              },
+              "text_preview": "name what that sounds like something an alien came up with that's like if I said hey I gotta go on my human lunch break in five minutes but suspicious it is kin"
+            },
+            {
+              "index": 2,
+              "start": 29.58,
+              "end": 45.66,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "interaction": 0.0,
+                "sponsor": 0.0,
+                "selfpromo": 0.0,
+                "content": 1.0
+              },
+              "text_preview": "didn't bring you in here to brainstorm names we brought you in because well Liz I don't really know how to go about this you know how the company's been giving "
+            },
+            {
+              "index": 3,
+              "start": 43.92,
+              "end": 59.64,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "interaction": 0.0,
+                "sponsor": 0.0,
+                "selfpromo": 0.0,
+                "content": 1.0
+              },
+              "text_preview": "to buy things such as house and food right all kinds of different food bread eggs pasta yeah cucumbers bananas eggplants different kinds of lubricants okay yeah"
+            },
+            {
+              "index": 4,
+              "start": 57.6,
+              "end": 72.78,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "interaction": 0.0,
+                "content": 1.0,
+                "selfpromo": 0.0,
+                "sponsor": 0.0
+              },
+              "text_preview": "money anymore I see wow that sucks for you guys that blows sorry to hear that Jesse we don't really like the way you've been doing the money tasks so we think i"
+            },
+            {
+              "index": 5,
+              "start": 71.34,
+              "end": 89.34,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "interaction": 0.0,
+                "sponsor": 0.0,
+                "selfpromo": 0.0,
+                "content": 1.0
+              },
+              "text_preview": "I don't get it uh what's a good way of putting this we we are letting uh you go oh okay great my human lunch break starts in about five minutes anyway oh wait n"
+            }
+          ],
+          "traces": null,
+          "pattern_counts": {
+            "sponsored_by": 1
+          },
+          "cue_hits": [
+            {
+              "start": 0.0,
+              "end": 3.78,
+              "pattern_name": "sponsored_by",
+              "strength": "strong",
+              "text": "this video is sponsored by scentbird"
+            }
+          ],
+          "proposed_windows": [
+            {
+              "start": 0.0,
+              "end": 80.0,
+              "strength": "strong",
+              "pattern_names": [
+                "sponsored_by"
+              ],
+              "hits": [
+                {
+                  "start": 0.0,
+                  "end": 3.78,
+                  "pattern_name": "sponsored_by",
+                  "strength": "strong",
+                  "text": "this video is sponsored by scentbird",
+                  "cue_index": 0
+                }
+              ]
+            }
+          ],
+          "dropped_segments": null,
+          "n_candidate_chunks": 6,
+          "tony_status": null,
+          "tony_traces": null,
+          "n_lines": null,
+          "windows_scanned": null
+        }
+      },
+      {
+        "video_id": "le_ORQZzkmE",
+        "mode": "regex_propose_jev_confirm",
+        "gold": [
+          {
+            "start": 0.0,
+            "end": 3.204,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 918.238,
+            "end": 974.186,
+            "category": "sponsor",
+            "uuid": null
+          }
+        ],
+        "pred_segments": [
+          {
+            "start": 967.35,
+            "end": 992.35,
+            "category": "sponsor"
+          }
+        ],
+        "metrics": {
+          "n_pred": 1,
+          "n_gold": 2,
+          "overlap_sec": 6.836000000000013,
+          "pred_dur_sec": 25.0,
+          "gold_dur_sec": 59.15199999999998,
+          "iou": 0.0884163691861971,
+          "precision": 0.2734400000000005,
+          "recall": 0.11556667568298647,
+          "f1": 0.1624679152010651,
+          "mean_best_iou": 0.09223877374784131,
+          "video_recall_hit": true,
+          "video_has_gold": true,
+          "video_detected": true,
+          "fp_sec": 18.163999999999987,
+          "content_fp_rate": 0.01985193021878216,
+          "latency_ms_total": 170.37841799901798,
+          "latency_ms_p50_calls": 166.23927000910044,
+          "n_api_calls": 1,
+          "input_tokens": 770,
+          "estimated_usd": 3.234e-05
+        },
+        "examples": {
+          "hits": [
+            {
+              "t": [
+                952.5,
+                974.1
+              ],
+              "label": "sponsor",
+              "conf": 0.88,
+              "preview": "to save us from the possibility of world-ending asteroid strikes. And a Magellan membership means you’ll never have to watch ads. Plus, MagellanTV offers annual",
+              "in_gold": true
+            }
+          ],
+          "misses": []
+        },
+        "raw": {
+          "n_chunks": 55,
+          "n_sentences": 130,
+          "refined": false,
+          "chunk_labels": [
+            {
+              "index": 54,
+              "start": 952.47,
+              "end": 974.126,
+              "label": "sponsor",
+              "confidence": 0.88,
+              "probabilities": {
+                "selfpromo": 0.09,
+                "content": 0.0,
+                "sponsor": 0.91,
+                "interaction": 0.0
+              },
+              "text_preview": "to save us from the possibility of world-ending asteroid strikes. And a Magellan membership means you’ll never have to watch ads. Plus, MagellanTV offers annual"
+            }
+          ],
+          "traces": null,
+          "pattern_counts": {
+            "use_code": 1
+          },
+          "cue_hits": [
+            {
+              "start": 967.35,
+              "end": 974.126,
+              "pattern_name": "use_code",
+              "strength": "strong",
+              "text": "For more information on membership go to https://www.magellantv.com and use code PBS"
+            }
+          ],
+          "proposed_windows": [
+            {
+              "start": 955.35,
+              "end": 974.126,
+              "strength": "strong",
+              "pattern_names": [
+                "use_code"
+              ],
+              "hits": [
+                {
+                  "start": 967.35,
+                  "end": 974.126,
+                  "pattern_name": "use_code",
+                  "strength": "strong",
+                  "text": "For more information on membership go to https://www.magellantv.com and use code PBS",
+                  "cue_index": 214
+                }
+              ]
+            }
+          ],
+          "dropped_segments": null,
+          "n_candidate_chunks": 1,
+          "tony_status": null,
+          "tony_traces": null,
+          "n_lines": null,
+          "windows_scanned": null
+        }
+      },
+      {
+        "video_id": "SwIPOf2YAgI",
+        "mode": "regex_propose_jev_confirm",
+        "gold": [
+          {
+            "start": 0.0,
+            "end": 2.65,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 346.2,
+            "end": 396.5,
+            "category": "sponsor",
+            "uuid": null
+          }
+        ],
+        "pred_segments": [
+          {
+            "start": 0.08,
+            "end": 25.08,
+            "category": "sponsor"
+          }
+        ],
+        "metrics": {
+          "n_pred": 1,
+          "n_gold": 2,
+          "overlap_sec": 2.57,
+          "pred_dur_sec": 25.0,
+          "gold_dur_sec": 52.95000000000001,
+          "iou": 0.03409392411780312,
+          "precision": 0.10279999999999999,
+          "recall": 0.04853635505193578,
+          "f1": 0.0659397049390635,
+          "mean_best_iou": 0.10247208931419458,
+          "video_recall_hit": true,
+          "video_has_gold": true,
+          "video_detected": true,
+          "fp_sec": 22.43,
+          "content_fp_rate": 0.022008968433860257,
+          "latency_ms_total": 250.21920300787315,
+          "latency_ms_p50_calls": 243.80247696535662,
+          "n_api_calls": 1,
+          "input_tokens": 3112,
+          "estimated_usd": 0.00013070400000000001
+        },
+        "examples": {
+          "hits": [],
+          "misses": [
+            {
+              "t": [
+                0.1,
+                15.9
+              ],
+              "label": "sponsor",
+              "conf": 0.9,
+              "preview": "This video was sponsored by Let's Get Rusty. Everybody knows that Electron apps like Discord are essentially web applications. This kind of software uses a mult",
+              "in_gold": false
+            }
+          ]
+        },
+        "raw": {
+          "n_chunks": 77,
+          "n_sentences": 113,
+          "refined": false,
+          "chunk_labels": [
+            {
+              "index": 0,
+              "start": 0.08,
+              "end": 15.92,
+              "label": "sponsor",
+              "confidence": 0.9,
+              "probabilities": {
+                "content": 0.07,
+                "interaction": 0.0,
+                "sponsor": 0.93,
+                "selfpromo": 0.0
+              },
+              "text_preview": "This video was sponsored by Let's Get Rusty. Everybody knows that Electron apps like Discord are essentially web applications. This kind of software uses a mult"
+            },
+            {
+              "index": 1,
+              "start": 14.559,
+              "end": 32.079,
+              "label": "content",
+              "confidence": 0.99,
+              "probabilities": {
+                "content": 0.99,
+                "interaction": 0.0,
+                "sponsor": 0.01,
+                "selfpromo": 0.0
+              },
+              "text_preview": "processes start running in the background and communicating with each other. The reason we don't really notice this is that we usually only interact with the pr"
+            },
+            {
+              "index": 2,
+              "start": 29.199,
+              "end": 44.719,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "content": 1.0,
+                "interaction": 0.0,
+                "sponsor": 0.0,
+                "selfpromo": 0.0
+              },
+              "text_preview": "those processes. I mean, if Discord is basically a web page rendered inside a fancy web view, why don't we have to manually start the local server that serves t"
+            },
+            {
+              "index": 3,
+              "start": 41.76,
+              "end": 58.48,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "content": 1.0,
+                "interaction": 0.0,
+                "sponsor": 0.0,
+                "selfpromo": 0.0
+              },
+              "text_preview": "the app? Today, we're going to explore how processes can create other processes and how this seemingly simple operation works very differently depending on the "
+            },
+            {
+              "index": 4,
+              "start": 56.239,
+              "end": 73.439,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "content": 1.0,
+                "interaction": 0.0,
+                "sponsor": 0.0,
+                "selfpromo": 0.0
+              },
+              "text_preview": "is core dumped. Many applications are designed so that once launched by a user, they can programmatically spawn new processes at any point during their executio"
+            },
+            {
+              "index": 5,
+              "start": 70.96,
+              "end": 88.88,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "content": 1.0,
+                "interaction": 0.0,
+                "sponsor": 0.0,
+                "selfpromo": 0.0
+              },
+              "text_preview": "question. What would a process, let's call it P1, need to do in order to create a new process, P2? Well, for starters, P1 would need to load P2's executable cod"
+            }
+          ],
+          "traces": null,
+          "pattern_counts": {
+            "sponsored_by": 1
+          },
+          "cue_hits": [
+            {
+              "start": 0.08,
+              "end": 4.08,
+              "pattern_name": "sponsored_by",
+              "strength": "strong",
+              "text": "This video was sponsored by Let's Get"
+            }
+          ],
+          "proposed_windows": [
+            {
+              "start": 0.0,
+              "end": 80.08,
+              "strength": "strong",
+              "pattern_names": [
+                "sponsored_by"
+              ],
+              "hits": [
+                {
+                  "start": 0.08,
+                  "end": 4.08,
+                  "pattern_name": "sponsored_by",
+                  "strength": "strong",
+                  "text": "This video was sponsored by Let's Get",
+                  "cue_index": 0
+                }
+              ]
+            }
+          ],
+          "dropped_segments": null,
+          "n_candidate_chunks": 6,
+          "tony_status": null,
+          "tony_traces": null,
+          "n_lines": null,
+          "windows_scanned": null
+        }
+      },
+      {
+        "video_id": "Gav25xB0LtE",
+        "mode": "regex_propose_jev_confirm",
+        "gold": [
+          {
+            "start": 278.75,
+            "end": 335.61,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 345.326,
+            "end": 348.476,
+            "category": "sponsor",
+            "uuid": null
+          }
+        ],
+        "pred_segments": [
+          {
+            "start": 340.08,
+            "end": 365.08,
+            "category": "sponsor"
+          }
+        ],
+        "metrics": {
+          "n_pred": 1,
+          "n_gold": 2,
+          "overlap_sec": 3.1499999999999773,
+          "pred_dur_sec": 25.0,
+          "gold_dur_sec": 60.00999999999999,
+          "iou": 0.03848033227461491,
+          "precision": 0.12599999999999908,
+          "recall": 0.05249125145808995,
+          "f1": 0.07410892836136873,
+          "mean_best_iou": 0.12599999999999908,
+          "video_recall_hit": true,
+          "video_has_gold": true,
+          "video_detected": true,
+          "fp_sec": 21.850000000000023,
+          "content_fp_rate": 0.07070282164121157,
+          "latency_ms_total": 260.63850603532046,
+          "latency_ms_p50_calls": 258.61900800373405,
+          "n_api_calls": 1,
+          "input_tokens": 2163,
+          "estimated_usd": 9.0846e-05
+        },
+        "examples": {
+          "hits": [],
+          "misses": [
+            {
+              "t": [
+                318.5,
+                333.8
+              ],
+              "label": "content",
+              "conf": 0.92,
+              "preview": "your already fast printer into lightning speed also you can print from the cloud and watch your print's update in real time you can even calibrate your printer'",
+              "in_gold": true,
+              "kind": "false_negative_chunk"
+            },
+            {
+              "t": [
+                331.4,
+                347.6
+              ],
+              "label": "sponsor",
+              "conf": 0.34,
+              "preview": "the Ender 5 S1 with the Sonic pad you can click the link in my description and by the way I didn't design the cup in this video I got it from thingiverse and I'",
+              "in_gold": false
+            }
+          ]
+        },
+        "raw": {
+          "n_chunks": 27,
+          "n_sentences": 30,
+          "refined": false,
+          "chunk_labels": [
+            {
+              "index": 23,
+              "start": 318.52,
+              "end": 333.759,
+              "label": "content",
+              "confidence": 0.92,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "sponsor": 0.06,
+                "content": 0.94,
+                "interaction": 0.0
+              },
+              "text_preview": "your already fast printer into lightning speed also you can print from the cloud and watch your print's update in real time you can even calibrate your printer'"
+            },
+            {
+              "index": 24,
+              "start": 331.44,
+              "end": 347.56,
+              "label": "sponsor",
+              "confidence": 0.34,
+              "probabilities": {
+                "selfpromo": 0.07,
+                "sponsor": 0.5,
+                "content": 0.42,
+                "interaction": 0.01
+              },
+              "text_preview": "the Ender 5 S1 with the Sonic pad you can click the link in my description and by the way I didn't design the cup in this video I got it from thingiverse and I'"
+            },
+            {
+              "index": 25,
+              "start": 345.759,
+              "end": 363.039,
+              "label": "sponsor",
+              "confidence": 0.39,
+              "probabilities": {
+                "selfpromo": 0.41,
+                "content": 0.04,
+                "sponsor": 0.54,
+                "interaction": 0.01
+              },
+              "text_preview": "thanks again to creality for sponsoring this video and thanks for watching another episode of the action lab you can head to the action lab.com for new action l"
+            },
+            {
+              "index": 26,
+              "start": 359.68,
+              "end": 369.05,
+              "label": "content",
+              "confidence": 0.86,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "sponsor": 0.0,
+                "content": 0.9,
+                "interaction": 0.1
+              },
+              "text_preview": "you next time [Music]"
+            }
+          ],
+          "traces": null,
+          "pattern_counts": {
+            "link_in_desc": 1
+          },
+          "cue_hits": [
+            {
+              "start": 340.08,
+              "end": 343.44,
+              "pattern_name": "link_in_desc",
+              "strength": "strong",
+              "text": "I'll put the link in the description for"
+            }
+          ],
+          "proposed_windows": [
+            {
+              "start": 328.08,
+              "end": 369.05,
+              "strength": "strong",
+              "pattern_names": [
+                "link_in_desc"
+              ],
+              "hits": [
+                {
+                  "start": 340.08,
+                  "end": 343.44,
+                  "pattern_name": "link_in_desc",
+                  "strength": "strong",
+                  "text": "I'll put the link in the description for",
+                  "cue_index": 141
+                }
+              ]
+            }
+          ],
+          "dropped_segments": null,
+          "n_candidate_chunks": 4,
+          "tony_status": null,
+          "tony_traces": null,
+          "n_lines": null,
+          "windows_scanned": null
+        }
+      },
+      {
+        "video_id": "c3CN8elYKrY",
+        "mode": "regex_propose_jev_confirm",
+        "gold": [
+          {
+            "start": 33.326,
+            "end": 105.892,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 910.083,
+            "end": 943.343,
+            "category": "sponsor",
+            "uuid": null
+          }
+        ],
+        "pred_segments": [
+          {
+            "start": 43.44,
+            "end": 101.6,
+            "category": "sponsor"
+          },
+          {
+            "start": 912.0,
+            "end": 944.8,
+            "category": "sponsor"
+          }
+        ],
+        "metrics": {
+          "n_pred": 2,
+          "n_gold": 2,
+          "overlap_sec": 89.50299999999996,
+          "pred_dur_sec": 90.95999999999995,
+          "gold_dur_sec": 105.826,
+          "iou": 0.8342701080320272,
+          "precision": 0.9839819700967459,
+          "recall": 0.845756241377355,
+          "f1": 0.9096480440681756,
+          "mean_best_iou": 0.8521457295561892,
+          "video_recall_hit": true,
+          "video_has_gold": true,
+          "video_detected": true,
+          "fp_sec": 1.4569999999999936,
+          "content_fp_rate": 0.001608286705528989,
+          "latency_ms_total": 1019.8454729979858,
+          "latency_ms_p50_calls": 227.6113750122022,
+          "n_api_calls": 4,
+          "input_tokens": 13548,
+          "estimated_usd": 0.000569016
+        },
+        "examples": {
+          "hits": [
+            {
+              "t": [
+                29.8,
+                46.0
+              ],
+              "label": "sponsor",
+              "conf": 0.78,
+              "preview": "details about how steam will run on chrome os let's get into it but first if you're interested in making sure that your organization is up to par in terms of li",
+              "in_gold": true
+            },
+            {
+              "t": [
+                43.4,
+                58.9
+              ],
+              "label": "sponsor",
+              "conf": 1.0,
+              "preview": "this video is sponsored by tuxcare but this time i'm not going to talk to you about their services to handle and manage your linux server fleet this time they w",
+              "in_gold": true
+            }
+          ],
+          "misses": [
+            {
+              "t": [
+                56.7,
+                71.8
+              ],
+              "label": "content",
+              "conf": 0.72,
+              "preview": "best practices this research was conducted by the independent ponemon institute and the results which are freely downloadable will let you benchmark your proces",
+              "in_gold": true,
+              "kind": "false_negative_chunk"
+            },
+            {
+              "t": [
+                69.8,
+                89.9
+              ],
+              "label": "content",
+              "conf": 0.38,
+              "preview": "shows that organizations spend about 1075 man hours monitoring and patching systems each week including 340 hours of downtime to apply those patches 45 of respo",
+              "in_gold": true,
+              "kind": "false_negative_chunk"
+            }
+          ]
+        },
+        "raw": {
+          "n_chunks": 69,
+          "n_sentences": 72,
+          "refined": false,
+          "chunk_labels": [
+            {
+              "index": 2,
+              "start": 29.84,
+              "end": 46.0,
+              "label": "sponsor",
+              "confidence": 0.78,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "content": 0.16,
+                "interaction": 0.0,
+                "sponsor": 0.84
+              },
+              "text_preview": "details about how steam will run on chrome os let's get into it but first if you're interested in making sure that your organization is up to par in terms of li"
+            },
+            {
+              "index": 3,
+              "start": 43.44,
+              "end": 58.879,
+              "label": "sponsor",
+              "confidence": 1.0,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "content": 0.0,
+                "sponsor": 1.0,
+                "interaction": 0.0
+              },
+              "text_preview": "this video is sponsored by tuxcare but this time i'm not going to talk to you about their services to handle and manage your linux server fleet this time they w"
+            },
+            {
+              "index": 4,
+              "start": 56.719,
+              "end": 71.76,
+              "label": "content",
+              "confidence": 0.72,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "content": 0.79,
+                "sponsor": 0.21,
+                "interaction": 0.0
+              },
+              "text_preview": "best practices this research was conducted by the independent ponemon institute and the results which are freely downloadable will let you benchmark your proces"
+            },
+            {
+              "index": 5,
+              "start": 69.76,
+              "end": 89.92,
+              "label": "content",
+              "confidence": 0.38,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "content": 0.54,
+                "sponsor": 0.46,
+                "interaction": 0.0
+              },
+              "text_preview": "shows that organizations spend about 1075 man hours monitoring and patching systems each week including 340 hours of downtime to apply those patches 45 of respo"
+            },
+            {
+              "index": 6,
+              "start": 86.56,
+              "end": 101.6,
+              "label": "sponsor",
+              "confidence": 0.96,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "content": 0.03,
+                "sponsor": 0.97,
+                "interaction": 0.0
+              },
+              "text_preview": "organization has no tolerance for system patching downtime of course that's a problem that tuxcare solves with their live patching services but if you want to l"
+            },
+            {
+              "index": 7,
+              "start": 99.52,
+              "end": 116.0,
+              "label": "content",
+              "confidence": 0.39,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "content": 0.54,
+                "sponsor": 0.45,
+                "interaction": 0.01
+              },
+              "text_preview": "implement them in your organization head over to the link in the description below and download the full report for free no strings attached okay so it seems th"
+            },
+            {
+              "index": 8,
+              "start": 112.079,
+              "end": 129.679,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "content": 1.0,
+                "sponsor": 0.0,
+                "interaction": 0.0
+              },
+              "text_preview": "not based on uefi fedora 37 will mark older bios installs as deprecated and new installs won't be possible on these architectures existing installs of fedora wi"
+            },
+            {
+              "index": 9,
+              "start": 127.2,
+              "end": 143.68,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "content": 1.0,
+                "sponsor": 0.0,
+                "interaction": 0.0
+              },
+              "text_preview": "your older devices won't be able to get a new fresh fedora install while the move might seem surprising it's driven by the fact that a lot of modern features de"
+            },
+            {
+              "index": 10,
+              "start": 141.76,
+              "end": 157.519,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "content": 1.0,
+                "selfpromo": 0.0,
+                "sponsor": 0.0,
+                "interaction": 0.0
+              },
+              "text_preview": "support or using the firmware update tool fw upd it also makes the installer and live session for fedora way easier to maintain as it allows the team to stop su"
+            },
+            {
+              "index": 11,
+              "start": 155.2,
+              "end": 170.239,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "sponsor": 0.0,
+                "selfpromo": 0.0,
+                "content": 1.0,
+                "interaction": 0.0
+              },
+              "text_preview": "hacks and complex code to be at future parody with uefi fedora has always looked to the future and is generally one of the first main distros to implement new t"
+            },
+            {
+              "index": 12,
+              "start": 168.64,
+              "end": 186.56,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "content": 1.0,
+                "selfpromo": 0.0,
+                "sponsor": 0.0,
+                "interaction": 0.0
+              },
+              "text_preview": "that it's going to piss a lot of people off though what would these videos look like without more kde news we won't find out today as nate graham keeps on publi"
+            },
+            {
+              "index": 53,
+              "start": 769.839,
+              "end": 787.44,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "sponsor": 0.0,
+                "selfpromo": 0.0,
+                "content": 1.0,
+                "interaction": 0.0
+              },
+              "text_preview": "the polaris rpg like pen and paper rpg this was an amazing game other good steam deck related news back for blood added experimental support for linux and the d"
+            },
+            {
+              "index": 54,
+              "start": 784.8,
+              "end": 801.76,
+              "label": "content",
+              "confidence": 0.41,
+              "probabilities": {
+                "content": 0.55,
+                "selfpromo": 0.12,
+                "sponsor": 0.32,
+                "interaction": 0.01
+              },
+              "text_preview": "necessary easy anti-cheat files to be playable online on linux and on deck unfortunately it seemed to also have broken the game for some but gaming on linux has"
+            },
+            {
+              "index": 55,
+              "start": 799.279,
+              "end": 818.0,
+              "label": "content",
+              "confidence": 0.69,
+              "probabilities": {
+                "content": 0.77,
+                "selfpromo": 0.0,
+                "sponsor": 0.23,
+                "interaction": 0.0
+              },
+              "text_preview": "it a microsoft game making changes specifically to be able to run on linux and on the steam deck it's crazy times we live in google detailed the inner workings "
+            },
+            {
+              "index": 56,
+              "start": 815.839,
+              "end": 832.0,
+              "label": "content",
+              "confidence": 0.97,
+              "probabilities": {
+                "content": 0.98,
+                "selfpromo": 0.0,
+                "sponsor": 0.02,
+                "interaction": 0.0
+              },
+              "text_preview": "which runs a modified version of arch linux specifically designed for gaming the image is named borealis and gets updates with every chrome os update so you don"
+            },
+            {
+              "index": 57,
+              "start": 829.76,
+              "end": 845.76,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "sponsor": 0.0,
+                "selfpromo": 0.0,
+                "content": 1.0,
+                "interaction": 0.0
+              },
+              "text_preview": "recent version of mesa to ensure the best performance possible in fact google says that this system offers near native performance thanks to venus a lightweight"
+            },
+            {
+              "index": 58,
+              "start": 843.12,
+              "end": 858.56,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "sponsor": 0.0,
+                "interaction": 0.0,
+                "content": 1.0,
+                "selfpromo": 0.0
+              },
+              "text_preview": "opengl the frames are then passed to x-wayland and to sommelier which is their wayland compositor and finally to chrome's wayland display server everything shou"
+            },
+            {
+              "index": 59,
+              "start": 856.48,
+              "end": 871.839,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "sponsor": 0.0,
+                "content": 1.0,
+                "interaction": 0.0
+              },
+              "text_preview": "just need to make games for linux or ensure they run with proton for them to run on chrome os hopefully this will open up the linux gaming market even more beca"
+            },
+            {
+              "index": 60,
+              "start": 869.12,
+              "end": 886.639,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "sponsor": 0.0,
+                "interaction": 0.0,
+                "content": 1.0,
+                "selfpromo": 0.0
+              },
+              "text_preview": "linux in terms of market share and maybe we'll see more games being compatible with our systems in the future and as always there's a new version of wine out wi"
+            },
+            {
+              "index": 62,
+              "start": 898.72,
+              "end": 914.16,
+              "label": "sponsor",
+              "confidence": 0.93,
+              "probabilities": {
+                "sponsor": 0.95,
+                "interaction": 0.0,
+                "content": 0.05,
+                "selfpromo": 0.0
+              },
+              "text_preview": "adobe photoshop 7. and as always wine 7.6 will serve as the basis for the next releases of proton so don't you worry you're pretty little ahead about it you'll "
+            },
+            {
+              "index": 63,
+              "start": 912.0,
+              "end": 928.16,
+              "label": "sponsor",
+              "confidence": 0.99,
+              "probabilities": {
+                "sponsor": 1.0,
+                "interaction": 0.0,
+                "content": 0.0,
+                "selfpromo": 0.0
+              },
+              "text_preview": "stuff from today's sponsor slim book these guys are based in valencia spain they make linux laptops linux desktops linux all in ones linux knucks keyboards what"
+            },
+            {
+              "index": 64,
+              "start": 925.839,
+              "end": 943.36,
+              "label": "sponsor",
+              "confidence": 0.92,
+              "probabilities": {
+                "sponsor": 0.95,
+                "interaction": 0.05,
+                "content": 0.0,
+                "selfpromo": 0.0
+              },
+              "text_preview": "slimbook pro x14 i use their desktop the slimbook chimera i use their keyboard the slimbook rgb keyboard and well they've been partners of the channel for a whi"
+            },
+            {
+              "index": 65,
+              "start": 940.959,
+              "end": 958.24,
+              "label": "selfpromo",
+              "confidence": 0.94,
+              "probabilities": {
+                "sponsor": 0.01,
+                "interaction": 0.03,
+                "content": 0.0,
+                "selfpromo": 0.96
+              },
+              "text_preview": "devices and maybe grab one for yourself so thanks everyone for watching the video if you enjoyed it don't hesitate to like to subscribe to turn on notifications"
+            },
+            {
+              "index": 66,
+              "start": 956.56,
+              "end": 968.56,
+              "label": "selfpromo",
+              "confidence": 0.73,
+              "probabilities": {
+                "sponsor": 0.0,
+                "interaction": 0.14,
+                "content": 0.07,
+                "selfpromo": 0.79
+              },
+              "text_preview": "of these videos you can also join my patreon subscribers or my youtube members both get access to a weekly patreon cast every monday and the right to vote on th"
+            },
+            {
+              "index": 67,
+              "start": 967.12,
+              "end": 1009.68,
+              "label": "selfpromo",
+              "confidence": 0.82,
+              "probabilities": {
+                "sponsor": 0.0,
+                "content": 0.1,
+                "selfpromo": 0.87,
+                "interaction": 0.03
+              },
+              "text_preview": "watching and i guess you'll see me in the next one bye"
+            },
+            {
+              "index": 68,
+              "start": 972.15,
+              "end": 1011.759,
+              "label": "content",
+              "confidence": 0.91,
+              "probabilities": {
+                "sponsor": 0.0,
+                "content": 0.93,
+                "selfpromo": 0.01,
+                "interaction": 0.06
+              },
+              "text_preview": "[Music] you"
+            }
+          ],
+          "traces": null,
+          "pattern_counts": {
+            "sponsored_by": 1,
+            "link_in_desc": 3,
+            "todays_sponsor": 1
+          },
+          "cue_hits": [
+            {
+              "start": 43.44,
+              "end": 49.52,
+              "pattern_name": "sponsored_by",
+              "strength": "strong",
+              "text": "this video is sponsored by tuxcare but this time i'm not going to talk to you"
+            },
+            {
+              "start": 99.52,
+              "end": 104.64,
+              "pattern_name": "link_in_desc",
+              "strength": "strong",
+              "text": "implement them in your organization head over to the link in the description"
+            },
+            {
+              "start": 795.12,
+              "end": 801.76,
+              "pattern_name": "link_in_desc",
+              "strength": "strong",
+              "text": "linux has a solution for that link in the description that's pretty nuts isn't"
+            },
+            {
+              "start": 912.0,
+              "end": 918.72,
+              "pattern_name": "todays_sponsor",
+              "strength": "strong",
+              "text": "stuff from today's sponsor slim book these guys are based in valencia spain"
+            },
+            {
+              "start": 938.24,
+              "end": 943.36,
+              "pattern_name": "link_in_desc",
+              "strength": "strong",
+              "text": "over to the link in the description if you want to learn more about their"
+            }
+          ],
+          "proposed_windows": [
+            {
+              "start": 31.439999999999998,
+              "end": 179.51999999999998,
+              "strength": "strong",
+              "pattern_names": [
+                "link_in_desc",
+                "sponsored_by"
+              ],
+              "hits": [
+                {
+                  "start": 43.44,
+                  "end": 49.52,
+                  "pattern_name": "sponsored_by",
+                  "strength": "strong",
+                  "text": "this video is sponsored by tuxcare but this time i'm not going to talk to you",
+                  "cue_index": 9
+                },
+                {
+                  "start": 99.52,
+                  "end": 104.64,
+                  "pattern_name": "link_in_desc",
+                  "strength": "strong",
+                  "text": "implement them in your organization head over to the link in the description",
+                  "cue_index": 21
+                }
+              ]
+            },
+            {
+              "start": 783.12,
+              "end": 875.12,
+              "strength": "strong",
+              "pattern_names": [
+                "link_in_desc"
+              ],
+              "hits": [
+                {
+                  "start": 795.12,
+                  "end": 801.76,
+                  "pattern_name": "link_in_desc",
+                  "strength": "strong",
+                  "text": "linux has a solution for that link in the description that's pretty nuts isn't",
+                  "cue_index": 176
+                }
+              ]
+            },
+            {
+              "start": 900.0,
+              "end": 1011.759,
+              "strength": "strong",
+              "pattern_names": [
+                "link_in_desc",
+                "todays_sponsor"
+              ],
+              "hits": [
+                {
+                  "start": 912.0,
+                  "end": 918.72,
+                  "pattern_name": "todays_sponsor",
+                  "strength": "strong",
+                  "text": "stuff from today's sponsor slim book these guys are based in valencia spain",
+                  "cue_index": 202
+                },
+                {
+                  "start": 938.24,
+                  "end": 943.36,
+                  "pattern_name": "link_in_desc",
+                  "strength": "strong",
+                  "text": "over to the link in the description if you want to learn more about their",
+                  "cue_index": 208
+                }
+              ]
+            }
+          ],
+          "dropped_segments": null,
+          "n_candidate_chunks": 26,
+          "tony_status": null,
+          "tony_traces": null,
+          "n_lines": null,
+          "windows_scanned": null
+        }
+      },
+      {
+        "video_id": "r_e21HhG5Ko",
+        "mode": "regex_propose_jev_confirm",
+        "gold": [
+          {
+            "start": 16.84,
+            "end": 34.1,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 1082.1,
+            "end": 1130.51,
+            "category": "sponsor",
+            "uuid": null
+          }
+        ],
+        "pred_segments": [
+          {
+            "start": 17.6,
+            "end": 43.559,
+            "category": "sponsor"
+          },
+          {
+            "start": 1086.0,
+            "end": 1136.48,
+            "category": "sponsor"
+          }
+        ],
+        "metrics": {
+          "n_pred": 2,
+          "n_gold": 2,
+          "overlap_sec": 61.00999999999999,
+          "pred_dur_sec": 76.43900000000002,
+          "gold_dur_sec": 65.67000000000009,
+          "iou": 0.7522904104859482,
+          "precision": 0.7981527754156906,
+          "recall": 0.9290391350692845,
+          "f1": 0.8586366802947026,
+          "mean_best_iou": 0.7180187649208079,
+          "video_recall_hit": true,
+          "video_has_gold": true,
+          "video_detected": true,
+          "fp_sec": 15.42900000000003,
+          "content_fp_rate": 0.01435189060973911,
+          "latency_ms_total": 507.7746689785272,
+          "latency_ms_p50_calls": 250.74159147334285,
+          "n_api_calls": 2,
+          "input_tokens": 7921,
+          "estimated_usd": 0.000332682
+        },
+        "examples": {
+          "hits": [
+            {
+              "t": [
+                14.4,
+                32.2
+              ],
+              "label": "sponsor",
+              "conf": 1.0,
+              "preview": "guys and even share a story about why we enjoy them so much but now before we share the segue to our sponsor delete me add another layer to your online privacy ",
+              "in_gold": true
+            },
+            {
+              "t": [
+                1079.2,
+                1095.2
+              ],
+              "label": "sponsor",
+              "conf": 0.99,
+              "preview": "enjoyed listening to me talking about my different drones here for my show and tell I decided to bring in the segue to our sponsor delete me it may be winter st",
+              "in_gold": true
+            }
+          ],
+          "misses": [
+            {
+              "t": [
+                0.2,
+                16.0
+              ],
+              "label": "sponsor",
+              "conf": 0.57,
+              "preview": "there are a lot of employees here at lus Media Group and while yes most of us are Gamers and computer enthusiasts even more of us have passions for Tech that ex",
+              "in_gold": false
+            },
+            {
+              "t": [
+                27.7,
+                43.6
+              ],
+              "label": "sponsor",
+              "conf": 0.73,
+              "preview": "delet me.com lt20 and use code lt20 for 20% off their plans today hello I am Alex Clark I'm one of the writers for lonus Tech tips and I have brought here today",
+              "in_gold": false
+            }
+          ]
+        },
+        "raw": {
+          "n_chunks": 85,
+          "n_sentences": 95,
+          "refined": false,
+          "chunk_labels": [
+            {
+              "index": 0,
+              "start": 0.16,
+              "end": 16.0,
+              "label": "sponsor",
+              "confidence": 0.57,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "content": 0.32,
+                "sponsor": 0.68,
+                "interaction": 0.0
+              },
+              "text_preview": "there are a lot of employees here at lus Media Group and while yes most of us are Gamers and computer enthusiasts even more of us have passions for Tech that ex"
+            },
+            {
+              "index": 1,
+              "start": 14.44,
+              "end": 32.2,
+              "label": "sponsor",
+              "confidence": 1.0,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "content": 0.0,
+                "sponsor": 1.0,
+                "interaction": 0.0
+              },
+              "text_preview": "guys and even share a story about why we enjoy them so much but now before we share the segue to our sponsor delete me add another layer to your online privacy "
+            },
+            {
+              "index": 2,
+              "start": 27.72,
+              "end": 43.559,
+              "label": "sponsor",
+              "confidence": 0.73,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "content": 0.2,
+                "sponsor": 0.8,
+                "interaction": 0.0
+              },
+              "text_preview": "delet me.com lt20 and use code lt20 for 20% off their plans today hello I am Alex Clark I'm one of the writers for lonus Tech tips and I have brought here today"
+            },
+            {
+              "index": 3,
+              "start": 42.039,
+              "end": 59.199,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "content": 1.0,
+                "sponsor": 0.0,
+                "interaction": 0.0
+              },
+              "text_preview": "now there's two things that you can do when you get a golf you can either take up vaping but that's not healthy for you so instead I slapped a great big subwoof"
+            },
+            {
+              "index": 4,
+              "start": 55.68,
+              "end": 71.4,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "content": 1.0,
+                "sponsor": 0.0,
+                "interaction": 0.0
+              },
+              "text_preview": "the battery to this asininely large fuse I don't know why it's so big everything else uses like mini fuses this one right here anything but mini but it's 100 am"
+            },
+            {
+              "index": 5,
+              "start": 69.56,
+              "end": 85.24,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "content": 1.0,
+                "sponsor": 0.0,
+                "interaction": 0.0
+              },
+              "text_preview": "cable comes back to here we have three more fuses that are power distributed to the different amps and we have three more fuses over on this side to make sure t"
+            },
+            {
+              "index": 6,
+              "start": 82.56,
+              "end": 97.72,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "content": 1.0,
+                "sponsor": 0.0,
+                "interaction": 0.0
+              },
+              "text_preview": "anything else around it the real star of the show is right here the mini DSP 8x12 DL which gives me rack live room correction the reason that is so great is tha"
+            },
+            {
+              "index": 7,
+              "start": 95.6,
+              "end": 111.799,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "content": 1.0,
+                "sponsor": 0.0,
+                "interaction": 0.0
+              },
+              "text_preview": "ever driven that sounds amazing like in particular the Volvo S90 but from other manufacturers as well is that dir live tuning so I wanted that in my car kind of"
+            },
+            {
+              "index": 8,
+              "start": 108.32,
+              "end": 124.96,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "interaction": 0.0,
+                "content": 1.0,
+                "selfpromo": 0.0,
+                "sponsor": 0.0
+              },
+              "text_preview": "about 1,300 watts of amplifier power I based that number off of other cars that I had driven that had apparently 13400 watts of power but I can tell you for sur"
+            },
+            {
+              "index": 79,
+              "start": 1064.72,
+              "end": 1081.24,
+              "label": "content",
+              "confidence": 0.38,
+              "probabilities": {
+                "interaction": 0.0,
+                "content": 0.54,
+                "selfpromo": 0.01,
+                "sponsor": 0.45
+              },
+              "text_preview": "them still like the DJI Neo or whatever have you and you can just pick up and play and go from there and those are fantastic drones to build off of and if I cou"
+            },
+            {
+              "index": 80,
+              "start": 1079.159,
+              "end": 1095.159,
+              "label": "sponsor",
+              "confidence": 0.99,
+              "probabilities": {
+                "interaction": 0.0,
+                "content": 0.01,
+                "selfpromo": 0.0,
+                "sponsor": 0.99
+              },
+              "text_preview": "enjoyed listening to me talking about my different drones here for my show and tell I decided to bring in the segue to our sponsor delete me it may be winter st"
+            },
+            {
+              "index": 81,
+              "start": 1093.08,
+              "end": 1109.72,
+              "label": "sponsor",
+              "confidence": 0.99,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "interaction": 0.0,
+                "content": 0.01,
+                "sponsor": 0.99
+              },
+              "text_preview": "sure you're protected delete me's data removal service targets pesky data Brokers that pedal your information online to the highest bidder and request them to b"
+            },
+            {
+              "index": 82,
+              "start": 1107.88,
+              "end": 1123.799,
+              "label": "sponsor",
+              "confidence": 1.0,
+              "probabilities": {
+                "interaction": 0.0,
+                "content": 0.0,
+                "selfpromo": 0.0,
+                "sponsor": 1.0
+              },
+              "text_preview": "which of the hundreds of data Brokers on their Hit List have your private info like email phone numbers addresses and more they have family plans too meaning up"
+            },
+            {
+              "index": 83,
+              "start": 1121.159,
+              "end": 1136.48,
+              "label": "sponsor",
+              "confidence": 0.93,
+              "probabilities": {
+                "interaction": 0.03,
+                "content": 0.01,
+                "selfpromo": 0.02,
+                "sponsor": 0.94
+              },
+              "text_preview": "use dashboard so go to join delet me.com or click our Link in the description and get 20% off a plan that suits your needs by using code lt20 at checkout if you"
+            },
+            {
+              "index": 84,
+              "start": 1134.44,
+              "end": 1140.72,
+              "label": "interaction",
+              "confidence": 0.92,
+              "probabilities": {
+                "interaction": 0.94,
+                "content": 0.03,
+                "selfpromo": 0.03,
+                "sponsor": 0.0
+              },
+              "text_preview": "years ago but also leave a comment down below about what product you would show off"
+            }
+          ],
+          "traces": null,
+          "pattern_counts": {
+            "segue_sponsor": 1,
+            "use_code": 1,
+            "pct_off": 2,
+            "our_sponsor": 1,
+            "link_in_desc": 1
+          },
+          "cue_hits": [
+            {
+              "start": 17.6,
+              "end": 23.32,
+              "pattern_name": "segue_sponsor",
+              "strength": "strong",
+              "text": "share the segue to our sponsor delete me"
+            },
+            {
+              "start": 27.72,
+              "end": 34.68,
+              "pattern_name": "use_code",
+              "strength": "strong",
+              "text": "delet me.com lt20 and use code lt20 for"
+            },
+            {
+              "start": 32.2,
+              "end": 36.44,
+              "pattern_name": "pct_off",
+              "strength": "strong",
+              "text": "20% off their plans today hello I am"
+            },
+            {
+              "start": 1086.0,
+              "end": 1091.039,
+              "pattern_name": "our_sponsor",
+              "strength": "strong",
+              "text": "our sponsor delete me it may be winter"
+            },
+            {
+              "start": 1123.799,
+              "end": 1127.559,
+              "pattern_name": "link_in_desc",
+              "strength": "strong",
+              "text": "or click our Link in the description and"
+            },
+            {
+              "start": 1125.36,
+              "end": 1130.88,
+              "pattern_name": "pct_off",
+              "strength": "strong",
+              "text": "get 20% off a plan that suits your needs"
+            }
+          ],
+          "proposed_windows": [
+            {
+              "start": 5.600000000000001,
+              "end": 112.2,
+              "strength": "strong",
+              "pattern_names": [
+                "pct_off",
+                "segue_sponsor",
+                "use_code"
+              ],
+              "hits": [
+                {
+                  "start": 17.6,
+                  "end": 23.32,
+                  "pattern_name": "segue_sponsor",
+                  "strength": "strong",
+                  "text": "share the segue to our sponsor delete me",
+                  "cue_index": 9
+                },
+                {
+                  "start": 27.72,
+                  "end": 34.68,
+                  "pattern_name": "use_code",
+                  "strength": "strong",
+                  "text": "delet me.com lt20 and use code lt20 for",
+                  "cue_index": 13
+                },
+                {
+                  "start": 32.2,
+                  "end": 36.44,
+                  "pattern_name": "pct_off",
+                  "strength": "strong",
+                  "text": "20% off their plans today hello I am",
+                  "cue_index": 14
+                }
+              ]
+            },
+            {
+              "start": 1074.0,
+              "end": 1140.72,
+              "strength": "strong",
+              "pattern_names": [
+                "link_in_desc",
+                "our_sponsor",
+                "pct_off"
+              ],
+              "hits": [
+                {
+                  "start": 1086.0,
+                  "end": 1091.039,
+                  "pattern_name": "our_sponsor",
+                  "strength": "strong",
+                  "text": "our sponsor delete me it may be winter",
+                  "cue_index": 470
+                },
+                {
+                  "start": 1123.799,
+                  "end": 1127.559,
+                  "pattern_name": "link_in_desc",
+                  "strength": "strong",
+                  "text": "or click our Link in the description and",
+                  "cue_index": 487
+                },
+                {
+                  "start": 1125.36,
+                  "end": 1130.88,
+                  "pattern_name": "pct_off",
+                  "strength": "strong",
+                  "text": "get 20% off a plan that suits your needs",
+                  "cue_index": 488
+                }
+              ]
+            }
+          ],
+          "dropped_segments": null,
+          "n_candidate_chunks": 15,
+          "tony_status": null,
+          "tony_traces": null,
+          "n_lines": null,
+          "windows_scanned": null
+        }
+      },
+      {
+        "video_id": "pmDePx56S6Q",
+        "mode": "regex_propose_jev_confirm",
+        "gold": [
+          {
+            "start": 190.736,
+            "end": 279.61,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 660.726,
+            "end": 674.95,
+            "category": "sponsor",
+            "uuid": null
+          }
+        ],
+        "pred_segments": [
+          {
+            "start": 672.079,
+            "end": 697.079,
+            "category": "sponsor"
+          }
+        ],
+        "metrics": {
+          "n_pred": 1,
+          "n_gold": 2,
+          "overlap_sec": 2.8710000000000946,
+          "pred_dur_sec": 25.0,
+          "gold_dur_sec": 103.09800000000007,
+          "iou": 0.022926365719853507,
+          "precision": 0.11484000000000379,
+          "recall": 0.02784729092707999,
+          "f1": 0.04482505581664184,
+          "mean_best_iou": 0.07897560036310891,
+          "video_recall_hit": true,
+          "video_has_gold": true,
+          "video_detected": true,
+          "fp_sec": 22.128999999999905,
+          "content_fp_rate": 0.038553540970868216,
+          "latency_ms_total": 529.2124479892664,
+          "latency_ms_p50_calls": 263.1579974840861,
+          "n_api_calls": 2,
+          "input_tokens": 8196,
+          "estimated_usd": 0.00034423200000000003
+        },
+        "examples": {
+          "hits": [
+            {
+              "t": [
+                194.4,
+                210.5
+              ],
+              "label": "selfpromo",
+              "conf": 0.97,
+              "preview": "people spreading the love but just just just for a minute let me plug myself real quick today's video is sponsored by me the proud owner of gamer Subs baby game",
+              "in_gold": true
+            },
+            {
+              "t": [
+                208.0,
+                224.5
+              ],
+              "label": "selfpromo",
+              "conf": 0.88,
+              "preview": "brings all the focus you need at 40 cents a seron but it's not just affordable I'm talking crucial vitamins minerals and neut Tropics with zero calories zero su",
+              "in_gold": true
+            }
+          ],
+          "misses": [
+            {
+              "t": [
+                180.5,
+                196.6
+              ],
+              "label": "selfpromo",
+              "conf": 0.32,
+              "preview": "has encouraged me to get outside more and stay outside longer and the profound impact that has had on my mental health uh cannot be understated huge vouch for s",
+              "in_gold": false
+            },
+            {
+              "t": [
+                650.0,
+                666.4
+              ],
+              "label": "sponsor",
+              "conf": 0.53,
+              "preview": "second channels out there just just spend five minutes do it or really any YouTuber out there I think I think this is just a could be a cool fun thing anyways t",
+              "in_gold": false
+            }
+          ]
+        },
+        "raw": {
+          "n_chunks": 49,
+          "n_sentences": 65,
+          "refined": false,
+          "chunk_labels": [
+            {
+              "index": 13,
+              "start": 180.48,
+              "end": 196.64,
+              "label": "selfpromo",
+              "confidence": 0.32,
+              "probabilities": {
+                "selfpromo": 0.49,
+                "content": 0.47,
+                "sponsor": 0.04,
+                "interaction": 0.0
+              },
+              "text_preview": "has encouraged me to get outside more and stay outside longer and the profound impact that has had on my mental health uh cannot be understated huge vouch for s"
+            },
+            {
+              "index": 14,
+              "start": 194.4,
+              "end": 210.519,
+              "label": "selfpromo",
+              "confidence": 0.97,
+              "probabilities": {
+                "selfpromo": 0.98,
+                "content": 0.0,
+                "sponsor": 0.02,
+                "interaction": 0.0
+              },
+              "text_preview": "people spreading the love but just just just for a minute let me plug myself real quick today's video is sponsored by me the proud owner of gamer Subs baby game"
+            },
+            {
+              "index": 15,
+              "start": 207.959,
+              "end": 224.48,
+              "label": "selfpromo",
+              "confidence": 0.88,
+              "probabilities": {
+                "selfpromo": 0.91,
+                "content": 0.07,
+                "sponsor": 0.02,
+                "interaction": 0.0
+              },
+              "text_preview": "brings all the focus you need at 40 cents a seron but it's not just affordable I'm talking crucial vitamins minerals and neut Tropics with zero calories zero su"
+            },
+            {
+              "index": 16,
+              "start": 222.439,
+              "end": 239.84,
+              "label": "selfpromo",
+              "confidence": 0.75,
+              "probabilities": {
+                "selfpromo": 0.81,
+                "content": 0.16,
+                "sponsor": 0.02,
+                "interaction": 0.0
+              },
+              "text_preview": "sugar or crashing afterwards and we have tons of Scrumptious Flavors too like my own personal creation titty milk why did I call it that doesn't look like you'r"
+            },
+            {
+              "index": 17,
+              "start": 237.239,
+              "end": 253.12,
+              "label": "selfpromo",
+              "confidence": 0.91,
+              "probabilities": {
+                "selfpromo": 0.93,
+                "content": 0.06,
+                "sponsor": 0.01,
+                "interaction": 0.0
+              },
+              "text_preview": "do not snort gamer Subs the animal testing did not go great we have to say that now don't snort the stuff if you put it in your mouth however you'll be very sat"
+            },
+            {
+              "index": 18,
+              "start": 251.239,
+              "end": 267.96,
+              "label": "selfpromo",
+              "confidence": 0.95,
+              "probabilities": {
+                "selfpromo": 0.97,
+                "content": 0.0,
+                "sponsor": 0.03,
+                "interaction": 0.0
+              },
+              "text_preview": "tub of choice add it to your water shake it all up of course I use a Gamers sub's waiu cup when I do this and boom you got yourself 200 Mig of delicious natural"
+            },
+            {
+              "index": 19,
+              "start": 265.56,
+              "end": 281.72,
+              "label": "selfpromo",
+              "confidence": 0.8,
+              "probabilities": {
+                "selfpromo": 0.86,
+                "content": 0.08,
+                "sponsor": 0.06,
+                "interaction": 0.0
+              },
+              "text_preview": "Subs boom caffeine free versions baby for all of them guys now is the time to try for yourself head over to Gamers subs. g/ shalat and use code schlat for 10% o"
+            },
+            {
+              "index": 20,
+              "start": 278.639,
+              "end": 294.68,
+              "label": "content",
+              "confidence": 0.98,
+              "probabilities": {
+                "selfpromo": 0.01,
+                "content": 0.98,
+                "sponsor": 0.01,
+                "interaction": 0.0
+              },
+              "text_preview": "video number three rat lobber look Gary's Mod has a very interesting place in my heart despite me never even playing the game really like the first time I ever "
+            },
+            {
+              "index": 21,
+              "start": 292.919,
+              "end": 308.199,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "interaction": 0.0,
+                "selfpromo": 0.0,
+                "content": 1.0,
+                "sponsor": 0.0
+              },
+              "text_preview": "it I didn't know how to set up the mods but every day after high school I'd come home I'd Rush onto the computer and uh I'd load up Cen anders' Channel and ever"
+            },
+            {
+              "index": 22,
+              "start": 306.68,
+              "end": 323.12,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "interaction": 0.0,
+                "selfpromo": 0.0,
+                "content": 1.0,
+                "sponsor": 0.0
+              },
+              "text_preview": "mod video is it just you and him that are in no NOA whoa whoa and while rat lobber content is not gaming funny moments in fact it's nowhere even close to it it "
+            },
+            {
+              "index": 23,
+              "start": 321.08,
+              "end": 336.88,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "interaction": 0.0,
+                "selfpromo": 0.0,
+                "content": 1.0,
+                "sponsor": 0.0
+              },
+              "text_preview": "filled way back in the day I fell in love with this dude's retrospectives on GMod you know he look at different mods he look at at different pieces of the lore "
+            },
+            {
+              "index": 24,
+              "start": 334.6,
+              "end": 350.16,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "interaction": 0.0,
+                "selfpromo": 0.0,
+                "content": 1.0,
+                "sponsor": 0.0
+              },
+              "text_preview": "because he's got the same [ __ ] gross accent that I do but it's it's worth checking out it really is he's been branching out of the valve subset of games like "
+            },
+            {
+              "index": 25,
+              "start": 347.6,
+              "end": 364.24,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "interaction": 0.0,
+                "selfpromo": 0.0,
+                "content": 1.0,
+                "sponsor": 0.0
+              },
+              "text_preview": "uh explorative style content and I love it got to be some of my favorite gaming content on the platform these days so shout out rat lobber number four Scott U J"
+            },
+            {
+              "index": 47,
+              "start": 649.959,
+              "end": 666.44,
+              "label": "sponsor",
+              "confidence": 0.53,
+              "probabilities": {
+                "interaction": 0.04,
+                "content": 0.31,
+                "selfpromo": 0.0,
+                "sponsor": 0.65
+              },
+              "text_preview": "second channels out there just just spend five minutes do it or really any YouTuber out there I think I think this is just a could be a cool fun thing anyways t"
+            },
+            {
+              "index": 48,
+              "start": 664.92,
+              "end": 677.079,
+              "label": "sponsor",
+              "confidence": 1.0,
+              "probabilities": {
+                "interaction": 0.0,
+                "content": 0.0,
+                "selfpromo": 0.0,
+                "sponsor": 1.0
+              },
+              "text_preview": "it's packed with everything you need to stay calm and focus without the crash of other energy drinks and it's 40 cents of serving check it out at gamersupps.gg "
+            }
+          ],
+          "traces": null,
+          "pattern_counts": {
+            "sponsored_by": 1,
+            "use_code": 2,
+            "pct_off": 1
+          },
+          "cue_hits": [
+            {
+              "start": 199.48,
+              "end": 205.68,
+              "pattern_name": "sponsored_by",
+              "strength": "strong",
+              "text": "real quick today's video is sponsored by"
+            },
+            {
+              "start": 270.88,
+              "end": 276.88,
+              "pattern_name": "use_code",
+              "strength": "strong",
+              "text": "subs. g/ shalat and use code schlat for"
+            },
+            {
+              "start": 273.96,
+              "end": 278.639,
+              "pattern_name": "pct_off",
+              "strength": "strong",
+              "text": "10% off and now back to the"
+            },
+            {
+              "start": 672.079,
+              "end": 677.079,
+              "pattern_name": "use_code",
+              "strength": "strong",
+              "text": "and use code schlatt for 10% off"
+            }
+          ],
+          "proposed_windows": [
+            {
+              "start": 187.48,
+              "end": 353.96,
+              "strength": "strong",
+              "pattern_names": [
+                "pct_off",
+                "sponsored_by",
+                "use_code"
+              ],
+              "hits": [
+                {
+                  "start": 199.48,
+                  "end": 205.68,
+                  "pattern_name": "sponsored_by",
+                  "strength": "strong",
+                  "text": "real quick today's video is sponsored by",
+                  "cue_index": 97
+                },
+                {
+                  "start": 270.88,
+                  "end": 276.88,
+                  "pattern_name": "use_code",
+                  "strength": "strong",
+                  "text": "subs. g/ shalat and use code schlat for",
+                  "cue_index": 130
+                },
+                {
+                  "start": 273.96,
+                  "end": 278.639,
+                  "pattern_name": "pct_off",
+                  "strength": "strong",
+                  "text": "10% off and now back to the",
+                  "cue_index": 131
+                }
+              ]
+            },
+            {
+              "start": 660.079,
+              "end": 677.079,
+              "strength": "strong",
+              "pattern_names": [
+                "use_code"
+              ],
+              "hits": [
+                {
+                  "start": 672.079,
+                  "end": 677.079,
+                  "pattern_name": "use_code",
+                  "strength": "strong",
+                  "text": "and use code schlatt for 10% off",
+                  "cue_index": 328
+                }
+              ]
+            }
+          ],
+          "dropped_segments": null,
+          "n_candidate_chunks": 15,
+          "tony_status": null,
+          "tony_traces": null,
+          "n_lines": null,
+          "windows_scanned": null
+        }
+      },
+      {
+        "video_id": "BUUF84Wfx6U",
+        "mode": "regex_propose_jev_confirm",
+        "gold": [
+          {
+            "start": 22.499,
+            "end": 25.183,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 302.764,
+            "end": 373.148,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 746.118,
+            "end": 749.291,
+            "category": "sponsor",
+            "uuid": null
+          }
+        ],
+        "pred_segments": [
+          {
+            "start": 22.08,
+            "end": 47.08,
+            "category": "sponsor"
+          }
+        ],
+        "metrics": {
+          "n_pred": 1,
+          "n_gold": 3,
+          "overlap_sec": 2.684000000000001,
+          "pred_dur_sec": 25.0,
+          "gold_dur_sec": 76.24100000000001,
+          "iou": 0.027232971782826187,
+          "precision": 0.10736000000000004,
+          "recall": 0.03520415524455346,
+          "f1": 0.053021997017018804,
+          "mean_best_iou": 0.10736000000000004,
+          "video_recall_hit": true,
+          "video_has_gold": true,
+          "video_detected": true,
+          "fp_sec": 22.316,
+          "content_fp_rate": 0.032835078622621715,
+          "latency_ms_total": 227.77171898633242,
+          "latency_ms_p50_calls": 225.38610396441072,
+          "n_api_calls": 1,
+          "input_tokens": 4022,
+          "estimated_usd": 0.00016892400000000004
+        },
+        "examples": {
+          "hits": [
+            {
+              "t": [
+                14.2,
+                32.2
+              ],
+              "label": "sponsor",
+              "conf": 0.98,
+              "preview": "that they couldn't fix it I've done a number of these repairs before so I'm not too worried about the repair so let's see if we can fix Joel's son's 3DS XL this",
+              "in_gold": true
+            }
+          ],
+          "misses": []
+        },
+        "raw": {
+          "n_chunks": 55,
+          "n_sentences": 46,
+          "refined": false,
+          "chunk_labels": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 16.08,
+              "label": "content",
+              "confidence": 0.99,
+              "probabilities": {
+                "content": 0.99,
+                "selfpromo": 0.0,
+                "interaction": 0.0,
+                "sponsor": 0.01
+              },
+              "text_preview": "a viewer named Joel took his son's 3DS XL to a repair shop so they could fix it it's obvious that this 3DS XL has a broken top screen which I do admit is a noto"
+            },
+            {
+              "index": 1,
+              "start": 14.219,
+              "end": 32.22,
+              "label": "sponsor",
+              "confidence": 0.98,
+              "probabilities": {
+                "content": 0.01,
+                "selfpromo": 0.0,
+                "interaction": 0.0,
+                "sponsor": 0.99
+              },
+              "text_preview": "that they couldn't fix it I've done a number of these repairs before so I'm not too worried about the repair so let's see if we can fix Joel's son's 3DS XL this"
+            },
+            {
+              "index": 2,
+              "start": 28.859,
+              "end": 44.04,
+              "label": "content",
+              "confidence": 0.97,
+              "probabilities": {
+                "content": 0.98,
+                "selfpromo": 0.0,
+                "interaction": 0.0,
+                "sponsor": 0.02
+              },
+              "text_preview": "these connectors right here and they actually look okay so far so so far I don't see any major problems that the other shop caused so let's just keep taking it "
+            },
+            {
+              "index": 3,
+              "start": 42.239,
+              "end": 59.219,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "content": 1.0,
+                "selfpromo": 0.0,
+                "interaction": 0.0,
+                "sponsor": 0.0
+              },
+              "text_preview": "that top screen now it's been a while since I've taken one of these apart but I feel like this isn't supposed to look like that guess we'll find out and now wit"
+            },
+            {
+              "index": 4,
+              "start": 56.699,
+              "end": 73.02,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "content": 1.0,
+                "selfpromo": 0.0,
+                "interaction": 0.0,
+                "sponsor": 0.0
+              },
+              "text_preview": "they're basically destroyed it looks like they just dug in right from the middle instead of just going around the outside with a sharp tool like this they could"
+            },
+            {
+              "index": 5,
+              "start": 71.34,
+              "end": 87.06,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "content": 1.0,
+                "selfpromo": 0.0,
+                "interaction": 0.0,
+                "sponsor": 0.0
+              },
+              "text_preview": "so that's pretty frustrating because these gray screw covers are pretty tough to find a lot of the other colors you can get other places but the gray ones are a"
+            },
+            {
+              "index": 6,
+              "start": 84.72,
+              "end": 100.2,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "content": 1.0,
+                "selfpromo": 0.0,
+                "interaction": 0.0,
+                "sponsor": 0.0
+              },
+              "text_preview": "more difficult and with those removed we can push the top screen up and then you can see it's already trying to pop off just itself there we go so we can pop of"
+            },
+            {
+              "index": 7,
+              "start": 96.84,
+              "end": 115.619,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "content": 1.0,
+                "selfpromo": 0.0,
+                "interaction": 0.0,
+                "sponsor": 0.0
+              },
+              "text_preview": "cover just like that and I actually don't see any major problems in here those hinges can be kind of difficult to get out you know if you're new at this but if "
+            }
+          ],
+          "traces": null,
+          "pattern_counts": {
+            "sponsored_by": 1
+          },
+          "cue_hits": [
+            {
+              "start": 22.08,
+              "end": 25.859,
+              "pattern_name": "sponsored_by",
+              "strength": "strong",
+              "text": "XL this video is sponsored by iFixit"
+            }
+          ],
+          "proposed_windows": [
+            {
+              "start": 10.079999999999998,
+              "end": 102.08,
+              "strength": "strong",
+              "pattern_names": [
+                "sponsored_by"
+              ],
+              "hits": [
+                {
+                  "start": 22.08,
+                  "end": 25.859,
+                  "pattern_name": "sponsored_by",
+                  "strength": "strong",
+                  "text": "XL this video is sponsored by iFixit",
+                  "cue_index": 10
+                }
+              ]
+            }
+          ],
+          "dropped_segments": null,
+          "n_candidate_chunks": 8,
+          "tony_status": null,
+          "tony_traces": null,
+          "n_lines": null,
+          "windows_scanned": null
+        }
+      },
+      {
+        "video_id": "51hiAU01A1E",
+        "mode": "regex_propose_jev_confirm",
+        "gold": [
+          {
+            "start": 0.0,
+            "end": 16.37,
+            "category": "sponsor",
+            "uuid": null
+          },
+          {
+            "start": 448.375,
+            "end": 480.832,
+            "category": "sponsor",
+            "uuid": null
+          }
+        ],
+        "pred_segments": [
+          {
+            "start": 0.16,
+            "end": 25.16,
+            "category": "sponsor"
+          }
+        ],
+        "metrics": {
+          "n_pred": 1,
+          "n_gold": 2,
+          "overlap_sec": 16.21,
+          "pred_dur_sec": 25.0,
+          "gold_dur_sec": 48.827,
+          "iou": 0.28134057656594413,
+          "precision": 0.6484000000000001,
+          "recall": 0.3319884490138653,
+          "f1": 0.43913473390493996,
+          "mean_best_iou": 0.6442766295707472,
+          "video_recall_hit": true,
+          "video_has_gold": true,
+          "video_detected": true,
+          "fp_sec": 8.79,
+          "content_fp_rate": 0.02023052208095891,
+          "latency_ms_total": 277.3143210215494,
+          "latency_ms_p50_calls": 275.45425697462633,
+          "n_api_calls": 1,
+          "input_tokens": 3020,
+          "estimated_usd": 0.00012684000000000003
+        },
+        "examples": {
+          "hits": [
+            {
+              "t": [
+                0.2,
+                17.3
+              ],
+              "label": "sponsor",
+              "conf": 0.44,
+              "preview": "this video was brought to you by curiosity stream and if you sign up now you also get access to our streaming service nebula absolutely free where you can get e",
+              "in_gold": true
+            }
+          ],
+          "misses": []
+        },
+        "raw": {
+          "n_chunks": 35,
+          "n_sentences": 38,
+          "refined": false,
+          "chunk_labels": [
+            {
+              "index": 0,
+              "start": 0.16,
+              "end": 17.279,
+              "label": "sponsor",
+              "confidence": 0.44,
+              "probabilities": {
+                "selfpromo": 0.41,
+                "interaction": 0.0,
+                "content": 0.0,
+                "sponsor": 0.59
+              },
+              "text_preview": "this video was brought to you by curiosity stream and if you sign up now you also get access to our streaming service nebula absolutely free where you can get e"
+            },
+            {
+              "index": 1,
+              "start": 14.48,
+              "end": 30.88,
+              "label": "content",
+              "confidence": 0.96,
+              "probabilities": {
+                "selfpromo": 0.03,
+                "interaction": 0.0,
+                "content": 0.97,
+                "sponsor": 0.0
+              },
+              "text_preview": "daily briefing as you probably already know putin's invasion of ukraine isn't going to plan in the north russian forces failed to take kiev in the south russian"
+            },
+            {
+              "index": 2,
+              "start": 27.84,
+              "end": 44.32,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "interaction": 0.0,
+                "content": 1.0,
+                "sponsor": 0.0
+              },
+              "text_preview": "territory since early march and in the east forces have even failed to take control over all of donbass a territory claimed by pro-russian separatists and recog"
+            },
+            {
+              "index": 3,
+              "start": 42.48,
+              "end": 59.199,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "interaction": 0.0,
+                "content": 1.0,
+                "sponsor": 0.0
+              },
+              "text_preview": "so given things aren't going as well as he hoped putin has apparently been forced to give up on his original plan of taking kiev and russian forces and now inst"
+            },
+            {
+              "index": 4,
+              "start": 56.399,
+              "end": 72.64,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "interaction": 0.0,
+                "content": 1.0,
+                "sponsor": 0.0
+              },
+              "text_preview": "russia's regrouping in the east and how all of this might pan out in the long term [Music] when the invasion began in late february it was clear that putin want"
+            },
+            {
+              "index": 5,
+              "start": 71.2,
+              "end": 86.799,
+              "label": "content",
+              "confidence": 1.0,
+              "probabilities": {
+                "selfpromo": 0.0,
+                "interaction": 0.0,
+                "content": 1.0,
+                "sponsor": 0.0
+              },
+              "text_preview": "capture kiev after all a 10 kilometer convoy was approaching from the north and russian forces were also trying to stage a separate offensive from the east in f"
+            }
+          ],
+          "traces": null,
+          "pattern_counts": {
+            "brought_to_you": 1
+          },
+          "cue_hits": [
+            {
+              "start": 0.16,
+              "end": 4.0,
+              "pattern_name": "brought_to_you",
+              "strength": "strong",
+              "text": "this video was brought to you by"
+            }
+          ],
+          "proposed_windows": [
+            {
+              "start": 0.0,
+              "end": 80.16,
+              "strength": "strong",
+              "pattern_names": [
+                "brought_to_you"
+              ],
+              "hits": [
+                {
+                  "start": 0.16,
+                  "end": 4.0,
+                  "pattern_name": "brought_to_you",
+                  "strength": "strong",
+                  "text": "this video was brought to you by",
+                  "cue_index": 0
+                }
+              ]
+            }
+          ],
+          "dropped_segments": null,
+          "n_candidate_chunks": 6,
+          "tony_status": null,
+          "tony_traces": null,
+          "n_lines": null,
+          "windows_scanned": null
+        }
+      }
+    ]
+  },
+  "blockers": [],
+  "pricing_usd_per_m_input": 0.042
+}

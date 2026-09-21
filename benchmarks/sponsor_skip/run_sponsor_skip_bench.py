@@ -183,6 +183,7 @@ def run_mode(
     mode: str,
     *,
     refine: bool,
+    confidence_threshold: float = 0.75,
 ) -> dict[str, Any]:
     gold_iv = [(g["start"], g["end"]) for g in prepared["gold_sponsor"]]
     # Also accept selfpromo in gold if we labeled sponsor_like
@@ -206,11 +207,27 @@ def run_mode(
             batch_size=8,
             video_duration=prepared["duration_sec"],
         )
+    elif mode == "regex_jev_refined":
+        out = detector.detect_regex_jev_refined(
+            prepared["chunks"],
+            prepared["cues"],
+            batch_size=8,
+            video_duration=prepared["duration_sec"],
+            confidence_threshold=confidence_threshold,
+        )
     elif mode == "jev_then_regex_gate":
         out = detector.detect_jev_then_regex_gate(
             prepared["chunks"],
             prepared["cues"],
             batch_size=8,
+        )
+    elif mode == "tony_line_scan":
+        out = detector.detect_tony_line_scan(
+            prepared["cues"],
+            title=prepared.get("video_id") or "unknown",
+            max_segments=6,
+            scan_workers=4,
+            trace_lead_in=True,
         )
     else:
         raise ValueError(mode)
@@ -239,6 +256,35 @@ def run_mode(
     metrics["n_api_calls"] = len(call_lats)
     metrics["input_tokens"] = input_tokens
     metrics["estimated_usd"] = estimate_usd(input_tokens)
+
+    # Confidence gate: all-preds metrics above; high-conf (auto-skip) subset below
+    segs = out.get("segments") or []
+    if segs and any("auto_skip" in s for s in segs if isinstance(s, dict)):
+        auto_iv = [
+            (float(s["start"]), float(s["end"]))
+            for s in segs
+            if s.get("auto_skip")
+        ]
+        hc = segment_metrics(auto_iv, gold_iv)
+        hc["content_fp_rate"] = content_false_positive_rate(
+            auto_iv, gold_iv, prepared["duration_sec"]
+        )
+        metrics["high_conf"] = {
+            "iou": hc["iou"],
+            "precision": hc["precision"],
+            "recall": hc["recall"],
+            "f1": hc["f1"],
+            "overlap_sec": hc["overlap_sec"],
+            "fp_sec": hc["fp_sec"],
+            "content_fp_rate": hc["content_fp_rate"],
+            "n_pred_segments": len(auto_iv),
+        }
+        gate = out.get("confidence_gate") or {}
+        metrics["confidence_gate"] = gate
+        metrics["confidence_threshold"] = out.get(
+            "confidence_threshold", confidence_threshold
+        )
+    
 
     # Qualitative: pick up to 2 hit/miss chunk examples
     examples: dict[str, Any] = {"hits": [], "misses": []}
@@ -279,6 +325,13 @@ def run_mode(
             "proposed_windows": out.get("proposed_windows"),
             "dropped_segments": out.get("dropped_segments"),
             "n_candidate_chunks": out.get("n_candidate_chunks"),
+            "confidence_gate": out.get("confidence_gate"),
+            "confidence_threshold": out.get("confidence_threshold"),
+            "intervals_pre_snap": out.get("intervals_pre_snap"),
+            "tony_status": out.get("status"),
+            "tony_traces": out.get("traces"),
+            "n_lines": out.get("n_lines"),
+            "windows_scanned": out.get("windows_scanned"),
         },
     }
 
@@ -300,6 +353,24 @@ def aggregate(rows: list[dict[str, Any]]) -> dict[str, Any]:
         agg["video_level_recall"] = None
     agg["total_input_tokens"] = sum(int(r["metrics"]["input_tokens"]) for r in rows)
     agg["total_estimated_usd"] = estimate_usd(agg["total_input_tokens"])
+    # High-conf / auto-skip coverage (when confidence gate present)
+    hc_rows = [r for r in rows if "high_conf" in r["metrics"]]
+    if hc_rows:
+        for k in ("iou", "precision", "recall", "f1", "content_fp_rate"):
+            vals = [float(r["metrics"]["high_conf"][k]) for r in hc_rows]
+            agg[f"high_conf_{k}"] = sum(vals) / len(vals) if vals else None
+        n_auto = sum(
+            int((r["metrics"].get("confidence_gate") or {}).get("n_auto_skip") or 0)
+            for r in hc_rows
+        )
+        n_seg = sum(
+            int((r["metrics"].get("confidence_gate") or {}).get("n_segments") or 0)
+            for r in hc_rows
+        )
+        agg["auto_skip_segments"] = n_auto
+        agg["all_pred_segments"] = n_seg
+        agg["auto_skip_coverage"] = (n_auto / n_seg) if n_seg else None
+
     all_lats: list[float] = []
     for r in rows:
         # use per-call p50 stored; also total
@@ -501,16 +572,24 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument(
         "--modes",
         nargs="+",
-        default=["chunk_batched", "regex_propose_jev_confirm", "jev_then_regex_gate"],
+        default=["regex_jev_refined", "regex_propose_jev_confirm"],
         choices=[
             "chunk",
             "chunk_batched",
             "paragraph",
             "regex_propose_jev_confirm",
+            "regex_jev_refined",
             "jev_then_regex_gate",
+            "tony_line_scan",
         ],
     )
     ap.add_argument("--refine", action="store_true", help="Cue-level boundary refine")
+    ap.add_argument(
+        "--confidence-threshold",
+        type=float,
+        default=0.75,
+        help="Auto-skip confidence gate for regex_jev_refined (default 0.75)",
+    )
     ap.add_argument("--prepare-only", action="store_true")
     ap.add_argument(
         "--video-ids",
@@ -611,7 +690,7 @@ def main(argv: list[str] | None = None) -> int:
                 # Fresh token counters are cumulative on detector; that's fine
                 print(f"  run {p['video_id']} …", flush=True)
                 try:
-                    row = run_mode(detector, p, mode, refine=args.refine)
+                    row = run_mode(detector, p, mode, refine=args.refine, confidence_threshold=args.confidence_threshold)
                 except Exception as exc:  # noqa: BLE001
                     print(f"    FAIL {type(exc).__name__}: {exc}")
                     blockers.append(f"{p['video_id']}/{mode}: {exc}")

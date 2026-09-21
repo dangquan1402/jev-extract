@@ -1,0 +1,221 @@
+{
+  "default_mode": "tony_line_scan",
+  "videos": [
+    {
+      "video_id": "qgLaCZyKv_8",
+      "gold": [
+        {
+          "start": 76.299,
+          "end": 100.557,
+          "category": "sponsor"
+        },
+        {
+          "start": 937.745,
+          "end": 1038.599,
+          "category": "sponsor"
+        }
+      ],
+      "pred": [
+        {
+          "start": 75.72,
+          "end": 83.17,
+          "category": "sponsor"
+        },
+        {
+          "start": 453.96,
+          "end": 473.31,
+          "category": "sponsor"
+        },
+        {
+          "start": 937.28,
+          "end": 1040.11,
+          "category": "sponsor"
+        }
+      ],
+      "metrics": {
+        "iou": 0.7327383907983428,
+        "precision": 0.8310190542312734,
+        "recall": 0.861028518447471,
+        "f1": 0.8457576685430747,
+        "input_tokens": 61201,
+        "estimated_usd": 0.002570442
+      },
+      "source": "results_tony_line_scan.json"
+    },
+    {
+      "video_id": "zg-rMHEqg-4",
+      "gold": [
+        {
+          "start": 80.815,
+          "end": 103.099,
+          "category": "sponsor"
+        },
+        {
+          "start": 1109.725,
+          "end": 1185.895,
+          "category": "sponsor"
+        }
+      ],
+      "pred": [
+        {
+          "start": 80.96,
+          "end": 111.91,
+          "category": "sponsor"
+        },
+        {
+          "start": 1115.6,
+          "end": 1182.71,
+          "category": "sponsor"
+        }
+      ],
+      "metrics": {
+        "iou": 0.8320421386286307,
+        "precision": 0.9101468488680402,
+        "recall": 0.9065045605054144,
+        "f1": 0.9083220533905987,
+        "input_tokens": 56944,
+        "estimated_usd": 0.002391648
+      },
+      "source": "results_tony_line_scan.json"
+    },
+    {
+      "video_id": "3xngArcFpek",
+      "gold": [
+        {
+          "start": 86.191,
+          "end": 101.898,
+          "category": "sponsor"
+        },
+        {
+          "start": 520.574,
+          "end": 573.97,
+          "category": "sponsor"
+        }
+      ],
+      "pred": [
+        {
+          "start": 84.24,
+          "end": 102.87,
+          "category": "sponsor"
+        },
+        {
+          "start": 517.52,
+          "end": 573.19,
+          "category": "sponsor"
+        }
+      ],
+      "metrics": {
+        "iou": 0.9100026638252539,
+        "precision": 0.919555854643338,
+        "recall": 0.988712501628005,
+        "f1": 0.9528810415402749,
+        "input_tokens": 50453,
+        "estimated_usd": 0.002119026
+      },
+      "source": "results_tony_line_scan.json"
+    },
+    {
+      "video_id": "3PGKMwgjla0",
+      "gold": [
+        {
+          "start": 99.413,
+          "end": 122.539,
+          "category": "sponsor"
+        },
+        {
+          "start": 1354.825,
+          "end": 1411.907,
+          "category": "sponsor"
+        }
+      ],
+      "pred": [
+        {
+          "start": 98.0,
+          "end": 131.83,
+          "category": "sponsor"
+        },
+        {
+          "start": 1349.84,
+          "end": 1411.83,
+          "category": "sponsor"
+        }
+      ],
+      "metrics": {
+        "iou": 0.8355944398677735,
+        "precision": 0.8362659152577736,
+        "recall": 0.9990399960103731,
+        "f1": 0.9104347035698858,
+        "input_tokens": 67273,
+        "estimated_usd": 0.002825466
+      },
+      "source": "results_tony_line_scan.json"
+    },
+    {
+      "video_id": "i_nj_vkD03g",
+      "gold": [
+        {
+          "start": 78.12,
+          "end": 92.441,
+          "category": "sponsor"
+        },
+        {
+          "start": 1438.211,
+          "end": 1512.873,
+          "category": "sponsor"
+        }
+      ],
+      "pred": [
+        {
+          "start": 76.96,
+          "end": 95.67,
+          "category": "sponsor"
+        },
+        {
+          "start": 1439.2,
+          "end": 1513.35,
+          "category": "sponsor"
+        }
+      ],
+      "metrics": {
+        "iou": 0.9376125478161738,
+        "precision": 0.9475985354296804,
+        "recall": 0.9888855174583906,
+        "f1": 0.9678018950413275,
+        "input_tokens": 63459,
+        "estimated_usd": 0.002665278
+      },
+      "source": "results_tony_line_scan.json"
+    },
+    {
+      "video_id": "pvSdeU13hKc",
+      "gold": [
+        {
+          "start": 99.078,
+          "end": 119.328,
+          "category": "sponsor"
+        },
+        {
+          "start": 1040.454,
+          "end": 1122.878,
+          "category": "sponsor"
+        }
+      ],
+      "pred": [
+        {
+          "start": 1039.52,
+          "end": 1118.47,
+          "category": "sponsor"
+        }
+      ],
+      "metrics": {
+        "iou": 0.7529920469461829,
+        "precision": 0.9881697276757445,
+        "recall": 0.7598418294797133,
+        "f1": 0.8590935118706786,
+        "input_tokens": 35115,
+        "estimated_usd": 0.00147483
+      },
+      "source": "results_tony_line_scan.json"
+    }
+  ]
+}

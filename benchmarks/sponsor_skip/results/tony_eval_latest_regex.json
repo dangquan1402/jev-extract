@@ -1,0 +1,20 @@
+{
+  "path": "sponsor_skip_20260921T053015Z.json",
+  "aggregates": {
+    "regex_propose_jev_confirm": {
+      "n_videos": 19,
+      "iou": 0.28183530008582663,
+      "precision": 0.4227448166947781,
+      "recall": 0.33284134485007405,
+      "f1": 0.35007376470021484,
+      "mean_best_iou": 0.374553401167724,
+      "content_fp_rate": 0.02582105402206538,
+      "video_level_recall": 0.8421052631578947,
+      "total_input_tokens": 95113,
+      "total_estimated_usd": 0.003994746,
+      "latency_p50_ms_across_videos": 240.90382852591574,
+      "latency_total_p50_ms": 260.63850603532046,
+      "latency_total_mean_ms": 355.4190894172184
+    }
+  }
+}

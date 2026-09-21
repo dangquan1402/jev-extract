@@ -1,0 +1,99 @@
+{
+  "created_at": "2026-09-21T05:31:14.113410+00:00",
+  "source": "https://github.com/trungdq88/youtube-sponsor-detection",
+  "sampled_at": "2026-09-18T00:40:07.471Z",
+  "n_videos_in_set": 20,
+  "n_with_transcript": 19,
+  "n_regex_ran": 19,
+  "n_tony_line_scan_ran": 8,
+  "missing_transcript": [
+    "Q2pejyn3-p8"
+  ],
+  "regex_propose_jev_confirm": {
+    "macro": {
+      "n_videos": 19,
+      "iou": 0.28183530008582663,
+      "precision": 0.4227448166947781,
+      "recall": 0.33284134485007405,
+      "f1": 0.35007376470021484,
+      "video_level_recall": 0.8421052631578947,
+      "content_fp_rate": 0.02582105402206538,
+      "total_input_tokens": 95113,
+      "total_estimated_usd": 0.003994746
+    },
+    "zero_recall": [
+      "JXQE_wjCQGE",
+      "8RTmvUZlSSk",
+      "j_OwK2OzO8E"
+    ],
+    "no_pred": [
+      "JXQE_wjCQGE",
+      "j_OwK2OzO8E"
+    ],
+    "big_fp": [
+      "6NxW3xSAqUg",
+      "8RTmvUZlSSk",
+      "uO6DMWHK_HA",
+      "DMqL73IGO5U",
+      "SwIPOf2YAgI",
+      "Gav25xB0LtE",
+      "pmDePx56S6Q",
+      "BUUF84Wfx6U"
+    ],
+    "low_iou": [
+      "6NxW3xSAqUg",
+      "JXQE_wjCQGE",
+      "8RTmvUZlSSk",
+      "j_OwK2OzO8E",
+      "QAkXf7O46w0",
+      "DMqL73IGO5U",
+      "le_ORQZzkmE",
+      "SwIPOf2YAgI",
+      "Gav25xB0LtE",
+      "pmDePx56S6Q",
+      "BUUF84Wfx6U"
+    ],
+    "non_english": [
+      "JXQE_wjCQGE"
+    ]
+  },
+  "tony_line_scan_subset": {
+    "macro": {
+      "n_videos": 8,
+      "iou": 0.5955277322710858,
+      "precision": 0.6599135063530145,
+      "recall": 0.6804220323624859,
+      "f1": 0.6576124896589732,
+      "video_level_recall": 0.75,
+      "content_fp_rate": 0.012866665037991118,
+      "total_input_tokens": 330218,
+      "total_estimated_usd": 0.013869156
+    },
+    "note": "first 8 with transcripts; full-20 skipped for cost"
+  },
+  "vs_ltt6": {
+    "ltt6_regex_iou_f1": [
+      0.838,
+      0.91
+    ],
+    "tony_regex_iou_f1": [
+      0.282,
+      0.35
+    ],
+    "ltt6_tony_iou_f1": [
+      0.833,
+      0.907
+    ],
+    "tony_linescan8_iou_f1": [
+      0.596,
+      0.658
+    ],
+    "verdict": "Tony set much harder than LTT-6 for regex_propose_jev_confirm (IoU 0.28 vs 0.84). Domain/language shift. Line-scan helps on subset but still below LTT-6; Vietnamese video unusable."
+  },
+  "blockers": [
+    "Q2pejyn3-p8: no committed transcript",
+    "JXQE_wjCQGE: Vietnamese captions \u2014 English pipeline fails",
+    "Regex patterns overfit LTT paid-read phrasing",
+    "tony_line_scan full-20 deferred (~$0.03\u20130.04 est.)"
+  ]
+}
