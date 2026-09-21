@@ -1,0 +1,30 @@
+{
+  "video_id": "i_nj_vkD03g",
+  "segments": [
+    {
+      "start": 78.12,
+      "end": 92.441,
+      "category": "sponsor",
+      "uuid": "66917919f95e2ffebd791ef0cc1cfc0cca7e0cd438372a01fc075ac30cdc2f927"
+    },
+    {
+      "start": 274.27,
+      "end": 280.803,
+      "category": "selfpromo",
+      "uuid": "1a59bfdec4aa1d0a546343d8989025d23d0d90c97be13eb55d344f2237d2bf0d7"
+    },
+    {
+      "start": 735.718,
+      "end": 737.9,
+      "category": "selfpromo",
+      "uuid": "d9c0c5526cd8bf961eb5a6793ac901078144ceb71b1ef3f804981d7a43e807057"
+    },
+    {
+      "start": 1438.211,
+      "end": 1512.873,
+      "category": "sponsor",
+      "uuid": "ecc70a65e9b430f4d06e8770851ef487a0bc26ff6c32f0ca7c306fec7e457e447"
+    }
+  ],
+  "fetched_at": "2026-09-21T04:50:27.110481+00:00"
+}

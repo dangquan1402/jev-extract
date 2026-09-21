@@ -1,0 +1,44 @@
+[
+  {
+    "video_id": "qgLaCZyKv_8",
+    "duration_sec": 1051.56,
+    "n_chunks": 63,
+    "n_sentences": 99,
+    "n_gold_sponsor": 2
+  },
+  {
+    "video_id": "zg-rMHEqg-4",
+    "duration_sec": 1198.24,
+    "n_chunks": 74,
+    "n_sentences": 171,
+    "n_gold_sponsor": 2
+  },
+  {
+    "video_id": "3xngArcFpek",
+    "duration_sec": 584.88,
+    "n_chunks": 36,
+    "n_sentences": 55,
+    "n_gold_sponsor": 2
+  },
+  {
+    "video_id": "3PGKMwgjla0",
+    "duration_sec": 1427.36,
+    "n_chunks": 89,
+    "n_sentences": 152,
+    "n_gold_sponsor": 2
+  },
+  {
+    "video_id": "i_nj_vkD03g",
+    "duration_sec": 1535.32,
+    "n_chunks": 93,
+    "n_sentences": 222,
+    "n_gold_sponsor": 2
+  },
+  {
+    "video_id": "pvSdeU13hKc",
+    "duration_sec": 1142.88,
+    "n_chunks": 71,
+    "n_sentences": 139,
+    "n_gold_sponsor": 2
+  }
+]

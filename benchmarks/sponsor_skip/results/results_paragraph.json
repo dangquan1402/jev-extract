@@ -1,0 +1,533 @@
+{
+  "mode": "paragraph",
+  "rows": [
+    {
+      "video_id": "qgLaCZyKv_8",
+      "mode": "paragraph",
+      "gold": [
+        {
+          "start": 76.299,
+          "end": 100.557,
+          "category": "sponsor",
+          "uuid": "f619b8a0f1080ef9b3a40750219b58eac66842019acb20502234d2abb5ebea267"
+        },
+        {
+          "start": 937.745,
+          "end": 1038.599,
+          "category": "sponsor",
+          "uuid": "cca31efb80647624d814c697609f12dc9310062bf8972aeb0b477262e1e24e7b7"
+        }
+      ],
+      "pred_segments": [
+        {
+          "start": 462.68,
+          "end": 470.87,
+          "category": "sponsor"
+        }
+      ],
+      "metrics": {
+        "n_pred": 1,
+        "n_gold": 2,
+        "overlap_sec": 0.0,
+        "pred_dur_sec": 8.189999999999998,
+        "gold_dur_sec": 125.11199999999992,
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "mean_best_iou": 0.0,
+        "video_recall_hit": false,
+        "video_has_gold": true,
+        "video_detected": true,
+        "fp_sec": 8.189999999999998,
+        "content_fp_rate": 0.008840215532873941,
+        "latency_ms_total": 935.7924780342728,
+        "latency_ms_p50_calls": 243.81711799651384,
+        "n_api_calls": 3,
+        "input_tokens": 20530,
+        "estimated_usd": 0.00086226
+      },
+      "examples": {
+        "hits": [],
+        "misses": []
+      },
+      "raw": {
+        "n_chunks": 63,
+        "n_sentences": 99,
+        "refined": false,
+        "chunk_labels": null,
+        "traces": [
+          {
+            "start": 39,
+            "end": 39,
+            "t_start": 462.68,
+            "t_end": 470.87,
+            "start_conf": 0.33,
+            "end_conf": 0.58
+          },
+          {
+            "start": "none",
+            "end": null,
+            "abstain": true
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "zg-rMHEqg-4",
+      "mode": "paragraph",
+      "gold": [
+        {
+          "start": 80.815,
+          "end": 103.099,
+          "category": "sponsor",
+          "uuid": "f8329644c11d347914b7aad24c1e05162749386d7a3d7d0fe492ee8d9400c2a07"
+        },
+        {
+          "start": 1109.725,
+          "end": 1185.895,
+          "category": "sponsor",
+          "uuid": "a9005823f723195678c22f204fc93dba5ff6d5eab343a0d50c9771def66c067e7"
+        }
+      ],
+      "pred_segments": [
+        {
+          "start": 98.96,
+          "end": 111.91,
+          "category": "sponsor"
+        },
+        {
+          "start": 1115.6,
+          "end": 1194.23,
+          "category": "sponsor"
+        }
+      ],
+      "metrics": {
+        "n_pred": 2,
+        "n_gold": 2,
+        "overlap_sec": 74.43400000000008,
+        "pred_dur_sec": 91.58000000000011,
+        "gold_dur_sec": 98.45400000000008,
+        "iou": 0.643892733564014,
+        "precision": 0.812775715221664,
+        "recall": 0.7560281959087495,
+        "f1": 0.7833756064704213,
+        "mean_best_iou": 0.48247624316247667,
+        "video_recall_hit": true,
+        "video_has_gold": true,
+        "video_detected": true,
+        "fp_sec": 17.14600000000003,
+        "content_fp_rate": 0.015590305750391468,
+        "latency_ms_total": 1224.3980600032955,
+        "latency_ms_p50_calls": 252.58514599408954,
+        "n_api_calls": 5,
+        "input_tokens": 45947,
+        "estimated_usd": 0.0019297740000000002
+      },
+      "examples": {
+        "hits": [],
+        "misses": []
+      },
+      "raw": {
+        "n_chunks": 74,
+        "n_sentences": 171,
+        "refined": false,
+        "chunk_labels": null,
+        "traces": [
+          {
+            "start": 12,
+            "end": 12,
+            "t_start": 98.96,
+            "t_end": 111.91,
+            "start_conf": 0.33,
+            "end_conf": 0.61
+          },
+          {
+            "start": 162,
+            "end": 169,
+            "t_start": 1115.6,
+            "t_end": 1194.23,
+            "start_conf": 0.25,
+            "end_conf": 0.72
+          },
+          {
+            "start": "none",
+            "end": null,
+            "abstain": true
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "3xngArcFpek",
+      "mode": "paragraph",
+      "gold": [
+        {
+          "start": 86.191,
+          "end": 101.898,
+          "category": "sponsor",
+          "uuid": "d9d25792733b4c2c35601eb5a027e784307fc1033b8a9f551a1974abbea6da917"
+        },
+        {
+          "start": 520.574,
+          "end": 573.97,
+          "category": "sponsor",
+          "uuid": "c34d890cd666f61f7dcd3144424dec58dff758f81b8c53f600fc6cb9f427e6da7"
+        }
+      ],
+      "pred_segments": [
+        {
+          "start": 84.24,
+          "end": 107.109,
+          "category": "sponsor"
+        },
+        {
+          "start": 310.16,
+          "end": 327.35,
+          "category": "sponsor"
+        },
+        {
+          "start": 521.839,
+          "end": 576.31,
+          "category": "sponsor"
+        }
+      ],
+      "metrics": {
+        "n_pred": 3,
+        "n_gold": 2,
+        "overlap_sec": 67.83799999999997,
+        "pred_dur_sec": 94.52999999999989,
+        "gold_dur_sec": 69.10300000000007,
+        "iou": 0.7081580458270262,
+        "precision": 0.7176346133502597,
+        "recall": 0.9816939930249035,
+        "f1": 0.8291481547120689,
+        "mean_best_iou": 0.540715013310387,
+        "video_recall_hit": true,
+        "video_has_gold": true,
+        "video_detected": true,
+        "fp_sec": 26.691999999999922,
+        "content_fp_rate": 0.0517510474488004,
+        "latency_ms_total": 1422.9184070136398,
+        "latency_ms_p50_calls": 247.1925189893227,
+        "n_api_calls": 6,
+        "input_tokens": 23771,
+        "estimated_usd": 0.0009983820000000001
+      },
+      "examples": {
+        "hits": [],
+        "misses": []
+      },
+      "raw": {
+        "n_chunks": 36,
+        "n_sentences": 55,
+        "refined": false,
+        "chunk_labels": null,
+        "traces": [
+          {
+            "start": 7,
+            "end": 8,
+            "t_start": 84.24,
+            "t_end": 107.109,
+            "start_conf": 0.92,
+            "end_conf": 0.74
+          },
+          {
+            "start": 47,
+            "end": 52,
+            "t_start": 521.839,
+            "t_end": 576.31,
+            "start_conf": 0.97,
+            "end_conf": 0.89
+          },
+          {
+            "start": 27,
+            "end": 28,
+            "t_start": 310.16,
+            "t_end": 327.35,
+            "start_conf": 0.86,
+            "end_conf": 0.56
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "3PGKMwgjla0",
+      "mode": "paragraph",
+      "gold": [
+        {
+          "start": 99.413,
+          "end": 122.539,
+          "category": "sponsor",
+          "uuid": "0933ec2fcb1f03c6dd3d354370a1d8336ef6a8aeae4b6454bf55c62c389dfb147"
+        },
+        {
+          "start": 1354.825,
+          "end": 1411.907,
+          "category": "sponsor",
+          "uuid": "2b4940cd9f58596233c89044c4f34c4acc96874e41c2527ab5de10b3ed1bc4f17"
+        }
+      ],
+      "pred_segments": [
+        {
+          "start": 98.0,
+          "end": 143.03,
+          "category": "sponsor"
+        },
+        {
+          "start": 1353.84,
+          "end": 1422.549,
+          "category": "sponsor"
+        }
+      ],
+      "metrics": {
+        "n_pred": 2,
+        "n_gold": 2,
+        "overlap_sec": 80.20799999999988,
+        "pred_dur_sec": 113.73900000000006,
+        "gold_dur_sec": 80.20799999999988,
+        "iou": 0.7051934692585643,
+        "precision": 0.7051934692585643,
+        "recall": 1.0,
+        "f1": 0.8271125616792206,
+        "mean_best_iou": 0.67217390737747,
+        "video_recall_hit": true,
+        "video_has_gold": true,
+        "video_detected": true,
+        "fp_sec": 33.531000000000176,
+        "content_fp_rate": 0.024890287064859924,
+        "latency_ms_total": 1328.6358340410516,
+        "latency_ms_p50_calls": 279.4926390051842,
+        "n_api_calls": 5,
+        "input_tokens": 41998,
+        "estimated_usd": 0.0017639160000000001
+      },
+      "examples": {
+        "hits": [],
+        "misses": []
+      },
+      "raw": {
+        "n_chunks": 89,
+        "n_sentences": 152,
+        "refined": false,
+        "chunk_labels": null,
+        "traces": [
+          {
+            "start": 9,
+            "end": 12,
+            "t_start": 98.0,
+            "t_end": 143.03,
+            "start_conf": 0.91,
+            "end_conf": 0.45
+          },
+          {
+            "start": 144,
+            "end": 150,
+            "t_start": 1353.84,
+            "t_end": 1422.549,
+            "start_conf": 0.45,
+            "end_conf": 0.54
+          },
+          {
+            "start": "none",
+            "end": null,
+            "abstain": true
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "i_nj_vkD03g",
+      "mode": "paragraph",
+      "gold": [
+        {
+          "start": 78.12,
+          "end": 92.441,
+          "category": "sponsor",
+          "uuid": "66917919f95e2ffebd791ef0cc1cfc0cca7e0cd438372a01fc075ac30cdc2f927"
+        },
+        {
+          "start": 1438.211,
+          "end": 1512.873,
+          "category": "sponsor",
+          "uuid": "ecc70a65e9b430f4d06e8770851ef487a0bc26ff6c32f0ca7c306fec7e457e447"
+        }
+      ],
+      "pred_segments": [
+        {
+          "start": 79.119,
+          "end": 96.55,
+          "category": "sponsor"
+        },
+        {
+          "start": 274.4,
+          "end": 280.87,
+          "category": "sponsor"
+        },
+        {
+          "start": 1502.72,
+          "end": 1510.31,
+          "category": "sponsor"
+        }
+      ],
+      "metrics": {
+        "n_pred": 3,
+        "n_gold": 2,
+        "overlap_sec": 20.91199999999992,
+        "pred_dur_sec": 31.490999999999943,
+        "gold_dur_sec": 88.98300000000003,
+        "iou": 0.21003997509089722,
+        "precision": 0.6640627480867536,
+        "recall": 0.23501118191115059,
+        "f1": 0.34716204326244543,
+        "mean_best_iou": 0.274833776599449,
+        "video_recall_hit": true,
+        "video_has_gold": true,
+        "video_detected": true,
+        "fp_sec": 10.579000000000022,
+        "content_fp_rate": 0.007314339604117174,
+        "latency_ms_total": 1647.8389850235544,
+        "latency_ms_p50_calls": 280.509954522131,
+        "n_api_calls": 6,
+        "input_tokens": 67372,
+        "estimated_usd": 0.002829624
+      },
+      "examples": {
+        "hits": [],
+        "misses": []
+      },
+      "raw": {
+        "n_chunks": 93,
+        "n_sentences": 222,
+        "refined": false,
+        "chunk_labels": null,
+        "traces": [
+          {
+            "start": 7,
+            "end": 8,
+            "t_start": 79.119,
+            "t_end": 96.55,
+            "start_conf": 0.91,
+            "end_conf": 0.43
+          },
+          {
+            "start": 218,
+            "end": 218,
+            "t_start": 1502.72,
+            "t_end": 1510.31,
+            "start_conf": 0.37,
+            "end_conf": 0.65
+          },
+          {
+            "start": 34,
+            "end": 35,
+            "t_start": 274.4,
+            "t_end": 280.87,
+            "start_conf": 0.46,
+            "end_conf": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "pvSdeU13hKc",
+      "mode": "paragraph",
+      "gold": [
+        {
+          "start": 99.078,
+          "end": 119.328,
+          "category": "sponsor",
+          "uuid": "509e9c20b861686a19d4d2eed7c539c2cfa5fc9df9b56370d9153b03f8e0f86b7"
+        },
+        {
+          "start": 1040.454,
+          "end": 1122.878,
+          "category": "sponsor",
+          "uuid": "4bd5613accd6e15e44d92257b8c339f6eee4e650cc800732c91165052afeb3957"
+        }
+      ],
+      "pred_segments": [
+        {
+          "start": 317.039,
+          "end": 323.83,
+          "category": "sponsor"
+        },
+        {
+          "start": 1044.799,
+          "end": 1134.31,
+          "category": "sponsor"
+        }
+      ],
+      "metrics": {
+        "n_pred": 2,
+        "n_gold": 2,
+        "overlap_sec": 78.07899999999995,
+        "pred_dur_sec": 96.30199999999996,
+        "gold_dur_sec": 102.67399999999998,
+        "iou": 0.6458307484883823,
+        "precision": 0.8107723619447154,
+        "recall": 0.7604554220153102,
+        "f1": 0.7848082180765517,
+        "mean_best_iou": 0.4159510313672006,
+        "video_recall_hit": true,
+        "video_has_gold": true,
+        "video_detected": true,
+        "fp_sec": 18.223000000000013,
+        "content_fp_rate": 0.017518645345248933,
+        "latency_ms_total": 1343.0500900140032,
+        "latency_ms_p50_calls": 258.3350329659879,
+        "n_api_calls": 5,
+        "input_tokens": 38199,
+        "estimated_usd": 0.001604358
+      },
+      "examples": {
+        "hits": [],
+        "misses": []
+      },
+      "raw": {
+        "n_chunks": 71,
+        "n_sentences": 139,
+        "refined": false,
+        "chunk_labels": null,
+        "traces": [
+          {
+            "start": 34,
+            "end": 34,
+            "t_start": 317.039,
+            "t_end": 323.83,
+            "start_conf": 0.4,
+            "end_conf": 0.65
+          },
+          {
+            "start": 130,
+            "end": 137,
+            "t_start": 1044.799,
+            "t_end": 1134.31,
+            "start_conf": 0.3,
+            "end_conf": 0.54
+          },
+          {
+            "start": "none",
+            "end": null,
+            "abstain": true
+          }
+        ]
+      }
+    }
+  ],
+  "aggregate": {
+    "n_videos": 6,
+    "iou": 0.4855191620381474,
+    "precision": 0.6184064846436595,
+    "recall": 0.6221981321433523,
+    "f1": 0.5952677640334513,
+    "mean_best_iou": 0.3976916619694972,
+    "content_fp_rate": 0.020984140124381975,
+    "video_level_recall": 0.8333333333333334,
+    "total_input_tokens": 237817,
+    "total_estimated_usd": 0.009988314,
+    "latency_p50_ms_across_videos": 255.46008948003873,
+    "latency_total_p50_ms": 1335.8429620275274,
+    "latency_total_mean_ms": 1317.1056423549696
+  }
+}

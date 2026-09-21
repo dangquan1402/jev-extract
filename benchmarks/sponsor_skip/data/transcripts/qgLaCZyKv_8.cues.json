@@ -1,0 +1,2271 @@
+{
+  "video_id": "qgLaCZyKv_8",
+  "vtt_file": "qgLaCZyKv_8.en.vtt",
+  "cues": [
+    {
+      "start": 1.8399999999999999,
+      "end": 5.229,
+      "text": "wanting a doorbell camera."
+    },
+    {
+      "start": 5.239,
+      "end": 8.07,
+      "text": "wanting a doorbell camera. [music]"
+    },
+    {
+      "start": 9.52,
+      "end": 10.75,
+      "text": "THAT'S MY TV!"
+    },
+    {
+      "start": 10.76,
+      "end": 12.35,
+      "text": "BUT WHICH ONE SHOULD you get? Are you"
+    },
+    {
+      "start": 12.36,
+      "end": 14.27,
+      "text": "going to end up paying a bunch of money"
+    },
+    {
+      "start": 14.28,
+      "end": 15.67,
+      "text": "for the hardware, going through the"
+    },
+    {
+      "start": 15.68,
+      "end": 17.19,
+      "text": "hassle of mounting and installing the"
+    },
+    {
+      "start": 17.2,
+      "end": 19.55,
+      "text": "thing, and only then realize that the"
+    },
+    {
+      "start": 19.56,
+      "end": 21.51,
+      "text": "stupid thing turns into a pumpkin the"
+    },
+    {
+      "start": 21.52,
+      "end": 22.87,
+      "text": "moment your credit card strikes"
+    },
+    {
+      "start": 22.88,
+      "end": 23.57,
+      "text": "moment your credit card strikes midnight?"
+    },
+    {
+      "start": 23.58,
+      "end": 26.51,
+      "text": "midnight? [music]"
+    },
+    {
+      "start": 28.92,
+      "end": 32.39,
+      "text": "let me pay over $2,000"
+    },
+    {
+      "start": 32.4,
+      "end": 34.63,
+      "text": "on what we're calling the search for the"
+    },
+    {
+      "start": 34.64,
+      "end": 36.87,
+      "text": "perfect doorbell. Okay, not the"
+    },
+    {
+      "start": 36.88,
+      "end": 38.51,
+      "text": "catchiest movie title, but if the"
+    },
+    {
+      "start": 38.52,
+      "end": 40.31,
+      "text": "indecipherable Spider-Man naming scheme"
+    },
+    {
+      "start": 40.32,
+      "end": 42.35,
+      "text": "can net 2 billion a pop, I think we can"
+    },
+    {
+      "start": 42.36,
+      "end": 44.67,
+      "text": "make this work. We bought {slash}"
+    },
+    {
+      "start": 44.68,
+      "end": 47.47,
+      "text": "obtained 13 options from budget to"
+    },
+    {
+      "start": 47.48,
+      "end": 49.51,
+      "text": "buzzonkers, mounted them to this"
+    },
+    {
+      "start": 49.52,
+      "end": 51.35,
+      "text": "comically wide doorbell frame, and then"
+    },
+    {
+      "start": 51.36,
+      "end": 53.07,
+      "text": "let them rip on the driveway at the Tech"
+    },
+    {
+      "start": 53.08,
+      "end": 54.63,
+      "text": "House, capturing the comings and goings"
+    },
+    {
+      "start": 54.64,
+      "end": 56.35,
+      "text": "of various cars, animals, and people"
+    },
+    {
+      "start": 56.36,
+      "end": 58.03,
+      "text": "throughout the day and night. We've"
+    },
+    {
+      "start": 58.04,
+      "end": 60.19,
+      "text": "sorted them into budget buckets"
+    },
+    {
+      "start": 60.2,
+      "end": 62.71,
+      "text": "according to their upfront cost, and now"
+    },
+    {
+      "start": 62.72,
+      "end": 64.27,
+      "text": "we're going to rank them according to"
+    },
+    {
+      "start": 64.28,
+      "end": 66.63,
+      "text": "their features, image quality, and their"
+    },
+    {
+      "start": 66.64,
+      "end": 69.55,
+      "text": "value over a 5-year ownership span."
+    },
+    {
+      "start": 69.56,
+      "end": 71.59,
+      "text": "Spoiler alert, some of the cheapest"
+    },
+    {
+      "start": 71.6,
+      "end": 73.83,
+      "text": "options end up being a lot more"
+    },
+    {
+      "start": 73.84,
+      "end": 75.71,
+      "text": "expensive in the longer term. That's how"
+    },
+    {
+      "start": 75.72,
+      "end": 77.75,
+      "text": "they get you. And here's how I get you,"
+    },
+    {
+      "start": 77.76,
+      "end": 83.175,
+      "text": "with the segue to our sponsor."
+    },
+    {
+      "start": 111.88,
+      "end": 113.39,
+      "text": "through. So, let's quickly run through"
+    },
+    {
+      "start": 113.4,
+      "end": 115.23,
+      "text": "what they have in common. They are"
+    },
+    {
+      "start": 115.24,
+      "end": 118.07,
+      "text": "mostly all battery operated, aside from"
+    },
+    {
+      "start": 118.08,
+      "end": 120.47,
+      "text": "the Ubiquiti's offerings. One is wired"
+    },
+    {
+      "start": 120.48,
+      "end": 122.47,
+      "text": "and the other is PoE, meaning that it is"
+    },
+    {
+      "start": 122.48,
+      "end": 125.83,
+      "text": "powered over its network cable. And"
+    },
+    {
+      "start": 125.84,
+      "end": 127.15,
+      "text": "that's about it. [music] There's a"
+    },
+    {
+      "start": 127.16,
+      "end": 128.79,
+      "text": "shocking amount of diversity in"
+    },
+    {
+      "start": 128.8,
+      "end": 131.23,
+      "text": "features, even among our budget options"
+    },
+    {
+      "start": 131.24,
+      "end": 134.67,
+      "text": "that start at just $10 for the Orbitel"
+    },
+    {
+      "start": 134.68,
+      "end": 137.87,
+      "text": "M52. That is a very low price, which is"
+    },
+    {
+      "start": 137.88,
+      "end": 139.99,
+      "text": "why they require a subscription if you"
+    },
+    {
+      "start": 140.0,
+      "end": 142.15,
+      "text": "want any more than a push notification"
+    },
+    {
+      "start": 142.16,
+      "end": 143.35,
+      "text": "want any more than a push notification for"
+    },
+    {
+      "start": 143.36,
+      "end": 144.71,
+      "text": "for well,"
+    },
+    {
+      "start": 144.72,
+      "end": 147.23,
+      "text": "pushes. If you want live video, though,"
+    },
+    {
+      "start": 147.24,
+      "end": 148.35,
+      "text": "that's [music] going to cost you. You'll"
+    },
+    {
+      "start": 148.36,
+      "end": 150.07,
+      "text": "have to buy a cloud storage"
+    },
+    {
+      "start": 150.08,
+      "end": 153.27,
+      "text": "subscription. The image quality is okay,"
+    },
+    {
+      "start": 153.28,
+      "end": 155.23,
+      "text": "though, and their subscription is"
+    },
+    {
+      "start": 155.24,
+      "end": 157.23,
+      "text": "reasonably affordable, which pushes it"
+    },
+    {
+      "start": 157.24,
+      "end": 161.55,
+      "text": "from, let's say, F all the way up to"
+    },
+    {
+      "start": 161.56,
+      "end": 163.949,
+      "text": "a high D tier. But, let's say for a"
+    },
+    {
+      "start": 163.959,
+      "end": 166.15,
+      "text": "moment that you had the budget for four"
+    },
+    {
+      "start": 166.16,
+      "end": 168.59,
+      "text": "Orbitels. The Arlo video doorbell,"
+    },
+    {
+      "start": 168.6,
+      "end": 171.51,
+      "text": "unfortunately, continues its same"
+    },
+    {
+      "start": 171.52,
+      "end": 173.63,
+      "text": "mandatory subscription trend, this time"
+    },
+    {
+      "start": 173.64,
+      "end": 176.39,
+      "text": "offering only live video until you fork"
+    },
+    {
+      "start": 176.4,
+      "end": 178.39,
+      "text": "out some dough. So, no push"
+    },
+    {
+      "start": 178.4,
+      "end": 180.91,
+      "text": "notifications. Also, it doesn't even"
+    },
+    {
+      "start": 180.92,
+      "end": 182.47,
+      "text": "come with a wall plug so that you can"
+    },
+    {
+      "start": 182.48,
+      "end": 184.63,
+      "text": "hear the chime from a common area inside"
+    },
+    {
+      "start": 184.64,
+      "end": 186.63,
+      "text": "your home. But, its AI detection was"
+    },
+    {
+      "start": 186.64,
+      "end": 188.39,
+      "text": "pretty solid, both recognizing our"
+    },
+    {
+      "start": 188.4,
+      "end": 190.63,
+      "text": "fabricator as a person and identifying"
+    },
+    {
+      "start": 190.64,
+      "end": 192.35,
+      "text": "our environment as a workshop. [music]"
+    },
+    {
+      "start": 192.36,
+      "end": 194.19,
+      "text": "For reference, our next doorbell clocked"
+    },
+    {
+      "start": 194.2,
+      "end": 196.39,
+      "text": "that same situation as a pet at the"
+    },
+    {
+      "start": 196.4,
+      "end": 198.87,
+      "text": "front door. Interesting. I never saw"
+    },
+    {
+      "start": 198.88,
+      "end": 201.67,
+      "text": "Justin that way. Button feel is fine, I"
+    },
+    {
+      "start": 201.68,
+      "end": 203.63,
+      "text": "guess, and so is the image quality,"
+    },
+    {
+      "start": 203.64,
+      "end": 206.949,
+      "text": "which had this cruising into a C until I"
+    },
+    {
+      "start": 206.959,
+      "end": 209.63,
+      "text": "saw the 5-year cost of ownership."
+    },
+    {
+      "start": 209.64,
+      "end": 211.75,
+      "text": "Over $500?"
+    },
+    {
+      "start": 211.76,
+      "end": 216.27,
+      "text": "Have you gone mad, Arlo? Low D for low"
+    },
+    {
+      "start": 216.28,
+      "end": 218.91,
+      "text": "D. What are you guys doing? Next up, we"
+    },
+    {
+      "start": 218.92,
+      "end": 221.47,
+      "text": "finally have our first non-subscription"
+    },
+    {
+      "start": 221.48,
+      "end": 223.47,
+      "text": "bell. It also adds some features that we"
+    },
+    {
+      "start": 223.48,
+      "end": 226.11,
+      "text": "haven't seen yet, like two cameras, one"
+    },
+    {
+      "start": 226.12,
+      "end": 228.79,
+      "text": "pointing down, as well as a whole 32"
+    },
+    {
+      "start": 228.8,
+      "end": 230.59,
+      "text": "gigs of onboard storage. So, you got"
+    },
+    {
+      "start": 230.6,
+      "end": 232.87,
+      "text": "recording, live view, an included chime,"
+    },
+    {
+      "start": 232.88,
+      "end": 234.87,
+      "text": "and two-way voice calls through the app"
+    },
+    {
+      "start": 234.88,
+      "end": 236.55,
+      "text": "with no subscription. It's got a little"
+    },
+    {
+      "start": 236.56,
+      "end": 238.27,
+      "text": "screen to display canned messages, and"
+    },
+    {
+      "start": 238.28,
+      "end": 241.03,
+      "text": "even the image quality is decent. So, uh"
+    },
+    {
+      "start": 241.04,
+      "end": 244.83,
+      "text": "question for me, why did I give it only"
+    },
+    {
+      "start": 244.84,
+      "end": 247.55,
+      "text": "a B? As crazy as it sounds, it's partly"
+    },
+    {
+      "start": 247.56,
+      "end": 250.79,
+      "text": "because of the lack of a subscription."
+    },
+    {
+      "start": 250.8,
+      "end": 252.23,
+      "text": "Bro, what are you talking about, man?"
+    },
+    {
+      "start": 252.24,
+      "end": 255.07,
+      "text": "I cannot buy cloud storage, meaning that"
+    },
+    {
+      "start": 255.08,
+      "end": 256.63,
+      "text": "my record of a home invasion, for"
+    },
+    {
+      "start": 256.64,
+      "end": 258.789,
+      "text": "instance, can be destroyed by said home"
+    },
+    {
+      "start": 258.799,
+      "end": 262.87,
+      "text": "invader with a simple hammer."
+    },
+    {
+      "start": 265.36,
+      "end": 267.27,
+      "text": "we encountered. Still though, it gets"
+    },
+    {
+      "start": 267.28,
+      "end": 270.07,
+      "text": "our coveted Value King award for being"
+    },
+    {
+      "start": 270.08,
+      "end": 272.59,
+      "text": "the least expensive viable product over"
+    },
+    {
+      "start": 272.6,
+      "end": 274.95,
+      "text": "5 years of ownership. As for the Blink"
+    },
+    {
+      "start": 274.96,
+      "end": 277.35,
+      "text": "Doorbell 2K Plus, this one started off"
+    },
+    {
+      "start": 277.36,
+      "end": 279.15,
+      "text": "on a pretty rough note. Without the"
+    },
+    {
+      "start": 279.16,
+      "end": 281.07,
+      "text": "additional sync module, this thing is"
+    },
+    {
+      "start": 281.08,
+      "end": 283.11,
+      "text": "just a brick, just sounding pretty"
+    },
+    {
+      "start": 283.12,
+      "end": 285.15,
+      "text": "dangerously close to F-tier product"
+    },
+    {
+      "start": 285.16,
+      "end": 288.43,
+      "text": "design. But, the module costs just $20"
+    },
+    {
+      "start": 288.44,
+      "end": 289.95,
+      "text": "more and supports multiple Blink"
+    },
+    {
+      "start": 289.96,
+      "end": 291.67,
+      "text": "products, and the battery on the"
+    },
+    {
+      "start": 291.68,
+      "end": 293.99,
+      "text": "doorbell supposedly lasts up to 2 years."
+    },
+    {
+      "start": 294.0,
+      "end": 295.27,
+      "text": "That sounds kind of perfect if you're"
+    },
+    {
+      "start": 295.28,
+      "end": 296.39,
+      "text": "looking for something with the same"
+    },
+    {
+      "start": 296.4,
+      "end": 298.11,
+      "text": "pedigree as Ring, but more"
+    },
+    {
+      "start": 298.12,
+      "end": 300.07,
+      "text": "wallet-friendly with two-way voice and"
+    },
+    {
+      "start": 300.08,
+      "end": 302.07,
+      "text": "live video included. But, there's a"
+    },
+    {
+      "start": 302.08,
+      "end": 304.15,
+      "text": "catch. Of course, there is. Recordings"
+    },
+    {
+      "start": 304.16,
+      "end": 305.63,
+      "text": "are paywalled, and with image quality"
+    },
+    {
+      "start": 305.64,
+      "end": 306.99,
+      "text": "that's only slightly better than the"
+    },
+    {
+      "start": 307.0,
+      "end": 308.909,
+      "text": "Havion, let's go with"
+    },
+    {
+      "start": 308.919,
+      "end": 312.03,
+      "text": "C minus. Now, it's time to look at our"
+    },
+    {
+      "start": 312.04,
+      "end": 314.23,
+      "text": "mid-tier offerings, starting with the"
+    },
+    {
+      "start": 314.24,
+      "end": 316.87,
+      "text": "original, as seen on Shark Tank, the"
+    },
+    {
+      "start": 316.88,
+      "end": 319.11,
+      "text": "Ring Doorbell. When it comes to ease of"
+    },
+    {
+      "start": 319.12,
+      "end": 321.27,
+      "text": "setup, it is clearly the industry"
+    },
+    {
+      "start": 321.28,
+      "end": 323.47,
+      "text": "standard for a reason. It was as easy as"
+    },
+    {
+      "start": 323.48,
+      "end": 324.909,
+      "text": "putting in a Wi-Fi password, and"
+    },
+    {
+      "start": 324.919,
+      "end": 326.51,
+      "text": "everything else happened automatically."
+    },
+    {
+      "start": 326.52,
+      "end": 327.99,
+      "text": "However, that's where the"
+    },
+    {
+      "start": 328.0,
+      "end": 330.75,
+      "text": "user-friendliness ended. Amazon acquired"
+    },
+    {
+      "start": 330.76,
+      "end": 333.19,
+      "text": "Ring back in 2018, [music] and come on,"
+    },
+    {
+      "start": 333.2,
+      "end": 334.83,
+      "text": "guys, they got to get their billion"
+    },
+    {
+      "start": 334.84,
+      "end": 337.51,
+      "text": "dollars back somehow. So, this doorbell"
+    },
+    {
+      "start": 337.52,
+      "end": 340.11,
+      "text": "app has ads around every corner, and it"
+    },
+    {
+      "start": 340.12,
+      "end": 343.83,
+      "text": "even has a store."
+    },
+    {
+      "start": 343.84,
+      "end": 345.19,
+      "text": "even has a store. Also,"
+    },
+    {
+      "start": 345.2,
+      "end": 347.99,
+      "text": "that noise has got to be the most"
+    },
+    {
+      "start": 348.0,
+      "end": 349.75,
+      "text": "annoying noise in the world. As for the"
+    },
+    {
+      "start": 349.76,
+      "end": 351.91,
+      "text": "image quality, man, I feel like"
+    },
+    {
+      "start": 351.92,
+      "end": 354.15,
+      "text": "everything's getting kind of good enough"
+    },
+    {
+      "start": 354.16,
+      "end": 355.59,
+      "text": "now that I'm going to need to see them"
+    },
+    {
+      "start": 355.6,
+      "end": 357.15,
+      "text": "side by side. So, we'll take a look at"
+    },
+    {
+      "start": 357.16,
+      "end": 358.87,
+      "text": "that later. I'm going to give this a"
+    },
+    {
+      "start": 358.88,
+      "end": 363.07,
+      "text": "placeholder C tier for the $350 5-year"
+    },
+    {
+      "start": 363.08,
+      "end": 365.67,
+      "text": "ownership cost, but who knows? Maybe the"
+    },
+    {
+      "start": 365.68,
+      "end": 367.39,
+      "text": "image quality will bump it up. Up"
+    },
+    {
+      "start": 367.4,
+      "end": 370.07,
+      "text": "against the Ring is the eufy C31. We"
+    },
+    {
+      "start": 370.08,
+      "end": 371.99,
+      "text": "know them for their vacuums, and now we"
+    },
+    {
+      "start": 372.0,
+      "end": 373.71,
+      "text": "can evaluate them for their doorbells,"
+    },
+    {
+      "start": 373.72,
+      "end": 375.55,
+      "text": "which they advertise as probably the"
+    },
+    {
+      "start": 375.56,
+      "end": 378.11,
+      "text": "best for under $100. I do take slight"
+    },
+    {
+      "start": 378.12,
+      "end": 379.47,
+      "text": "issue with that because it was listed"
+    },
+    {
+      "start": 379.48,
+      "end": 383.83,
+      "text": "for exactly $100, not under $100. But,"
+    },
+    {
+      "start": 383.84,
+      "end": 385.35,
+      "text": "there's been no subscription fee for"
+    },
+    {
+      "start": 385.36,
+      "end": 386.83,
+      "text": "their core features ever since their"
+    },
+    {
+      "start": 386.84,
+      "end": 389.07,
+      "text": "debut back in 2019, which has helped"
+    },
+    {
+      "start": 389.08,
+      "end": 391.39,
+      "text": "them build a cult following. If you want"
+    },
+    {
+      "start": 391.4,
+      "end": 393.43,
+      "text": "cloud backups, they do offer that at a"
+    },
+    {
+      "start": 393.44,
+      "end": 395.43,
+      "text": "pretty average price, meaning that if"
+    },
+    {
+      "start": 395.44,
+      "end": 397.83,
+      "text": "this button's any good,"
+    },
+    {
+      "start": 397.84,
+      "end": 403.909,
+      "text": "not bad. This might be our first"
+    },
+    {
+      "start": 406.48,
+      "end": 408.059,
+      "text": "This might be our first A. However,"
+    },
+    {
+      "start": 408.069,
+      "end": 408.35,
+      "text": "However, [clears throat]"
+    },
+    {
+      "start": 408.36,
+      "end": 410.47,
+      "text": "it's an A plus."
+    },
+    {
+      "start": 410.48,
+      "end": 414.27,
+      "text": "No, not a high A. I meant A plus some"
+    },
+    {
+      "start": 414.28,
+      "end": 416.87,
+      "text": "pretty sketchy baggage. A couple of"
+    },
+    {
+      "start": 416.88,
+      "end": 419.27,
+      "text": "years back, eufy had a scandal around"
+    },
+    {
+      "start": 419.28,
+      "end": 421.909,
+      "text": "easy public access to unsecured [music]"
+    },
+    {
+      "start": 421.919,
+      "end": 424.03,
+      "text": "cameras. And instead of engaging in good"
+    },
+    {
+      "start": 424.04,
+      "end": 426.27,
+      "text": "faith, they deflected and obfuscated to"
+    },
+    {
+      "start": 426.28,
+      "end": 428.23,
+      "text": "the point where we actually put them in"
+    },
+    {
+      "start": 428.24,
+      "end": 430.31,
+      "text": "our sponsor doghouse until at least"
+    },
+    {
+      "start": 430.32,
+      "end": 432.63,
+      "text": "2027. With that said, they claim to have"
+    },
+    {
+      "start": 432.64,
+      "end": 434.35,
+      "text": "cleaned up their act and have managed to"
+    },
+    {
+      "start": 434.36,
+      "end": 436.35,
+      "text": "stay out of the headlines lately. So,"
+    },
+    {
+      "start": 436.36,
+      "end": 438.99,
+      "text": "hopefully they'll be back soon enough."
+    },
+    {
+      "start": 439.0,
+      "end": 441.51,
+      "text": "Next up is another no subscription bell"
+    },
+    {
+      "start": 441.52,
+      "end": 443.63,
+      "text": "that's priced right in line with Ring,"
+    },
+    {
+      "start": 443.64,
+      "end": 446.07,
+      "text": "an offering from TP-Link, the Tapo 2K"
+    },
+    {
+      "start": 446.08,
+      "end": 448.35,
+      "text": "Plus. Like eufy, highlights their"
+    },
+    {
+      "start": 448.36,
+      "end": 450.43,
+      "text": "internal storage as a key feature,"
+    },
+    {
+      "start": 450.44,
+      "end": 453.95,
+      "text": "except they draw the line at 512 gigs"
+    },
+    {
+      "start": 453.96,
+      "end": 456.59,
+      "text": "instead of just 128. That is a lot of"
+    },
+    {
+      "start": 456.6,
+      "end": 458.35,
+      "text": "clips of your courier delivering your"
+    },
+    {
+      "start": 458.36,
+      "end": 460.03,
+      "text": "durable True Spec cables from"
+    },
+    {
+      "start": 460.04,
+      "end": 462.67,
+      "text": "lttstore.com than a porch pirate, taking"
+    },
+    {
+      "start": 462.68,
+      "end": 465.03,
+      "text": "your cables from lttstore.com."
+    },
+    {
+      "start": 465.04,
+      "end": 466.95,
+      "text": "Then your wonderful SO bringing over"
+    },
+    {
+      "start": 466.96,
+      "end": 468.35,
+      "text": "some replacements to help you feel"
+    },
+    {
+      "start": 468.36,
+      "end": 470.87,
+      "text": "better. Replacements from lttstore.com."
+    },
+    {
+      "start": 470.88,
+      "end": 473.31,
+      "text": "Build quality for this one is a bit of a"
+    },
+    {
+      "start": 473.32,
+      "end": 475.27,
+      "text": "low light though. So, for the same"
+    },
+    {
+      "start": 475.28,
+      "end": 478.03,
+      "text": "price, it's hard to give this quite the"
+    },
+    {
+      "start": 478.04,
+      "end": 480.39,
+      "text": "same rating. We're going to go with"
+    },
+    {
+      "start": 480.4,
+      "end": 480.765,
+      "text": "same rating. We're going to go with um"
+    },
+    {
+      "start": 480.775,
+      "end": 481.11,
+      "text": "um [music]"
+    },
+    {
+      "start": 481.12,
+      "end": 482.19,
+      "text": "B tier."
+    },
+    {
+      "start": 482.2,
+      "end": 483.67,
+      "text": "There you go, Tapo. Next, we have the"
+    },
+    {
+      "start": 483.68,
+      "end": 485.55,
+      "text": "doorbell light from Ubiquiti. Like the"
+    },
+    {
+      "start": 485.56,
+      "end": 487.03,
+      "text": "others in this price segment, it offers"
+    },
+    {
+      "start": 487.04,
+      "end": 488.43,
+      "text": "two-way audio, but it's a little"
+    },
+    {
+      "start": 488.44,
+      "end": 491.23,
+      "text": "different as it's PoE. So, you actually"
+    },
+    {
+      "start": 491.24,
+      "end": 493.75,
+      "text": "get much more reliable streaming over a"
+    },
+    {
+      "start": 493.76,
+      "end": 495.39,
+      "text": "wire. And after the hassle of running"
+    },
+    {
+      "start": 495.4,
+      "end": 497.47,
+      "text": "said wire once, you never change a"
+    },
+    {
+      "start": 497.48,
+      "end": 500.47,
+      "text": "battery again. However, even though it's"
+    },
+    {
+      "start": 500.48,
+      "end": 503.79,
+      "text": "only $100, it requires a whole ecosystem"
+    },
+    {
+      "start": 503.8,
+      "end": 505.35,
+      "text": "of products to support it that we're"
+    },
+    {
+      "start": 505.36,
+      "end": 506.79,
+      "text": "going to talk about a little bit more"
+    },
+    {
+      "start": 506.8,
+      "end": 508.71,
+      "text": "later once we get to Ubiquiti's flagship"
+    },
+    {
+      "start": 508.72,
+      "end": 510.83,
+      "text": "offering. For now, I'm going to throw it"
+    },
+    {
+      "start": 510.84,
+      "end": 513.709,
+      "text": "in the B tier. There you go, Ubiquiti."
+    },
+    {
+      "start": 513.719,
+      "end": 515.63,
+      "text": "Our last bell in this segment is another"
+    },
+    {
+      "start": 515.64,
+      "end": 517.589,
+      "text": "dual camera, this time from Wyze. And"
+    },
+    {
+      "start": 517.599,
+      "end": 519.19,
+      "text": "it's going to cost you $20 more than the"
+    },
+    {
+      "start": 519.2,
+      "end": 521.35,
+      "text": "rest of the offerings. Why? Well, I"
+    },
+    {
+      "start": 521.36,
+      "end": 522.55,
+      "text": "guess part of it could be the second"
+    },
+    {
+      "start": 522.56,
+      "end": 525.03,
+      "text": "camera, but the more interesting feature"
+    },
+    {
+      "start": 525.04,
+      "end": 526.75,
+      "text": "for me is that this is the first we've"
+    },
+    {
+      "start": 526.76,
+      "end": 530.51,
+      "text": "seen to support both 2.4 GHz and 5 GHz"
+    },
+    {
+      "start": 530.52,
+      "end": 532.59,
+      "text": "Wi-Fi. That means more consistent video"
+    },
+    {
+      "start": 532.6,
+      "end": 534.43,
+      "text": "streaming and lower likelihood of"
+    },
+    {
+      "start": 534.44,
+      "end": 536.07,
+      "text": "network dropouts from my personal"
+    },
+    {
+      "start": 536.08,
+      "end": 537.63,
+      "text": "experience. It doesn't come with any"
+    },
+    {
+      "start": 537.64,
+      "end": 539.43,
+      "text": "built-in storage, but it does support up"
+    },
+    {
+      "start": 539.44,
+      "end": 542.79,
+      "text": "to 256 gigs via microSD with no core"
+    },
+    {
+      "start": 542.8,
+      "end": 544.71,
+      "text": "features locked behind a paywall and the"
+    },
+    {
+      "start": 544.72,
+      "end": 546.51,
+      "text": "option for a reasonably priced cloud"
+    },
+    {
+      "start": 546.52,
+      "end": 549.35,
+      "text": "backup. The button"
+    },
+    {
+      "start": 549.36,
+      "end": 551.15,
+      "text": "feels pretty nice. I'm putting this in"
+    },
+    {
+      "start": 551.16,
+      "end": 553.79,
+      "text": "the A+ tier. Again though, I'm doing the"
+    },
+    {
+      "start": 553.8,
+      "end": 558.19,
+      "text": "same bit. A plus some baggage. Wyze has"
+    },
+    {
+      "start": 558.2,
+      "end": 560.11,
+      "text": "also made headlines for undesirable"
+    },
+    {
+      "start": 560.12,
+      "end": 562.829,
+      "text": "reasons. And actually, that reminds me."
+    },
+    {
+      "start": 562.839,
+      "end": 565.35,
+      "text": "We never even mentioned Ring's recent"
+    },
+    {
+      "start": 565.36,
+      "end": 567.07,
+      "text": "collaborations with law enforcement. I"
+    },
+    {
+      "start": 567.08,
+      "end": 569.79,
+      "text": "mean, is it possible that cameras on all"
+    },
+    {
+      "start": 569.8,
+      "end": 571.03,
+      "text": "the things, surveillance products, are"
+    },
+    {
+      "start": 571.04,
+      "end": 572.35,
+      "text": "just magnets for this kind of"
+    },
+    {
+      "start": 572.36,
+      "end": 574.55,
+      "text": "controversy? No, it's the children who"
+    },
+    {
+      "start": 574.56,
+      "end": 575.87,
+      "text": "are wrong. Let's take a look at their"
+    },
+    {
+      "start": 575.88,
+      "end": 578.63,
+      "text": "image quality. All right, Ring."
+    },
+    {
+      "start": 578.64,
+      "end": 580.43,
+      "text": "Got to give you credit. That looks"
+    },
+    {
+      "start": 580.44,
+      "end": 582.83,
+      "text": "really nice, but"
+    },
+    {
+      "start": 582.84,
+      "end": 586.15,
+      "text": "I think a lot of it is just kind of like"
+    },
+    {
+      "start": 586.16,
+      "end": 587.55,
+      "text": "misleading. [music]"
+    },
+    {
+      "start": 587.56,
+      "end": 589.99,
+      "text": "It's just the contrast. The eufy"
+    },
+    {
+      "start": 590.0,
+      "end": 592.27,
+      "text": "actually has better readability of the"
+    },
+    {
+      "start": 592.28,
+      "end": 594.07,
+      "text": "text down the driveway. Meanwhile, the"
+    },
+    {
+      "start": 594.08,
+      "end": 596.39,
+      "text": "Tapo is"
+    },
+    {
+      "start": 596.4,
+      "end": 598.99,
+      "text": "pretty rough. Ubiquiti is not as good as"
+    },
+    {
+      "start": 599.0,
+      "end": 600.91,
+      "text": "I thought. Wow, really?"
+    },
+    {
+      "start": 600.92,
+      "end": 605.31,
+      "text": "eufy pulling out the win with Wyze in"
+    },
+    {
+      "start": 605.32,
+      "end": 607.07,
+      "text": "second place. Well, isn't that"
+    },
+    {
+      "start": 607.08,
+      "end": 609.71,
+      "text": "fascinating? Dynamic range on the eufy"
+    },
+    {
+      "start": 609.72,
+      "end": 611.47,
+      "text": "is pretty rough."
+    },
+    {
+      "start": 611.48,
+      "end": 613.23,
+      "text": "I think that could push Wyze into first"
+    },
+    {
+      "start": 613.24,
+      "end": 617.07,
+      "text": "place for me. Wow."
+    },
+    {
+      "start": 623.2,
+      "end": 625.11,
+      "text": "You, too."
+    },
+    {
+      "start": 625.12,
+      "end": 626.43,
+      "text": "You, too. There."
+    },
+    {
+      "start": 626.44,
+      "end": 628.79,
+      "text": "All right. you, Ring."
+    },
+    {
+      "start": 628.8,
+      "end": 630.75,
+      "text": "I'm happy with that. Let's move on to"
+    },
+    {
+      "start": 630.76,
+      "end": 633.59,
+      "text": "the flagships now. I'm talking doorbells"
+    },
+    {
+      "start": 633.6,
+      "end": 637.95,
+      "text": "that cost anywhere from $150 to $300."
+    },
+    {
+      "start": 637.96,
+      "end": 640.51,
+      "text": "Up first here is eufy again. For an"
+    },
+    {
+      "start": 640.52,
+      "end": 642.11,
+      "text": "extra 50 bucks over the last one, we're"
+    },
+    {
+      "start": 642.12,
+      "end": 644.11,
+      "text": "getting both 8 gigs of non-removable"
+    },
+    {
+      "start": 644.12,
+      "end": 646.829,
+      "text": "storage and a dual camera setup."
+    },
+    {
+      "start": 646.839,
+      "end": 648.63,
+      "text": "However, this one doesn't have"
+    },
+    {
+      "start": 648.64,
+      "end": 651.23,
+      "text": "traditional expandable storage. Instead,"
+    },
+    {
+      "start": 651.24,
+      "end": 653.39,
+      "text": "it integrates into eufy's homebase"
+    },
+    {
+      "start": 653.4,
+      "end": 656.55,
+      "text": "ecosystem for up to 16 terabytes of"
+    },
+    {
+      "start": 656.56,
+      "end": 658.79,
+      "text": "additional space. There are cases where"
+    },
+    {
+      "start": 658.8,
+      "end": 661.63,
+      "text": "additional controller hardware and"
+    },
+    {
+      "start": 661.64,
+      "end": 663.23,
+      "text": "network attached storage does make"
+    },
+    {
+      "start": 663.24,
+      "end": 664.95,
+      "text": "sense, but I'll leave it up to you to"
+    },
+    {
+      "start": 664.96,
+      "end": 667.87,
+      "text": "decide if this is one of those cases."
+    },
+    {
+      "start": 667.88,
+      "end": 669.99,
+      "text": "Either way, I've got to give it a B tier"
+    },
+    {
+      "start": 670.0,
+      "end": 672.15,
+      "text": "placement for retaining most of the key"
+    },
+    {
+      "start": 672.16,
+      "end": 674.79,
+      "text": "features on the friendly side of [music]"
+    },
+    {
+      "start": 674.8,
+      "end": 677.87,
+      "text": "the paywall. Boop. Next up, we've got"
+    },
+    {
+      "start": 677.88,
+      "end": 680.39,
+      "text": "Google's one and only doorbell. It has"
+    },
+    {
+      "start": 680.4,
+      "end": 683.43,
+      "text": "the most flat modern design of the bunch"
+    },
+    {
+      "start": 683.44,
+      "end": 686.03,
+      "text": "and it's going to cost you 180 bucks and"
+    },
+    {
+      "start": 686.04,
+      "end": 688.95,
+      "text": "that's before the $100 [snorts]"
+    },
+    {
+      "start": 688.96,
+      "end": 691.67,
+      "text": "annual subscription fee."
+    },
+    {
+      "start": 691.68,
+      "end": 693.51,
+      "text": "It's not all bad news, though, since"
+    },
+    {
+      "start": 693.52,
+      "end": 696.03,
+      "text": "they don't paywall recording, live view,"
+    },
+    {
+      "start": 696.04,
+      "end": 698.83,
+      "text": "or two-way audio. So,"
+    },
+    {
+      "start": 698.84,
+      "end": 699.59,
+      "text": "or two-way audio. So, uh"
+    },
+    {
+      "start": 699.6,
+      "end": 701.39,
+      "text": "maybe B tier?"
+    },
+    {
+      "start": 701.4,
+      "end": 703.87,
+      "text": "Ooh, only 3 hours of recording history,"
+    },
+    {
+      "start": 703.88,
+      "end": 706.39,
+      "text": "and a 5-year subscription is going to"
+    },
+    {
+      "start": 706.4,
+      "end": 709.11,
+      "text": "cost me almost $700?"
+    },
+    {
+      "start": 709.12,
+      "end": 712.59,
+      "text": "Sorry, Google, best I can do is a C+."
+    },
+    {
+      "start": 712.6,
+      "end": 714.35,
+      "text": "That's just too expensive. Not to"
+    },
+    {
+      "start": 714.36,
+      "end": 716.83,
+      "text": "mention it has the lowest resolution in"
+    },
+    {
+      "start": 716.84,
+      "end": 718.51,
+      "text": "this price range. Swinging back to the"
+    },
+    {
+      "start": 718.52,
+      "end": 720.87,
+      "text": "market leader, Ring. This time, it's"
+    },
+    {
+      "start": 720.88,
+      "end": 723.59,
+      "text": "their more premium battery doorbell Pro."
+    },
+    {
+      "start": 723.6,
+      "end": 726.55,
+      "text": "It looks very similar, but the Pro badge"
+    },
+    {
+      "start": 726.56,
+      "end": 728.83,
+      "text": "comes with a $150"
+    },
+    {
+      "start": 728.84,
+      "end": 730.79,
+      "text": "upcharge. The main difference, a"
+    },
+    {
+      "start": 730.8,
+      "end": 733.47,
+      "text": "quick-release battery."
+    },
+    {
+      "start": 733.48,
+      "end": 736.83,
+      "text": "Okay. And a resolution bump from 1080p"
+    },
+    {
+      "start": 736.84,
+      "end": 739.91,
+      "text": "to 1536p HD Plus. Otherwise, the"
+    },
+    {
+      "start": 739.92,
+      "end": 741.47,
+      "text": "subscription and everything else remains"
+    },
+    {
+      "start": 741.48,
+      "end": 743.15,
+      "text": "the same. So,"
+    },
+    {
+      "start": 743.16,
+      "end": 745.87,
+      "text": "C at best. I mean, same ease of use, but"
+    },
+    {
+      "start": 745.88,
+      "end": 751.11,
+      "text": "also $500 for 5 years of ownership?"
+    },
+    {
+      "start": 753.96,
+      "end": 755.47,
+      "text": "the one made for Linus option, which"
+    },
+    {
+      "start": 755.48,
+      "end": 758.71,
+      "text": "comes from, you guessed it, Ubiquiti. I"
+    },
+    {
+      "start": 758.72,
+      "end": 761.35,
+      "text": "hate batteries, and the G4 doorbell Pro"
+    },
+    {
+      "start": 761.36,
+      "end": 763.63,
+      "text": "uses either the included power"
+    },
+    {
+      "start": 763.64,
+      "end": 767.829,
+      "text": "kit/transformer combo, or USB-C, or with"
+    },
+    {
+      "start": 767.839,
+      "end": 769.87,
+      "text": "a separate model, you can actually power"
+    },
+    {
+      "start": 769.88,
+      "end": 771.79,
+      "text": "it with PoE, just like the doorbell"
+    },
+    {
+      "start": 771.8,
+      "end": 773.63,
+      "text": "light. This specific one, though, uses"
+    },
+    {
+      "start": 773.64,
+      "end": 776.59,
+      "text": "Wi-Fi for data, but at 5 GHz, so at"
+    },
+    {
+      "start": 776.6,
+      "end": 778.31,
+      "text": "least it has that going for it. And"
+    },
+    {
+      "start": 778.32,
+      "end": 779.99,
+      "text": "Ubiquiti products are proudly"
+    },
+    {
+      "start": 780.0,
+      "end": 782.95,
+      "text": "subscription free. With that said, they"
+    },
+    {
+      "start": 782.96,
+      "end": 785.47,
+      "text": "are expensive, and it's kind of hard to"
+    },
+    {
+      "start": 785.48,
+      "end": 788.07,
+      "text": "justify the additional hardware that you"
+    },
+    {
+      "start": 788.08,
+      "end": 790.43,
+      "text": "will also need, unless you were already"
+    },
+    {
+      "start": 790.44,
+      "end": 792.07,
+      "text": "planning to use their ecosystem for"
+    },
+    {
+      "start": 792.08,
+      "end": 793.87,
+      "text": "other aspects of your buildout, like"
+    },
+    {
+      "start": 793.88,
+      "end": 795.824,
+      "text": "wireless access points. The UI/UX"
+    },
+    {
+      "start": 795.834,
+      "end": 797.35,
+      "text": "[music] is getting pretty good, though,"
+    },
+    {
+      "start": 797.36,
+      "end": 799.15,
+      "text": "and constantly getting better, and so is"
+    },
+    {
+      "start": 799.16,
+      "end": 800.87,
+      "text": "the product line. Ubiquiti pointed out"
+    },
+    {
+      "start": 800.88,
+      "end": 802.39,
+      "text": "to us that this particular model is"
+    },
+    {
+      "start": 802.4,
+      "end": 803.829,
+      "text": "actually being phased out for something"
+    },
+    {
+      "start": 803.839,
+      "end": 806.23,
+      "text": "new that's being developed for Q4 2026."
+    },
+    {
+      "start": 806.24,
+      "end": 810.59,
+      "text": "So, I don't know. Asterisk"
+    },
+    {
+      "start": 810.6,
+      "end": 812.75,
+      "text": "tier. High-quality product that costs"
+    },
+    {
+      "start": 812.76,
+      "end": 814.23,
+      "text": "the same 10 years later as it does up"
+    },
+    {
+      "start": 814.24,
+      "end": 816.63,
+      "text": "front, but it it is really, really"
+    },
+    {
+      "start": 816.64,
+      "end": 818.51,
+      "text": "expensive. Now, let's look at image"
+    },
+    {
+      "start": 818.52,
+      "end": 820.59,
+      "text": "quality for these premium options and"
+    },
+    {
+      "start": 820.6,
+      "end": 821.55,
+      "text": "see if we're going to move anything"
+    },
+    {
+      "start": 821.56,
+      "end": 823.79,
+      "text": "around. How about Google? I mean, Google"
+    },
+    {
+      "start": 823.8,
+      "end": 825.63,
+      "text": "knows image quality, right? They got the"
+    },
+    {
+      "start": 825.64,
+      "end": 826.19,
+      "text": "knows image quality, right? They got the Pixel."
+    },
+    {
+      "start": 826.2,
+      "end": 827.91,
+      "text": "Google one has the lowest res camera and"
+    },
+    {
+      "start": 827.92,
+      "end": 829.51,
+      "text": "you could kind of tell."
+    },
+    {
+      "start": 829.52,
+      "end": 831.31,
+      "text": "Yeah, like dude, you can barely even"
+    },
+    {
+      "start": 831.32,
+      "end": 832.87,
+      "text": "tell that this [music] fence has"
+    },
+    {
+      "start": 832.88,
+      "end": 834.75,
+      "text": "vertical slats on some of the panels"
+    },
+    {
+      "start": 834.76,
+      "end": 835.79,
+      "text": "that Look at this."
+    },
+    {
+      "start": 835.8,
+      "end": 836.35,
+      "text": "Oh, yeah."
+    },
+    {
+      "start": 836.36,
+      "end": 836.83,
+      "text": "Oh, yeah. Yeah."
+    },
+    {
+      "start": 836.84,
+      "end": 837.47,
+      "text": "Yeah. Yeah."
+    },
+    {
+      "start": 837.48,
+      "end": 838.83,
+      "text": "There's just There's not a lot of"
+    },
+    {
+      "start": 838.84,
+      "end": 839.95,
+      "text": "resolution there."
+    },
+    {
+      "start": 839.96,
+      "end": 840.99,
+      "text": "It's cartoon."
+    },
+    {
+      "start": 841.0,
+      "end": 842.95,
+      "text": "And the You know what? The ring is"
+    },
+    {
+      "start": 842.96,
+      "end": 845.19,
+      "text": "honestly not much better. Okay, Eufy"
+    },
+    {
+      "start": 845.2,
+      "end": 846.15,
+      "text": "honestly not much better. Okay, Eufy though."
+    },
+    {
+      "start": 846.16,
+      "end": 849.27,
+      "text": "Oh, that dynamic range, Eufy. Eufy, the"
+    },
+    {
+      "start": 849.28,
+      "end": 851.67,
+      "text": "dynamic range. They all just kind of"
+    },
+    {
+      "start": 851.68,
+      "end": 854.11,
+      "text": "suck. I think the takeaway here is that"
+    },
+    {
+      "start": 854.12,
+      "end": 856.51,
+      "text": "I would not pay the extra for a more"
+    },
+    {
+      "start": 856.52,
+      "end": 858.75,
+      "text": "premium doorbell camera because all the"
+    },
+    {
+      "start": 858.76,
+      "end": 861.55,
+      "text": "cameras are just some flavor of suck."
+    },
+    {
+      "start": 861.56,
+      "end": 863.87,
+      "text": "Recapping then in our budget category,"
+    },
+    {
+      "start": 863.88,
+      "end": 866.51,
+      "text": "the Havrion D1 is a clear winner. It's"
+    },
+    {
+      "start": 866.52,
+      "end": 868.03,
+      "text": "the Havrion D1 is a clear winner. It's $79"
+    },
+    {
+      "start": 868.04,
+      "end": 869.95,
+      "text": "all-in and yeah, it's got a slightly"
+    },
+    {
+      "start": 869.96,
+      "end": 871.55,
+      "text": "unintuitive design and some software"
+    },
+    {
+      "start": 871.56,
+      "end": 874.11,
+      "text": "quirks, but for the price and with no"
+    },
+    {
+      "start": 874.12,
+      "end": 876.39,
+      "text": "subscription, it's pretty hard to find"
+    },
+    {
+      "start": 876.4,
+      "end": 877.87,
+      "text": "fault here. Moving on to our mainstream"
+    },
+    {
+      "start": 877.88,
+      "end": 881.03,
+      "text": "options, Wyze looks like a wise way to"
+    },
+    {
+      "start": 881.04,
+      "end": 883.23,
+      "text": "go, at least from a financial standpoint"
+    },
+    {
+      "start": 883.24,
+      "end": 884.67,
+      "text": "with our 5-year cost of ownership"
+    },
+    {
+      "start": 884.68,
+      "end": 887.95,
+      "text": "running us the lowest at $270."
+    },
+    {
+      "start": 887.96,
+      "end": 889.43,
+      "text": "But with that said, it doesn't come with"
+    },
+    {
+      "start": 889.44,
+      "end": 891.63,
+      "text": "an SD card, so it's about on par with"
+    },
+    {
+      "start": 891.64,
+      "end": 894.63,
+      "text": "both Eufy and Tapo in that regard. With"
+    },
+    {
+      "start": 894.64,
+      "end": 896.63,
+      "text": "all three of them falling significantly"
+    },
+    {
+      "start": 896.64,
+      "end": 898.91,
+      "text": "behind Ring in terms of total cost of"
+    },
+    {
+      "start": 898.92,
+      "end": 900.27,
+      "text": "ownership. Given that all of these"
+    },
+    {
+      "start": 900.28,
+      "end": 901.67,
+      "text": "players have had a security scandal in"
+    },
+    {
+      "start": 901.68,
+      "end": 903.75,
+      "text": "the past at some point, it feels a"
+    },
+    {
+      "start": 903.76,
+      "end": 905.43,
+      "text": "little bit pick your poison and then"
+    },
+    {
+      "start": 905.44,
+      "end": 906.75,
+      "text": "Ubiquiti's in there just kind of"
+    },
+    {
+      "start": 906.76,
+      "end": 908.63,
+      "text": "uniquely being Ubiquiti with an"
+    },
+    {
+      "start": 908.64,
+      "end": 910.11,
+      "text": "affordable upfront price for the"
+    },
+    {
+      "start": 910.12,
+      "end": 912.11,
+      "text": "doorbell, but of course all of the extra"
+    },
+    {
+      "start": 912.12,
+      "end": 913.51,
+      "text": "baggage that it carries. Finally, for"
+    },
+    {
+      "start": 913.52,
+      "end": 914.99,
+      "text": "the flagships, these are a bit tough to"
+    },
+    {
+      "start": 915.0,
+      "end": 917.07,
+      "text": "recommend because they don't really do"
+    },
+    {
+      "start": 917.08,
+      "end": 918.87,
+      "text": "more than the cheaper options we've"
+    },
+    {
+      "start": 918.88,
+      "end": 920.51,
+      "text": "looked at with the exception of Ubiquiti"
+    },
+    {
+      "start": 920.52,
+      "end": 922.27,
+      "text": "who has a very fully featured product"
+    },
+    {
+      "start": 922.28,
+      "end": 924.205,
+      "text": "here with no subscriptions,"
+    },
+    {
+      "start": 924.215,
+      "end": 924.39,
+      "text": "here with no subscriptions, [music]"
+    },
+    {
+      "start": 924.4,
+      "end": 927.27,
+      "text": "as far as we can tell, ever. And if I'm"
+    },
+    {
+      "start": 927.28,
+      "end": 929.79,
+      "text": "spending more, then I want it to be in"
+    },
+    {
+      "start": 929.8,
+      "end": 931.67,
+      "text": "order to own my data and not have it"
+    },
+    {
+      "start": 931.68,
+      "end": 932.83,
+      "text": "used without my permission by Big"
+    },
+    {
+      "start": 932.84,
+      "end": 934.91,
+      "text": "Brother or by anyone else. So, Ubiquiti"
+    },
+    {
+      "start": 934.92,
+      "end": 937.27,
+      "text": "gets my coveted attaboy of product"
+    },
+    {
+      "start": 937.28,
+      "end": 939.59,
+      "text": "design, meaning that uh all that's left"
+    },
+    {
+      "start": 939.6,
+      "end": 941.19,
+      "text": "is to say attaboy"
+    },
+    {
+      "start": 941.2,
+      "end": 943.31,
+      "text": "to our sponsor."
+    },
+    {
+      "start": 943.32,
+      "end": 946.91,
+      "text": "Earn XP, level up, unlock achievements,"
+    },
+    {
+      "start": 946.92,
+      "end": 949.19,
+      "text": "and complete quests in the hot new"
+    },
+    {
+      "start": 949.2,
+      "end": 952.43,
+      "text": "phenomenon sweeping the nation. It's"
+    },
+    {
+      "start": 952.44,
+      "end": 954.51,
+      "text": "phenomenon sweeping the nation. It's boot.dev,"
+    },
+    {
+      "start": 954.52,
+      "end": 957.19,
+      "text": "the best way to learn to code in Python,"
+    },
+    {
+      "start": 957.2,
+      "end": 960.75,
+      "text": "Go, [music] and more, because it's fun."
+    },
+    {
+      "start": 960.76,
+      "end": 963.63,
+      "text": "Get hands-on building real projects,"
+    },
+    {
+      "start": 963.64,
+      "end": 965.83,
+      "text": "track your progress, and rally the"
+    },
+    {
+      "start": 965.84,
+      "end": 968.091,
+      "text": "community in challenging BI-MONTHLY"
+    },
+    {
+      "start": 968.101,
+      "end": 970.39,
+      "text": "[screaming] BOSS FIGHTS."
+    },
+    {
+      "start": 970.4,
+      "end": 972.51,
+      "text": "All while learning real skills that"
+    },
+    {
+      "start": 972.52,
+      "end": 975.83,
+      "text": "could get you a high-paying job. Back it"
+    },
+    {
+      "start": 975.84,
+      "end": 978.11,
+      "text": "could get you a high-paying job. Back it Oh."
+    },
+    {
+      "start": 978.12,
+      "end": 981.191,
+      "text": "Look what the dork squad is up to."
+    },
+    {
+      "start": 981.201,
+      "end": 981.67,
+      "text": "Look what the dork squad is up to. [laughter]"
+    },
+    {
+      "start": 981.68,
+      "end": 984.99,
+      "text": "Oh, learning to code, oh, having fun."
+    },
+    {
+      "start": 985.0,
+      "end": 986.55,
+      "text": "Oh, learning to code, oh, having fun. Losers."
+    },
+    {
+      "start": 986.56,
+      "end": 987.71,
+      "text": "Travis, go away."
+    },
+    {
+      "start": 987.72,
+      "end": 988.91,
+      "text": "How's Travis doing?"
+    },
+    {
+      "start": 988.92,
+      "end": 990.55,
+      "text": "Go away. We're learning valuable life"
+    },
+    {
+      "start": 990.56,
+      "end": 992.59,
+      "text": "skills right now, Travis. Travis."
+    },
+    {
+      "start": 992.6,
+      "end": 994.87,
+      "text": "Just think about that."
+    },
+    {
+      "start": 994.88,
+      "end": 995.87,
+      "text": "Just think about that. You"
+    },
+    {
+      "start": 995.88,
+      "end": 998.79,
+      "text": "You're not going to do anything with us."
+    },
+    {
+      "start": 998.8,
+      "end": 999.39,
+      "text": "You're not going to do anything with us. Cody."
+    },
+    {
+      "start": 999.4,
+      "end": 1001.15,
+      "text": "Cody. Hey."
+    },
+    {
+      "start": 1001.16,
+      "end": 1004.79,
+      "text": "Hey, stupid."
+    },
+    {
+      "start": 1006.4,
+      "end": 1009.91,
+      "text": "Yeah. Man, like you, dude. Your mom"
+    },
+    {
+      "start": 1009.92,
+      "end": 1012.15,
+      "text": "makes the worst"
+    },
+    {
+      "start": 1012.16,
+      "end": 1015.39,
+      "text": "YOUR DAD? HE'S LIKE"
+    },
+    {
+      "start": 1015.4,
+      "end": 1017.35,
+      "text": "DUDE, YOUR DOG? Your dog LOOKS LIKE A"
+    },
+    {
+      "start": 1017.36,
+      "end": 1020.27,
+      "text": "HOT DOG. I'd put ketchup on him AND EAT"
+    },
+    {
+      "start": 1020.28,
+      "end": 1022.99,
+      "text": "HIM. WHAT ARE YOU EVEN DOING HERE?"
+    },
+    {
+      "start": 1023.0,
+      "end": 1027.71,
+      "text": "YOU'LL NEVER KNOW BOOTS LIKE I DO."
+    },
+    {
+      "start": 1030.959,
+      "end": 1034.71,
+      "text": "LTT to get 25% off your first month or"
+    },
+    {
+      "start": 1034.72,
+      "end": 1037.521,
+      "text": "year with boot.dev."
+    },
+    {
+      "start": 1037.531,
+      "end": 1038.67,
+      "text": "year with boot.dev. [music]"
+    },
+    {
+      "start": 1038.68,
+      "end": 1040.11,
+      "text": "If you guys enjoyed this video and"
+    },
+    {
+      "start": 1040.12,
+      "end": 1041.51,
+      "text": "you're on the hunt for more video"
+    },
+    {
+      "start": 1041.52,
+      "end": 1043.03,
+      "text": "peripherals, why not check out the time"
+    },
+    {
+      "start": 1043.04,
+      "end": 1045.11,
+      "text": "that we spent two grand trying all the"
+    },
+    {
+      "start": 1045.12,
+      "end": 1047.189,
+      "text": "best webcams? There were a lot of them."
+    },
+    {
+      "start": 1047.199,
+      "end": 1048.99,
+      "text": "Surprisingly, more even than this lineup"
+    },
+    {
+      "start": 1049.0,
+      "end": 1051.56,
+      "text": "in front of me."
+    }
+  ]
+}

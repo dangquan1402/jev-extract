@@ -1,0 +1,30 @@
+{
+  "video_id": "2KztkwBYD68",
+  "segments": [
+    {
+      "start": 114.441,
+      "end": 128.87,
+      "category": "sponsor",
+      "uuid": "86660c0054d89f6ee3ea89b2204cf39d3ad26b4d90414084accb66b2bb2edc747"
+    },
+    {
+      "start": 277.899,
+      "end": 287.878,
+      "category": "selfpromo",
+      "uuid": "b155ae8ea948a8593fe6410fda9449c787aebfe02f40ce898fedfc5c58bfb6e97"
+    },
+    {
+      "start": 838.771,
+      "end": 903.231,
+      "category": "sponsor",
+      "uuid": "8b6829324aa79007272b66e22b5e224df3e2e6f79de9d44475218697fad363e37"
+    },
+    {
+      "start": 903.372,
+      "end": 918.258,
+      "category": "selfpromo",
+      "uuid": "70707c225e25cace100b647aea2476232d7e570c1f6e247bde8cc7fbb1b969887"
+    }
+  ],
+  "fetched_at": "2026-09-21T04:49:41.726943+00:00"
+}

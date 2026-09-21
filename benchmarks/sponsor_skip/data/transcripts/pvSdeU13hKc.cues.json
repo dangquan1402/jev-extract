@@ -1,0 +1,2796 @@
+{
+  "video_id": "pvSdeU13hKc",
+  "vtt_file": "pvSdeU13hKc.en.vtt",
+  "cues": [
+    {
+      "start": 2.879,
+      "end": 8.07,
+      "text": "CMP 170HX, a mining GPU so utterly"
+    },
+    {
+      "start": 8.08,
+      "end": 10.15,
+      "text": "worthless that its very existence"
+    },
+    {
+      "start": 10.16,
+      "end": 14.07,
+      "text": "offended me. See, unlike a real GPU,"
+    },
+    {
+      "start": 14.08,
+      "end": 16.63,
+      "text": "these crypto cards didn't have any"
+    },
+    {
+      "start": 16.64,
+      "end": 18.07,
+      "text": "graphics hardware built into them"
+    },
+    {
+      "start": 18.08,
+      "end": 20.95,
+      "text": "whatsoever. All they could do was crunch"
+    },
+    {
+      "start": 20.96,
+      "end": 23.029,
+      "text": "crypto numbers, meaning that as soon as"
+    },
+    {
+      "start": 23.039,
+      "end": 24.79,
+      "text": "they were unprofitable,"
+    },
+    {
+      "start": 24.8,
+      "end": 28.23,
+      "text": "they were garbage."
+    },
+    {
+      "start": 28.24,
+      "end": 30.95,
+      "text": "But why? Compute GPUs can be used for"
+    },
+    {
+      "start": 30.96,
+      "end": 33.83,
+      "text": "lots of things. And in fact, the A100"
+    },
+    {
+      "start": 33.84,
+      "end": 36.15,
+      "text": "cards that these mining cards were"
+    },
+    {
+      "start": 36.16,
+      "end": 38.31,
+      "text": "derived from in the first place are"
+    },
+    {
+      "start": 38.32,
+      "end": 40.31,
+      "text": "still in high demand for AI"
+    },
+    {
+      "start": 40.32,
+      "end": 43.11,
+      "text": "applications. Well, because Nvidia went"
+    },
+    {
+      "start": 43.12,
+      "end": 46.069,
+      "text": "out of their way to make them useless."
+    },
+    {
+      "start": 46.079,
+      "end": 48.47,
+      "text": "They crippled the PCI Express bus,"
+    },
+    {
+      "start": 48.48,
+      "end": 51.19,
+      "text": "locked the memory down from 64 gigs of"
+    },
+    {
+      "start": 51.2,
+      "end": 54.549,
+      "text": "HBM2E to just 8 gigs, meaning it could"
+    },
+    {
+      "start": 54.559,
+      "end": 57.189,
+      "text": "barely run any decentsized models. And"
+    },
+    {
+      "start": 57.199,
+      "end": 59.27,
+      "text": "to add insult to injury, they locked"
+    },
+    {
+      "start": 59.28,
+      "end": 61.11,
+      "text": "down the floating point performance,"
+    },
+    {
+      "start": 61.12,
+      "end": 63.59,
+      "text": "too. Which raises the question. I"
+    },
+    {
+      "start": 63.6,
+      "end": 65.27,
+      "text": "think it lived."
+    },
+    {
+      "start": 65.28,
+      "end": 68.63,
+      "text": "Why am I so happy about that? Because as"
+    },
+    {
+      "start": 68.64,
+      "end": 71.19,
+      "text": "Lucas from the lab is about to show us,"
+    },
+    {
+      "start": 71.2,
+      "end": 73.429,
+      "text": "enterprising modders have found ways to"
+    },
+    {
+      "start": 73.439,
+      "end": 75.99,
+      "text": "unlock the floating point performance,"
+    },
+    {
+      "start": 76.0,
+      "end": 78.71,
+      "text": "the hidden memory, and even the PCI"
+    },
+    {
+      "start": 78.72,
+      "end": 80.23,
+      "text": "Express interface, turning these from"
+    },
+    {
+      "start": 80.24,
+      "end": 85.109,
+      "text": "e-waste to E"
+    },
+    {
+      "start": 87.759,
+      "end": 90.87,
+      "text": "sorry, I stepped on you. you."
+    },
+    {
+      "start": 90.88,
+      "end": 92.31,
+      "text": "I can't"
+    },
+    {
+      "start": 92.32,
+      "end": 94.311,
+      "text": "fit all of you in my field of view,"
+    },
+    {
+      "start": 94.321,
+      "end": 95.67,
+      "text": "[snorts] but we're gonna show you guys"
+    },
+    {
+      "start": 95.68,
+      "end": 97.51,
+      "text": "how to do it and talk about whether one"
+    },
+    {
+      "start": 97.52,
+      "end": 99.59,
+      "text": "of these cards could be right for you"
+    },
+    {
+      "start": 99.6,
+      "end": 104.39,
+      "text": "after the segue to our sh Behold wisdom"
+    },
+    {
+      "start": 104.4,
+      "end": 116.149,
+      "text": "from the unmoistened one."
+    },
+    {
+      "start": 119.439,
+      "end": 121.35,
+      "text": "Step one"
+    },
+    {
+      "start": 121.36,
+      "end": 123.429,
+      "text": "is to stand on this box so that our"
+    },
+    {
+      "start": 123.439,
+      "end": 124.789,
+      "text": "camera operator can frame for both of"
+    },
+    {
+      "start": 124.799,
+      "end": 127.59,
+      "text": "us. Step two is to establish a baseline"
+    },
+    {
+      "start": 127.6,
+      "end": 130.07,
+      "text": "of what kind of models we can actually"
+    },
+    {
+      "start": 130.08,
+      "end": 131.43,
+      "text": "run on this card in its stock"
+    },
+    {
+      "start": 131.44,
+      "end": 132.949,
+      "text": "configuration and what it is performance"
+    },
+    {
+      "start": 132.959,
+      "end": 133.67,
+      "text": "looks like."
+    },
+    {
+      "start": 133.68,
+      "end": 135.589,
+      "text": "We will just be using Llama Bench uh"
+    },
+    {
+      "start": 135.599,
+      "end": 136.869,
+      "text": "since it's the simplest."
+    },
+    {
+      "start": 136.879,
+      "end": 139.03,
+      "text": "It's not a comprehensive benchmark, but"
+    },
+    {
+      "start": 139.04,
+      "end": 140.949,
+      "text": "it gives us a number which is all we"
+    },
+    {
+      "start": 140.959,
+      "end": 143.51,
+      "text": "really need to do a comparison like for"
+    },
+    {
+      "start": 143.52,
+      "end": 145.589,
+      "text": "like. Literally the exact same card"
+    },
+    {
+      "start": 145.599,
+      "end": 148.07,
+      "text": "running the exact same architecture, but"
+    },
+    {
+      "start": 148.08,
+      "end": 149.51,
+      "text": "more stronger. You might have noticed"
+    },
+    {
+      "start": 149.52,
+      "end": 151.99,
+      "text": "we've got a lot of GPUs on this bench."
+    },
+    {
+      "start": 152.0,
+      "end": 155.83,
+      "text": "The 3090 Ti are here for sort of a"
+    },
+    {
+      "start": 155.84,
+      "end": 157.35,
+      "text": "they're not quite equivalent in price,"
+    },
+    {
+      "start": 157.36,
+      "end": 159.35,
+      "text": "are they? These are a little more."
+    },
+    {
+      "start": 159.36,
+      "end": 161.75,
+      "text": "They were equivalent in price um before"
+    },
+    {
+      "start": 161.76,
+      "end": 163.589,
+      "text": "and now they've now the CMPs have shot"
+    },
+    {
+      "start": 163.599,
+      "end": 165.35,
+      "text": "up in price. Uh so when we were looking"
+    },
+    {
+      "start": 165.36,
+      "end": 168.07,
+      "text": "before they were about 1,100 each uh"
+    },
+    {
+      "start": 168.08,
+      "end": 170.309,
+      "text": "11-,300 and now the CMPs are going for"
+    },
+    {
+      "start": 170.319,
+      "end": 173.75,
+      "text": "like 16-,900. 3090 Ti are here as sort"
+    },
+    {
+      "start": 173.76,
+      "end": 177.589,
+      "text": "of a faster compute but less RAM point"
+    },
+    {
+      "start": 177.599,
+      "end": 180.15,
+      "text": "of comparison. We've got a 1650 that's"
+    },
+    {
+      "start": 180.16,
+      "end": 181.99,
+      "text": "just here for video output. And then we"
+    },
+    {
+      "start": 182.0,
+      "end": 183.99,
+      "text": "have two of these mining cards to show"
+    },
+    {
+      "start": 184.0,
+      "end": 187.43,
+      "text": "you how well things can go and also how"
+    },
+    {
+      "start": 187.44,
+      "end": 189.03,
+      "text": "not as well things can go with the"
+    },
+    {
+      "start": 189.04,
+      "end": 189.67,
+      "text": "not as well things can go with the unlock."
+    },
+    {
+      "start": 189.68,
+      "end": 191.83,
+      "text": "We have long CVP run here on uh with the"
+    },
+    {
+      "start": 191.84,
+      "end": 194.79,
+      "text": "granite uh 4.1 model 8 billion. Um so we"
+    },
+    {
+      "start": 194.8,
+      "end": 196.39,
+      "text": "can ask it some questions like"
+    },
+    {
+      "start": 196.4,
+      "end": 197.509,
+      "text": "sure question of the day."
+    },
+    {
+      "start": 197.519,
+      "end": 199.99,
+      "text": "Who's the best tech YouTuber? Wow, that"
+    },
+    {
+      "start": 200.0,
+      "end": 203.19,
+      "text": "is out of date and also really stupid."
+    },
+    {
+      "start": 203.2,
+      "end": 205.83,
+      "text": "Smosh, lots of love to Ian and Anthony,"
+    },
+    {
+      "start": 205.84,
+      "end": 209.03,
+      "text": "but like tech YouTuber. Oh,"
+    },
+    {
+      "start": 209.04,
+      "end": 209.99,
+      "text": "yeah, we had to choose that basically"
+    },
+    {
+      "start": 210.0,
+      "end": 212.309,
+      "text": "cuz that's all we can fit on the 8 GB."
+    },
+    {
+      "start": 212.319,
+      "end": 214.949,
+      "text": "But if we al put that onto the 3090"
+    },
+    {
+      "start": 214.959,
+      "end": 217.27,
+      "text": "first, uh we can see it loads much"
+    },
+    {
+      "start": 217.28,
+      "end": 218.55,
+      "text": "faster and then we can ask"
+    },
+    {
+      "start": 218.56,
+      "end": 221.83,
+      "text": "Oh, that did load much faster"
+    },
+    {
+      "start": 221.84,
+      "end": 224.149,
+      "text": "and it uh it rips away,"
+    },
+    {
+      "start": 224.159,
+      "end": 226.71,
+      "text": "right? And that just comes down to the"
+    },
+    {
+      "start": 226.72,
+      "end": 229.27,
+      "text": "way faster compute because both of them"
+    },
+    {
+      "start": 229.28,
+      "end": 231.27,
+      "text": "are running really small models. Now,"
+    },
+    {
+      "start": 231.28,
+      "end": 232.869,
+      "text": "what would happen if we tried to run a"
+    },
+    {
+      "start": 232.879,
+      "end": 235.83,
+      "text": "larger model on our 8 GB mining card?"
+    },
+    {
+      "start": 235.84,
+      "end": 237.589,
+      "text": "We use Quen 3.8. You know, it's all the"
+    },
+    {
+      "start": 237.599,
+      "end": 241.19,
+      "text": "rage now. I think this is like 28 GBish."
+    },
+    {
+      "start": 241.2,
+      "end": 244.149,
+      "text": "To be clear, we do have over 28 gigs of"
+    },
+    {
+      "start": 244.159,
+      "end": 247.509,
+      "text": "system memory for it to uh fall back on."
+    },
+    {
+      "start": 247.519,
+      "end": 249.03,
+      "text": "It's probably going to fail very soon"
+    },
+    {
+      "start": 249.04,
+      "end": 251.35,
+      "text": "here. [laughter] I also like the context"
+    },
+    {
+      "start": 251.36,
+      "end": 252.63,
+      "text": "we did for the small model. It could"
+    },
+    {
+      "start": 252.64,
+      "end": 254.229,
+      "text": "only be 16k instead of what I would"
+    },
+    {
+      "start": 254.239,
+      "end": 256.55,
+      "text": "usually run like 64 on it. I was going"
+    },
+    {
+      "start": 256.56,
+      "end": 257.909,
+      "text": "to um but here we can see it."
+    },
+    {
+      "start": 257.919,
+      "end": 259.27,
+      "text": "Yeah. So red text is good, right?"
+    },
+    {
+      "start": 259.28,
+      "end": 261.349,
+      "text": "Yeah, it's the warning one. And then"
+    },
+    {
+      "start": 261.359,
+      "end": 263.51,
+      "text": "this should uh this will fit. Actually,"
+    },
+    {
+      "start": 263.52,
+      "end": 266.23,
+      "text": "this may might not fit on the 3090, but"
+    },
+    {
+      "start": 266.24,
+      "end": 267.59,
+      "text": "it'll fit on two, which we can do as"
+    },
+    {
+      "start": 267.6,
+      "end": 267.909,
+      "text": "it'll fit on two, which we can do as well."
+    },
+    {
+      "start": 267.919,
+      "end": 269.27,
+      "text": "Yeah. Do we have an Envy link bridge? Do"
+    },
+    {
+      "start": 269.28,
+      "end": 269.99,
+      "text": "we even need it?"
+    },
+    {
+      "start": 270.0,
+      "end": 271.51,
+      "text": "Uh we do, but we don't really need it."
+    },
+    {
+      "start": 271.52,
+      "end": 272.87,
+      "text": "We actually didn't see too much of a"
+    },
+    {
+      "start": 272.88,
+      "end": 277.27,
+      "text": "gain of it on uh with Envy Link bridge."
+    },
+    {
+      "start": 277.28,
+      "end": 278.95,
+      "text": "That is another thing. the 3090s"
+    },
+    {
+      "start": 278.96,
+      "end": 281.27,
+      "text": "sometimes inconsistent and they'll"
+    },
+    {
+      "start": 281.28,
+      "end": 282.39,
+      "text": "sometimes inconsistent and they'll crash."
+    },
+    {
+      "start": 282.4,
+      "end": 286.07,
+      "text": "crash. BRB."
+    },
+    {
+      "start": 287.68,
+      "end": 289.35,
+      "text": "time to perform the unlock. How would"
+    },
+    {
+      "start": 289.36,
+      "end": 291.59,
+      "text": "you rate this on a scale of 1 to 10 for"
+    },
+    {
+      "start": 291.6,
+      "end": 292.79,
+      "text": "you rate this on a scale of 1 to 10 for difficulty?"
+    },
+    {
+      "start": 292.8,
+      "end": 296.39,
+      "text": "Pretty easy. Um,"
+    },
+    {
+      "start": 296.4,
+      "end": 297.99,
+      "text": "six. [laughter]"
+    },
+    {
+      "start": 298.0,
+      "end": 298.55,
+      "text": "six. [laughter] Okay."
+    },
+    {
+      "start": 298.56,
+      "end": 300.15,
+      "text": "Six. You got to know the little things."
+    },
+    {
+      "start": 300.16,
+      "end": 303.59,
+      "text": "Uh I I think the the relock afterwards"
+    },
+    {
+      "start": 303.6,
+      "end": 305.59,
+      "text": "is where I kind of uh it got more"
+    },
+    {
+      "start": 305.6,
+      "end": 306.87,
+      "text": "difficult when I was doing that before"
+    },
+    {
+      "start": 306.88,
+      "end": 308.95,
+      "text": "this, but uh yeah, it's not too bad. And"
+    },
+    {
+      "start": 308.96,
+      "end": 310.95,
+      "text": "there's like steps on in the repo from"
+    },
+    {
+      "start": 310.96,
+      "end": 313.83,
+      "text": "this guy, Amog Mooney Cot. I'm going to"
+    },
+    {
+      "start": 313.84,
+      "end": 315.51,
+      "text": "butcher his name, but we'll have it"
+    },
+    {
+      "start": 315.52,
+      "end": 317.029,
+      "text": "linked of course somewhere."
+    },
+    {
+      "start": 317.039,
+      "end": 318.55,
+      "text": "And we'll actually have a link down"
+    },
+    {
+      "start": 318.56,
+      "end": 320.55,
+      "text": "below to the full LT Labs companion"
+    },
+    {
+      "start": 320.56,
+      "end": 322.07,
+      "text": "article that'll go with this video. So"
+    },
+    {
+      "start": 322.08,
+      "end": 323.189,
+      "text": "you're going to want to be sure to check"
+    },
+    {
+      "start": 323.199,
+      "end": 323.83,
+      "text": "that out."
+    },
+    {
+      "start": 323.84,
+      "end": 325.51,
+      "text": "Yeah, but we just have, you know, the"
+    },
+    {
+      "start": 325.52,
+      "end": 327.59,
+      "text": "cloned GitHub repo. Um you have to"
+    },
+    {
+      "start": 327.6,
+      "end": 330.39,
+      "text": "disable secure boot. Um, and then nuke"
+    },
+    {
+      "start": 330.4,
+      "end": 332.79,
+      "text": "all the existing Nvidia drivers. Um,"
+    },
+    {
+      "start": 332.8,
+      "end": 334.15,
+      "text": "just purge those."
+    },
+    {
+      "start": 334.16,
+      "end": 335.99,
+      "text": "Blacklist the Neuvo drivers. Uh, so"
+    },
+    {
+      "start": 336.0,
+      "end": 338.07,
+      "text": "those don't kind of try to jump in."
+    },
+    {
+      "start": 338.08,
+      "end": 340.23,
+      "text": "Yeah. Oh, dude. I ran into that a little"
+    },
+    {
+      "start": 340.24,
+      "end": 343.189,
+      "text": "while ago with Fedora. It just like kept"
+    },
+    {
+      "start": 343.199,
+      "end": 344.87,
+      "text": "installing drivers that I didn't want"
+    },
+    {
+      "start": 344.88,
+      "end": 346.629,
+      "text": "over and over and over again when I was"
+    },
+    {
+      "start": 346.639,
+      "end": 347.749,
+      "text": "trying to get some Volta cards working"
+    },
+    {
+      "start": 347.759,
+      "end": 348.79,
+      "text": "on. It was a whole thing."
+    },
+    {
+      "start": 348.8,
+      "end": 350.55,
+      "text": "Yeah. But there's a kind of config file"
+    },
+    {
+      "start": 350.56,
+      "end": 351.99,
+      "text": "you can write to them and so it'll stop"
+    },
+    {
+      "start": 352.0,
+      "end": 352.629,
+      "text": "you can write to them and so it'll stop that."
+    },
+    {
+      "start": 352.639,
+      "end": 355.11,
+      "text": "Um, rebuild the RAM file system and all"
+    },
+    {
+      "start": 355.12,
+      "end": 358.87,
+      "text": "that. um and then specify which drivers"
+    },
+    {
+      "start": 358.88,
+      "end": 359.909,
+      "text": "you want because there's specific"
+    },
+    {
+      "start": 359.919,
+      "end": 361.35,
+      "text": "drivers that these are built for that"
+    },
+    {
+      "start": 361.36,
+      "end": 362.87,
+      "text": "this is built for and this"
+    },
+    {
+      "start": 362.88,
+      "end": 365.029,
+      "text": "this unlock will act on."
+    },
+    {
+      "start": 365.039,
+      "end": 366.71,
+      "text": "Now tell me this another thing I ran up"
+    },
+    {
+      "start": 366.72,
+      "end": 368.71,
+      "text": "against is that on Linux or at least on"
+    },
+    {
+      "start": 368.72,
+      "end": 370.309,
+      "text": "Fedora it's a little bit more"
+    },
+    {
+      "start": 370.319,
+      "end": 372.309,
+      "text": "challenging to run different Nvidia"
+    },
+    {
+      "start": 372.319,
+      "end": 374.39,
+      "text": "drivers for your different Nvidia cards"
+    },
+    {
+      "start": 374.4,
+      "end": 376.15,
+      "text": "like you can on Windows. Do you have to"
+    },
+    {
+      "start": 376.16,
+      "end": 377.909,
+      "text": "run the same Nvidia driver across all"
+    },
+    {
+      "start": 377.919,
+      "end": 379.11,
+      "text": "your cards?"
+    },
+    {
+      "start": 379.12,
+      "end": 381.029,
+      "text": "I actually don't know. I kind of just"
+    },
+    {
+      "start": 381.039,
+      "end": 383.029,
+      "text": "stuck with the single driver to to to"
+    },
+    {
+      "start": 383.039,
+      "end": 384.87,
+      "text": "make sure it works in this limited time"
+    },
+    {
+      "start": 384.88,
+      "end": 385.83,
+      "text": "and with the unlock. So,"
+    },
+    {
+      "start": 385.84,
+      "end": 387.11,
+      "text": "chat with us in the comments. In the"
+    },
+    {
+      "start": 387.12,
+      "end": 389.67,
+      "text": "meantime, though, are we pretty much"
+    },
+    {
+      "start": 389.68,
+      "end": 391.909,
+      "text": "ready to press execute and show the"
+    },
+    {
+      "start": 391.919,
+      "end": 392.71,
+      "text": "unlocked cards?"
+    },
+    {
+      "start": 392.72,
+      "end": 393.59,
+      "text": "Uh, yeah."
+    },
+    {
+      "start": 393.6,
+      "end": 396.07,
+      "text": "And then basically, instead of unlocking"
+    },
+    {
+      "start": 396.08,
+      "end": 398.469,
+      "text": "the card, you're just running like a"
+    },
+    {
+      "start": 398.479,
+      "end": 400.629,
+      "text": "modified version of the driver software"
+    },
+    {
+      "start": 400.639,
+      "end": 402.15,
+      "text": "that unlocks any card that you put in"
+    },
+    {
+      "start": 402.16,
+      "end": 403.35,
+      "text": "the system now. Is that right?"
+    },
+    {
+      "start": 403.36,
+      "end": 404.629,
+      "text": "Yeah, that's correct. Yeah. There's some"
+    },
+    {
+      "start": 404.639,
+      "end": 406.469,
+      "text": "papers in like earlier research on"
+    },
+    {
+      "start": 406.479,
+      "end": 408.15,
+      "text": "unlocking the cards specifically and"
+    },
+    {
+      "start": 408.16,
+      "end": 408.95,
+      "text": "they're actually really interesting"
+    },
+    {
+      "start": 408.96,
+      "end": 410.95,
+      "text": "papers to read, but this one acts on the"
+    },
+    {
+      "start": 410.96,
+      "end": 413.029,
+      "text": "system and the drivers. So any card you"
+    },
+    {
+      "start": 413.039,
+      "end": 414.55,
+      "text": "plug in will be unlocked and then if you"
+    },
+    {
+      "start": 414.56,
+      "end": 416.07,
+      "text": "take that same card, plug it into a"
+    },
+    {
+      "start": 416.08,
+      "end": 417.35,
+      "text": "different system, it'll be locked again"
+    },
+    {
+      "start": 417.36,
+      "end": 418.87,
+      "text": "until you unlock that system."
+    },
+    {
+      "start": 418.88,
+      "end": 420.95,
+      "text": "I love this kind of just like blackmagic"
+    },
+    {
+      "start": 420.96,
+      "end": 421.99,
+      "text": "tom foolery."
+    },
+    {
+      "start": 422.0,
+      "end": 423.67,
+      "text": "It's very cool uh to see and kind of the"
+    },
+    {
+      "start": 423.68,
+      "end": 425.83,
+      "text": "unlocking of uh all this potential and"
+    },
+    {
+      "start": 425.84,
+      "end": 427.43,
+      "text": "uh hardware. I mean, some of the papers"
+    },
+    {
+      "start": 427.44,
+      "end": 428.469,
+      "text": "I read were like, oh, you know,"
+    },
+    {
+      "start": 428.479,
+      "end": 429.99,
+      "text": "investigating this as like, you know,"
+    },
+    {
+      "start": 430.0,
+      "end": 431.27,
+      "text": "things we should watch out for, so"
+    },
+    {
+      "start": 431.28,
+      "end": 433.11,
+      "text": "people can't unlock them in the future."
+    },
+    {
+      "start": 433.12,
+      "end": 433.99,
+      "text": "But, you know,"
+    },
+    {
+      "start": 434.0,
+      "end": 435.99,
+      "text": "Oh, those guys."
+    },
+    {
+      "start": 436.0,
+      "end": 438.469,
+      "text": "Yeah. Yeah. [laughter]"
+    },
+    {
+      "start": 438.479,
+      "end": 439.35,
+      "text": "There you go. Sick."
+    },
+    {
+      "start": 439.36,
+      "end": 442.15,
+      "text": "Nvidia CMX or CMP 170HX."
+    },
+    {
+      "start": 442.16,
+      "end": 443.589,
+      "text": "We didn't even talk about the power"
+    },
+    {
+      "start": 443.599,
+      "end": 445.35,
+      "text": "limit going up too then."
+    },
+    {
+      "start": 445.36,
+      "end": 446.87,
+      "text": "Uh, yes. Well, actually, it's the same"
+    },
+    {
+      "start": 446.88,
+      "end": 448.39,
+      "text": "power limit, but because the compute was"
+    },
+    {
+      "start": 448.4,
+      "end": 449.589,
+      "text": "so locked down before, all the"
+    },
+    {
+      "start": 449.599,
+      "end": 451.51,
+      "text": "floatingoint operation, it never even"
+    },
+    {
+      "start": 451.52,
+      "end": 454.15,
+      "text": "like used anywhere near the 250 W I saw."
+    },
+    {
+      "start": 454.16,
+      "end": 456.55,
+      "text": "But now we could get up near that 250"
+    },
+    {
+      "start": 456.56,
+      "end": 457.189,
+      "text": "But now we could get up near that 250 watts."
+    },
+    {
+      "start": 457.199,
+      "end": 458.55,
+      "text": "Definitely. Yeah. Yeah, definitely. Uh"
+    },
+    {
+      "start": 458.56,
+      "end": 460.07,
+      "text": "when it's running. Uh depends on what's"
+    },
+    {
+      "start": 460.08,
+      "end": 461.11,
+      "text": "running, of course."
+    },
+    {
+      "start": 461.12,
+      "end": 462.71,
+      "text": "All right. Well, why don't we start with"
+    },
+    {
+      "start": 462.72,
+      "end": 464.95,
+      "text": "that little model and have a look at"
+    },
+    {
+      "start": 464.96,
+      "end": 466.07,
+      "text": "what our better floating port"
+    },
+    {
+      "start": 466.08,
+      "end": 467.029,
+      "text": "performance gets us."
+    },
+    {
+      "start": 467.039,
+      "end": 468.629,
+      "text": "It's actually quite slow, but that"
+    },
+    {
+      "start": 468.639,
+      "end": 471.35,
+      "text": "that's mostly because of the PCIe um"
+    },
+    {
+      "start": 471.36,
+      "end": 473.189,
+      "text": "lane kind of thing cuz we it unlocks it"
+    },
+    {
+      "start": 473.199,
+      "end": 474.95,
+      "text": "to PC Gen 2,"
+    },
+    {
+      "start": 474.96,
+      "end": 477.35,
+      "text": "but it's still a BY4, so our bandwidth"
+    },
+    {
+      "start": 477.36,
+      "end": 478.79,
+      "text": "is seriously limited."
+    },
+    {
+      "start": 478.8,
+      "end": 480.15,
+      "text": "Still limited there. Yeah,"
+    },
+    {
+      "start": 480.16,
+      "end": 481.83,
+      "text": "that can be unlocked, but that takes a"
+    },
+    {
+      "start": 481.84,
+      "end": 483.51,
+      "text": "capacitor mod that we'll get into a bit"
+    },
+    {
+      "start": 483.52,
+      "end": 483.99,
+      "text": "more later."
+    },
+    {
+      "start": 484.0,
+      "end": 485.99,
+      "text": "Is there any fights"
+    },
+    {
+      "start": 486.0,
+      "end": 487.43,
+      "text": "and much faster? This is kind of like"
+    },
+    {
+      "start": 487.44,
+      "end": 488.869,
+      "text": "what we were seeing with the 3090."
+    },
+    {
+      "start": 488.879,
+      "end": 492.869,
+      "text": "Wow, that is worlds faster. Still"
+    },
+    {
+      "start": 492.879,
+      "end": 494.95,
+      "text": "completely crap analysis."
+    },
+    {
+      "start": 494.96,
+      "end": 497.83,
+      "text": "We'll give it a larger um prompt, too."
+    },
+    {
+      "start": 497.84,
+      "end": 498.39,
+      "text": "We'll give it a larger um prompt, too. Sure."
+    },
+    {
+      "start": 498.4,
+      "end": 500.39,
+      "text": "Um cuz you don't really see the prompt"
+    },
+    {
+      "start": 500.4,
+      "end": 501.749,
+      "text": "processing speed unless you give it a"
+    },
+    {
+      "start": 501.759,
+      "end": 503.189,
+      "text": "large prompt like that. And you [music]"
+    },
+    {
+      "start": 503.199,
+      "end": 506.23,
+      "text": "can see the 3090 Ti uh single one of"
+    },
+    {
+      "start": 506.24,
+      "end": 507.99,
+      "text": "them was getting about 7,000 I think it"
+    },
+    {
+      "start": 508.0,
+      "end": 509.749,
+      "text": "was or 4,000 I don't know exact but this"
+    },
+    {
+      "start": 509.759,
+      "end": 511.51,
+      "text": "one you know is also up there"
+    },
+    {
+      "start": 511.52,
+      "end": 515.67,
+      "text": "right? Yeah it it's it's slower right"
+    },
+    {
+      "start": 515.68,
+      "end": 517.509,
+      "text": "but this is a completely different world"
+    },
+    {
+      "start": 517.519,
+      "end": 519.029,
+      "text": "of speed compared to what it was doing"
+    },
+    {
+      "start": 519.039,
+      "end": 520.55,
+      "text": "before. And now let's see what happens"
+    },
+    {
+      "start": 520.56,
+      "end": 521.99,
+      "text": "when we load that Quen model that"
+    },
+    {
+      "start": 522.0,
+      "end": 524.23,
+      "text": "everyone is mayonnaing themselves over."
+    },
+    {
+      "start": 524.24,
+      "end": 525.11,
+      "text": "Okay, here we go."
+    },
+    {
+      "start": 525.12,
+      "end": 526.79,
+      "text": "Hopefully it runs. It'll it'll always be"
+    },
+    {
+      "start": 526.8,
+      "end": 528.15,
+      "text": "slower to load up. That's kind of the"
+    },
+    {
+      "start": 528.16,
+      "end": 531.03,
+      "text": "main uh lock from the PC thing,"
+    },
+    {
+      "start": 531.04,
+      "end": 532.71,
+      "text": "right? eight because even [music] though"
+    },
+    {
+      "start": 532.72,
+      "end": 535.509,
+      "text": "we've got that 64 gigs and it's HPM 2e"
+    },
+    {
+      "start": 535.519,
+      "end": 537.43,
+      "text": "which is still very fast like right on"
+    },
+    {
+      "start": 537.44,
+      "end": 539.59,
+      "text": "par with the GDDDR7 that you'd get on"
+    },
+    {
+      "start": 539.6,
+      "end": 542.07,
+      "text": "something like a 5090"
+    },
+    {
+      "start": 542.08,
+      "end": 543.509,
+      "text": "if the data's got to be loaded through"
+    },
+    {
+      "start": 543.519,
+      "end": 546.87,
+      "text": "the PCIe bus if that bus is slow then"
+    },
+    {
+      "start": 546.88,
+      "end": 547.91,
+      "text": "you got to wait around I mean that"
+    },
+    {
+      "start": 547.92,
+      "end": 548.71,
+      "text": "wasn't that bad though"
+    },
+    {
+      "start": 548.72,
+      "end": 549.91,
+      "text": "yeah it's not too bad it's a it's a"
+    },
+    {
+      "start": 549.92,
+      "end": 550.63,
+      "text": "larger model"
+    },
+    {
+      "start": 550.64,
+      "end": 552.389,
+      "text": "let's ask the same thing and probably"
+    },
+    {
+      "start": 552.399,
+      "end": 554.79,
+      "text": "get a way better answer"
+    },
+    {
+      "start": 554.8,
+      "end": 557.11,
+      "text": "so we'll see if how this runs cuz Quen"
+    },
+    {
+      "start": 557.12,
+      "end": 559.03,
+      "text": "likes to think a lot and I didn't give"
+    },
+    {
+      "start": 559.04,
+      "end": 561.43,
+      "text": "it any reasoning effort um Okay."
+    },
+    {
+      "start": 561.44,
+      "end": 562.87,
+      "text": "Commands. So, it may just think for a"
+    },
+    {
+      "start": 562.88,
+      "end": 564.71,
+      "text": "really long time uh before Oh, it says"
+    },
+    {
+      "start": 564.72,
+      "end": 567.509,
+      "text": "something there."
+    },
+    {
+      "start": 567.519,
+      "end": 569.11,
+      "text": "something there. Okay."
+    },
+    {
+      "start": 569.12,
+      "end": 569.67,
+      "text": "Okay. Yeah,"
+    },
+    {
+      "start": 569.68,
+      "end": 571.509,
+      "text": "this isn't"
+    },
+    {
+      "start": 571.519,
+      "end": 572.389,
+      "text": "it's not ordered."
+    },
+    {
+      "start": 572.399,
+      "end": 573.43,
+      "text": "I knew this was going to happen."
+    },
+    {
+      "start": 573.44,
+      "end": 573.99,
+      "text": "It's not ordered."
+    },
+    {
+      "start": 574.0,
+      "end": 574.949,
+      "text": "I knew it was going to happen."
+    },
+    {
+      "start": 574.959,
+      "end": 576.55,
+      "text": "There's no single best. Maybe that is"
+    },
+    {
+      "start": 576.56,
+      "end": 578.949,
+      "text": "the smarter uh decision. You know, watch"
+    },
+    {
+      "start": 578.959,
+      "end": 583.829,
+      "text": "multiple reviews."
+    },
+    {
+      "start": 585.76,
+      "end": 586.55,
+      "text": "speed. Oh,"
+    },
+    {
+      "start": 586.56,
+      "end": 587.19,
+      "text": "speed. Oh, MKBH."
+    },
+    {
+      "start": 587.2,
+      "end": 588.841,
+      "text": "We'll cut that. Cut that. Cut that."
+    },
+    {
+      "start": 588.851,
+      "end": 590.15,
+      "text": "We'll cut that. Cut that. Cut that. [laughter]"
+    },
+    {
+      "start": 590.16,
+      "end": 591.59,
+      "text": "All right. Let's see what happens if we"
+    },
+    {
+      "start": 591.6,
+      "end": 593.35,
+      "text": "give it a much longer prompt. Now,"
+    },
+    {
+      "start": 593.36,
+      "end": 595.11,
+      "text": "this will be slower. There'll be some"
+    },
+    {
+      "start": 595.12,
+      "end": 597.75,
+      "text": "time to first token. Um, but still quite"
+    },
+    {
+      "start": 597.76,
+      "end": 598.87,
+      "text": "time to first token. Um, but still quite quick."
+    },
+    {
+      "start": 598.88,
+      "end": 601.43,
+      "text": "That's a thousand words of Laurum."
+    },
+    {
+      "start": 601.44,
+      "end": 602.949,
+      "text": "Now, you mentioned before that because"
+    },
+    {
+      "start": 602.959,
+      "end": 604.87,
+      "text": "we've got twice the memory of the 3090"
+    },
+    {
+      "start": 604.88,
+      "end": 607.43,
+      "text": "Ti, we could actually run even larger"
+    },
+    {
+      "start": 607.44,
+      "end": 610.71,
+      "text": "models on our mining card. But question"
+    },
+    {
+      "start": 610.72,
+      "end": 613.509,
+      "text": "for you, given that it doesn't have the"
+    },
+    {
+      "start": 613.519,
+      "end": 615.67,
+      "text": "fastest compute, would an Aentic"
+    },
+    {
+      "start": 615.68,
+      "end": 617.67,
+      "text": "workload make more sense for a card like"
+    },
+    {
+      "start": 617.68,
+      "end": 621.19,
+      "text": "this? and would we instead want to just"
+    },
+    {
+      "start": 621.2,
+      "end": 623.829,
+      "text": "use that extra VRAM for more context and"
+    },
+    {
+      "start": 623.839,
+      "end": 625.75,
+      "text": "then let it churn away at things in the"
+    },
+    {
+      "start": 625.76,
+      "end": 626.47,
+      "text": "then let it churn away at things in the background."
+    },
+    {
+      "start": 626.48,
+      "end": 627.91,
+      "text": "It's really good to have all the extra"
+    },
+    {
+      "start": 627.92,
+      "end": 629.91,
+      "text": "memory obviously for the larger um"
+    },
+    {
+      "start": 629.92,
+      "end": 631.75,
+      "text": "larger models and also if there's"
+    },
+    {
+      "start": 631.76,
+      "end": 633.43,
+      "text": "multiple like concurrency going on so"
+    },
+    {
+      "start": 633.44,
+      "end": 635.829,
+      "text": "they all have large contexts um or if"
+    },
+    {
+      "start": 635.839,
+      "end": 637.509,
+      "text": "you're doing some kind of task that"
+    },
+    {
+      "start": 637.519,
+      "end": 639.75,
+      "text": "needs multiple different models um if"
+    },
+    {
+      "start": 639.76,
+      "end": 641.75,
+      "text": "you have like your main one your agent"
+    },
+    {
+      "start": 641.76,
+      "end": 643.43,
+      "text": "you're talking to and it's also doing"
+    },
+    {
+      "start": 643.44,
+      "end": 645.829,
+      "text": "embedding or image generation. Um, so"
+    },
+    {
+      "start": 645.839,
+      "end": 647.19,
+      "text": "that's kind of the advantage you get"
+    },
+    {
+      "start": 647.2,
+      "end": 648.949,
+      "text": "from this huge amount of memory."
+    },
+    {
+      "start": 648.959,
+      "end": 651.19,
+      "text": "So basically, yes and also yes and also"
+    },
+    {
+      "start": 651.2,
+      "end": 653.11,
+      "text": "yes. It's just way more flexibility."
+    },
+    {
+      "start": 653.12,
+      "end": 654.79,
+      "text": "I'd love to buy this one off of uh, you"
+    },
+    {
+      "start": 654.8,
+      "end": 656.389,
+      "text": "know, logistics."
+    },
+    {
+      "start": 656.399,
+      "end": 658.15,
+      "text": "Now, let's try running Quen on our 3090"
+    },
+    {
+      "start": 658.16,
+      "end": 661.03,
+      "text": "Ti or should I say 3090 Ti cuz we kind"
+    },
+    {
+      "start": 661.04,
+      "end": 662.79,
+      "text": "of have to pull their memory in order to"
+    },
+    {
+      "start": 662.8,
+      "end": 664.47,
+      "text": "run that without it crashing or"
+    },
+    {
+      "start": 664.48,
+      "end": 665.829,
+      "text": "uh, sure. Yeah, we can try running on"
+    },
+    {
+      "start": 665.839,
+      "end": 667.509,
+      "text": "just one right now and see how that"
+    },
+    {
+      "start": 667.519,
+      "end": 668.55,
+      "text": "Okay. I mean,"
+    },
+    {
+      "start": 668.56,
+      "end": 669.35,
+      "text": "it's going to fail."
+    },
+    {
+      "start": 669.36,
+      "end": 670.389,
+      "text": "Crash last time."
+    },
+    {
+      "start": 670.399,
+      "end": 672.63,
+      "text": "Uh, yeah, it won't work. Um cuz the"
+    },
+    {
+      "start": 672.64,
+      "end": 674.949,
+      "text": "model is like 20 29 GB and then if we"
+    },
+    {
+      "start": 674.959,
+      "end": 676.23,
+      "text": "add two of them together."
+    },
+    {
+      "start": 676.24,
+      "end": 676.55,
+      "text": "add two of them together. Mhm."
+    },
+    {
+      "start": 676.56,
+      "end": 678.47,
+      "text": "Just on layer split mode this will work"
+    },
+    {
+      "start": 678.48,
+      "end": 680.069,
+      "text": "since we got 48 GB."
+    },
+    {
+      "start": 680.079,
+      "end": 681.11,
+      "text": "since we got 48 GB. Okay."
+    },
+    {
+      "start": 681.12,
+      "end": 682.79,
+      "text": "We should get a very similar quality of"
+    },
+    {
+      "start": 682.8,
+      "end": 684.79,
+      "text": "answer and we should actually get"
+    },
+    {
+      "start": 684.8,
+      "end": 686.55,
+      "text": "measurably more performance in this"
+    },
+    {
+      "start": 686.56,
+      "end": 688.71,
+      "text": "measurably more performance in this case."
+    },
+    {
+      "start": 688.72,
+      "end": 689.91,
+      "text": "I think it actually is"
+    },
+    {
+      "start": 689.92,
+      "end": 691.03,
+      "text": "looks really similar."
+    },
+    {
+      "start": 691.04,
+      "end": 692.389,
+      "text": "Slower. Yeah."
+    },
+    {
+      "start": 692.399,
+      "end": 694.31,
+      "text": "So prompt got 164 but it's such a small"
+    },
+    {
+      "start": 694.32,
+      "end": 696.71,
+      "text": "prompt. Generation out we got 30."
+    },
+    {
+      "start": 696.72,
+      "end": 698.23,
+      "text": "Not as much of a difference as you might"
+    },
+    {
+      "start": 698.24,
+      "end": 699.99,
+      "text": "think but let's go ahead and throw a"
+    },
+    {
+      "start": 700.0,
+      "end": 701.509,
+      "text": "bigger prompt in there. And so that was"
+    },
+    {
+      "start": 701.519,
+      "end": 703.03,
+      "text": "a bit of a pause, but that was like I"
+    },
+    {
+      "start": 703.04,
+      "end": 705.35,
+      "text": "think 2,000 words or something. Um, and"
+    },
+    {
+      "start": 705.36,
+      "end": 707.35,
+      "text": "it'll think for a while to about 2,000"
+    },
+    {
+      "start": 707.36,
+      "end": 708.47,
+      "text": "tokens per second,"
+    },
+    {
+      "start": 708.48,
+      "end": 711.03,
+      "text": "right? Okay. So that's where the better"
+    },
+    {
+      "start": 711.04,
+      "end": 713.829,
+      "text": "compute of the 3090 Ti comes into play."
+    },
+    {
+      "start": 713.839,
+      "end": 716.31,
+      "text": "Of course, just like we can run two 3090"
+    },
+    {
+      "start": 716.32,
+      "end": 719.269,
+      "text": "Ti, we can also run two mining cards."
+    },
+    {
+      "start": 719.279,
+      "end": 721.509,
+      "text": "This is where once again the PCIe"
+    },
+    {
+      "start": 721.519,
+      "end": 723.11,
+      "text": "bandwidth limitations could rear their"
+    },
+    {
+      "start": 723.12,
+      "end": 724.949,
+      "text": "ugly heads. Yeah, it does depend"
+    },
+    {
+      "start": 724.959,
+      "end": 727.829,
+      "text": "slightly as well on the tensor versus um"
+    },
+    {
+      "start": 727.839,
+      "end": 730.15,
+      "text": "layer split mode um like parallelism."
+    },
+    {
+      "start": 730.16,
+      "end": 731.509,
+      "text": "And it's kind of the same thing again"
+    },
+    {
+      "start": 731.519,
+      "end": 732.71,
+      "text": "where it's like there's so many factors"
+    },
+    {
+      "start": 732.72,
+      "end": 734.629,
+      "text": "that could you know limit it, bottleneck"
+    },
+    {
+      "start": 734.639,
+      "end": 736.389,
+      "text": "it or make it speed up."
+    },
+    {
+      "start": 736.399,
+      "end": 737.91,
+      "text": "That's his way of saying"
+    },
+    {
+      "start": 737.92,
+      "end": 740.23,
+      "text": "that these are not certified labs test"
+    },
+    {
+      "start": 740.24,
+      "end": 740.79,
+      "text": "that these are not certified labs test results."
+    },
+    {
+      "start": 740.8,
+      "end": 741.59,
+      "text": "It depends."
+    },
+    {
+      "start": 741.6,
+      "end": 742.949,
+      "text": "These are quick and dirty illustrative"
+    },
+    {
+      "start": 742.959,
+      "end": 744.949,
+      "text": "numbers and anyone actually deploying"
+    },
+    {
+      "start": 744.959,
+      "end": 746.71,
+      "text": "these would do a bunch more tuning and"
+    },
+    {
+      "start": 746.72,
+      "end": 748.79,
+      "text": "almost certainly get better results. as"
+    },
+    {
+      "start": 748.8,
+      "end": 750.069,
+      "text": "we've been doing like in the discord"
+    },
+    {
+      "start": 750.079,
+      "end": 751.35,
+      "text": "they have got there for the CMP and"
+    },
+    {
+      "start": 751.36,
+      "end": 752.389,
+      "text": "locker they've been doing a lot of"
+    },
+    {
+      "start": 752.399,
+      "end": 753.829,
+      "text": "different uh really cool things there so"
+    },
+    {
+      "start": 753.839,
+      "end": 755.75,
+      "text": "you should check that as well so I'm"
+    },
+    {
+      "start": 755.76,
+      "end": 757.67,
+      "text": "kind of expecting you know half the"
+    },
+    {
+      "start": 757.68,
+      "end": 759.59,
+      "text": "prompt processing speed of it um but"
+    },
+    {
+      "start": 759.6,
+      "end": 761.11,
+      "text": "same token generation"
+    },
+    {
+      "start": 761.12,
+      "end": 762.87,
+      "text": "still really usable"
+    },
+    {
+      "start": 762.88,
+      "end": 764.629,
+      "text": "yeah this is great for like if you're"
+    },
+    {
+      "start": 764.639,
+      "end": 766.15,
+      "text": "using some local coding or whatever"
+    },
+    {
+      "start": 766.16,
+      "end": 768.31,
+      "text": "agentic thing [music] over like 10 to 15"
+    },
+    {
+      "start": 768.32,
+      "end": 770.47,
+      "text": "is usually pretty good for kind of"
+    },
+    {
+      "start": 770.48,
+      "end": 772.069,
+      "text": "expect but yeah"
+    },
+    {
+      "start": 772.079,
+      "end": 774.71,
+      "text": "but it's not all sunshine and rainbows"
+    },
+    {
+      "start": 774.72,
+      "end": 777.03,
+      "text": "either as Lucas already alluded to in"
+    },
+    {
+      "start": 777.04,
+      "end": 778.47,
+      "text": "the time since this unlock lock was"
+    },
+    {
+      "start": 778.48,
+      "end": 779.59,
+      "text": "discovered to the time that we're"
+    },
+    {
+      "start": 779.6,
+      "end": 781.67,
+      "text": "filming, these have gone up very"
+    },
+    {
+      "start": 781.68,
+      "end": 784.629,
+      "text": "significantly in price. And there's no"
+    },
+    {
+      "start": 784.639,
+      "end": 786.79,
+      "text": "guarantee whatsoever that you're going"
+    },
+    {
+      "start": 786.8,
+      "end": 789.75,
+      "text": "to actually get a working one. In fact,"
+    },
+    {
+      "start": 789.76,
+      "end": 792.15,
+      "text": "even though we were able to process a"
+    },
+    {
+      "start": 792.16,
+      "end": 795.03,
+      "text": "prompt just now on these two cards, one"
+    },
+    {
+      "start": 795.04,
+      "end": 796.949,
+      "text": "of them is bad."
+    },
+    {
+      "start": 796.959,
+      "end": 798.389,
+      "text": "Let me show you what that means here."
+    },
+    {
+      "start": 798.399,
+      "end": 800.949,
+      "text": "So, we'll mem test this and we'll try to"
+    },
+    {
+      "start": 800.959,
+      "end": 804.15,
+      "text": "target one of the 170HXs. So this test"
+    },
+    {
+      "start": 804.16,
+      "end": 805.269,
+      "text": "will just, you know, go through all of"
+    },
+    {
+      "start": 805.279,
+      "end": 807.509,
+      "text": "the memory and check it for any errors"
+    },
+    {
+      "start": 807.519,
+      "end": 809.19,
+      "text": "that like write and read it back to see"
+    },
+    {
+      "start": 809.2,
+      "end": 811.03,
+      "text": "if anything's changed. It should show up"
+    },
+    {
+      "start": 811.04,
+      "end": 812.47,
+      "text": "in the within the first five minutes of"
+    },
+    {
+      "start": 812.48,
+      "end": 814.55,
+      "text": "the test, even faster on my previous"
+    },
+    {
+      "start": 814.56,
+      "end": 817.43,
+      "text": "tests. But this, I would say, seems like"
+    },
+    {
+      "start": 817.44,
+      "end": 818.629,
+      "text": "the good one. [laughter]"
+    },
+    {
+      "start": 818.639,
+      "end": 821.03,
+      "text": "See, there's lots of reasons that a card"
+    },
+    {
+      "start": 821.04,
+      "end": 823.35,
+      "text": "might be [clears throat] demoted from"
+    },
+    {
+      "start": 823.36,
+      "end": 827.11,
+      "text": "A100 to crap mining card. Maybe it"
+    },
+    {
+      "start": 827.12,
+      "end": 829.269,
+      "text": "doesn't meet the power threshold. Maybe"
+    },
+    {
+      "start": 829.279,
+      "end": 831.829,
+      "text": "it doesn't meet the quality standards."
+    },
+    {
+      "start": 831.839,
+      "end": 835.03,
+      "text": "Or maybe the HBM memory, which if you"
+    },
+    {
+      "start": 835.04,
+      "end": 838.069,
+      "text": "guys recall is right on the package and"
+    },
+    {
+      "start": 838.079,
+      "end": 840.949,
+      "text": "once it's installed, cannot be removed,"
+    },
+    {
+      "start": 840.959,
+      "end": 844.069,
+      "text": "was damaged or otherwise failed during"
+    },
+    {
+      "start": 844.079,
+      "end": 846.15,
+      "text": "manufacturing. And when that happens,"
+    },
+    {
+      "start": 846.16,
+      "end": 847.91,
+      "text": "what Nvidia was doing was they were"
+    },
+    {
+      "start": 847.92,
+      "end": 850.069,
+      "text": "basically fusing off most of it and"
+    },
+    {
+      "start": 850.079,
+      "end": 851.91,
+      "text": "selling it as a crap mining card. So"
+    },
+    {
+      "start": 851.92,
+      "end": 853.91,
+      "text": "whether you get one that has a memory"
+    },
+    {
+      "start": 853.92,
+      "end": 857.43,
+      "text": "defect or some other kind of defect,"
+    },
+    {
+      "start": 857.44,
+      "end": 860.23,
+      "text": "pure luck of the draw. And like [snorts]"
+    },
+    {
+      "start": 860.24,
+      "end": 863.03,
+      "text": "Lucas mentioned, maybe not even pure"
+    },
+    {
+      "start": 863.04,
+      "end": 864.949,
+      "text": "luck because a lot of people are going"
+    },
+    {
+      "start": 864.959,
+      "end": 867.35,
+      "text": "to be buying these in bulk, binning"
+    },
+    {
+      "start": 867.36,
+      "end": 869.509,
+      "text": "them, and selling the crap ones to take"
+    },
+    {
+      "start": 869.519,
+      "end": 871.59,
+      "text": "advantage of the current market"
+    },
+    {
+      "start": 871.6,
+      "end": 872.23,
+      "text": "advantage of the current market situation."
+    },
+    {
+      "start": 872.24,
+      "end": 872.47,
+      "text": "situation. Oh,"
+    },
+    {
+      "start": 872.48,
+      "end": 874.425,
+      "text": "so there we go. Memory found a bad one."
+    },
+    {
+      "start": 874.48,
+      "end": 875.91,
+      "text": "So if it's all good, it'll kind of just"
+    },
+    {
+      "start": 875.92,
+      "end": 877.189,
+      "text": "keep showing through the list and show"
+    },
+    {
+      "start": 877.199,
+      "end": 878.23,
+      "text": "iterations as it goes."
+    },
+    {
+      "start": 878.24,
+      "end": 878.629,
+      "text": "iterations as it goes. Yeah."
+    },
+    {
+      "start": 878.639,
+      "end": 879.829,
+      "text": "Standard 5 minute and you should let it"
+    },
+    {
+      "start": 879.839,
+      "end": 881.43,
+      "text": "go for longer. But this one, bad"
+    },
+    {
+      "start": 881.44,
+      "end": 882.23,
+      "text": "go for longer. But this one, bad sectors."
+    },
+    {
+      "start": 882.24,
+      "end": 884.949,
+      "text": "And what does that mean? That basically"
+    },
+    {
+      "start": 884.959,
+      "end": 887.03,
+      "text": "means that at some point we're going to"
+    },
+    {
+      "start": 887.04,
+      "end": 889.99,
+      "text": "ask it to do some math and it's going to"
+    },
+    {
+      "start": 890.0,
+      "end": 890.79,
+      "text": "burp out."
+    },
+    {
+      "start": 890.8,
+      "end": 891.75,
+      "text": "Whatever you're running is going to"
+    },
+    {
+      "start": 891.76,
+      "end": 893.829,
+      "text": "crash. I saw some stuff on the Discord"
+    },
+    {
+      "start": 893.839,
+      "end": 895.269,
+      "text": "where people were trying to trying to"
+    },
+    {
+      "start": 895.279,
+      "end": 896.79,
+      "text": "run it um and they were seeing you know"
+    },
+    {
+      "start": 896.8,
+      "end": 898.47,
+      "text": "inconsistency. We didn't see any"
+    },
+    {
+      "start": 898.48,
+      "end": 900.069,
+      "text": "inconsistency but we didn't run it for a"
+    },
+    {
+      "start": 900.079,
+      "end": 901.509,
+      "text": "long time like that. Who we borrowed"
+    },
+    {
+      "start": 901.519,
+      "end": 903.189,
+      "text": "this card from said that as it gets"
+    },
+    {
+      "start": 903.199,
+      "end": 905.03,
+      "text": "really hot sometimes that fixes their"
+    },
+    {
+      "start": 905.04,
+      "end": 907.43,
+      "text": "kind of inconsistency. Um like when it's"
+    },
+    {
+      "start": 907.44,
+      "end": 909.509,
+      "text": "above like 85° kind of like the limit"
+    },
+    {
+      "start": 909.519,
+      "end": 912.31,
+      "text": "there. Um but who knows? I wouldn't rely"
+    },
+    {
+      "start": 912.32,
+      "end": 914.15,
+      "text": "on that for production. But if you do"
+    },
+    {
+      "start": 914.16,
+      "end": 916.069,
+      "text": "get a good card, there's another step"
+    },
+    {
+      "start": 916.079,
+      "end": 918.069,
+      "text": "that you can go to to unlock even"
+    },
+    {
+      "start": 918.079,
+      "end": 920.15,
+      "text": "further performance. Using some leaked"
+    },
+    {
+      "start": 920.16,
+      "end": 922.47,
+      "text": "schematics on the 170th Street repo, our"
+    },
+    {
+      "start": 922.48,
+      "end": 925.11,
+      "text": "resident soldering wizard Dan managed to"
+    },
+    {
+      "start": 925.12,
+      "end": 929.75,
+      "text": "put the 24 little tiny capacitors back"
+    },
+    {
+      "start": 929.76,
+      "end": 932.31,
+      "text": "on this thing above the PCIe slot,"
+    },
+    {
+      "start": 932.32,
+      "end": 933.829,
+      "text": "on this thing above the PCIe slot, unlocking"
+    },
+    {
+      "start": 933.839,
+      "end": 937.59,
+      "text": "full 16 functionality. So, let's go"
+    },
+    {
+      "start": 937.6,
+      "end": 940.23,
+      "text": "ahead and throw two modded cards into"
+    },
+    {
+      "start": 940.24,
+      "end": 942.47,
+      "text": "our system and see how they fly. Uh,"
+    },
+    {
+      "start": 942.48,
+      "end": 944.31,
+      "text": "while we're performing this operation,"
+    },
+    {
+      "start": 944.32,
+      "end": 946.069,
+      "text": "seems as good a time as any to talk"
+    },
+    {
+      "start": 946.079,
+      "end": 947.91,
+      "text": "about cooling these monsters. This is"
+    },
+    {
+      "start": 947.92,
+      "end": 949.43,
+      "text": "the same shroud that we used last time"
+    },
+    {
+      "start": 949.44,
+      "end": 950.389,
+      "text": "around. We'll have it linked in the"
+    },
+    {
+      "start": 950.399,
+      "end": 951.67,
+      "text": "video description. What's good about"
+    },
+    {
+      "start": 951.68,
+      "end": 953.43,
+      "text": "this approach is it works pretty well"
+    },
+    {
+      "start": 953.44,
+      "end": 955.749,
+      "text": "and is reasonably quiet. But what sucks"
+    },
+    {
+      "start": 955.759,
+      "end": 957.749,
+      "text": "about it is it takes up a lot of space,"
+    },
+    {
+      "start": 957.759,
+      "end": 960.23,
+      "text": "forcing the use of risers, which just"
+    },
+    {
+      "start": 960.24,
+      "end": 962.949,
+      "text": "adds another variable whenever you run"
+    },
+    {
+      "start": 962.959,
+      "end": 964.87,
+      "text": "into flaky behavior. So, if you're more"
+    },
+    {
+      "start": 964.88,
+      "end": 966.069,
+      "text": "interested in water cooling, you'll find"
+    },
+    {
+      "start": 966.079,
+      "end": 967.91,
+      "text": "more information about that on 170th"
+    },
+    {
+      "start": 967.92,
+      "end": 969.43,
+      "text": "Street. I guess you're waiting for me to"
+    },
+    {
+      "start": 969.44,
+      "end": 970.949,
+      "text": "give you this so you have the can have"
+    },
+    {
+      "start": 970.959,
+      "end": 972.629,
+      "text": "the fan. I'm so sorry. I don't think"
+    },
+    {
+      "start": 972.639,
+      "end": 974.31,
+      "text": "we're going to get into the nuance of"
+    },
+    {
+      "start": 974.32,
+      "end": 976.31,
+      "text": "how different concurrency methods might"
+    },
+    {
+      "start": 976.32,
+      "end": 977.99,
+      "text": "benefit more or less from the additional"
+    },
+    {
+      "start": 978.0,
+      "end": 980.629,
+      "text": "bandwidth. I just want to see something"
+    },
+    {
+      "start": 980.639,
+      "end": 982.23,
+      "text": "everyone will benefit from, which is"
+    },
+    {
+      "start": 982.24,
+      "end": 985.11,
+      "text": "faster model loadins. So, want to throw"
+    },
+    {
+      "start": 985.12,
+      "end": 987.99,
+      "text": "Quinn in there. Loading model. And this"
+    },
+    {
+      "start": 988.0,
+      "end": 990.31,
+      "text": "was, if you remember, quite slow the"
+    },
+    {
+      "start": 990.32,
+      "end": 993.67,
+      "text": "first time around on a single card."
+    },
+    {
+      "start": 993.68,
+      "end": 996.23,
+      "text": "And that was quite not nearly as slow."
+    },
+    {
+      "start": 996.24,
+      "end": 997.59,
+      "text": "So, what's the takeaway?"
+    },
+    {
+      "start": 997.6,
+      "end": 999.35,
+      "text": "Is that rhetorical for me?"
+    },
+    {
+      "start": 999.36,
+      "end": 1000.629,
+      "text": "Uh, no. No, we're going to answer it in"
+    },
+    {
+      "start": 1000.639,
+      "end": 1001.91,
+      "text": "a second. I mean, sure. Yeah. Take a"
+    },
+    {
+      "start": 1001.92,
+      "end": 1002.55,
+      "text": "crack at it."
+    },
+    {
+      "start": 1002.56,
+      "end": 1004.15,
+      "text": "Uh, buy one, I guess,"
+    },
+    {
+      "start": 1004.16,
+      "end": 1005.749,
+      "text": "if you can get a working one."
+    },
+    {
+      "start": 1005.759,
+      "end": 1008.15,
+      "text": "Yeah. Yeah. No, I think it's great. Um,"
+    },
+    {
+      "start": 1008.16,
+      "end": 1010.069,
+      "text": "it kind of fits all of the standard"
+    },
+    {
+      "start": 1010.079,
+      "end": 1011.749,
+      "text": "large kind of models you'd fit cuz"
+    },
+    {
+      "start": 1011.759,
+      "end": 1013.59,
+      "text": "they're kind of now contained between"
+    },
+    {
+      "start": 1013.6,
+      "end": 1016.069,
+      "text": "like the 20 to 40 GB range and leaves a"
+    },
+    {
+      "start": 1016.079,
+      "end": 1017.749,
+      "text": "lot of room for context to make it Yeah."
+    },
+    {
+      "start": 1017.759,
+      "end": 1019.509,
+      "text": "like half a million or quarter a million"
+    },
+    {
+      "start": 1019.519,
+      "end": 1019.99,
+      "text": "like half a million or quarter a million context"
+    },
+    {
+      "start": 1020.0,
+      "end": 1021.829,
+      "text": "or running additional models."
+    },
+    {
+      "start": 1021.839,
+      "end": 1025.189,
+      "text": "Uh, it's fast enough to interact with in"
+    },
+    {
+      "start": 1025.199,
+      "end": 1027.35,
+      "text": "real time, but definitely fast enough to"
+    },
+    {
+      "start": 1027.36,
+      "end": 1029.51,
+      "text": "work on agentic tasks in the background."
+    },
+    {
+      "start": 1029.52,
+      "end": 1030.87,
+      "text": "There are some inconveniences, but even"
+    },
+    {
+      "start": 1030.88,
+      "end": 1032.63,
+      "text": "at the current pricing, um, I think it's"
+    },
+    {
+      "start": 1032.64,
+      "end": 1033.99,
+      "text": "pretty good deal. And there will be more"
+    },
+    {
+      "start": 1034.0,
+      "end": 1035.75,
+      "text": "optimizations and people finding"
+    },
+    {
+      "start": 1035.76,
+      "end": 1037.11,
+      "text": "workarounds for things, maybe some more"
+    },
+    {
+      "start": 1037.12,
+      "end": 1039.51,
+      "text": "unlocks as well. So, pretty interesting."
+    },
+    {
+      "start": 1039.52,
+      "end": 1042.23,
+      "text": "Future's bright because it contains this"
+    },
+    {
+      "start": 1042.24,
+      "end": 1044.789,
+      "text": "segue to our sponsor."
+    },
+    {
+      "start": 1044.799,
+      "end": 1048.657,
+      "text": "segue to our sponsor. Busy"
+    },
+    {
+      "start": 1049.36,
+      "end": 1053.19,
+      "text": "water. No"
+    },
+    {
+      "start": 1053.2,
+      "end": 1055.11,
+      "text": "water. No water."
+    },
+    {
+      "start": 1055.12,
+      "end": 1055.75,
+      "text": "water. No."
+    },
+    {
+      "start": 1055.76,
+      "end": 1058.789,
+      "text": "No, I haven't seen him. I know it's cats"
+    },
+    {
+      "start": 1058.799,
+      "end": 1061.51,
+      "text": "and dogs out there. I hope he's wearing"
+    },
+    {
+      "start": 1061.52,
+      "end": 1065.11,
+      "text": "his messy [music] classic Chelseies."
+    },
+    {
+      "start": 1065.12,
+      "end": 1067.43,
+      "text": "Dampertton Falls had never been this"
+    },
+    {
+      "start": 1067.44,
+      "end": 1070.07,
+      "text": "damp. Like an infection. [music]"
+    },
+    {
+      "start": 1070.08,
+      "end": 1072.87,
+      "text": "The rain wormed its way into every"
+    },
+    {
+      "start": 1072.88,
+      "end": 1076.39,
+      "text": "crevice. There wasn't a dry sock in the"
+    },
+    {
+      "start": 1076.4,
+      "end": 1082.549,
+      "text": "city except the one inside that"
+    },
+    {
+      "start": 1082.559,
+      "end": 1084.31,
+      "text": "city except the one inside that thing."
+    },
+    {
+      "start": 1084.32,
+      "end": 1085.99,
+      "text": "Expect the unexpected with the Vessie"
+    },
+    {
+      "start": 1086.0,
+      "end": 1087.669,
+      "text": "Weekend Chelsea. Lightweight,"
+    },
+    {
+      "start": 1087.679,
+      "end": 1089.669,
+      "text": "breathable, comfortable, and waterproof."
+    },
+    {
+      "start": 1089.679,
+      "end": 1091.232,
+      "text": "Bet you didn't see that coming. Simple,"
+    },
+    {
+      "start": 1091.242,
+      "end": 1093.43,
+      "text": "[music] stylish, and versatile. It's one"
+    },
+    {
+      "start": 1093.44,
+      "end": 1096.472,
+      "text": "pair for whatever might happen."
+    },
+    {
+      "start": 1096.482,
+      "end": 1100.15,
+      "text": "[music] It's existence is a paradox."
+    },
+    {
+      "start": 1100.16,
+      "end": 1103.11,
+      "text": "Does that mean it [music] can't be real?"
+    },
+    {
+      "start": 1103.12,
+      "end": 1107.029,
+      "text": "Or that you can't get 15% off your first"
+    },
+    {
+      "start": 1107.039,
+      "end": 1109.669,
+      "text": "order [music] with a one-year warranty"
+    },
+    {
+      "start": 1109.679,
+      "end": 1111.909,
+      "text": "and free shipping on North American"
+    },
+    {
+      "start": 1111.919,
+      "end": 1113.11,
+      "text": "orders? [music]"
+    },
+    {
+      "start": 1113.12,
+      "end": 1118.47,
+      "text": "over $110."
+    },
+    {
+      "start": 1120.799,
+      "end": 1123.029,
+      "text": "Just embrace Vessie."
+    },
+    {
+      "start": 1123.039,
+      "end": 1124.549,
+      "text": "Now, to return most of these to their"
+    },
+    {
+      "start": 1124.559,
+      "end": 1126.15,
+      "text": "rightful owner. If you guys enjoyed this"
+    },
+    {
+      "start": 1126.16,
+      "end": 1128.07,
+      "text": "video, maybe check out the one where we"
+    },
+    {
+      "start": 1128.08,
+      "end": 1131.27,
+      "text": "used a different cut down mining card"
+    },
+    {
+      "start": 1131.28,
+      "end": 1134.31,
+      "text": "for gaming by routing its GPU power"
+    },
+    {
+      "start": 1134.32,
+      "end": 1137.19,
+      "text": "through our onboard graphics,"
+    },
+    {
+      "start": 1137.2,
+      "end": 1139.19,
+      "text": "which if that sounds complicated, it's"
+    },
+    {
+      "start": 1139.2,
+      "end": 1142.88,
+      "text": "because it was a little bit."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "video_id": "3xngArcFpek",
+  "segments": [
+    {
+      "start": 86.191,
+      "end": 101.898,
+      "category": "sponsor",
+      "uuid": "d9d25792733b4c2c35601eb5a027e784307fc1033b8a9f551a1974abbea6da917"
+    },
+    {
+      "start": 311.106,
+      "end": 317.896,
+      "category": "selfpromo",
+      "uuid": "657b995def1e2d93a30008e31fed19303f5e1af69506e6837b8eb5eabf5c63bf7"
+    },
+    {
+      "start": 520.574,
+      "end": 573.97,
+      "category": "sponsor",
+      "uuid": "c34d890cd666f61f7dcd3144424dec58dff758f81b8c53f600fc6cb9f427e6da7"
+    }
+  ],
+  "fetched_at": "2026-09-21T04:50:22.900175+00:00"
+}

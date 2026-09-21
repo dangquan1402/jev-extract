@@ -1,0 +1,24 @@
+{
+  "video_id": "pvSdeU13hKc",
+  "segments": [
+    {
+      "start": 99.078,
+      "end": 119.328,
+      "category": "sponsor",
+      "uuid": "509e9c20b861686a19d4d2eed7c539c2cfa5fc9df9b56370d9153b03f8e0f86b7"
+    },
+    {
+      "start": 316.6,
+      "end": 323.8,
+      "category": "selfpromo",
+      "uuid": "4c736f555af5f047d1ea34ab70bed49e133d24b54ba1ec74cb4df64dd223eb057"
+    },
+    {
+      "start": 1040.454,
+      "end": 1122.878,
+      "category": "sponsor",
+      "uuid": "4bd5613accd6e15e44d92257b8c339f6eee4e650cc800732c91165052afeb3957"
+    }
+  ],
+  "fetched_at": "2026-09-21T04:50:29.328379+00:00"
+}
